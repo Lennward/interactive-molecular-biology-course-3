@@ -5,13 +5,7 @@ import initModule2 from './modules/module2.js';
 import initModule3 from './modules/module3.js';
 import initModule4 from './modules/module4.js';
 import initModule5 from './modules/module5.js';
-// Add the missing imports for modules 6 through 11
-import initModule6 from './modules/module6.js';
-import initModule7 from './modules/module7.js';
-import initModule8 from './modules/module8.js';
-import initModule9 from './modules/module9.js';
-import initModule10 from './modules/module10.js';
-import initModule11 from './modules/module11.js';
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -26,8 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array of all module initializer functions
     const moduleInitializers = [
-        initModule1, initModule2, initModule3, initModule4, initModule5, 
-        initModule6, initModule7, initModule8, initModule9, initModule10, initModule11
+        initModule1, initModule2, initModule3, initModule4, initModule5
     ];
     
     // Create sections and root divs for each module

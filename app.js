@@ -1,8 +1,18 @@
+// CORRECTED APP.JS CODE
+
 import initModule1 from './modules/module1.js';
 import initModule2 from './modules/module2.js';
 import initModule3 from './modules/module3.js';
 import initModule4 from './modules/module4.js';
 import initModule5 from './modules/module5.js';
+// Add the missing imports for modules 6 through 11
+import initModule6 from './modules/module6.js';
+import initModule7 from './modules/module7.js';
+import initModule8 from './modules/module8.js';
+import initModule9 from './modules/module9.js';
+import initModule10 from './modules/module10.js';
+import initModule11 from './modules/module11.js';
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const sidebarEl = document.getElementById('sidebar');

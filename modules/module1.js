@@ -204,7 +204,7 @@ export default function initModule1(rootEl, sidebarEl) {
     link.href = '#module-1';
     link.textContent = TITLE;
     link.className = 'sidebar-link block px-3 py-2 rounded-md';
-    sidebarEl.appendChild(link);
+    sidebarEl.querySelector('#sidebar-links').appendChild(link);
 
     // 2. Inject content
     rootEl.innerHTML = getContent();

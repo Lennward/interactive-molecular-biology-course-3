@@ -1,7 +1,7 @@
 const MODULE_NUM = 5;
 const TITLE = `Module ${MODULE_NUM}: Work in Progress`;
 
-export default function initModule4(rootEl, sidebarEl) {
+export default function initModule5(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
     link.href = `#module-${MODULE_NUM}`;

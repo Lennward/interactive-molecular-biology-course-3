@@ -1,4 +1,4 @@
-const TITLE = "Module 3: Cellular Alchemy: The Art of Transfection";
+const TITLE = "Module 9: Cellular Alchemy: The Art of Transfection";
 const QUIZ_DATA = [
     {
         question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",

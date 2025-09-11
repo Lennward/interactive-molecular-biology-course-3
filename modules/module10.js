@@ -1,4 +1,4 @@
-const TITLE = "Module 3: Cellular Alchemy: The Art of Transfection";
+const TITLE = "Module 10: Fluorescence Microscopy of GFP as proof of fluorophore expression";
 const QUIZ_DATA = [
     {
         question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",

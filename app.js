@@ -1,14 +1,14 @@
 // CORRECTED APP.JS CODE
 
-import initModule1 from './modules/module1.js';
-import initModule2 from './modules/module2.js';
-import initModule3 from './modules/module3.js';
-import initModule4 from './modules/module4.js';
-import initModule5 from './modules/module5.js';
-import initModule6 from './modules/module6.js';
-import initModule7 from './modules/module7.js';
-import initModule8 from './modules/module8.js';
-import initModule9 from './modules/module9.js';
+import initModule1 from './modules/module01.js';
+import initModule2 from './modules/module02.js';
+import initModule3 from './modules/module03.js';
+import initModule4 from './modules/module04.js';
+import initModule5 from './modules/module05.js';
+import initModule6 from './modules/module06.js';
+import initModule7 from './modules/module07.js';
+import initModule8 from './modules/module08.js';
+import initModule9 from './modules/module09.js';
 import initModule10 from './modules/module10.js';
 import initModule11 from './modules/module11.js';
 

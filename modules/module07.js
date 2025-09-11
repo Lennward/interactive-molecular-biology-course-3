@@ -1,4 +1,4 @@
-const TITLE = "Module 3: Cellular Alchemy: The Art of Transfection";
+const TITLE = "Module 7: Introduction to Cell Culture & work with mammalian cells";
 const QUIZ_DATA = [
     {
         question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",
@@ -26,18 +26,15 @@ const QUIZ_DATA = [
 function getContent() {
     return `
         <div class="module-content">
-            <h2>Module 3: Cellular Alchemy: The Art of Transfection</h2>
+            <h2>Module 7: Introduction to Cell Culture & work with mammalian cells</h2>
             <p>Welcome to the fascinating world of transfection! In this module, you'll learn how to introduce foreign genetic material into cells, a cornerstone technique in molecular biology that allows us to study gene function, produce proteins, and much more. It's like giving cells a new set of instructions!</p>
             
-            <h3>I. Module Overview & Learning Objectives</h3>
-            <p>This module will guide you through the principles and practical steps of transfecting eukaryotic cells, focusing on the calcium phosphate method.</p>
+            <h3>Cell Culture Deep Dive</h3>
+            <p>In the lab, cells derived from a wide variety of tissues and organisms can be cultivated. Cell culture is the process by which cells (especially mammalian cells) are grown under controlled conditions in the lab, generally outside their natural environment which is referred to as “in vitro”. Cell culture technology makes it possible to establish long-term or permanent cultures that can serve as “in vitro” models for cells in vivo (in living organisms). Furthermore, there are techniques (e.g., cytotoxicity tests and mutagenicity tests) that make it possible to reduce the number of animal experiments.</p>
+            <p>Cells can be grown as:</p>
             <ul class="list-disc list-inside mb-4 bg-sky-50 p-3 rounded-md">
-                <li>Understand the definition and goals of transfection.</li>
-                <li>Differentiate between transient and stable transfection.</li>
-                <li>Get an overview of various transfection methods and their applications.</li>
-                <li>Master the calcium phosphate transfection protocol for HEK293 cells.</li>
-                <li>Learn to calculate necessary reagent and plasmid amounts.</li>
-                <li>Identify key factors for successful transfection and basic troubleshooting.</li>
+                <li>Adherent cell cultures: Cells grow attached to a surface (e.g., flask, plate). Adherent cells are derived from specific tissues and organs such as the liver, kidneys, muscles, nerves, endothelium, and epithelium.</li>
+                <li>Suspension (non-adherent) cell cultures: Cells float freely in the culture medium. Immune system cells and their precursors, on the other hand, are cultivated as a suspension.</li>                
             </ul>
 
             <h3>II. Content Sections</h3>

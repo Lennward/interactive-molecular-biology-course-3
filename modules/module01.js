@@ -38,7 +38,14 @@ function getContent() {
                 <li><strong>Translation:</strong> Ribosomes produce a new polypeptide encoded in the mRNA by translating it from the start to the stop codon.</li>
             </ul>
             <p>(Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
-            <img src="https://lh5.googleusercontent.com/Re2XXSHN3W10HJ7u7mT63-HS4OEegHGeETTeyhaVxOsT3EWM0ISlGhjlUUATlvKnT33eXaL1Yv3aJHDh7_jNqSUQTwrwtaNj-2K5qTq47I4ZaK6iiEol1mc8KaqBQw=s0" alt="Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
+            
+            <!-- Broad Canonical Dogma Image -->
+            <img src="images/image01.jpg" alt="Broad Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
+            
+            <p>This canonical dogma has four main steps in eukaryotes: activation, transcription, processing, and translation (Figure 1).</p>
+
+            <!-- Detailed Canonical Dogma Image -->
+            <img src="images/image02.jpg" alt="Detailed Canonical Dogma in the Cell" class="my-4 w-full max-w-xl mx-auto" />
 
             <h4 class="styled-h4">Plasmids</h4>
             <p>A plasmid is a small, circular, double-stranded DNA molecule that is distinct from a cell's chromosomal DNA. It serves as a carrier of genetic information. Plasmids naturally exist in bacterial cells and they also occur in some eukaryotes. In the lab, scientists use plasmids to introduce new genes into cells. First, a plasmid needs to be cloned using bacteria. Afterwards, the functional plasmid can be introduced (=transfected) into mammalian cells. For both organisms (bacteria and mammalian cells), different components of a plasmid are needed.</p>
@@ -54,6 +61,9 @@ function getContent() {
                 <li><strong>Tag:</strong> A short DNA sequence fused to the gene of interest, which can be used for protein detection or purification. Examples include GFP (Green Fluorescent Protein) for fluorescence and His-tag for affinity chromatography.</li>
             </ul>
             
+            <h4 class="styled-h4">General Plasmid Map</h4>
+            <img src="images/image03.jpg" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
+
             <h3>Module Quiz</h3>
             <div id="quiz-container"></div>
         </div>

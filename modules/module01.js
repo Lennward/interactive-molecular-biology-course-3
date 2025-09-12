@@ -40,12 +40,12 @@ function getContent() {
             <p>(Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
             <!-- Broad Canonical Dogma Image -->
-            <img src="images/image01.jpg" alt="Broad Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
+            <img src="images/image01.png" alt="Broad Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
             
             <p>This canonical dogma has four main steps in eukaryotes: activation, transcription, processing, and translation (Figure 1).</p>
 
             <!-- Detailed Canonical Dogma Image -->
-            <img src="images/image02.jpg" alt="Detailed Canonical Dogma in the Cell" class="my-4 w-full max-w-xl mx-auto" />
+            <img src="images/image02.png" alt="Detailed Canonical Dogma in the Cell" class="my-4 w-full max-w-xl mx-auto" />
 
             <h4 class="styled-h4">Plasmids</h4>
             <p>A plasmid is a small, circular, double-stranded DNA molecule that is distinct from a cell's chromosomal DNA. It serves as a carrier of genetic information. Plasmids naturally exist in bacterial cells and they also occur in some eukaryotes. In the lab, scientists use plasmids to introduce new genes into cells. First, a plasmid needs to be cloned using bacteria. Afterwards, the functional plasmid can be introduced (=transfected) into mammalian cells. For both organisms (bacteria and mammalian cells), different components of a plasmid are needed.</p>
@@ -62,7 +62,7 @@ function getContent() {
             </ul>
             
             <h4 class="styled-h4">General Plasmid Map</h4>
-            <img src="images/image03.jpg" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
+            <img src="images/image03.png" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
 
             <h3>Module Quiz</h3>
             <div id="quiz-container"></div>

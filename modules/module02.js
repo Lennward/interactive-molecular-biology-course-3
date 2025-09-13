@@ -1,4 +1,4 @@
-const TITLE = "Module 2: Dilutions, Concentrations & Cell Counting";
+const TITLE = "Module 2: Mastering Dilutions & Concentrations";
 const QUIZ_DATA = [
     {
         question: "If you have a stock solution of 10M NaOH and you want to make 500 mL of 0.5M NaOH, how much of the stock solution do you need?",
@@ -6,13 +6,6 @@ const QUIZ_DATA = [
         answer: "25 mL",
         type: "mcq",
         explanation: "Using C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>2</sub>: (10M)(V<sub>1</sub>) = (0.5M)(500mL). So, V<sub>1</sub> = (0.5 &times; 500) / 10 = 250 / 10 = 25 mL."
-    },
-    {
-        question: "You count an average of 60 live cells per large square in a Neubauer hemocytometer. Your cells were diluted 1:2 with Trypan Blue before counting. What is the concentration of live cells in your original sample (cells/mL)?",
-        options: ["0.6 &times; 10<sup>4</sup> cells/mL", "1.2 &times; 10<sup>5</sup> cells/mL", "6.0 &times; 10<sup>5</sup> cells/mL", "1.2 &times; 10<sup>6</sup> cells/mL"],
-        answer: "1.2 &times; 10<sup>6</sup> cells/mL",
-        type: "mcq",
-        explanation: "Cells/mL = (Avg cells per square) &times; Dilution Factor &times; 10<sup>4</sup> = 60 &times; 2 &times; 10<sup>4</sup> = 120 &times; 10<sup>4</sup> = 1.2 &times; 10<sup>6</sup> cells/mL."
     },
     {
         question: "To make 50 mL of a 200 &mu;M solution from a 10 mM stock, how much stock solution is required?",
@@ -26,11 +19,15 @@ const QUIZ_DATA = [
 function getContent() {
     return `
         <div class="module-content">
-            <h2>Module 2: Mastering Dilutions, Concentrations & Cell Counting</h2>
-            <p>Accurate calculations are fundamental in molecular biology. This module will guide you through essential concepts and practical applications.</p>
+            <h2>Module 2: Mastering Dilutions & Concentrations</h2>
+            <p>In molecular biology research, it is often necessary to prepare samples in different concentrations. Volume and concentration play a key role here. Dilution series are a common method for obtaining and analyzing accurate concentrations. This module will guide you through essential concepts and practical applications.</p>
 
             <h3>Units and Conversions</h3>
             <p>Understanding and converting between different units of volume and concentration is crucial for accurate lab work.</p>
+            
+            <h4>Volume (V):</h4>
+            <p>Volume is the space occupied by a liquid and is usually measured in liters (L), milliliters (mL), or microliters (µL). When diluting, it is important to know the exact volume of the solution to be diluted (= what is being diluted, e.g., a plasmid) and the diluent (= what is being used to dilute, e.g., H₂O).</p>
+            
             <ul>
                 <li><strong>Volume:</strong> Liters (L), milliliters (mL), microliters (&mu;L)
                     <ul class="list-inside list-disc ml-4 bg-slate-100 p-3 rounded-md shadow-sm">
@@ -39,8 +36,8 @@ function getContent() {
                         <li>Therefore, 1 Liter (L) = 1,000,000 microliters (&mu;L)</li>
                     </ul>
                 </li>
-                <li class="mt-2"><strong>Concentration:</strong> Molarity (M = moles/Liter), mg/mL, &mu;g/&mu;L, percentages (%)</li>
             </ul>
+            
             <div class="interactive-box">
                 <h4>Interactive: Unit Converter</h4>
                 <p class="text-sm mb-2">Practice converting milliliters (mL) to microliters (&mu;L). Enter a value in mL and click "Convert".</p>
@@ -52,31 +49,69 @@ function getContent() {
                 <p id="ul-output" class="mt-2 text-sm font-medium text-purple-700"></p>
             </div>
 
-            <h3>The Dilution Formula: <span class="formula">C<sub>1</sub> &times; V<sub>1</sub> = C<sub>2</sub> &times; V<sub>2</sub></span></h3>
-            <p>This is the cornerstone formula for calculating dilutions. It states that the amount of solute remains constant before and after dilution.</p>
+            <h4>Concentration (c):</h4>
+            <p>Concentration indicates how much of a particular substance is present in a solution and is often expressed as molarity (M = mol/L), milligrams per milliliter (mg/mL), or micrograms per microliter (µg/µL).</p>
+            
             <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
-                <li><strong>C<sub>1</sub></strong> = Initial concentration (concentration of your stock solution)</li>
+                <li><strong>Concentration:</strong> Molarity (M = moles/Liter), mg/mL, &mu;g/&mu;L, percentages (%)</li>
+                <li class="mt-2">1 Molar (M = mol/l) = 1000 millimolar (mM = mmol/l)</li>
+                <li>1 millimolar (mM = mmol/l) = 1000 micromolar (&mu;M = µmol/l)</li>
+                <li>Therefore, 1 Molar (M) = 1,000,000 micromolar (&mu;M)</li>
+                <li class="mt-2"><strong>Also important to know is that:</strong></li>
+                <li>1 Molar (M = 1 mol/l) = 1 mmol/ml = 1 µmol/µl</li>
+                <li>1 g/l = 1 mg/ml = 1µg/µl</li>
+                <li>1 mg/ml = 1000 µg/ml</li>
+                <li>1 µg/µl = 1000 ng/µl</li>
+                <li>% = g/100 ml or ml/100 ml or g/100 g (depends on used substances)</li>
+            </ul>
+
+            <div class="interactive-box">
+                <h4>Interactive: Unit Converter</h4>
+                <p class="text-sm mb-2">Practice converting molar (M) to micromolar (&mu;M). Enter a value in M and click "Convert".</p>
+                <div class="flex flex-wrap items-center gap-2">
+                    <label for="m-input" class="sr-only">Molar:</label>
+                    <input type="number" id="m-input" placeholder="Enter M" class="border p-2 rounded w-32 text-sm">
+                    <button id="molar-convert-btn" class="text-sm">Convert to &mu;M</button>
+                </div>
+                <p id="um-output" class="mt-2 text-sm font-medium text-purple-700"></p>
+            </div>
+
+            <h3>The Dilution Formula: <span class="formula">c<sub>1</sub> &times; V<sub>1</sub> = c<sub>2</sub> &times; V<sub>2</sub></span></h3>
+            <p>This is the cornerstone formula for calculating dilutions. It states that the product of the initial concentration and the initial volume is equal to the product of the final concentration and the final volume.</p>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li><strong>c<sub>1</sub></strong> = Initial concentration (concentration of your stock solution)</li>
                 <li><strong>V<sub>1</sub></strong> = Initial volume (the volume of stock solution you need to take)</li>
-                <li><strong>C<sub>2</sub></strong> = Final concentration (the desired concentration of your diluted solution)</li>
+                <li><strong>c<sub>2</sub></strong> = Final concentration (the desired concentration of your diluted solution)</li>
                 <li><strong>V<sub>2</sub></strong> = Final volume (the total volume of your desired diluted solution)</li>
             </ul>
             <p class="mt-2"><strong>Example:</strong> You need to prepare 10 mL of a 0.1 mg/mL solution from a 1 mg/mL stock solution.</p>
             <ul class="text-sm">
-                <li>C<sub>1</sub> = 1 mg/mL (stock concentration)</li>
-                <li>C<sub>2</sub> = 0.1 mg/mL (desired final concentration)</li>
+                <li>c<sub>1</sub> = 1 mg/mL (stock concentration)</li>
+                <li>c<sub>2</sub> = 0.1 mg/mL (desired final concentration)</li>
                 <li>V<sub>2</sub> = 10 mL (desired final volume)</li>
             </ul>
             <p>We need to find V<sub>1</sub> (the volume of stock to use).</p>
-            <p>Rearranging the formula: <span class="formula">V<sub>1</sub> = (C<sub>2</sub> &times; V<sub>2</sub>) / C<sub>1</sub></span></p>
+            <p>Rearranging the formula: <span class="formula">V<sub>1</sub> = (c<sub>2</sub> &times; V<sub>2</sub>) / c<sub>1</sub></span></p>
             <p><span class="formula">V<sub>1</sub> = (0.1 mg/mL &times; 10 mL) / 1 mg/mL = 1 mL</span></p>
             <p><strong>Conclusion:</strong> You would take 1 mL of the 1 mg/mL stock solution and add 9 mL of diluent (e.g., water or buffer) to make a total final volume of 10 mL with a concentration of 0.1 mg/mL.</p>
             
+            <h4>This formula can also be used to calculate dilution series:</h4>
+            <p>A dilution series is a method for gradually diluting a starting solution. In this process, a solution is diluted by a constant factor in several steps.</p>
+            
+            <h4>Preparation of a dilution series:</h4>
+            <p>To prepare a dilution series, you can proceed step by step. For example, you can prepare a 1:10 dilution of the initial solution, then a 1:10 dilution of this dilution, and so on, to obtain a dilution series.</p>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li>Step 1: 1 ml of the stock solution + 9 ml of diluent = 1:10 dilution</li>
+                <li>Step 2: 1 ml of the 1:10 dilution + 9 ml of diluent = 1:100 dilution</li>
+                <li>Step 3: 1 ml of the 1:100 dilution + 9 ml of diluent = 1:1000 dilution</li>
+            </ul>
+            
             <div class="interactive-box">
                 <h4>Interactive: Dilution Calculator</h4>
-                <p class="text-sm mb-3">Enter any three values (C1, V1, C2, V2) and the units for concentration and volume. The calculator will determine the missing value.</p>
+                <p class="text-sm mb-3">Enter any three values (c1, V1, c2, V2) and the units for concentration and volume. The calculator will determine the missing value.</p>
                 <div class="calculator grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 items-end">
                     <div>
-                        <label for="c1_calc" class="block text-sm font-medium text-gray-700">C<sub>1</sub> (Stock Conc.):</label>
+                        <label for="c1_calc" class="block text-sm font-medium text-gray-700">c<sub>1</sub> (Stock Conc.):</label>
                         <input type="number" id="c1_calc" placeholder="e.g., 10" class="w-full mt-1"> 
                     </div>
                     <div>
@@ -84,7 +119,7 @@ function getContent() {
                         <input type="number" id="v1_calc" placeholder="e.g., ?" class="w-full mt-1"> 
                     </div>
                     <div>
-                        <label for="c2_calc" class="block text-sm font-medium text-gray-700">C<sub>2</sub> (Final Conc.):</label>
+                        <label for="c2_calc" class="block text-sm font-medium text-gray-700">c<sub>2</sub> (Final Conc.):</label>
                         <input type="number" id="c2_calc" placeholder="e.g., 1" class="w-full mt-1"> 
                     </div>
                     <div>
@@ -122,44 +157,6 @@ function getContent() {
                 </div>
             </div>
 
-            <h3>Cell Counting with a Hemocytometer (Neubauer Chamber)</h3>
-            <p>A hemocytometer is a specialized counting chamber slide used to determine the concentration of cells in a liquid sample.</p>
-            <img src="Neubauer-chamber-counting example.jpg" alt="Neubauer chamber counting grid with example cells" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
-            <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Example of cell counting in one square of a Neubauer grid. Green checks indicate cells to count; red X's indicate cells not to count based on a common counting rule (e.g., count cells on top and left lines, exclude bottom and right).</p>
-            
-            <p><strong>General Procedure:</strong></p>
-            <ol class="list-decimal list-inside bg-slate-100 p-3 rounded-md shadow-sm">
-                <li>Clean the hemocytometer and coverslip.</li>
-                <li>Mix your cell suspension thoroughly. Often, cells are mixed 1:1 with Trypan Blue stain (e.g., 10 &mu;L cells + 10 &mu;L Trypan Blue). Trypan Blue stains dead cells blue, allowing for viability assessment. This creates a <strong>dilution factor of 2</strong>.</li>
-                <li>Carefully load about 10 &mu;L of the cell suspension/Trypan Blue mixture into one side of the hemocytometer chamber. Avoid overfilling.</li>
-                <li>Under a microscope (typically at 10x objective), focus on the grid lines.</li>
-                <li>Count the cells in the 4 large corner squares (each 1mm &times; 1mm, subdivided into 16 smaller squares). For consistency, establish a counting rule (e.g., count cells touching the top and left lines, but not the bottom and right lines).</li>
-                <li>The volume of one large square (1mm x 1mm) with a standard coverslip depth of 0.1mm is 1mm &times; 1mm &times; 0.1mm = 0.1 mm<sup>3</sup> = 0.1 &mu;L = 1 x 10<sup>-4</sup> mL.</li>
-            </ol>
-            
-            <p><strong>Calculation:</strong></p>
-            <p><span class="formula">Cells/mL = (Average cells per large square) &times; Dilution Factor &times; 10<sup>4</sup></span></p>
-            <p>Where 10<sup>4</sup> is the conversion factor (since each large square is 10<sup>-4</sup> mL).</p>
-            
-            <div class="interactive-box">
-                <h4>Interactive: Cell Count Calculator</h4>
-                <p class="text-sm mb-3">Enter the total number of live (unstained) cells counted in the 4 large corner squares and the dilution factor used.</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 items-center">
-                    <div>
-                        <label for="cells-counted" class="block text-sm font-medium text-gray-700">Total live cells in 4 large squares:</label>
-                        <input type="number" id="cells-counted" placeholder="e.g., 240" class="w-full mt-1">
-                    </div>
-                    <div>
-                        <label for="dilution-factor" class="block text-sm font-medium text-gray-700">Dilution factor (e.g., 2 for 1:1 mix):</label>
-                        <input type="number" id="dilution-factor" value="2" class="w-full mt-1">
-                    </div>
-                    <div class="sm:col-span-2 mt-2">
-                        <button id="cell-density-btn" class="text-sm w-full">Calculate Cell Density (cells/mL)</button>
-                    </div>
-                </div>
-                <p id="cell-density-output" class="mt-3 font-semibold text-green-700"></p>
-            </div>
-            
             <h3>Practice Problems</h3>
             <p>Test your understanding with these common lab scenarios. Enter your answers and click "Check Answer".</p>
             <div id="practice-problems-container" class="space-y-6">
@@ -180,11 +177,11 @@ function getContent() {
                     <div id="bsa-dilution-feedback" class="practice-feedback text-sm mt-2 hidden"></div>
                     <div id="bsa-dilution-solution" class="solution-details hidden">
                         <strong>Detailed Solution:</strong><br>
-                        Using C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>2</sub>:<br>
-                        C<sub>1</sub> (Stock Conc.) = 100%<br>
-                        C<sub>2</sub> (Final Conc.) = 5%<br>
+                        Using c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>:<br>
+                        c<sub>1</sub> (Stock Conc.) = 100%<br>
+                        c<sub>2</sub> (Final Conc.) = 5%<br>
                         V<sub>2</sub> (Final Vol.) = 1 mL<br>
-                        V<sub>1</sub> (Stock BSA Vol.) = (C<sub>2</sub> &times; V<sub>2</sub>) / C<sub>1</sub> = (5% &times; 1 mL) / 100% = 0.05 mL.<br>
+                        V<sub>1</sub> (Stock BSA Vol.) = (c<sub>2</sub> &times; V<sub>2</sub>) / c<sub>1</sub> = (5% &times; 1 mL) / 100% = 0.05 mL.<br>
                         Convert to &mu;L: 0.05 mL &times; 1000 &mu;L/mL = <strong>50 &mu;L of 100% BSA stock</strong>.<br>
                         Volume of PBS (Diluent) = V<sub>2</sub> - V<sub>1</sub> = 1 mL - 0.05 mL = 0.95 mL.<br>
                         Convert to &mu;L: 0.95 mL &times; 1000 &mu;L/mL = <strong>950 &mu;L of PBS</strong>.
@@ -208,11 +205,11 @@ function getContent() {
                     <div id="triton-dilution-feedback" class="practice-feedback text-sm mt-2 hidden"></div>
                     <div id="triton-dilution-solution" class="solution-details hidden">
                         <strong>Detailed Solution:</strong><br>
-                        Using C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>2</sub>:<br>
-                        C<sub>1</sub> (Stock Conc.) = 10%<br>
-                        C<sub>2</sub> (Final Conc.) = 0.1%<br>
+                        Using c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>:<br>
+                        c<sub>1</sub> (Stock Conc.) = 10%<br>
+                        c<sub>2</sub> (Final Conc.) = 0.1%<br>
                         V<sub>2</sub> (Final Vol.) = 10 mL<br>
-                        V<sub>1</sub> (Stock Triton Vol.) = (C<sub>2</sub> &times; V<sub>2</sub>) / C<sub>1</sub> = (0.1% &times; 10 mL) / 10% = 0.1 mL.<br>
+                        V<sub>1</sub> (Stock Triton Vol.) = (c<sub>2</sub> &times; V<sub>2</sub>) / c<sub>1</sub> = (0.1% &times; 10 mL) / 10% = 0.1 mL.<br>
                         Convert to &mu;L: 0.1 mL &times; 1000 &mu;L/mL = <strong>100 &mu;L of 10% Triton X-100 stock</strong>.<br>
                         Volume of Diluent = V<sub>2</sub> - V<sub>1</sub> = 10 mL - 0.1 mL = <strong>9.9 mL</strong>.
                     </div>
@@ -240,27 +237,6 @@ function getContent() {
                         Volume of antibody stock (V<sub>stock</sub>) = V<sub>final</sub> / Dilution factor = 1200 &mu;L / 1000 = <strong>1.2 &mu;L</strong>.<br>
                         Volume of buffer = V<sub>final</sub> - V<sub>stock</sub> = 1200 &mu;L - 1.2 &mu;L = <strong>1198.8 &mu;L</strong>.<br>
                         <em>(Note: In practice, you'd prepare a bit extra, e.g., for 6.5 or 7 wells, to account for pipetting inaccuracies.)</em>
-                    </div>
-                </div>
-
-                <div class="practice-problem-box">
-                    <p class="font-semibold">4. Cell Plating:</p>
-                    <p>You have a cell stock with a concentration of 1 &times; 10<sup>6</sup> cells/mL. You want to plate 2 &times; 10<sup>5</sup> cells into each well. What volume of your cell stock do you need to add to each well?</p>
-                    <div class="mt-2 space-y-2 sm:space-y-0 sm:flex sm:items-end sm:gap-3">
-                        <div>
-                            <label for="cell-plating-input" class="block text-xs font-medium text-gray-600">Cell Stock Volume per well (&mu;L):</label>
-                            <input type="number" id="cell-plating-input" placeholder="e.g., 200" class="text-sm p-1 w-48">
-                        </div>
-                        <button id="check-plating-btn" class="text-sm px-3 py-1.5">Check Answer</button>
-                    </div>
-                    <div id="cell-plating-feedback" class="practice-feedback text-sm mt-2 hidden"></div>
-                    <div id="cell-plating-solution" class="solution-details hidden">
-                        <strong>Detailed Solution:</strong><br>
-                        Desired cells per well = 2 &times; 10<sup>5</sup> cells.<br>
-                        Stock concentration = 1 &times; 10<sup>6</sup> cells/mL.<br>
-                        Volume needed per well = (Desired cells per well) / (Stock concentration)<br>
-                        Volume = (2 &times; 10<sup>5</sup> cells) / (1 &times; 10<sup>6</sup> cells/mL) = 0.2 mL.<br>
-                        Convert to &mu;L: 0.2 mL &times; 1000 &mu;L/mL = <strong>200 &mu;L per well</strong>.
                     </div>
                 </div>
             </div>
@@ -321,6 +297,18 @@ function convertUnits() {
     }
 }
 
+function convertMolar() {
+    const mInput = document.getElementById('m-input');
+    const outputP = document.getElementById('um-output');
+    if (!mInput || !outputP) return;
+    const mVal = parseFloat(mInput.value);
+    if (!isNaN(mVal)) {
+        outputP.innerHTML = `${mVal} M = <span class="font-bold">${mVal * 1000000} &mu;M</span>`;
+    } else {
+        outputP.textContent = 'Please enter a valid number for M.';
+    }
+}
+
 function calculateDilution() {
     const c1El = document.getElementById('c1_calc'), v1El = document.getElementById('v1_calc');
     const c2El = document.getElementById('c2_calc'), v2El = document.getElementById('v2_calc');
@@ -348,39 +336,24 @@ function calculateDilution() {
     if (isNaN(c1)) {
         if (v1 === 0) { resultP.textContent = "Error: V1 cannot be zero."; return; }
         const val = (c2 * v2) / v1;
-        calculatedValueStr = `Calculated Stock Concentration (C<sub>1</sub>) = <strong>${val.toFixed(3)} ${concUnits}</strong>`;
+        calculatedValueStr = `Calculated Stock Concentration (c<sub>1</sub>) = <strong>${val.toFixed(3)} ${concUnits}</strong>`;
     } else if (isNaN(v1)) {
-        if (c1 === 0) { resultP.textContent = "Error: C1 cannot be zero."; return; }
+        if (c1 === 0) { resultP.textContent = "Error: c1 cannot be zero."; return; }
         const val = (c2 * v2) / c1;
         calculatedValueStr = `Calculated Stock Volume (V<sub>1</sub>) = <strong>${val.toFixed(3)} ${volUnits}</strong>`;
         calculationStepsStr = `You need ${val.toFixed(3)} ${volUnits} of stock and ${(v2 - val).toFixed(3)} ${volUnits} of diluent.`;
     } else if (isNaN(c2)) {
         if (v2 === 0) { resultP.textContent = "Error: V2 cannot be zero."; return; }
         const val = (c1 * v1) / v2;
-        calculatedValueStr = `Calculated Final Concentration (C<sub>2</sub>) = <strong>${val.toFixed(3)} ${concUnits}</strong>`;
+        calculatedValueStr = `Calculated Final Concentration (c<sub>2</sub>) = <strong>${val.toFixed(3)} ${concUnits}</strong>`;
     } else if (isNaN(v2)) {
-        if (c2 === 0) { resultP.textContent = "Error: C2 cannot be zero."; return; }
+        if (c2 === 0) { resultP.textContent = "Error: c2 cannot be zero."; return; }
         const val = (c1 * v1) / c2;
         calculatedValueStr = `Calculated Final Volume (V<sub>2</sub>) = <strong>${val.toFixed(3)} ${volUnits}</strong>`;
     }
     
     resultP.innerHTML = calculatedValueStr;
     stepsP.innerHTML = calculationStepsStr;
-}
-
-function calculateCellDensity() {
-    const cellsCounted = parseInt(document.getElementById('cells-counted').value);
-    const dilutionFactor = parseFloat(document.getElementById('dilution-factor').value);
-    const outputP = document.getElementById('cell-density-output');
-    if (!outputP) return;
-
-    if (isNaN(cellsCounted) || isNaN(dilutionFactor) || cellsCounted < 0 || dilutionFactor <= 0) {
-        outputP.textContent = "Please enter valid, positive numbers.";
-        return;
-    }
-    const avgCellsPerSquare = cellsCounted / 4;
-    const cellsPerMilliLiter = avgCellsPerSquare * dilutionFactor * 10000;
-    outputP.innerHTML = `Calculated Cell Density: <strong>${cellsPerMilliLiter.toExponential(2)} cells/mL</strong>`;
 }
 
 function checkPracticeAnswer(problemId, correctAnswers, inputIds) {
@@ -406,40 +379,3 @@ function checkPracticeAnswer(problemId, correctAnswers, inputIds) {
     if (allCorrect) {
         feedbackDiv.textContent = 'Correct!';
     } else {
-        feedbackDiv.innerHTML = 'One or more answers are incorrect. Please review the solution below.';
-    }
-}
-
-export default function initModule2(rootEl, sidebarEl) {
-    // 1. Add sidebar link
-    const link = document.createElement('a');
-    link.href = '#module-2';
-    link.textContent = TITLE;
-    link.className = 'sidebar-link block px-3 py-2 rounded-md';
-    // NEW, CORRECTED CODE
-    sidebarEl.querySelector('#sidebar-links').appendChild(link);;
-
-    // 2. Inject content
-    rootEl.innerHTML = getContent();
-
-    // Add quiz container
-    const quizHtml = `
-        <div class="mt-8 pt-6 border-t-2 border-purple-300">
-            <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
-            <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
-            <div id="quiz-container-module-2"></div>
-        </div>`;
-    rootEl.insertAdjacentHTML('beforeend', quizHtml);
-    
-    // 3. Attach event listeners
-    document.getElementById('unit-convert-btn')?.addEventListener('click', convertUnits);
-    document.getElementById('dilution-calc-btn')?.addEventListener('click', calculateDilution);
-    document.getElementById('cell-density-btn')?.addEventListener('click', calculateCellDensity);
-    document.getElementById('check-bsa-btn')?.addEventListener('click', () => checkPracticeAnswer('bsa-dilution', [50, 950], ['bsa-stock-input', 'pbs-input']));
-    document.getElementById('check-triton-btn')?.addEventListener('click', () => checkPracticeAnswer('triton-dilution', [100, 9.9], ['triton-stock-input', 'triton-diluent-input']));
-    document.getElementById('check-antibody-btn')?.addEventListener('click', () => checkPracticeAnswer('antibody-dilution', [1.2, 1198.8], ['antibody-stock-input', 'antibody-buffer-input']));
-    document.getElementById('check-plating-btn')?.addEventListener('click', () => checkPracticeAnswer('cell-plating', [200], ['cell-plating-input']));
-
-    // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-2');
-}

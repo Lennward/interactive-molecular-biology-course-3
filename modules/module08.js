@@ -1,236 +1,238 @@
-const TITLE = "Module 3: Cellular Alchemy: The Art of Transfection";
+const TITLE = "Module 8: Passaging and Seeding of mammalian cells";
 const QUIZ_DATA = [
     {
-        question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",
-        options: ["To provide nutrients to the cells", "To permeabilize the cell membrane", "To form a DNA-calcium phosphate co-precipitate", "To select for transfected cells"],
-        answer: "To form a DNA-calcium phosphate co-precipitate",
+        question: "You count an average of 60 live cells per large square in a Neubauer hemocytometer. Your cells were diluted 1:2 with Trypan Blue before counting. What is the concentration of live cells in your original sample (cells/mL)?",
+        options: ["0.6 × 10⁴ cells/mL", "1.2 × 10⁵ cells/mL", "6.0 × 10⁵ cells/mL", "1.2 × 10⁶ cells/mL"],
+        answer: "1.2 × 10⁶ cells/mL",
         type: "mcq",
-        explanation: "2x BBS (Buffered Saline Solution) provides the phosphate ions that react with calcium chloride and DNA to form the fine precipitate that cells can take up."
-    },
-    {
-        question: "True or False: For optimal calcium phosphate transfection, cells should ideally be 100% confluent.",
-        options: ["True", "False"],
-        answer: "False",
-        type: "tf",
-        explanation: "Cells should be actively dividing and typically at a confluency of 50-70% for efficient calcium phosphate transfection. 100% confluency often leads to lower efficiency."
-    },
-    {
-        question: "Which of the following is NOT a critical factor for successful calcium phosphate transfection?",
-        options: ["pH of the BBS solution", "Quality and quantity of plasmid DNA", "Vigorous vortexing after adding BBS", "Cell health and confluency"],
-        answer: "Vigorous vortexing after adding BBS",
-        type: "mcq",
-        explanation: "Vigorous vortexing after adding BBS can lead to large, irregular precipitates and shear DNA, reducing transfection efficiency. Gentle mixing by inversion is recommended."
+        explanation: "Cells/mL = (Avg cells per square) × Dilution Factor × 10⁴ = 60 × 2 × 10⁴ = 120 × 10⁴ = 1.2 × 10⁶ cells/mL."
     }
 ];
 
 function getContent() {
     return `
         <div class="module-content">
-            <h2>Module 3: Cellular Alchemy: The Art of Transfection</h2>
-            <p>Welcome to the fascinating world of transfection! In this module, you'll learn how to introduce foreign genetic material into cells, a cornerstone technique in molecular biology that allows us to study gene function, produce proteins, and much more. It's like giving cells a new set of instructions!</p>
+            <h2>Module 8: Passaging and Seeding of mammalian cells</h2>
             
-            <h3>I. Module Overview & Learning Objectives</h3>
-            <p>This module will guide you through the principles and practical steps of transfecting eukaryotic cells, focusing on the calcium phosphate method.</p>
-            <ul class="list-disc list-inside mb-4 bg-sky-50 p-3 rounded-md">
-                <li>Understand the definition and goals of transfection.</li>
-                <li>Differentiate between transient and stable transfection.</li>
-                <li>Get an overview of various transfection methods and their applications.</li>
-                <li>Master the calcium phosphate transfection protocol for HEK293 cells.</li>
-                <li>Learn to calculate necessary reagent and plasmid amounts.</li>
-                <li>Identify key factors for successful transfection and basic troubleshooting.</li>
-            </ul>
-
-            <h3>II. Content Sections</h3>
+            <p>In order to use cells for experiments, they are kept in culture and must be cared for. Every 3-4 days, cells are passaged, i.e., only a certain portion of the cells is used for further cultivation, and they are given new nutrients. During passaging, some of the cells that are no longer needed for further cultivation can be used for experiments. To do this, this portion of the cells is seeded in plates or dishes after the first steps of passaging.</p>
             
-            <h4 class="styled-h4">A. Introduction to Transfection</h4>
-            <p><strong>What is Transfection?</strong><br>
-            Transfection is a powerful biotechnological process used to introduce foreign nucleic acids – most commonly plasmid DNA – into eukaryotic cells. This allows scientists to manipulate the genetic makeup of cells in a controlled manner.</p>
-            
-            <p><strong>Goals of Transfection:</strong><br>
-            The primary goals include:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <div class="goal-box"><strong>Gene Expression</strong><p class="text-sm">Introducing a gene to produce a specific protein (e.g., a fluorescent marker like GFP, or a therapeutic protein).</p></div>
-                <div class="goal-box"><strong>Gene Silencing/Knockdown</strong><p class="text-sm">Introducing constructs (like siRNA or shRNA) to reduce or eliminate the expression of a specific endogenous gene.</p></div>
-                <div class="goal-box"><strong>Reporter Assays</strong><p class="text-sm">Studying the activity of promoters or other regulatory elements by linking them to a reporter gene.</p></div>
-                <div class="goal-box"><strong>Protein Production</strong><p class="text-sm">Using cells as factories to produce large quantities of a desired protein.</p></div>
-            </div>
-            
+            <p>In this course we will work with HEK293 cells.</p>
 
-            <p><strong>Transient vs. Stable Transfection:</strong><br>
-            Transfection can be either transient or stable:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Transient Transfection:</strong> The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</li>
-                <li><strong>Stable Transfection:</strong> The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</li>
-            </ul>
-            </p>
-            <img src="placeholder_transfection_overview.svg" alt="Schematic of plasmid DNA entering a cell and leading to protein expression" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
+            <h3>HEK293 Cells</h3>
+            <p><strong>HEK293 cells:</strong> are eukaryotes derived from <u><strong>H</strong></u>uman <u><strong>E</strong></u>mbryonic <u><strong>K</strong></u>idney cells. The number 293 refers to the specific cell line that was produced in the 1970s by transformation with a fragment of adenovirus type 5. HEK293 cells are among the most frequently used cell lines in molecular biology. They are adherent epithelial cells commonly used for their high transfection efficiency and protein production capabilities.</p>
 
-            <h4 class="styled-h4">B. Overview of Transfection Methods</h4>
-            <p><strong>The Variety of Methods:</strong><br>
-            There are numerous ways to get nucleic acids into cells, broadly categorized as:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Chemical Methods:</strong> These involve using reagents that complex with DNA and facilitate its entry into cells. Examples include:
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Calcium Phosphate Precipitation:</strong> The method we'll use! DNA is mixed with calcium chloride and phosphate buffer, forming fine DNA-calcium phosphate co-precipitates that are taken up by cells via endocytosis. It's cost-effective and works well for many adherent cell lines like HEK293.</li>
-                        <li><strong>Lipid-based (Lipofection):</strong> Cationic lipids form complexes (lipoplexes) with negatively charged DNA, which then fuse with the cell membrane or are endocytosed. Reagents like Lipofectamine™ are common.</li>
-                        <li><strong>Cationic Polymers:</strong> Polymers like Polyethylenimine (PEI) or dendrimers bind DNA and form polyplexes, which are then endocytosed.</li>
-                    </ul>
-                </li>
-                <li><strong>Physical Methods:</strong> These use physical force to create transient pores in the cell membrane.
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Electroporation:</strong> Cells are exposed to a brief electrical pulse, creating temporary pores for DNA entry. Very efficient for many cell types, including those hard to transfect by chemical means.</li>
-                        <li><strong>Microinjection:</strong> DNA is directly injected into the cytoplasm or nucleus using a fine glass micropipette. Precise but low-throughput.</li>
-                        <li><strong>Gene Gun (Biolistics):</strong> DNA-coated gold or tungsten particles are shot into cells or tissues.</li>
-                    </ul>
-                </li>
-                <li><strong>Viral Methods (Transduction):</strong> Recombinant viruses (e.g., lentiviruses, adenoviruses, AAV) are used as vectors to deliver genetic material. Often very high efficiency, even in primary cells and in vivo, and can be used for stable integration.</li>
-            </ul>
-            In this course, we will focus on the <strong>Calcium Phosphate Precipitation</strong> method due to its effectiveness with HEK293 cells and its historical significance.
-            </p>
-            <div class="interactive-box">
-                <h4>Interactive Box 1: The Agony of Choice: Which Method for Which Purpose?</h4>
-                <p class="text-sm mb-2">Scenario: Imagine you want to express proteins quickly and cost-effectively in robust HEK293 cells. Which of the following methods would be most suitable for this project and our course?</p>
-                <div id="transfection-method-choice-quiz" class="space-y-1"></div>
-                <div id="transfection-method-choice-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
-            </div>
+            <p>Adherent cells grow as a monolayer (a single layer) until they reach confluence, meaning that the cells form a continuous layer without gaps. The cells then stop growing because they are subject to contact inhibition.</p>
 
-            <h4 class="styled-h4">C. In Detail: Calcium Phosphate Transfection</h4>
-            <p><strong>The Principle – Magic with Calcium and Phosphate:</strong><br>
-            The calcium phosphate method relies on a simple chemical trick. Negatively charged plasmid DNA is mixed with calcium chloride (CaCl₂). When a phosphate-buffered saline solution (like 2x BBS - HEPES Buffered Saline) is added, insoluble calcium phosphate-DNA co-precipitates form. These fine, crystalline particles settle onto adherent cells. Cells naturally take up these particles through endocytosis (a process where the cell membrane engulfs external material). Once inside the cell, some of the DNA escapes the endosomes, makes its way to the nucleus, and can then be transcribed and translated by the cell's machinery to produce the desired protein (e.g., GFP or your FLAG-tagged protein).</p>
+            <p>At this point at the latest, the cells should be passaged/split, i.e., divided. To do this, they are detached from the culture vessel using trypsin, a protease, and resuspended in serum-containing medium (the serum inhibits trypsin). In order to track the age of a cell culture, the number of subcultures is noted on the culture dish. Subcultivation is often referred to as "passaging" in laboratory jargon, which is why the age is indicated in the form of "passages," e.g., "P21."</p>
 
-            <p><strong>Our Tools and Ingredients:</strong>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cells:</strong> HEK293 cells (Human Embryonic Kidney cells, adherent).</li>
-                <li><strong>Plasmids:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>pH2B-GFP (Concentration: e.g., 682.3 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                        <li>pRKV-FLAG (Concentration: 1015 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                    </ul>
-                </li>
-                <li><strong>Main Reagents:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>0.25 M CaCl₂ solution</li>
-                        <li>2x BBS (Buffered Saline Solution, typically HEPES-buffered, pH is critical, usually around 7.05-7.12)</li>
-                    </ul>
-                </li>
-            </ul>
-            </p>
-            <img src="placeholder_calcium_phosphate_mechanism.svg" alt="Schematic of calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">
-
-            <h4 class="styled-h4">The Protocol – Step by Step to Success:</h4>
-            <p class="text-sm italic">The following protocol is for transfecting <strong>one well</strong> of a 24-well plate. Remember to scale up your calculations for the total number of wells you plan to transfect for each plasmid, and always prepare a little extra (e.g., 10%) to account for pipetting inaccuracies!</p>
-            
             <div class="highlight-note">
-                <p><strong>Crucial Reminder:</strong> Always prepare all solutions for the required number of wells PLUS 10% extra volume to account for pipetting errors!</p>
+                <p><strong>Confluency:</strong> Proportion of the vessel's surface that is covered by cells. Cells should be split when they are at 70% confluency.</p>
             </div>
 
-            <ol class="list-decimal list-inside space-y-3">
-                <li>
-                    <strong>Prepare Solution (per well):</strong>
-                    <ul class="list-disc list-inside ml-5 mt-1 text-sm space-y-1">
-                        <li>In a sterile 1.5 mL microcentrifuge tube (Eppendorf tube), add <strong>25 µL of 0.25 M CaCl₂</strong>.</li>
-                        <li>
-                            <strong>Add Plasmid DNA:</strong> Add <strong>0.3 - 0.5 µg</strong> of your desired plasmid (pH2B-GFP or pRKV-FLAG) to the CaCl₂.
-                            <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
-                                <p><strong>Attention, Pipetting Pros!</strong> Pipetting volumes less than 2 µL is highly inaccurate. If your calculated volume is too small, consider preparing a master mix. For example, if you need 0.5 µL per well and are doing 4 wells, prepare a mix for 4.4 wells (4 wells + 10% extra), so 0.5 µL/well * 4.4 wells = 2.2 µL plasmid in a larger volume of CaCl₂.</p>
-                                <p class="mt-1"><strong>Storage & Handling:</strong> Plasmids are stored in the freezer. Always keep plasmids on ice when outside the freezer.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Interactive Box 2: "Plasmid Calculation Wizards Wanted!"</strong>
-                    <div class="interactive-box">
-                        <h4>Plasmid Calculation Practice</h4>
-                        <p class="text-sm mb-2"><strong>Scenario 1: Volume Calculation</strong><br>You want to use 0.4 µg of Plasmid pH2B-GFP. Its stock concentration is 682.3 ng/µL. How many µL of the stock solution do you need?</p>
-                        <div class="calculator grid grid-cols-1 sm:grid-cols-2 gap-2 items-end mb-4">
-                            <div>
-                                <label for="desired_mass_pg" class="block text-xs font-medium text-gray-700">Desired Mass (µg):</label>
-                                <input type="number" id="desired_mass_pg" value="0.4" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div>
-                                <label for="stock_conc_pg" class="block text-xs font-medium text-gray-700">Stock Conc. (ng/µL):</label>
-                                <input type="number" id="stock_conc_pg" value="682.3" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <button id="plasmid-calc-btn" class="w-full py-1.5 text-sm">Calculate Volume</button>
-                            </div>
-                        </div>
-                        <div id="plasmid-volume-result-container" class="p-2 bg-white rounded-md shadow text-sm hidden">
-                            <p id="plasmid-volume-result" class="font-semibold text-purple-700"></p>
-                        </div>
+            <img src="images/image81.png" alt="Cell confluency diagram showing different confluence levels" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
 
-                        <p class="text-sm mb-2 mt-4"><strong>Scenario 2: Handling Small Volumes</strong><br>The calculated volume from Scenario 1 is approximately 0.586 µL. Can this be pipetted accurately and directly with standard lab pipettes? (Select Yes or No)</p>
-                        <div id="small-volume-quiz" class="space-y-1 mb-2">
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="false">Yes, it's fine.</button>
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="true">No, it's too small for accurate direct pipetting.</button>
-                        </div>
-                        <div id="small-volume-feedback" class="feedback-message text-xs mt-1 p-1.5 rounded-md hidden"></div>
+            <h3>Cell Counting with a Hemocytometer (Neubauer Chamber)</h3>
+            <p>A hemocytometer is a specialized counting chamber slide used to determine the concentration of cells in a liquid sample.</p>
+
+            <img src="images/image82.jpg" alt="Neubauer chamber counting grid with example cells" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
+            <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Example of cell counting in <strong>one big</strong> square of a Neubauer grid. Green checks indicate cells to count; red X's indicate cells not to count based on a common counting rule (e.g., count cells on top and left lines, exclude bottom and right).</p>
+
+            <h4 class="styled-h4">General Procedure</h4>
+            <ol class="list-decimal list-inside bg-slate-100 p-3 rounded-md shadow-sm">
+                <li>Under a microscope (typically at 10x objective), focus on the grid lines.</li>
+                <li>Count the cells in the 4 large corner squares (each 1mm × 1mm, subdivided into 16 smaller squares). For consistency, establish a counting rule (e.g., count cells touching the top and left lines, but not the bottom and right lines).</li>
+            </ol>
+
+            <h4 class="styled-h4">Calculation</h4>
+            <p><span class="formula">Cells/mL = (Average cells per large square) × Dilution Factor × 10⁴</span></p>
+            <p>The dilution factor is only important if you diluted the cell suspension. This is often done in Trypan Blue, as this reagent stains dead cells blue. A typical dilution would be 1:10 or 1:2, i.e. dilution factor 10 or 2.</p>
+            <p>10⁴ is the conversion factor (since each large square is 10⁻⁴ mL).</p>
+
+            <div class="interactive-box">
+                <h4>Interactive: Cell Count Calculator</h4>
+                <p class="text-sm mb-3">Enter the total number of live (unstained) cells counted in the 4 large corner squares and the dilution factor used.</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 items-center">
+                    <div>
+                        <label for="cells-counted-8" class="block text-sm font-medium text-gray-700">Total live cells in 4 large squares:</label>
+                        <input type="number" id="cells-counted-8" placeholder="e.g., 240" class="w-full mt-1">
                     </div>
-                </li>
-                <li>
-                    <strong>The Magic Ingredient:</strong> Slowly, while gently vortexing or flicking the tube containing the CaCl₂-DNA mixture, add <strong>25 µL of 2x BBS</strong>. *Critical: Add BBS to DNA/CaCl₂, not the other way around for optimal precipitate formation.*
-                </li>
-                <li>
-                    <strong>Mix Gently:</strong> Immediately after adding BBS, cap the tube and gently invert it 4-5 times to mix. **DO NOT VORTEX** at this stage, as it can shear the DNA or lead to suboptimal precipitate size.
-                </li>
-                <li>
-                    <strong>Patience Test (Precipitate Formation):</strong> Incubate the mixture for <strong>15 minutes at room temperature (RT)</strong>.
-                     <div class="text-xs p-2 mt-1 bg-orange-50 border-l-4 border-orange-400 text-orange-700 rounded-r-md">
-                        <em>Note on Centrifugation: Some older protocols mention a brief centrifugation. This step is not typical for modern CaPi protocols as it might compact the precipitate too much. We will proceed without centrifugation.</em>
+                    <div>
+                        <label for="dilution-factor-8" class="block text-sm font-medium text-gray-700">Dilution factor (e.g., 2 for 1:2 mix):</label>
+                        <input type="number" id="dilution-factor-8" value="2" class="w-full mt-1">
                     </div>
-                </li>
-                <li>
-                    <strong>"Feed" the Cells:</strong> After the 15-minute incubation, gently resuspend the fine precipitate and add <strong>50 µL of this suspension dropwise</strong> onto the cells in one well of a 24-well plate.
-                </li>
-                <li>
-                    <strong>Interactive Box 3: "My Plate Layout – Who Gets What?"</strong>
-                    <div class="interactive-box">
-                        <h4>Experimental Plate Setup</h4>
-                        <p class="text-sm mb-2">Plan your experiment! This is a conceptual representation.</p>
-                        <img src="placeholder_24_well_plate_interactive.png" alt="Schematic of a 24-well plate for transfection planning" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto bg-gray-200 p-2" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Placeholder:+24-Well+Plate'; this.alt='Placeholder: 24-Well Plate';">
-                        <p class="text-xs text-gray-600">Example conditions: Well A1: Untransfected Control, Well A2: pH2B-GFP, Well A3: pRKV-FLAG.</p>
+                    <div class="sm:col-span-2 mt-2">
+                        <button id="cell-density-btn-8" class="text-sm w-full">Calculate Cell Density (cells/mL)</button>
                     </div>
-                </li>
-                <li>
-                    <strong>Gentle Distribution:</strong> After adding the precipitate, gently swirl the plate in a "figure-eight" motion to ensure even distribution.
-                </li>
-                <li>
-                    <strong>Off to the Incubator:</strong> Place the plate carefully into the 37°C incubator with 5% CO₂ and incubate overnight (16-24 hours).
-                </li>
-                <li>
-                    <strong>Curious Observation:</strong>
-                    <p class="text-sm">The next day, check your cells under a phase-contrast microscope. Note any changes in cell morphology. Calcium phosphate precipitates can sometimes be slightly toxic, appearing as small, dark granules on or around them.</p>
-                    <img src="placeholder_HEK_cells_CaPi_phase_contrast.jpg" alt="HEK cells under phase contrast after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+HEK+Cells+CaPi'; this.alt='Placeholder: HEK Cells CaPi';">
+                </div>
+                <p id="cell-density-output-8" class="mt-3 font-semibold text-green-700"></p>
+            </div>
+
+            <div class="practice-problem-box">
+                <p class="font-semibold">Practice Problem: Cell Plating</p>
+                <p>You have a cell stock with a concentration of 1 × 10⁶ cells/mL. You want to plate 2 × 10⁵ cells into each well. What volume of your cell stock do you need to add to each well?</p>
+                <div class="mt-2 space-y-2 sm:space-y-0 sm:flex sm:items-end sm:gap-3">
+                    <div>
+                        <label for="cell-plating-input-8" class="block text-xs font-medium text-gray-600">Cell Stock Volume per well (μL):</label>
+                        <input type="number" id="cell-plating-input-8" placeholder="e.g., 200" class="text-sm p-1 w-48">
+                    </div>
+                    <button id="check-plating-btn-8" class="text-sm px-3 py-1.5">Check Answer</button>
+                </div>
+                <div id="cell-plating-feedback-8" class="practice-feedback text-sm mt-2 hidden"></div>
+                <div id="cell-plating-solution-8" class="solution-details hidden">
+                    <strong>Detailed Solution:</strong><br>
+                    Desired cells per well = 2 × 10⁵ cells.<br>
+                    Stock concentration = 1 × 10⁶ cells/mL.<br>
+                    Volume needed per well = (Desired cells per well) / (Stock concentration)<br>
+                    Volume = (2 × 10⁵ cells) / (1 × 10⁶ cells/mL) = 0.2 mL.<br>
+                    Convert to μL: 0.2 mL × 1000 μL/mL = <strong>200 μL per well</strong>.
+                </div>
+            </div>
+
+            <h3>Materials</h3>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li>Waste bottle</li>
+                <li>5mL glass pipettes</li>
+                <li>New small cell culture bottle (T25 flask)</li>
+                <li>Culture medium with additives (see Module "Introduction to Cell Culture"), trypsin</li>
+                <li>15mL Falcon</li>
+                <li>Pipettes P1000 / P200 and corresponding filter tips</li>
+                <li>Pipetboy</li>
+            </ul>
+
+            <h3>Protocol</h3>
+            <div class="space-y-4">
+                <div class="highlight-note">
+                    <p>Before starting, warm up the medium, PBS, and trypsin in the incubator for at least 30 minutes (in a glass beaker to collect condensation and slightly loosen the Falcon tube with medium).</p>
+                </div>
+
+                <ol class="list-decimal list-inside space-y-3">
+                    <li>Before starting work, generously disinfect the work surface with 80% EtOH.</li>
+                    <li>Disinfect all necessary materials with 80% EtOH and place them in the sterile workbench.</li>
+                    <li>Further preparation in the sterile workbench: Unscrew the medium bottle caps, but do not remove them; open the pipette box for the glass pipettes; prepare the waste bottle.</li>
+                    <li>Remove the cells from the incubator and check: Are the cells alive? Are the cells sitting at the bottom or floating in the medium? Is the medium clear and bright red?</li>
+                    <li>Place the cell culture bottle in the sterile workbench and disinfect your gloves.</li>
+                    <li>Loosen the lid of the cell culture bottle.</li>
+                    <li>Take a serological pipette in a sterile manner (do not touch anything) and remove and discard the old medium using a Pipet-Boy. Place the glass pipette in the waste container.</li>
+                    <li>Add 4 mL of 1xPBS (washing solution) to the bottle (without detaching the cells, drop onto the other side of the bottle) and tilt over the cell layer to "wash" the cells, remove the PBS and discard.</li>
+                    <li>Add 1 mL trypsin to the bottle and tilt gently (!) so that all cells are/were in contact with trypsin, then incubate for 2-5 min at 37°C to detach the cells from the bottom (the vessel may require a few gentle taps). Cell detachment can be verified microscopically.</li>
+                    <li>Rinse the cells from the bottle wall with 4 mL of fresh medium until no cell lawn is visible.</li>
+                    <li>Separate the cells by slow (!) resuspension.</li>
+                    <li>Transfer to a new 15 mL Falcon tube and centrifuge for 2 min at 2000 rpm.</li>
+                </ol>
+
+                <div class="highlight-note">
+                    <p><strong>Afterwards, cells can be passaged (and plated if necessary). The protocol splits at this point!</strong></p>
+                </div>
+            </div>
+
+            <h4 class="styled-h4">Option 1: Passaging cells</h4>
+            <ul class="list-disc list-inside ml-4 space-y-2">
+                <li>Meanwhile, prepare a new cell culture bottle, label it with the cell line, date, initials, and add 5 mL of fresh medium to this bottle.</li>
+                <li>After centrifugation, discard the supernatant (pour it into the waste container, but do not touch it) and resuspend the cell pellet in 1 mL of fresh medium.</li>
+                <li>Transfer 250 μL of cells (split factor: 1:4) to the new prepared cell culture bottle (several new bottles can also be prepared).</li>
+                <li>Swirl "in a cross" so that the cells are evenly distributed on the bottom and place in the incubator.</li>
+            </ul>
+
+            <h4 class="styled-h4">Option 2: Plate cells</h4>
+            <p>We are using a 24 well plate (see Module "Introduction to Cell Culture" for growth area & volume of culture medium)</p>
+
+            <ol class="list-decimal list-inside space-y-2">
+                <li>After centrifugation, discard the supernatant (pour it into the waste container, but do not touch it) and resuspend the cell pellet in 1 mL of fresh medium.</li>
+                <li>Take a new Eppi and mix 10 μL of cell suspension 1:10 with trypan blue (= 90 μl), flick the tube briefly and place 10 μL of the mixture in a Neubauer counting chamber and determine the number of cells
+                    <ul class="list-disc list-inside ml-4 mt-2">
+                        <li>for this you need a light microscope and a Neubauer counting chamber</li>
+                    </ul>
                 </li>
             </ol>
 
-            <h4 class="styled-h4">D. Important Tips & Troubleshooting Corner</h4>
-            <p>Successful transfection is an art as much as a science! Here are some key factors:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cell Confluency:</strong> Aim for 50-70% confluency for optimal results.</li>
-                <li><strong>DNA Quality & Quantity:</strong> Use high-purity, endotoxin-free DNA.</li>
-                <li><strong>pH of BBS:</strong> This is CRITICAL. A pH between 7.05 and 7.12 is required for proper precipitate formation.</li>
-                <li><strong>Pipetting Skills & Sterility:</strong> Accuracy and strict aseptic technique are paramount.</li>
-            </ul>
+            <img src="images/image83.png" alt="Neubauer counting chamber under the microscope" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
+            <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Fig.: Neubauer counting chamber under the microscope</p>
+
+            <ol class="list-decimal list-inside space-y-2" start="3">
+                <li>Moisten the bridges of the Neubauer counting chamber with water (or breathe on them), place the cover glass on top and press down until the "Newton's rings" (rainbow-like) are visible.</li>
+                <li>Carefully fill one side of the Neubauer counting chamber with 10 μL of the 1:10 trypan blue diluted cell suspension (as described above).</li>
+                <li>If cell clumps are still present, then the cell suspension has not yet been adequately triturated/mixed → triturate cell suspension (pipette up and down) 10-20 times and use a new Eppi and dilute cell suspension in trypan blue as before and check again.</li>
+                <li>Many dead cells mean that the trituration was too coarse.</li>
+                <li>Count the cells under the microscope (10x/20x objective). Count the round/spherical (living) cells in the 4×4 squares (see L).</li>
+                <li>These are colorless = alive, while blue cells are dead (do not count blue cells!). Trypan blue is a cell-impermeant, blue-colored dye that binds strongly to proteins. Accordingly, it weakly labels the membrane of living cells, and strongly labels proteinaceous debris as well as the cytoplasm of dead and dying cells whose plasma membranes are no longer intact.</li>
+            </ol>
+
+            <h4 class="styled-h4">Calculation for adjusting the cell count</h4>
+            <p>The total number of cells in the 4 squares (L) is divided by 4 to determine the mean value.</p>
+
             <div class="interactive-box">
-                <h4>Interactive Box 4: What Went Wrong? – Transfection Troubleshooting</h4>
-                <div id="transfection-troubleshooting-quiz"></div>
+                <h4>Cell Counting Worksheet</h4>
+                <table class="w-full border-collapse border border-gray-300 mb-4">
+                    <thead>
+                        <tr class="bg-purple-100">
+                            <th class="border border-gray-300 p-2 text-left font-semibold">Large square (L)</th>
+                            <th class="border border-gray-300 p-2 text-left font-semibold">Number of cells (cells/square)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-2">1</td>
+                            <td class="border border-gray-300 p-2">
+                                <input type="number" id="square1" class="w-full p-1 border rounded" placeholder="Count">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2">2</td>
+                            <td class="border border-gray-300 p-2">
+                                <input type="number" id="square2" class="w-full p-1 border rounded" placeholder="Count">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2">3</td>
+                            <td class="border border-gray-300 p-2">
+                                <input type="number" id="square3" class="w-full p-1 border rounded" placeholder="Count">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2">4</td>
+                            <td class="border border-gray-300 p-2">
+                                <input type="number" id="square4" class="w-full p-1 border rounded" placeholder="Count">
+                            </td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="border border-gray-300 p-2 font-semibold">Average</td>
+                            <td class="border border-gray-300 p-2">
+                                <span id="average-result" class="font-semibold">---</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="calculate-average" class="mb-4">Calculate Average</button>
+                
+                <div id="calculation-results" class="hidden bg-blue-50 p-4 rounded-md">
+                    <p class="font-semibold mb-2">Calculation Results:</p>
+                    <p class="text-sm">L₁ + L₂ + L₃ + L₄ = L_total</p>
+                    <p class="text-sm">L_total ÷ 4 = L_mean</p>
+                    <p class="text-sm">L_mean = <span id="mean-value" class="font-semibold">---</span></p>
+                    <p class="text-sm mt-2"><strong>Final calculation:</strong></p>
+                    <p class="text-sm">mean × dilution factor (Trypan blue) × 10⁴ = <span id="final-calculation" class="font-semibold">---</span> × 10⁴ cells/mL = <span id="final-result" class="font-semibold">---</span> × 10⁶ cells/mL</p>
+                    <p class="text-xs text-gray-600 mt-2">(10⁴ = Constant factor resulting from the size of the counting chamber, since the area of a square (L) is 1 mm × 1 mm = 1 mm² and the depth is 0.1 mm → volume = 0.1 mm³ = 1 × 10⁻⁴ ml and you want to calculate cells/ml)</p>
+                </div>
             </div>
 
-            <h4 class="styled-h4">E. Outlook</h4>
-            <p>Congratulations, you've theoretically performed a transfection! What's next? After 24-48 hours, you would typically:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li>Observe cells under a fluorescence microscope to detect GFP expression.</li>
-                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein.</li>
-                <li>Calculate transfection efficiency.</li>
-                <li>Proceed with downstream experiments, such as Western blotting.</li>
+            <h4 class="styled-h4">Final Steps</h4>
+            <ul class="list-disc list-inside space-y-2">
+                <li>Dilute your total cell suspension so that in 500 μL you have 1×10⁵ cells.
+                    <ul class="list-disc list-inside ml-4">
+                        <li>1×10⁵ cells / (n cells/ml) = volume cell-suspension per well</li>
+                        <li>dilute in DMEM to a total volume of 500 μL per well</li>
+                        <li>multiply by number of wells and prepare around 10% more to allow for volume losses during pipetting</li>
+                    </ul>
+                </li>
+                <li>Seed 500 μL of the cell suspension per 24-well (see scheme 24-well plate)</li>
+                <li>Label your plate with initials, date, group, cell line, ...</li>
+                <li>Mix carefully making moves in shape of number 8 - no circular movements!</li>
+                <li>24h incubation at 37°C for transfection</li>
             </ul>
         </div>
     `;
 }
 
-// Helper functions for this module
 function renderQuiz(quizData, containerId) {
     const quizContainer = document.getElementById(containerId);
     if (!quizContainer) return;
@@ -271,91 +273,90 @@ function renderQuiz(quizData, containerId) {
     });
 }
 
-function calculatePlasmidVolume() {
-    const desiredMassUg = parseFloat(document.getElementById('desired_mass_pg').value);
-    const stockConcNgUl = parseFloat(document.getElementById('stock_conc_pg').value);
-    const resultContainerEl = document.getElementById('plasmid-volume-result-container');
-    const resultEl = document.getElementById('plasmid-volume-result');
-    if (!resultContainerEl || !resultEl) return;
-    
-    resultContainerEl.classList.remove('hidden');
-    if (isNaN(desiredMassUg) || isNaN(stockConcNgUl) || desiredMassUg <= 0 || stockConcNgUl <= 0) {
-        resultEl.innerHTML = "<span class='text-red-500'>Please enter valid positive numbers.</span>";
+// Helper functions specific to this module
+function calculateCellDensity8() {
+    const cellsCounted = parseInt(document.getElementById('cells-counted-8').value);
+    const dilutionFactor = parseFloat(document.getElementById('dilution-factor-8').value);
+    const outputP = document.getElementById('cell-density-output-8');
+    if (!outputP) return;
+
+    if (isNaN(cellsCounted) || isNaN(dilutionFactor) || cellsCounted < 0 || dilutionFactor <= 0) {
+        outputP.textContent = "Please enter valid, positive numbers.";
         return;
     }
-    const volumeUl = (desiredMassUg * 1000) / stockConcNgUl;
-    resultEl.innerHTML = `Required Volume: <strong>${volumeUl.toFixed(3)} &micro;L</strong>`;
+    const avgCellsPerSquare = cellsCounted / 4;
+    const cellsPerMilliLiter = avgCellsPerSquare * dilutionFactor * 10000;
+    outputP.innerHTML = `Calculated Cell Density: <strong>${cellsPerMilliLiter.toExponential(2)} cells/mL</strong>`;
 }
 
-function handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback) {
-    const parentDiv = button.parentElement;
-    const feedbackEl = parentDiv.nextElementSibling;
+function checkPracticeAnswer8(correctAnswer, inputId, feedbackId, solutionId) {
+    const inputEl = document.getElementById(inputId);
+    const feedbackDiv = document.getElementById(feedbackId);
+    const solutionDiv = document.getElementById(solutionId);
     
-    parentDiv.querySelectorAll('.quiz-option').forEach(btn => {
-        btn.disabled = true;
-        btn.classList.remove('correct', 'incorrect');
-    });
+    if (!inputEl || !feedbackDiv || !solutionDiv) return;
 
-    if (isCorrect) {
-        button.classList.add('correct');
-        feedbackEl.innerHTML = correctFeedback;
+    const userAnswer = parseFloat(inputEl.value);
+    inputEl.classList.remove('correct-answer', 'incorrect-answer');
+    
+    feedbackDiv.classList.remove('hidden');
+    solutionDiv.classList.remove('hidden');
+    
+    if (Math.abs(userAnswer - correctAnswer) < 0.1) {
+        inputEl.classList.add('correct-answer');
+        feedbackDiv.textContent = 'Correct!';
+        feedbackDiv.className = 'practice-feedback text-sm mt-2 text-green-700';
     } else {
-        button.classList.add('incorrect');
-        feedbackEl.innerHTML = incorrectFeedback;
-        const correctButton = parentDiv.querySelector('[data-correct="true"]');
-        if (correctButton) correctButton.classList.add('correct');
+        inputEl.classList.add('incorrect-answer');
+        feedbackDiv.innerHTML = 'Incorrect. Please review the solution below.';
+        feedbackDiv.className = 'practice-feedback text-sm mt-2 text-red-700';
     }
-    feedbackEl.classList.remove('hidden');
 }
 
-function renderInteractiveQuiz(container, quizData) {
-    container.innerHTML = '';
-    quizData.forEach((q, index) => {
-        const qDiv = document.createElement('div');
-        qDiv.className = 'quiz-question p-3 mb-2 bg-white rounded-md shadow-sm';
-        let optionsHtml = `<p class="font-medium mb-2 text-sm">${index + 1}. ${q.question}</p><div class="space-y-1">`;
-        q.options.forEach(optText => {
-            optionsHtml += `<button class="quiz-option text-xs">${optText}</button>`;
-        });
-        optionsHtml += `</div><div class="feedback-message text-xs mt-1 p-1 rounded-md hidden"></div>`;
-        qDiv.innerHTML = optionsHtml;
-        
-        qDiv.querySelectorAll('.quiz-option').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const isCorrect = btn.textContent === q.answer;
-                const correctFeedback = `<strong>Correct!</strong> ${q.explanation}`;
-                const incorrectFeedback = `<strong>Incorrect.</strong> ${q.explanation}`;
-                const parentDiv = btn.parentElement;
-                const feedbackEl = parentDiv.nextElementSibling;
-                parentDiv.querySelectorAll('.quiz-option').forEach(b => {
-                    b.disabled = true;
-                    b.classList.remove('correct', 'incorrect');
-                });
-                if (isCorrect) {
-                    btn.classList.add('correct');
-                    feedbackEl.innerHTML = correctFeedback;
-                } else {
-                    btn.classList.add('incorrect');
-                    feedbackEl.innerHTML = incorrectFeedback;
-                    parentDiv.querySelectorAll('.quiz-option').forEach(opt => {
-                         if (opt.textContent === q.answer) opt.classList.add('correct');
-                    });
-                }
-                feedbackEl.classList.remove('hidden');
-            });
-        });
-        container.appendChild(qDiv);
-    });
+function calculateAverage() {
+    const square1 = parseFloat(document.getElementById('square1').value) || 0;
+    const square2 = parseFloat(document.getElementById('square2').value) || 0;
+    const square3 = parseFloat(document.getElementById('square3').value) || 0;
+    const square4 = parseFloat(document.getElementById('square4').value) || 0;
+    
+    const total = square1 + square2 + square3 + square4;
+    const average = total / 4;
+    
+    document.getElementById('average-result').textContent = average.toFixed(1);
+    
+    // Show calculation results
+    const resultsDiv = document.getElementById('calculation-results');
+    const meanSpan = document.getElementById('mean-value');
+    const finalCalcSpan = document.getElementById('final-calculation');
+    const finalResultSpan = document.getElementById('final-result');
+    
+    meanSpan.textContent = average.toFixed(1);
+    
+    // Assuming 1:10 dilution factor (10) for trypan blue
+    const dilutionFactor = 10;
+    const finalCalc = average * dilutionFactor;
+    const finalResult = finalCalc / 10; // Convert to ×10⁶ format
+    
+    finalCalcSpan.textContent = finalCalc.toFixed(1);
+    finalResultSpan.textContent = finalResult.toFixed(2);
+    
+    resultsDiv.classList.remove('hidden');
 }
 
-export default function initModule3(rootEl, sidebarEl) {
+export default function initModule8(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
-    link.href = '#module-3';
+    link.href = '#module-8';
     link.textContent = TITLE;
     link.className = 'sidebar-link block px-3 py-2 rounded-md';
-    // NEW, CORRECTED CODE
-    sidebarEl.querySelector('#sidebar-links').appendChild(link);;
+    
+    // Find the sidebar links container and add the link
+    const sidebarLinks = sidebarEl.querySelector('#sidebar-links');
+    if (sidebarLinks) {
+        sidebarLinks.appendChild(link);
+    } else {
+        console.error('Sidebar links container not found');
+    }
 
     // 2. Inject content
     rootEl.innerHTML = getContent();
@@ -365,64 +366,17 @@ export default function initModule3(rootEl, sidebarEl) {
         <div class="mt-8 pt-6 border-t-2 border-purple-300">
             <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
             <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
-            <div id="quiz-container-module-3"></div>
+            <div id="quiz-container-module-8"></div>
         </div>`;
     rootEl.insertAdjacentHTML('beforeend', quizHtml);
-
-    // 3. Attach event listeners and run init logic
-    // Interactive Box 1: Transfection Method Choice
-    const methodChoiceContainer = document.getElementById('transfection-method-choice-quiz');
-    if (methodChoiceContainer) {
-        const methodQuizData = {
-            options: ["Lipofection (e.g., Lipofectamine)", "Electroporation", "Calcium Phosphate Precipitation", "Viral Transduction (e.g., with lentiviruses)"],
-            answer: "Calcium Phosphate Precipitation",
-            feedback_correct: "Exactly! The calcium phosphate method is an established, cost-effective method well-suited for transfecting adherent cells like HEK293 and is ideal for our course objectives.",
-            feedback_incorrect: "Not quite. While other methods work, CaPi is a great balance of cost and efficiency for this specific purpose. Viral methods are more complex and costly, and Lipofection is often more expensive."
-        };
-        methodQuizData.options.forEach(optText => {
-            const btn = document.createElement('button');
-            btn.className = 'quiz-option text-xs sm:text-sm';
-            btn.textContent = optText;
-            btn.dataset.correct = (optText === methodQuizData.answer).toString();
-            btn.addEventListener('click', () => handleSimpleQuiz(btn, optText === methodQuizData.answer, methodQuizData.feedback_correct, methodQuizData.feedback_incorrect));
-            methodChoiceContainer.appendChild(btn);
-        });
-    }
-
-    // Interactive Box 2: Plasmid Calculator and Small Volume Quiz
-    document.getElementById('plasmid-calc-btn')?.addEventListener('click', calculatePlasmidVolume);
-    const smallVolumeQuizContainer = document.getElementById('small-volume-quiz');
-    if(smallVolumeQuizContainer) {
-        smallVolumeQuizContainer.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', () => {
-                 const isCorrect = button.dataset.correct === 'true';
-                 const correctFeedback = "<strong>Correct!</strong> 0.586 µL is generally too small to pipette accurately. A good strategy is to prepare a master mix or a working dilution.";
-                 const incorrectFeedback = "<strong>Not quite.</strong> This volume is very prone to error with standard lab equipment.";
-                 handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
-            });
-        });
-    }
-
-    // Interactive Box 4: Troubleshooting Quiz
-    const troubleshootingContainer = document.getElementById('transfection-troubleshooting-quiz');
-    if (troubleshootingContainer) {
-        const troubleshootingQuizData = [
-            {
-                question: "Your cells look very unhappy after transfection, and many have detached. What could be a primary reason related to the CaPi method?",
-                options: ["Too little DNA was used", "The precipitates were too fine or incubated for too short a time", "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long", "Cells were not confluent enough"],
-                answer: "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long",
-                explanation: "Coarse CaPi precipitates formed due to incorrect pH or overly long incubation with cells can be quite toxic, leading to cell stress and detachment."
-            },
-            {
-                question: "You see hardly any GFP-positive cells 24-48 hours post-transfection. Which is a common critical factor to check first for CaPi transfections?",
-                options: ["The incubator temperature was 36°C instead of 37°C", "The pH of the 2x BBS solution was incorrect", "You used 0.5 µg of DNA instead of 0.3 µg", "The cells were only 50% confluent"],
-                answer: "The pH of the 2x BBS solution was incorrect",
-                explanation: "The pH of the BBS is extremely critical for forming the right kind of fine precipitate for efficient uptake. Incorrect pH is a very common reason for CaPi transfection failure."
-            }
-        ];
-        renderInteractiveQuiz(troubleshootingContainer, troubleshootingQuizData);
-    }
     
+    // 3. Attach event listeners
+    document.getElementById('cell-density-btn-8')?.addEventListener('click', calculateCellDensity8);
+    document.getElementById('check-plating-btn-8')?.addEventListener('click', () => 
+        checkPracticeAnswer8(200, 'cell-plating-input-8', 'cell-plating-feedback-8', 'cell-plating-solution-8')
+    );
+    document.getElementById('calculate-average')?.addEventListener('click', calculateAverage);
+
     // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-3');
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-8');
 }

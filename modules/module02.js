@@ -5,14 +5,14 @@ const QUIZ_DATA = [
         options: ["2.5 mL", "25 mL", "50 mL", "5 mL"],
         answer: "25 mL",
         type: "mcq",
-        explanation: "Using C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>2</sub>: (10M)(V<sub>1</sub>) = (0.5M)(500mL). So, V<sub>1</sub> = (0.5 &times; 500) / 10 = 250 / 10 = 25 mL."
+        explanation: "Using c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>: (10M)(V<sub>1</sub>) = (0.5M)(500mL). So, V<sub>1</sub> = (0.5 &times; 500) / 10 = 250 / 10 = 25 mL."
     },
     {
         question: "To make 50 mL of a 200 &mu;M solution from a 10 mM stock, how much stock solution is required?",
         options: ["10 &mu;L", "100 &mu;L", "1 mL", "0.1 &mu;L"],
         answer: "1 mL",
         type: "mcq",
-        explanation: "First, ensure units are consistent. 10 mM = 10,000 &mu;M. C<sub>1</sub> = 10,000 &mu;M, V<sub>1</sub> = ?, C<sub>2</sub> = 200 &mu;M, V<sub>2</sub> = 50 mL. V<sub>1</sub> = (200 &mu;M &times; 50 mL) / 10,000 &mu;M = 10,000 / 10,000 mL = 1 mL."
+        explanation: "First, ensure units are consistent. 10 mM = 10,000 &mu;M. c<sub>1</sub> = 10,000 &mu;M, V<sub>1</sub> = ?, c<sub>2</sub> = 200 &mu;M, V<sub>2</sub> = 50 mL. V<sub>1</sub> = (200 &mu;M &times; 50 mL) / 10,000 &mu;M = 10,000 / 10,000 mL = 1 mL."
     }
 ];
 
@@ -386,3 +386,38 @@ function checkPracticeAnswer(problemId, correctAnswers, inputIds) {
 export default function initModule2(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
+    link.href = '#module-2';
+    link.textContent = TITLE;
+    link.className = 'sidebar-link block px-3 py-2 rounded-md';
+    
+    // Find the sidebar links container and add the link
+    const sidebarLinks = sidebarEl.querySelector('#sidebar-links');
+    if (sidebarLinks) {
+        sidebarLinks.appendChild(link);
+    } else {
+        console.error('Sidebar links container not found');
+    }
+
+    // 2. Inject content
+    rootEl.innerHTML = getContent();
+
+    // Add quiz container
+    const quizHtml = `
+        <div class="mt-8 pt-6 border-t-2 border-purple-300">
+            <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
+            <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
+            <div id="quiz-container-module-2"></div>
+        </div>`;
+    rootEl.insertAdjacentHTML('beforeend', quizHtml);
+    
+    // 3. Attach event listeners
+    document.getElementById('unit-convert-btn')?.addEventListener('click', convertUnits);
+    document.getElementById('molar-convert-btn')?.addEventListener('click', convertMolar);
+    document.getElementById('dilution-calc-btn')?.addEventListener('click', calculateDilution);
+    document.getElementById('check-bsa-btn')?.addEventListener('click', () => checkPracticeAnswer('bsa-dilution', [50, 950], ['bsa-stock-input', 'pbs-input']));
+    document.getElementById('check-triton-btn')?.addEventListener('click', () => checkPracticeAnswer('triton-dilution', [100, 9.9], ['triton-stock-input', 'triton-diluent-input']));
+    document.getElementById('check-antibody-btn')?.addEventListener('click', () => checkPracticeAnswer('antibody-dilution', [1.2, 1198.8], ['antibody-stock-input', 'antibody-buffer-input']));
+
+    // 4. Render main module quiz
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-2');
+}

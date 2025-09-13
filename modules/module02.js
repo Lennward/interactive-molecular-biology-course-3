@@ -6,87 +6,68 @@ const QUIZ_DATA = [
         options: ["2.5 mL", "25 mL", "50 mL", "5 mL"],
         answer: "25 mL",
         type: "mcq",
-        explanation: "Using C<sub>1</sub>V<sub>1</sub> = C<sub>2</sub>V<sub>2</sub>: (10M)(V<sub>1</sub>) = (0.5M)(500mL). So, V<sub>1</sub> = (0.5 × 500) / 10 = 250 / 10 = 25 mL."
+        explanation: "Using C1V1 = C2V2: (10M)(V1) = (0.5M)(500mL). So, V1 = (0.5 × 500) / 10 = 250 / 10 = 25 mL."
     },
     {
         question: "To make 50 mL of a 200 μM solution from a 10 mM stock, how much stock solution is required?",
         options: ["10 µl", "100 µl", "1 ml", "0.1 µl"],
         answer: "1 ml",
         type: "mcq",
-        explanation: "First, ensure units are consistent. 10 mM = 10,000 μM. C1 = 10,000 μM, V1 = ?, C2 = 200 μM, V2 = 50 mL. V1 = (200 μM × 50 mL) / 10,000 μM = 1 mL."
+        explanation: "10 mM = 10,000 μM. V1 = (200 μM × 50 mL) / 10,000 μM = 1 mL."
     }
 ];
 
 function getContent() {
     return `
-        <div class="module-content">
-            <h2>${TITLE}</h2>
+    <div class="module-content">
+        <h2>${TITLE}</h2>
 
-            <p>In molecular biology research, it is often necessary to prepare samples in different concentrations. Volume and concentration play a key role here. Dilution series are a common method for obtaining and analyzing accurate concentrations. This module will guide you through essential concepts and practical applications.</p>
+        <p>In molecular biology research, it is often necessary to prepare samples in different concentrations...</p>
 
-            <h3>Units and Conversions</h3>
-            <p>Understanding and converting between different units of volume and concentration is crucial for accurate lab work.</p>
+        <h3>Units and Conversions</h3>
+        <p>Understanding and converting between different units of volume and concentration is crucial for accurate lab work.</p>
 
-            <h4 class="styled-h4">Volume (V)</h4>
-            <p>Volume is the space occupied by a liquid and is usually measured in liters (L), milliliters (mL), or microliters (µL). When diluting, it is important to know the exact volume of the solution to be diluted (= what is being diluted, e.g., a plasmid) and the diluent (= what is being used to dilute, e.g., H<sub>2</sub>O).</p>
+        <h4 class="styled-h4">Volume (V)</h4>
+        <p>Volume is the space occupied by a liquid and is usually measured in liters (L), milliliters (mL), or microliters (µL)...</p>
 
-            <ul>
-                <li>1 Liter (L) = 1000 milliliters (mL)</li>
-                <li>1 milliliter (mL) = 1000 microliters (µL)</li>
-                <li>Therefore, 1 Liter (L) = 1,000,000 microliters (µL)</li>
-            </ul>
-
-            <div class="interactive-box">
-                <h4>Interactive: Unit Converter</h4>
-                <p class="text-sm mb-2">Practice converting milliliters (mL) to microliters (µL). Enter a value in mL and click "Convert".</p>
-                <div class="flex flex-wrap items-center gap-2">
-                    <input type="number" id="ml-input" placeholder="Enter mL" class="border p-2 rounded w-32 text-sm">
-                    <button id="unit-convert-btn" class="text-sm">Convert to µL</button>
-                </div>
-                <p id="ul-output" class="mt-2 text-sm font-medium text-purple-700"></p>
-            </div>
-
-            <h4 class="styled-h4">Concentration (c)</h4>
-            <p>Concentration indicates how much of a particular substance is present in a solution and is often expressed as molarity (M = mol/L), milligrams per milliliter (mg/mL), or micrograms per microliter (µg/µL).</p>
-
-            <ul>
-                <li>1 Molar (M) = 1000 millimolar (mM)</li>
-                <li>1 millimolar (mM) = 1000 micromolar (µM)</li>
-                <li>1 M = 1,000,000 µM</li>
-                <li>1 M = 1 mmol/mL = 1 µmol/µL</li>
-                <li>1 g/L = 1 mg/mL = 1 µg/µL</li>
-                <li>1 mg/mL = 1000 µg/mL</li>
-                <li>1 µg/µL = 1000 ng/µL</li>
-                <li>% = g/100mL, mL/100mL or g/100g depending on the substance</li>
-            </ul>
-
-            <p><strong>Interactive: Molarity Converter</strong> — Practice converting molar (M) to micromolar (µM).</p>
-    `;
-}
-    return `
-        ...
-        <h3>The Dilution Formula: <span class="formula">c<sub>1</sub> × V<sub>1</sub> = c<sub>2</sub> × V<sub>2</sub></span></h3>
-        <p>This is the cornerstone formula for calculating dilutions. It states that the product of the initial concentration and the initial volume is equal to the product of the final concentration and the final volume.</p>
         <ul>
-            <li><strong>c<sub>1</sub></strong>: Initial concentration</li>
-            <li><strong>V<sub>1</sub></strong>: Initial volume</li>
-            <li><strong>c<sub>2</sub></strong>: Final concentration</li>
-            <li><strong>V<sub>2</sub></strong>: Final volume</li>
+            <li>1 Liter (L) = 1000 milliliters (mL)</li>
+            <li>1 milliliter (mL) = 1000 microliters (µL)</li>
+            <li>1 Liter (L) = 1,000,000 µL</li>
         </ul>
-        <p><strong>Example:</strong> To prepare 10 mL of 0.1 mg/mL solution from a 1 mg/mL stock:</p>
-        <p><span class="formula">V<sub>1</sub> = (0.1 × 10) / 1 = 1 mL</span> ⇒ Add 9 mL diluent to reach 10 mL.</p>
 
-        <p>This formula also helps in dilution series. Example:</p>
+        <div class="interactive-box">
+            <h4>Interactive: Unit Converter</h4>
+            <p class="text-sm mb-2">Convert mL → µL</p>
+            <div class="flex flex-wrap items-center gap-2">
+                <input type="number" id="ml-input" placeholder="Enter mL" class="border p-2 rounded w-32 text-sm">
+                <button id="unit-convert-btn" class="text-sm">Convert</button>
+            </div>
+            <p id="ul-output" class="mt-2 text-sm font-medium text-purple-700"></p>
+        </div>
+
+        <h4 class="styled-h4">Concentration (c)</h4>
+        <p>Concentration is often expressed as molarity (M = mol/L), mg/mL, or µg/µL.</p>
         <ul>
-            <li>Step 1: 1 mL stock + 9 mL diluent = 1:10</li>
-            <li>Step 2: 1 mL of 1:10 + 9 mL diluent = 1:100</li>
-            <li>Step 3: 1 mL of 1:100 + 9 mL diluent = 1:1000</li>
+            <li>1 M = 1000 mM</li>
+            <li>1 mM = 1000 µM</li>
+            <li>1 M = 1,000,000 µM</li>
+            <li>1 g/L = 1 mg/mL = 1 µg/µL</li>
+        </ul>
+
+        <h3>The Dilution Formula: <span class="formula">c<sub>1</sub> × V<sub>1</sub> = c<sub>2</sub> × V<sub>2</sub></span></h3>
+        <p>This is the cornerstone formula for calculating dilutions.</p>
+
+        <ul>
+            <li><strong>c1</strong>: Initial concentration</li>
+            <li><strong>V1</strong>: Initial volume</li>
+            <li><strong>c2</strong>: Final concentration</li>
+            <li><strong>V2</strong>: Final volume</li>
         </ul>
 
         <div class="interactive-box">
             <h4>Interactive: Dilution Calculator</h4>
-            <p class="text-sm mb-3">Enter 3 values (c1, V1, c2, V2). The calculator will determine the missing one.</p>
-            <!-- calculator fields preserved from original file -->
+            <p>Enter 3 values (c1, V1, c2, V2) and calculate the 4th.</p>
             <div class="calculator grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 items-end">
                 <div><label for="c1_calc">C<sub>1</sub>:</label><input type="number" id="c1_calc" class="w-full mt-1"></div>
                 <div><label for="v1_calc">V<sub>1</sub>:</label><input type="number" id="v1_calc" class="w-full mt-1"></div>
@@ -95,12 +76,12 @@ function getContent() {
                 <div class="sm:col-span-1">
                     <label for="calc_units_conc">Concentration Units:</label>
                     <select id="calc_units_conc" class="w-full mt-1">
-                        <option value="M">M (Molar)</option>
-                        <option value="mM">mM (millimolar)</option>
-                        <option value="µM">µM (micromolar)</option>
+                        <option value="M">M</option>
+                        <option value="mM">mM</option>
+                        <option value="µM">µM</option>
                         <option value="mg/mL">mg/mL</option>
                         <option value="µg/mL">µg/mL</option>
-                        <option value="%">% (percent)</option>
+                        <option value="%">%</option>
                     </select>
                 </div>
                 <div class="sm:col-span-1">
@@ -111,7 +92,7 @@ function getContent() {
                     </select>
                 </div>
                 <div class="sm:col-span-2 mt-2">
-                    <button id="dilution-calc-btn" class="w-full py-2">Calculate Missing Value</button>
+                    <button id="dilution-calc-btn" class="w-full py-2">Calculate</button>
                 </div>
             </div>
             <div id="dilution-result-container" class="mt-3 p-3 bg-white rounded-md shadow hidden">
@@ -121,7 +102,8 @@ function getContent() {
         </div>
 
         <h3>Practice Problems</h3>
-        <p>Test your understanding with these scenarios. Enter your answers and click "Check Answer".</p>
+        <div id="quiz-container-module-2"></div>
+    </div>
     `;
 }
 
@@ -149,17 +131,19 @@ function renderQuiz(quizData, containerId) {
 
                 if (button.textContent === q.answer) {
                     button.classList.add('correct');
-                    feedbackDiv.innerHTML = '<strong>Correct!</strong> ';
+                    feedbackDiv.innerHTML = '<strong>Correct!</strong>';
                 } else {
                     button.classList.add('incorrect');
-                    feedbackDiv.innerHTML = `<strong>Incorrect.</strong> The correct answer is: <span class="font-semibold">${q.answer}</span>. `;
+                    feedbackDiv.innerHTML = `<strong>Incorrect.</strong> Correct answer: <span class="font-semibold">${q.answer}</span>`;
                     allOptions.forEach(btn => {
                         if (btn.textContent === q.answer) btn.classList.add('correct');
                     });
                 }
+
                 if (q.explanation) {
                     feedbackDiv.innerHTML += `<br><span class="text-xs">${q.explanation}</span>`;
                 }
+
                 feedbackDiv.classList.remove('hidden');
             });
         });
@@ -176,14 +160,6 @@ export default function initModule2(rootEl, sidebarEl) {
     sidebarEl.querySelector('#sidebar-links').appendChild(link);
 
     rootEl.innerHTML = getContent();
-
-    const quizHtml = `
-        <div class="mt-8 pt-6 border-t-2 border-purple-300">
-            <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
-            <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
-            <div id="quiz-container-module-2"></div>
-        </div>`;
-    rootEl.insertAdjacentHTML('beforeend', quizHtml);
 
     document.getElementById('unit-convert-btn')?.addEventListener('click', () => {
         const ml = parseFloat(document.getElementById('ml-input').value);

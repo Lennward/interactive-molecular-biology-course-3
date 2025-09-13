@@ -1,4 +1,4 @@
-const TITLE = "Module 2: Mastering Dilutions & Concentrations";
+const TITLE = "Module 5: Mastering Dilutions & Concentrations";
 
 const QUIZ_DATA = [
     {

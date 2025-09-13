@@ -1,25 +1,32 @@
 const TITLE = "Module 7: Introduction to Cell Culture & work with mammalian cells";
 const QUIZ_DATA = [
     {
-        question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",
-        options: ["To provide nutrients to the cells", "To permeabilize the cell membrane", "To form a DNA-calcium phosphate co-precipitate", "To select for transfected cells"],
-        answer: "To form a DNA-calcium phosphate co-precipitate",
+        question: "What is the primary purpose of heat-inactivating serum (e.g., FBS/FCS) for cell culture?",
+        options: ["To sterilize the serum by killing all microbes", "To inactivate complement proteins that could harm cells", "To enhance the activity of growth factors in the serum", "To remove any residual antibiotics from the serum"],
+        answer: "To inactivate complement proteins that could harm cells",
         type: "mcq",
-        explanation: "2x BBS (Buffered Saline Solution) provides the phosphate ions that react with calcium chloride and DNA to form the fine precipitate that cells can take up."
+        explanation: "Heat inactivation (typically 56°C for 30 minutes) denatures complement proteins, which can otherwise cause cell lysis or activate immune responses in culture."
     },
     {
-        question: "True or False: For optimal calcium phosphate transfection, cells should ideally be 100% confluent.",
-        options: ["True", "False"],
-        answer: "False",
-        type: "tf",
-        explanation: "Cells should be actively dividing and typically at a confluency of 50-70% for efficient calcium phosphate transfection. 100% confluency often leads to lower efficiency."
+        question: "A cell culture medium containing Phenol Red as a pH indicator appears bright yellow. This most likely indicates the medium is:",
+        options: ["Too alkaline (pH too high)", "Too acidic (pH too low)", "Perfectly neutral (pH 7.4)", "Contaminated with mold"],
+        answer: "Too acidic (pH too low)",
+        type: "mcq",
+        explanation: "Phenol Red turns yellow at acidic pH (below ~6.8), often due to excessive cell metabolism producing lactic acid or bacterial contamination producing acidic byproducts."
     },
     {
-        question: "Which of the following is NOT a critical factor for successful calcium phosphate transfection?",
-        options: ["pH of the BBS solution", "Quality and quantity of plasmid DNA", "Vigorous vortexing after adding BBS", "Cell health and confluency"],
-        answer: "Vigorous vortexing after adding BBS",
+        question: "Mycoplasma contamination is notoriously difficult to detect in cell cultures because:",
+        options: ["They are very large and thus easily filtered out during media preparation", "They cause rapid, visible cloudiness (turbidity) in the culture medium within hours", "They are extremely small, lack a cell wall, can pass through standard 0.22 μm sterilization filters, and often do not cause obvious visual changes like turbidity", "They only grow optimally at room temperature, not in a 37°C incubator"],
+        answer: "They are extremely small, lack a cell wall, can pass through standard 0.22 μm sterilization filters, and often do not cause obvious visual changes like turbidity",
         type: "mcq",
-        explanation: "Vigorous vortexing after adding BBS can lead to large, irregular precipitates and shear DNA, reducing transfection efficiency. Gentle mixing by inversion is recommended."
+        explanation: "Mycoplasma are among the smallest self-replicating organisms and their lack of a cell wall makes them resistant to some antibiotics and flexible enough to pass through filters. They often cause subtle changes in cell behavior rather than obvious turbidity."
+    },
+    {
+        question: "What do cells need to grow?",
+        options: ["Building materials: amino acids for protein synthesis, sugars as an energy source for cell wall synthesis, fatty acids for membrane synthesis, and nucleotides for RNA and DNA synthesis", "Energy in the form of ATP", "Water as a solvent for biochemical reactions and for maintaining intracellular pressure", "Ions for enzyme functions, osmoregulation, and signal transmission", "Growth factors and nutrient availability", "Optimal temperature, pH value, oxygen supply", "All of the above"],
+        answer: "All of the above",
+        type: "mcq",
+        explanation: "Cells require all these components for proper growth: building materials, energy, water, ions, growth factors, and optimal environmental conditions."
     }
 ];
 
@@ -27,207 +34,251 @@ function getContent() {
     return `
         <div class="module-content">
             <h2>Module 7: Introduction to Cell Culture & work with mammalian cells</h2>
-            <p>Welcome to the fascinating world of transfection! In this module, you'll learn how to introduce foreign genetic material into cells, a cornerstone technique in molecular biology that allows us to study gene function, produce proteins, and much more. It's like giving cells a new set of instructions!</p>
             
             <h3>Cell Culture Deep Dive</h3>
-            <p>In the lab, cells derived from a wide variety of tissues and organisms can be cultivated. Cell culture is the process by which cells (especially mammalian cells) are grown under controlled conditions in the lab, generally outside their natural environment which is referred to as “in vitro”. Cell culture technology makes it possible to establish long-term or permanent cultures that can serve as “in vitro” models for cells in vivo (in living organisms). Furthermore, there are techniques (e.g., cytotoxicity tests and mutagenicity tests) that make it possible to reduce the number of animal experiments.</p>
+            <p>In the lab, cells derived from a wide variety of tissues and organisms can be cultivated. Cell culture is the process by which cells (especially mammalian cells) are grown under controlled conditions in the lab, generally outside their natural environment which is referred to as <em>"in vitro"</em>. Cell culture technology makes it possible to establish long-term or permanent cultures that can serve as "in vitro" models for cells in vivo (in living organisms). Furthermore, there are techniques (e.g., cytotoxicity tests and mutagenicity tests) that make it possible to reduce the number of animal experiments.</p>
+
             <p>Cells can be grown as:</p>
-            <ul class="list-disc list-inside mb-4 bg-sky-50 p-3 rounded-md">
-                <li>Adherent cell cultures: Cells grow attached to a surface (e.g., flask, plate). Adherent cells are derived from specific tissues and organs such as the liver, kidneys, muscles, nerves, endothelium, and epithelium.</li>
-                <li>Suspension (non-adherent) cell cultures: Cells float freely in the culture medium. Immune system cells and their precursors, on the other hand, are cultivated as a suspension.</li>                
+            <ul>
+                <li><strong>Adherent cell cultures:</strong> Cells grow attached to a surface (e.g., flask, plate). Adherent cells are derived from specific tissues and organs such as the liver, kidneys, muscles, nerves, endothelium, and epithelium.</li>
+                <li><strong>Suspension (non-adherent) cell cultures:</strong> Cells float freely in the culture medium. Immune system cells and their precursors, on the other hand, are cultivated as a suspension.</li>
             </ul>
 
-            <h3>II. Content Sections</h3>
+            <h4 class="styled-h4">Primary Cell Cultures vs. Cell Lines</h4>
+            <table class="w-full border-collapse border border-gray-300 bg-slate-100 p-3 rounded-md shadow-sm mb-4">
+                <thead>
+                    <tr class="bg-purple-100">
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Feature</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Primary Cell Cultures</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Cell Lines</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Origin</td>
+                        <td class="border border-gray-300 p-2">Directly from tissues/organs</td>
+                        <td class="border border-gray-300 p-2">Immortalized cells (e.g., tumor-derived, virally transformed)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Lifespan</td>
+                        <td class="border border-gray-300 p-2">Limited (finite)</td>
+                        <td class="border border-gray-300 p-2">Unlimited (infinite)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Properties</td>
+                        <td class="border border-gray-300 p-2">More representative of in vivo state</td>
+                        <td class="border border-gray-300 p-2">May have altered characteristics, easier to grow</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Examples</td>
+                        <td class="border border-gray-300 p-2">Neurons, fibroblasts from biopsy</td>
+                        <td class="border border-gray-300 p-2">HEK293, HeLa</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h4 class="styled-h4">Cell Culture Environment & Media</h4>
+            <p>Most cultured mammalian (and human) cells require the following for optimal growth:</p>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li><strong>Temperature:</strong> Typically 37°C for mammalian cells (= body temperature).</li>
+                <li><strong>CO₂:</strong> Usually 5% in the incubator to work with the NaHCO₃ buffer system in the medium to maintain physiological pH of 7.2-7.4.</li>
+                <li><strong>Humidity:</strong> High (70-100%) to prevent evaporation of medium.</li>
+                <li><strong>Sterility:</strong> Essential to prevent contamination.</li>
+            </ul>
+
+            <p>Suitable temperature, CO₂ and humidity are provided by an incubator.</p>
             
-            <h4 class="styled-h4">A. Introduction to Transfection</h4>
-            <p><strong>What is Transfection?</strong><br>
-            Transfection is a powerful biotechnological process used to introduce foreign nucleic acids – most commonly plasmid DNA – into eukaryotic cells. This allows scientists to manipulate the genetic makeup of cells in a controlled manner.</p>
-            
-            <p><strong>Goals of Transfection:</strong><br>
-            The primary goals include:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <div class="goal-box"><strong>Gene Expression</strong><p class="text-sm">Introducing a gene to produce a specific protein (e.g., a fluorescent marker like GFP, or a therapeutic protein).</p></div>
-                <div class="goal-box"><strong>Gene Silencing/Knockdown</strong><p class="text-sm">Introducing constructs (like siRNA or shRNA) to reduce or eliminate the expression of a specific endogenous gene.</p></div>
-                <div class="goal-box"><strong>Reporter Assays</strong><p class="text-sm">Studying the activity of promoters or other regulatory elements by linking them to a reporter gene.</p></div>
-                <div class="goal-box"><strong>Protein Production</strong><p class="text-sm">Using cells as factories to produce large quantities of a desired protein.</p></div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
+                <img src="images/image71.jpg" alt="Incubator closed" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image72.jpg" alt="Incubator open" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image73.jpg" alt="Incubator interior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
-            
 
-            <p><strong>Transient vs. Stable Transfection:</strong><br>
-            Transfection can be either transient or stable:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Transient Transfection:</strong> The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</li>
-                <li><strong>Stable Transfection:</strong> The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</li>
-            </ul>
-            </p>
-            <img src="placeholder_transfection_overview.svg" alt="Schematic of plasmid DNA entering a cell and leading to protein expression" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
+            <p>Therefore, the (mammalian) cells are stored in the incubator all the time. Only if a step of an experiment is conducted the (mammalian) cells are taken out of the incubator.</p>
 
-            <h4 class="styled-h4">B. Overview of Transfection Methods</h4>
-            <p><strong>The Variety of Methods:</strong><br>
-            There are numerous ways to get nucleic acids into cells, broadly categorized as:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Chemical Methods:</strong> These involve using reagents that complex with DNA and facilitate its entry into cells. Examples include:
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Calcium Phosphate Precipitation:</strong> The method we'll use! DNA is mixed with calcium chloride and phosphate buffer, forming fine DNA-calcium phosphate co-precipitates that are taken up by cells via endocytosis. It's cost-effective and works well for many adherent cell lines like HEK293.</li>
-                        <li><strong>Lipid-based (Lipofection):</strong> Cationic lipids form complexes (lipoplexes) with negatively charged DNA, which then fuse with the cell membrane or are endocytosed. Reagents like Lipofectamine™ are common.</li>
-                        <li><strong>Cationic Polymers:</strong> Polymers like Polyethylenimine (PEI) or dendrimers bind DNA and form polyplexes, which are then endocytosed.</li>
-                    </ul>
-                </li>
-                <li><strong>Physical Methods:</strong> These use physical force to create transient pores in the cell membrane.
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Electroporation:</strong> Cells are exposed to a brief electrical pulse, creating temporary pores for DNA entry. Very efficient for many cell types, including those hard to transfect by chemical means.</li>
-                        <li><strong>Microinjection:</strong> DNA is directly injected into the cytoplasm or nucleus using a fine glass micropipette. Precise but low-throughput.</li>
-                        <li><strong>Gene Gun (Biolistics):</strong> DNA-coated gold or tungsten particles are shot into cells or tissues.</li>
-                    </ul>
-                </li>
-                <li><strong>Viral Methods (Transduction):</strong> Recombinant viruses (e.g., lentiviruses, adenoviruses, AAV) are used as vectors to deliver genetic material. Often very high efficiency, even in primary cells and in vivo, and can be used for stable integration.</li>
-            </ul>
-            In this course, we will focus on the <strong>Calcium Phosphate Precipitation</strong> method due to its effectiveness with HEK293 cells and its historical significance.
-            </p>
+            <h4 class="styled-h4">Culture Media</h4>
+            <p><strong>Culture Media:</strong> Provides nutrients for cell growth.</p>
+            <p>The culture medium for cell culture must be such that it enables the cells to proliferate and grow and, if necessary, also to differentiate and perform typical cell functions. The first successful chemically defined medium was created by Harry Eagle in 1955, after previous work had been done with culture media that contained complex organic additives and were not standardized.</p>
+
             <div class="interactive-box">
-                <h4>Interactive Box 1: The Agony of Choice: Which Method for Which Purpose?</h4>
-                <p class="text-sm mb-2">Scenario: Imagine you want to express proteins quickly and cost-effectively in robust HEK293 cells. Which of the following methods would be most suitable for this project and our course?</p>
-                <div id="transfection-method-choice-quiz" class="space-y-1"></div>
-                <div id="transfection-method-choice-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+                <h4>Interactive: Media Prep Station</h4>
+                <p class="text-sm mb-3"><strong>You are preparing complete DMEM. Click on each component you would add to the basal DMEM to learn more about it.</strong></p>
+                
+                <div id="media-components" class="space-y-3">
+                    <div class="media-component-info-box hidden bg-blue-50 border-l-4 border-blue-400 p-3" id="component-1">
+                        <h5 class="font-semibold text-blue-800">Basal DMEM (salts, amino acids, vitamins, glucose)</h5>
+                        <p class="text-sm text-blue-700">Basal DMEM (Dulbecco's Modified Eagle's Medium): Contains a mixture of inorganic salts (for osmotic balance and membrane potential), L-amino acids (building blocks for proteins), vitamins (cofactors for enzymes), D-glucose (energy source), and often sodium pyruvate (additional energy source). This is the foundation of your complete medium.</p>
+                    </div>
+                    <div class="media-component-info-box hidden bg-green-50 border-l-4 border-green-400 p-3" id="component-2">
+                        <h5 class="font-semibold text-green-800">Fetal Bovine Serum (FBS/FCS) - typically 10%</h5>
+                        <p class="text-sm text-green-700">Fetal Bovine Serum (FBS) or Fetal Calf Serum (FCS): Typically added at 5-20% (10% is common). It's a complex mixture providing growth factors, hormones, attachment factors, transport proteins, and trace elements. Crucial for the growth of many cell lines. Batch-to-batch variability is a concern. Can be heat-inactivated (56°C for 30 min) to destroy complement proteins that might lyse cells.</p>
+                    </div>
+                    <div class="media-component-info-box hidden bg-yellow-50 border-l-4 border-yellow-400 p-3" id="component-3">
+                        <h5 class="font-semibold text-yellow-800">L-Glutamine (or GlutaMAX™) - typically 2-4 mM</h5>
+                        <p class="text-sm text-yellow-700">L-Glutamine: An essential amino acid required by cells in culture, serving as a nitrogen source for nucleotide and amino acid synthesis, and an energy source. It's unstable in liquid media at 37°C, degrading over time (half-life ~1 week). Often added fresh or a stable dipeptide form like GlutaMAX™ is used. Typical concentration is 2-4 mM.</p>
+                    </div>
+                    <div class="media-component-info-box hidden bg-purple-50 border-l-4 border-purple-400 p-3" id="component-4">
+                        <h5 class="font-semibold text-purple-800">Penicillin-Streptomycin (optional, but common) - typically 1%</h5>
+                        <p class="text-sm text-purple-700">Penicillin-Streptomycin (Pen-Strep): An antibiotic/antimycotic solution typically added at 1% (final concentration ~100 U/mL Penicillin, ~100 µg/mL Streptomycin). Used to prevent bacterial contamination. While common, routine use can mask poor aseptic technique and may lead to antibiotic-resistant strains or affect cell physiology. Should be used judiciously.</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-2 mt-4">
+                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="1">1. Basal DMEM</button>
+                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="2">2. FBS/FCS (10%)</button>
+                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="3">3. L-Glutamine</button>
+                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="4">4. Pen-Strep</button>
+                </div>
             </div>
 
-            <h4 class="styled-h4">C. In Detail: Calcium Phosphate Transfection</h4>
-            <p><strong>The Principle – Magic with Calcium and Phosphate:</strong><br>
-            The calcium phosphate method relies on a simple chemical trick. Negatively charged plasmid DNA is mixed with calcium chloride (CaCl₂). When a phosphate-buffered saline solution (like 2x BBS - HEPES Buffered Saline) is added, insoluble calcium phosphate-DNA co-precipitates form. These fine, crystalline particles settle onto adherent cells. Cells naturally take up these particles through endocytosis (a process where the cell membrane engulfs external material). Once inside the cell, some of the DNA escapes the endosomes, makes its way to the nucleus, and can then be transcribed and translated by the cell's machinery to produce the desired protein (e.g., GFP or your FLAG-tagged protein).</p>
+            <p><strong>Phenol Red:</strong> A pH indicator. Medium is typically reddish-orange at pH 7.4. It turns yellow if acidic (e.g., due to excessive cell metabolism or bacterial contamination) and purple if alkaline.</p>
+            <p><strong>Other Additives (depending on cell type/media):</strong> Sodium Bicarbonate (NaHCO₃ - primary buffering component with incubator CO₂), HEPES buffer (alternative non-CO₂ dependent buffer), non-essential amino acids, specific growth factors.</p>
 
-            <p><strong>Our Tools and Ingredients:</strong>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cells:</strong> HEK293 cells (Human Embryonic Kidney cells, adherent).</li>
-                <li><strong>Plasmids:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>pH2B-GFP (Concentration: e.g., 682.3 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                        <li>pRKV-FLAG (Concentration: 1015 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                    </ul>
-                </li>
-                <li><strong>Main Reagents:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>0.25 M CaCl₂ solution</li>
-                        <li>2x BBS (Buffered Saline Solution, typically HEPES-buffered, pH is critical, usually around 7.05-7.12)</li>
-                    </ul>
-                </li>
-            </ul>
-            </p>
-            <img src="placeholder_calcium_phosphate_mechanism.svg" alt="Schematic of calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">
-
-            <h4 class="styled-h4">The Protocol – Step by Step to Success:</h4>
-            <p class="text-sm italic">The following protocol is for transfecting <strong>one well</strong> of a 24-well plate. Remember to scale up your calculations for the total number of wells you plan to transfect for each plasmid, and always prepare a little extra (e.g., 10%) to account for pipetting inaccuracies!</p>
+            <h4 class="styled-h4">Vessels for storing the cells</h4>
+            <p>Animal cells are cultured in sterile plastic vessels (bottles, plates and dishes) that have undergone special surface treatment.</p>
             
-            <div class="highlight-note">
-                <p><strong>Crucial Reminder:</strong> Always prepare all solutions for the required number of wells PLUS 10% extra volume to account for pipetting errors!</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <img src="images/image74.jpeg" alt="Flask with cells and medium" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image75.jpg" alt="Cell culture vessels" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
 
-            <ol class="list-decimal list-inside space-y-3">
-                <li>
-                    <strong>Prepare Solution (per well):</strong>
-                    <ul class="list-disc list-inside ml-5 mt-1 text-sm space-y-1">
-                        <li>In a sterile 1.5 mL microcentrifuge tube (Eppendorf tube), add <strong>25 µL of 0.25 M CaCl₂</strong>.</li>
-                        <li>
-                            <strong>Add Plasmid DNA:</strong> Add <strong>0.3 - 0.5 µg</strong> of your desired plasmid (pH2B-GFP or pRKV-FLAG) to the CaCl₂.
-                            <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
-                                <p><strong>Attention, Pipetting Pros!</strong> Pipetting volumes less than 2 µL is highly inaccurate. If your calculated volume is too small, consider preparing a master mix. For example, if you need 0.5 µL per well and are doing 4 wells, prepare a mix for 4.4 wells (4 wells + 10% extra), so 0.5 µL/well * 4.4 wells = 2.2 µL plasmid in a larger volume of CaCl₂.</p>
-                                <p class="mt-1"><strong>Storage & Handling:</strong> Plasmids are stored in the freezer. Always keep plasmids on ice when outside the freezer.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Interactive Box 2: "Plasmid Calculation Wizards Wanted!"</strong>
-                    <div class="interactive-box">
-                        <h4>Plasmid Calculation Practice</h4>
-                        <p class="text-sm mb-2"><strong>Scenario 1: Volume Calculation</strong><br>You want to use 0.4 µg of Plasmid pH2B-GFP. Its stock concentration is 682.3 ng/µL. How many µL of the stock solution do you need?</p>
-                        <div class="calculator grid grid-cols-1 sm:grid-cols-2 gap-2 items-end mb-4">
-                            <div>
-                                <label for="desired_mass_pg" class="block text-xs font-medium text-gray-700">Desired Mass (µg):</label>
-                                <input type="number" id="desired_mass_pg" value="0.4" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div>
-                                <label for="stock_conc_pg" class="block text-xs font-medium text-gray-700">Stock Conc. (ng/µL):</label>
-                                <input type="number" id="stock_conc_pg" value="682.3" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <button id="plasmid-calc-btn" class="w-full py-1.5 text-sm">Calculate Volume</button>
-                            </div>
-                        </div>
-                        <div id="plasmid-volume-result-container" class="p-2 bg-white rounded-md shadow text-sm hidden">
-                            <p id="plasmid-volume-result" class="font-semibold text-purple-700"></p>
-                        </div>
+            <p>Flasks, plates and dishes are the three main types of cell culture vessels. All of them are available in different sizes. Thus, they have different growth areas and need different volumes of culture medium.</p>
+            
+            <img src="images/image76.png" alt="Different cell culture vessel types and sizes" class="my-4 rounded-lg shadow-md mx-auto block max-w-full w-auto">
 
-                        <p class="text-sm mb-2 mt-4"><strong>Scenario 2: Handling Small Volumes</strong><br>The calculated volume from Scenario 1 is approximately 0.586 µL. Can this be pipetted accurately and directly with standard lab pipettes? (Select Yes or No)</p>
-                        <div id="small-volume-quiz" class="space-y-1 mb-2">
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="false">Yes, it's fine.</button>
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="true">No, it's too small for accurate direct pipetting.</button>
-                        </div>
-                        <div id="small-volume-feedback" class="feedback-message text-xs mt-1 p-1.5 rounded-md hidden"></div>
-                    </div>
-                </li>
-                <li>
-                    <strong>The Magic Ingredient:</strong> Slowly, while gently vortexing or flicking the tube containing the CaCl₂-DNA mixture, add <strong>25 µL of 2x BBS</strong>. *Critical: Add BBS to DNA/CaCl₂, not the other way around for optimal precipitate formation.*
-                </li>
-                <li>
-                    <strong>Mix Gently:</strong> Immediately after adding BBS, cap the tube and gently invert it 4-5 times to mix. **DO NOT VORTEX** at this stage, as it can shear the DNA or lead to suboptimal precipitate size.
-                </li>
-                <li>
-                    <strong>Patience Test (Precipitate Formation):</strong> Incubate the mixture for <strong>15 minutes at room temperature (RT)</strong>.
-                     <div class="text-xs p-2 mt-1 bg-orange-50 border-l-4 border-orange-400 text-orange-700 rounded-r-md">
-                        <em>Note on Centrifugation: Some older protocols mention a brief centrifugation. This step is not typical for modern CaPi protocols as it might compact the precipitate too much. We will proceed without centrifugation.</em>
-                    </div>
-                </li>
-                <li>
-                    <strong>"Feed" the Cells:</strong> After the 15-minute incubation, gently resuspend the fine precipitate and add <strong>50 µL of this suspension dropwise</strong> onto the cells in one well of a 24-well plate.
-                </li>
-                <li>
-                    <strong>Interactive Box 3: "My Plate Layout – Who Gets What?"</strong>
-                    <div class="interactive-box">
-                        <h4>Experimental Plate Setup</h4>
-                        <p class="text-sm mb-2">Plan your experiment! This is a conceptual representation.</p>
-                        <img src="placeholder_24_well_plate_interactive.png" alt="Schematic of a 24-well plate for transfection planning" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto bg-gray-200 p-2" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Placeholder:+24-Well+Plate'; this.alt='Placeholder: 24-Well Plate';">
-                        <p class="text-xs text-gray-600">Example conditions: Well A1: Untransfected Control, Well A2: pH2B-GFP, Well A3: pRKV-FLAG.</p>
-                    </div>
-                </li>
-                <li>
-                    <strong>Gentle Distribution:</strong> After adding the precipitate, gently swirl the plate in a "figure-eight" motion to ensure even distribution.
-                </li>
-                <li>
-                    <strong>Off to the Incubator:</strong> Place the plate carefully into the 37°C incubator with 5% CO₂ and incubate overnight (16-24 hours).
-                </li>
-                <li>
-                    <strong>Curious Observation:</strong>
-                    <p class="text-sm">The next day, check your cells under a phase-contrast microscope. Note any changes in cell morphology. Calcium phosphate precipitates can sometimes be slightly toxic, appearing as small, dark granules on or around them.</p>
-                    <img src="placeholder_HEK_cells_CaPi_phase_contrast.jpg" alt="HEK cells under phase contrast after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+HEK+Cells+CaPi'; this.alt='Placeholder: HEK Cells CaPi';">
-                </li>
+            <h4 class="styled-h4">Aseptic Technique & Sterilization</h4>
+            <p>Aseptic technique refers to the practices used to prevent contamination (especially of mammalian cells with e.g. bacteria). For this the most important thing is that all work is performed aseptically under a laminar flow hood which provides a sterile environment. This includes experiments but also everything else that comes into contact with the cells e.g. culture media preparation. Thereby each culture media component is added aseptically under the laminar flow hood.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <img src="images/image77.jpg" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image78.jpg" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+            </div>
+
+            <h4 class="styled-h4">Laminar Flow Hood Principle</h4>
+            <p>A laminar flow hood's principle relies on:</p>
+            <ol class="list-decimal list-inside space-y-2 bg-slate-100 p-3 rounded-md shadow-sm">
+                <li><strong>Air Intake & Pre-Filtration:</strong> A fan or blower draws ambient room air into the cabinet. This air first passes through a pre-filter, which traps larger particles.</li>
+                <li><strong>HEPA Filtration:</strong> The air then moves through a High-Efficiency Particulate Air (HEPA) filter, which captures almost all remaining microscopic particles, such as bacteria, fungi, and other contaminants.</li>
+                <li><strong>Unidirectional Airflow:</strong> The now particle-free air flows out of the HEPA filter and across the work surface in a consistent, single direction -- either horizontally or vertically.</li>
+                <li><strong>Sterile Workspace:</strong> This constant, uniform flow of clean air physically sweeps the work area, preventing airborne particles from settling on samples or equipment.</li>
+                <li><strong>Contamination Prevention:</strong> The enclosed nature of the cabinet, with its side panels, ensures a constant positive air pressure, preventing external, contaminated air from entering the workspace.</li>
             </ol>
 
-            <h4 class="styled-h4">D. Important Tips & Troubleshooting Corner</h4>
-            <p>Successful transfection is an art as much as a science! Here are some key factors:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cell Confluency:</strong> Aim for 50-70% confluency for optimal results.</li>
-                <li><strong>DNA Quality & Quantity:</strong> Use high-purity, endotoxin-free DNA.</li>
-                <li><strong>pH of BBS:</strong> This is CRITICAL. A pH between 7.05 and 7.12 is required for proper precipitate formation.</li>
-                <li><strong>Pipetting Skills & Sterility:</strong> Accuracy and strict aseptic technique are paramount.</li>
-            </ul>
-            <div class="interactive-box">
-                <h4>Interactive Box 4: What Went Wrong? – Transfection Troubleshooting</h4>
-                <div id="transfection-troubleshooting-quiz"></div>
+            <h4 class="styled-h4">Fundamental rules for sterile work in cell culture</h4>
+            <div class="space-y-4">
+                <div class="highlight-note">
+                    <p><strong>1. Check cultures for contamination before starting work (cloudiness of the medium, microscopically).</strong></p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>2. Always keep your work surface tidy and disinfect it before starting work.</strong></p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>3. Essentially, sterile glass or disposable plastic pipettes are used in cell culture.</strong></p>
+                    <p class="text-sm mt-1"><em>Clickable Info:</em> To take glass pipettes out of the metal box, open it, shake it gently, and hold it downwards so that the pipettes stick out a little from the box. Then you can grab a single pipette at the top (and only there!) without touching the others, which you should definitely avoid to prevent contamination.</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>4. Pipetting should be carried out without touching the storage bottle or culture vessels if possible.</strong></p>
+                    <p class="text-sm mt-1"><em>Clickable Info:</em> Changing the pipette more frequently reduces the risk of contamination of both the cultures and the medium in the storage bottle. If liquid gets into the cotton wool during pipetting or if the pipette is accidentally knocked against an object, it must be replaced. To remove media and buffers from the culture vessels, pipette out the corresponding supernatants.</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>5. Wear a lab coat and gloves, and disinfect gloves with 80% ethanol.</strong> Disinfect gloves regularly, especially when coming into contact with materials outside the sterile workbench!</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>6. Disinfect devices and bottles on the outside with 80% ethanol.</strong></p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>7. Never work over open sterile containers.</strong></p>
+                    <p class="text-sm mt-1"><em>Clickable Info:</em> To remove medium from the storage bottle, unscrew the lid and hold it between your index and middle fingers so that the inside with the thread faces away from the bottle when you hold it in your hand. After completing the task, put the lid back on the bottle (it does not need to be screwed on). If it is not possible to hold the cap in your hand, place it in the sterile area at the back.</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>8. Only sterile equipment and solutions are used for all cell culture activities.</strong> If sterile items come into contact with non-sterile areas, use new glass/plastic ware.</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>9. Only the materials required for the respective experiment are placed under the laminar flow hood,</strong> and they are sprayed or wiped with 80% ethanol before being placed there.</p>
+                    <p class="text-sm mt-1"><em>Note on 80% Ethanol:</em> Ethanol is only effective as a bactericide when it contains a certain amount of water. Absolute alcohol, on the other hand, has a preservative effect on bacterial spores and is therefore not suitable for disinfection.</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>10. Wipe up spilled solutions immediately with an alcohol-soaked tissue.</strong></p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>11. Waste and utensils that are no longer needed are removed from the experiment room</strong> and disposed of in the designated containers, if necessary.</p>
+                </div>
+                <div class="highlight-note">
+                    <p><strong>12. All activities must be carried out within the sterile area.</strong></p>
+                    <p class="text-sm mt-1"><em>Clickable Info:</em> The sterile area of the workbench begins behind the front air vents and ends in front of the air vents on the rear wall -> Air vents in the worktop remain open.</p>
+                </div>
             </div>
 
-            <h4 class="styled-h4">E. Outlook</h4>
-            <p>Congratulations, you've theoretically performed a transfection! What's next? After 24-48 hours, you would typically:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li>Observe cells under a fluorescence microscope to detect GFP expression.</li>
-                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein.</li>
-                <li>Calculate transfection efficiency.</li>
-                <li>Proceed with downstream experiments, such as Western blotting.</li>
+            <h4 class="styled-h4">Sterilization Methods</h4>
+            <p><strong>Sterilization aims to kill or inactivate all viable microorganisms.</strong></p>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li><strong>Flaming:</strong> Sterilizing bottle necks, metal tools.</li>
+                <li><strong>UV Light (254nm):</strong> Surface sterilization (e.g., inside laminar flow hoods). Max 30cm distance. Safety hazard (burns, mutagenesis).</li>
+                <li><strong>Sterile Filtration (0.22 μm filter):</strong> For heat-sensitive liquids like media and serum.</li>
+                <li><strong>Autoclaving (Steam Sterilization):</strong> High pressure and temperature (e.g., 121°C, 15 psi, 15-20 min) for liquids (not media with sensitive components), glassware, and some plastics.</li>
+                <li><strong>Gamma Radiation:</strong> For pre-sterilized plastic consumables (flasks, pipettes).</li>
             </ul>
+
+            <h4 class="styled-h4">Contamination in Cell Culture</h4>
+            <p>Contamination is a major issue in cell culture. Common types include:</p>
+            <ul class="space-y-3">
+                <li><strong>Bacteria:</strong> Tiny, single-celled prokaryotes.<br>
+                <em>Spot them by:</em> Rapid medium turbidity (cloudiness), sudden pH drop (medium turns yellow), and sometimes a "storm" of moving particles visible under the microscope.</li>
+                <li><strong>Yeasts:</strong> Single-celled eukaryotic fungi.<br>
+                <em>Spot them by:</em> Medium may become slightly turbid; individual ovoid or budding particles visible under microscope, often appearing as small, distinct dots or clusters.</li>
+                <li><strong>Molds (Fungi):</strong> Multicellular eukaryotic fungi that grow as hyphae (filaments).<br>
+                <em>Spot them by:</em> Visible fuzzy or cotton-like colonies, often on the surface of the medium or flask, and a network of filaments seen under the microscope.</li>
+                <li><strong>Mycoplasma:</strong> Very small bacteria lacking a cell wall, making them hard to see and filter.<br>
+                <em>Spot them by:</em> Often no visible turbidity; signs include slower cell growth, changes in cell morphology, premature yellowing of medium, or a "milky way-like fog" around nuclei when stained with DAPI.</li>
+                <li><strong>Viruses:</strong> Submicroscopic infectious agents replicating only inside living cells.<br>
+                <em>Spot them by:</em> Often no immediate visible signs; may cause cytopathic effects (CPE) like cell rounding or lysis, but diagnosis usually requires specific assays (e.g., ELISA, PCR).</li>
+                <li><strong>Cross-contamination (other cell lines):</strong> Unwanted presence of a different cell line in the culture.<br>
+                <em>Spot them by:</em> Unexpected changes in cell morphology, growth rate, or experimental results; requires specific testing like STR profiling for confirmation.</li>
+            </ul>
+
+            <div class="interactive-box">
+                <h4>Interactive: Contamination Detective!</h4>
+                <p class="text-sm mb-3">What type of contamination is most likely described in each scenario?</p>
+                
+                <div id="contamination-scenarios" class="space-y-4">
+                    <div class="contamination-scenario">
+                        <p class="font-medium text-sm mb-2">1. Your cell culture medium has suddenly become cloudy, and under the microscope, you see tiny, fast-moving rod-shaped or spherical particles between your cells. The medium has also turned yellow quickly.</p>
+                        <div class="space-y-1">
+                            <button class="quiz-option text-xs" data-scenario="1" data-correct="false">Mycoplasma</button>
+                            <button class="quiz-option text-xs" data-scenario="1" data-correct="false">Yeast</button>
+                            <button class="quiz-option text-xs" data-scenario="1" data-correct="true">Bacteria</button>
+                            <button class="quiz-option text-xs" data-scenario="1" data-correct="false">Viral</button>
+                        </div>
+                        <div class="feedback-message text-xs mt-1 p-1 rounded-md hidden" id="feedback-1"></div>
+                    </div>
+
+                    <div class="contamination-scenario">
+                        <p class="font-medium text-sm mb-2">2. You notice a 'milky way-like fog' or tiny specks around the nuclei of your cells when stained with DAPI. Cell growth has slowed, and the medium turns yellow faster than usual, but there's no visible cloudiness.</p>
+                        <div class="space-y-1">
+                            <button class="quiz-option text-xs" data-scenario="2" data-correct="false">Fungal (mold)</button>
+                            <button class="quiz-option text-xs" data-scenario="2" data-correct="true">Mycoplasma</button>
+                            <button class="quiz-option text-xs" data-scenario="2" data-correct="false">Cross-contamination with other cells</button>
+                            <button class="quiz-option text-xs" data-scenario="2" data-correct="false">Bacteria</button>
+                        </div>
+                        <div class="feedback-message text-xs mt-1 p-1 rounded-md hidden" id="feedback-2"></div>
+                    </div>
+
+                    <div class="contamination-scenario">
+                        <p class="font-medium text-sm mb-2">3. You see fuzzy, filamentous structures growing in your flask, some of which might be floating on the surface of the medium. Some areas might have a cottony appearance.</p>
+                        <div class="space-y-1">
+                            <button class="quiz-option text-xs" data-scenario="3" data-correct="false">Yeast</button>
+                            <button class="quiz-option text-xs" data-scenario="3" data-correct="false">Bacteria</button>
+                            <button class="quiz-option text-xs" data-scenario="3" data-correct="true">Fungal (mold)</button>
+                            <button class="quiz-option text-xs" data-scenario="3" data-correct="false">Mycoplasma</button>
+                        </div>
+                        <div class="feedback-message text-xs mt-1 p-1 rounded-md hidden" id="feedback-3"></div>
+                    </div>
+                </div>
+            </div>
         </div>
     `;
 }
 
-// Helper functions for this module
 function renderQuiz(quizData, containerId) {
     const quizContainer = document.getElementById(containerId);
     if (!quizContainer) return;
@@ -268,91 +319,72 @@ function renderQuiz(quizData, containerId) {
     });
 }
 
-function calculatePlasmidVolume() {
-    const desiredMassUg = parseFloat(document.getElementById('desired_mass_pg').value);
-    const stockConcNgUl = parseFloat(document.getElementById('stock_conc_pg').value);
-    const resultContainerEl = document.getElementById('plasmid-volume-result-container');
-    const resultEl = document.getElementById('plasmid-volume-result');
-    if (!resultContainerEl || !resultEl) return;
+// Helper functions for this module
+function handleMediaComponent(componentNumber) {
+    // Hide all component info boxes
+    document.querySelectorAll('.media-component-info-box').forEach(box => {
+        box.classList.add('hidden');
+    });
     
-    resultContainerEl.classList.remove('hidden');
-    if (isNaN(desiredMassUg) || isNaN(stockConcNgUl) || desiredMassUg <= 0 || stockConcNgUl <= 0) {
-        resultEl.innerHTML = "<span class='text-red-500'>Please enter valid positive numbers.</span>";
-        return;
+    // Remove selected state from all buttons
+    document.querySelectorAll('.media-component-button').forEach(btn => {
+        btn.classList.remove('selected');
+    });
+    
+    // Show selected component info
+    const selectedComponent = document.getElementById(`component-${componentNumber}`);
+    if (selectedComponent) {
+        selectedComponent.classList.remove('hidden');
     }
-    const volumeUl = (desiredMassUg * 1000) / stockConcNgUl;
-    resultEl.innerHTML = `Required Volume: <strong>${volumeUl.toFixed(3)} &micro;L</strong>`;
+    
+    // Add selected state to clicked button
+    const selectedButton = document.querySelector(`[data-component="${componentNumber}"]`);
+    if (selectedButton) {
+        selectedButton.classList.add('selected');
+    }
 }
 
-function handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback) {
-    const parentDiv = button.parentElement;
-    const feedbackEl = parentDiv.nextElementSibling;
+function handleContaminationScenario(button, scenario, isCorrect) {
+    const scenarioDiv = button.closest('.contamination-scenario');
+    const allButtons = scenarioDiv.querySelectorAll('.quiz-option');
+    const feedbackDiv = document.getElementById(`feedback-${scenario}`);
     
-    parentDiv.querySelectorAll('.quiz-option').forEach(btn => {
-        btn.disabled = true;
-        btn.classList.remove('correct', 'incorrect');
-    });
-
+    // Disable all buttons in this scenario
+    allButtons.forEach(btn => btn.disabled = true);
+    
+    // Style the clicked button
     if (isCorrect) {
         button.classList.add('correct');
-        feedbackEl.innerHTML = correctFeedback;
+        feedbackDiv.innerHTML = '<strong>Correct!</strong>';
+        feedbackDiv.className = 'feedback-message text-xs mt-1 p-1 rounded-md bg-green-100 text-green-800';
     } else {
         button.classList.add('incorrect');
-        feedbackEl.innerHTML = incorrectFeedback;
-        const correctButton = parentDiv.querySelector('[data-correct="true"]');
-        if (correctButton) correctButton.classList.add('correct');
+        // Find and highlight the correct answer
+        const correctButton = scenarioDiv.querySelector('[data-correct="true"]');
+        if (correctButton) {
+            correctButton.classList.add('correct');
+        }
+        feedbackDiv.innerHTML = `<strong>Incorrect.</strong> The correct answer is: <strong>${correctButton ? correctButton.textContent : 'Unknown'}</strong>`;
+        feedbackDiv.className = 'feedback-message text-xs mt-1 p-1 rounded-md bg-red-100 text-red-800';
     }
-    feedbackEl.classList.remove('hidden');
+    
+    feedbackDiv.classList.remove('hidden');
 }
 
-function renderInteractiveQuiz(container, quizData) {
-    container.innerHTML = '';
-    quizData.forEach((q, index) => {
-        const qDiv = document.createElement('div');
-        qDiv.className = 'quiz-question p-3 mb-2 bg-white rounded-md shadow-sm';
-        let optionsHtml = `<p class="font-medium mb-2 text-sm">${index + 1}. ${q.question}</p><div class="space-y-1">`;
-        q.options.forEach(optText => {
-            optionsHtml += `<button class="quiz-option text-xs">${optText}</button>`;
-        });
-        optionsHtml += `</div><div class="feedback-message text-xs mt-1 p-1 rounded-md hidden"></div>`;
-        qDiv.innerHTML = optionsHtml;
-        
-        qDiv.querySelectorAll('.quiz-option').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const isCorrect = btn.textContent === q.answer;
-                const correctFeedback = `<strong>Correct!</strong> ${q.explanation}`;
-                const incorrectFeedback = `<strong>Incorrect.</strong> ${q.explanation}`;
-                const parentDiv = btn.parentElement;
-                const feedbackEl = parentDiv.nextElementSibling;
-                parentDiv.querySelectorAll('.quiz-option').forEach(b => {
-                    b.disabled = true;
-                    b.classList.remove('correct', 'incorrect');
-                });
-                if (isCorrect) {
-                    btn.classList.add('correct');
-                    feedbackEl.innerHTML = correctFeedback;
-                } else {
-                    btn.classList.add('incorrect');
-                    feedbackEl.innerHTML = incorrectFeedback;
-                    parentDiv.querySelectorAll('.quiz-option').forEach(opt => {
-                         if (opt.textContent === q.answer) opt.classList.add('correct');
-                    });
-                }
-                feedbackEl.classList.remove('hidden');
-            });
-        });
-        container.appendChild(qDiv);
-    });
-}
-
-export default function initModule3(rootEl, sidebarEl) {
+export default function initModule7(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
-    link.href = '#module-3';
+    link.href = '#module-7';
     link.textContent = TITLE;
     link.className = 'sidebar-link block px-3 py-2 rounded-md';
-    // NEW, CORRECTED CODE
-    sidebarEl.querySelector('#sidebar-links').appendChild(link);;
+    
+    // Find the sidebar links container and add the link
+    const sidebarLinks = sidebarEl.querySelector('#sidebar-links');
+    if (sidebarLinks) {
+        sidebarLinks.appendChild(link);
+    } else {
+        console.error('Sidebar links container not found');
+    }
 
     // 2. Inject content
     rootEl.innerHTML = getContent();
@@ -362,64 +394,28 @@ export default function initModule3(rootEl, sidebarEl) {
         <div class="mt-8 pt-6 border-t-2 border-purple-300">
             <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
             <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
-            <div id="quiz-container-module-3"></div>
+            <div id="quiz-container-module-7"></div>
         </div>`;
     rootEl.insertAdjacentHTML('beforeend', quizHtml);
-
-    // 3. Attach event listeners and run init logic
-    // Interactive Box 1: Transfection Method Choice
-    const methodChoiceContainer = document.getElementById('transfection-method-choice-quiz');
-    if (methodChoiceContainer) {
-        const methodQuizData = {
-            options: ["Lipofection (e.g., Lipofectamine)", "Electroporation", "Calcium Phosphate Precipitation", "Viral Transduction (e.g., with lentiviruses)"],
-            answer: "Calcium Phosphate Precipitation",
-            feedback_correct: "Exactly! The calcium phosphate method is an established, cost-effective method well-suited for transfecting adherent cells like HEK293 and is ideal for our course objectives.",
-            feedback_incorrect: "Not quite. While other methods work, CaPi is a great balance of cost and efficiency for this specific purpose. Viral methods are more complex and costly, and Lipofection is often more expensive."
-        };
-        methodQuizData.options.forEach(optText => {
-            const btn = document.createElement('button');
-            btn.className = 'quiz-option text-xs sm:text-sm';
-            btn.textContent = optText;
-            btn.dataset.correct = (optText === methodQuizData.answer).toString();
-            btn.addEventListener('click', () => handleSimpleQuiz(btn, optText === methodQuizData.answer, methodQuizData.feedback_correct, methodQuizData.feedback_incorrect));
-            methodChoiceContainer.appendChild(btn);
-        });
-    }
-
-    // Interactive Box 2: Plasmid Calculator and Small Volume Quiz
-    document.getElementById('plasmid-calc-btn')?.addEventListener('click', calculatePlasmidVolume);
-    const smallVolumeQuizContainer = document.getElementById('small-volume-quiz');
-    if(smallVolumeQuizContainer) {
-        smallVolumeQuizContainer.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', () => {
-                 const isCorrect = button.dataset.correct === 'true';
-                 const correctFeedback = "<strong>Correct!</strong> 0.586 µL is generally too small to pipette accurately. A good strategy is to prepare a master mix or a working dilution.";
-                 const incorrectFeedback = "<strong>Not quite.</strong> This volume is very prone to error with standard lab equipment.";
-                 handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
-            });
-        });
-    }
-
-    // Interactive Box 4: Troubleshooting Quiz
-    const troubleshootingContainer = document.getElementById('transfection-troubleshooting-quiz');
-    if (troubleshootingContainer) {
-        const troubleshootingQuizData = [
-            {
-                question: "Your cells look very unhappy after transfection, and many have detached. What could be a primary reason related to the CaPi method?",
-                options: ["Too little DNA was used", "The precipitates were too fine or incubated for too short a time", "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long", "Cells were not confluent enough"],
-                answer: "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long",
-                explanation: "Coarse CaPi precipitates formed due to incorrect pH or overly long incubation with cells can be quite toxic, leading to cell stress and detachment."
-            },
-            {
-                question: "You see hardly any GFP-positive cells 24-48 hours post-transfection. Which is a common critical factor to check first for CaPi transfections?",
-                options: ["The incubator temperature was 36°C instead of 37°C", "The pH of the 2x BBS solution was incorrect", "You used 0.5 µg of DNA instead of 0.3 µg", "The cells were only 50% confluent"],
-                answer: "The pH of the 2x BBS solution was incorrect",
-                explanation: "The pH of the BBS is extremely critical for forming the right kind of fine precipitate for efficient uptake. Incorrect pH is a very common reason for CaPi transfection failure."
-            }
-        ];
-        renderInteractiveQuiz(troubleshootingContainer, troubleshootingQuizData);
-    }
     
+    // 3. Attach event listeners
+    // Media component buttons
+    document.querySelectorAll('.media-component-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const componentNumber = button.getAttribute('data-component');
+            handleMediaComponent(componentNumber);
+        });
+    });
+    
+    // Contamination scenario buttons
+    document.querySelectorAll('#contamination-scenarios .quiz-option').forEach(button => {
+        button.addEventListener('click', () => {
+            const scenario = button.getAttribute('data-scenario');
+            const isCorrect = button.getAttribute('data-correct') === 'true';
+            handleContaminationScenario(button, scenario, isCorrect);
+        });
+    });
+
     // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-3');
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-7');
 }

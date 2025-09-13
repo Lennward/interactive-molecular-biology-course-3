@@ -379,3 +379,10 @@ function checkPracticeAnswer(problemId, correctAnswers, inputIds) {
     if (allCorrect) {
         feedbackDiv.textContent = 'Correct!';
     } else {
+        feedbackDiv.innerHTML = 'One or more answers are incorrect. Please review the solution below.';
+    }
+}
+
+export default function initModule2(rootEl, sidebarEl) {
+    // 1. Add sidebar link
+    const link = document.createElement('a');

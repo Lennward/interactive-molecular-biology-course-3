@@ -314,4 +314,249 @@ function getContent() {
                         <li><strong>Low efficiency:</strong> Particularly in primary cells or hard-to-transfect lines.</li>
                         <li><strong>Toxicity:</strong> Large precipitates or long incubation times can be harmful to cells.</li>
                         <li><strong>Precipitate size:</strong> If the precipitate is too coarse, it won't be taken up efficiently.</li>
-                        <li><strong>Limited reproducibility:</strong
+                        <li><strong>Limited reproducibility:</strong> Small changes in mixing or timing can affect results.</li>
+                    </ul>
+                </div>
+                
+                <div class="highlight-note">
+                    <p><strong>How can the transfection efficiency be influenced? (especially Calcium phosphate)</strong></p>
+                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
+                        <li><strong>Precise pH control:</strong> Optimal pH for precipitate formation is usually around 7.05–7.12. Slight deviations can strongly affect efficiency.</li>
+                        <li><strong>Precipitate quality:</strong> A fine, even precipitate increases uptake—this depends on mixing speed and incubation time before adding to cells.</li>
+                        <li><strong>DNA amount and purity:</strong> Using clean, endotoxin-free DNA in the right concentration improves results.</li>
+                        <li><strong>Cell confluency:</strong> Ideal confluency is 50–80%—cells that are too sparse or too confluent transfect less efficiently.</li>
+                        <li><strong>Incubation time with precipitate:</strong> Typically 4–8 hours, but too long can cause toxicity.</li>
+                        <li><strong>Glycerol shock or DMSO shock (optional):</strong> Brief exposure after transfection can boost efficiency.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h4 class="styled-h4">Plasmid Maps</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
+                <div class="text-center">
+                    <img src="images/image95.png" alt="pH2B-GFP plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+95:+pH2B-GFP+Plasmid'; this.alt='Placeholder: pH2B-GFP Plasmid Map';">
+                    <p class="text-sm mt-2 font-semibold">Figure 5: Plasmid map of pH2B-GFP used in the practical course</p>
+                </div>
+                <div class="text-center">
+                    <img src="images/image96.png" alt="pRKV-FLAG plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+pRKV-FLAG+Plasmid'; this.alt='Placeholder: pRKV-FLAG Plasmid Map';">
+                    <p class="text-sm mt-2 font-semibold">Figure 6: Plasmid map of pRKV-FLAG used in the practical course</p>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function renderQuiz(quizData, containerId) {
+    const quizContainer = document.getElementById(containerId);
+    if (!quizContainer) return;
+    quizContainer.innerHTML = '';
+
+    quizData.forEach((q, index) => {
+        const questionDiv = document.createElement('div');
+        questionDiv.className = 'quiz-question';
+        let optionsHtml = q.options.map(optionText => `<button class="quiz-option">${optionText}</button>`).join('');
+
+        questionDiv.innerHTML = `
+            <p class="font-medium mb-3">${index + 1}. ${q.question}</p>
+            <div class="space-y-2">${optionsHtml}</div>
+            <div class="feedback-message text-sm mt-2 p-2 rounded-md hidden"></div>
+        `;
+        
+        questionDiv.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const feedbackDiv = questionDiv.querySelector('.feedback-message');
+                const allOptions = questionDiv.querySelectorAll('.quiz-option');
+                allOptions.forEach(btn => btn.disabled = true);
+                
+                if (button.textContent === q.answer) {
+                    button.classList.add('correct');
+                    feedbackDiv.innerHTML = '<strong>Correct!</strong> ';
+                } else {
+                    button.classList.add('incorrect');
+                    feedbackDiv.innerHTML = `<strong>Incorrect.</strong> The correct answer is: <span class="font-semibold">${q.answer}</span>. `;
+                    allOptions.forEach(btn => { if (btn.textContent === q.answer) btn.classList.add('correct'); });
+                }
+                if (q.explanation) {
+                    feedbackDiv.innerHTML += `<br><span class="text-xs">${q.explanation}</span>`;
+                }
+                feedbackDiv.classList.remove('hidden');
+            });
+        });
+        quizContainer.appendChild(questionDiv);
+    });
+}
+
+function calculatePlasmidVolume() {
+    const desiredMassUg = parseFloat(document.getElementById('desired_mass_pg').value);
+    const stockConcNgUl = parseFloat(document.getElementById('stock_conc_pg').value);
+    const resultContainerEl = document.getElementById('plasmid-volume-result-container');
+    const resultEl = document.getElementById('plasmid-volume-result');
+    if (!resultContainerEl || !resultEl) return;
+    
+    resultContainerEl.classList.remove('hidden');
+    if (isNaN(desiredMassUg) || isNaN(stockConcNgUl) || desiredMassUg <= 0 || stockConcNgUl <= 0) {
+        resultEl.innerHTML = "<span class='text-red-500'>Please enter valid positive numbers.</span>";
+        return;
+    }
+    const volumeUl = (desiredMassUg * 1000) / stockConcNgUl;
+    resultEl.innerHTML = `Required Volume: <strong>${volumeUl.toFixed(3)} &micro;L</strong>`;
+}
+
+function handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback) {
+    const parentDiv = button.parentElement;
+    const feedbackEl = parentDiv.nextElementSibling;
+    
+    parentDiv.querySelectorAll('.quiz-option').forEach(btn => {
+        btn.disabled = true;
+        btn.classList.remove('correct', 'incorrect');
+    });
+
+    if (isCorrect) {
+        button.classList.add('correct');
+        feedbackEl.innerHTML = correctFeedback;
+    } else {
+        button.classList.add('incorrect');
+        feedbackEl.innerHTML = incorrectFeedback;
+        const correctButton = parentDiv.querySelector('[data-correct="true"]');
+        if (correctButton) correctButton.classList.add('correct');
+    }
+    feedbackEl.classList.remove('hidden');
+}
+
+function renderInteractiveQuiz(container, quizData) {
+    container.innerHTML = '';
+    quizData.forEach((q, index) => {
+        const qDiv = document.createElement('div');
+        qDiv.className = 'quiz-question p-3 mb-2 bg-white rounded-md shadow-sm';
+        let optionsHtml = `<p class="font-medium mb-2 text-sm">${index + 1}. ${q.question}</p><div class="space-y-1">`;
+        q.options.forEach(optText => {
+            optionsHtml += `<button class="quiz-option text-xs">${optText}</button>`;
+        });
+        optionsHtml += `</div><div class="feedback-message text-xs mt-1 p-1 rounded-md hidden"></div>`;
+        qDiv.innerHTML = optionsHtml;
+        
+        qDiv.querySelectorAll('.quiz-option').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isCorrect = btn.textContent === q.answer;
+                const correctFeedback = `<strong>Correct!</strong> ${q.explanation}`;
+                const incorrectFeedback = `<strong>Incorrect.</strong> ${q.explanation}`;
+                const parentDiv = btn.parentElement;
+                const feedbackEl = parentDiv.nextElementSibling;
+                parentDiv.querySelectorAll('.quiz-option').forEach(b => {
+                    b.disabled = true;
+                    b.classList.remove('correct', 'incorrect');
+                });
+                if (isCorrect) {
+                    btn.classList.add('correct');
+                    feedbackEl.innerHTML = correctFeedback;
+                } else {
+                    btn.classList.add('incorrect');
+                    feedbackEl.innerHTML = incorrectFeedback;
+                    parentDiv.querySelectorAll('.quiz-option').forEach(opt => {
+                         if (opt.textContent === q.answer) opt.classList.add('correct');
+                    });
+                }
+                feedbackEl.classList.remove('hidden');
+            });
+        });
+        container.appendChild(qDiv);
+    });
+}
+
+export default function initModule9(rootEl, sidebarEl) {
+    // 1. Add sidebar link
+    const link = document.createElement('a');
+    link.href = '#module-9';
+    link.textContent = TITLE;
+    link.className = 'sidebar-link block px-3 py-2 rounded-md';
+    
+    // Find the sidebar links container and add the link
+    const sidebarLinks = sidebarEl.querySelector('#sidebar-links');
+    if (sidebarLinks) {
+        sidebarLinks.appendChild(link);
+    } else {
+        console.error('Sidebar links container not found');
+    }
+
+    // 2. Inject content
+    rootEl.innerHTML = getContent();
+
+    // Add quiz container
+    const quizHtml = `
+        <div class="mt-8 pt-6 border-t-2 border-purple-300">
+            <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
+            <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
+            <div id="quiz-container-module-9"></div>
+        </div>`;
+    rootEl.insertAdjacentHTML('beforeend', quizHtml);
+
+    // 3. Attach event listeners and run init logic
+    // Transfection type quiz
+    const transfectionTypeContainer = document.getElementById('transfection-type-quiz');
+    if (transfectionTypeContainer) {
+        transfectionTypeContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const isCorrect = button.dataset.correct === 'true';
+                const correctFeedback = "<strong>Correct!</strong> After transfection, the plasmid remains in the cell nucleus as a free DNA molecule.";
+                const incorrectFeedback = "<strong>Incorrect!</strong> We perform transient transfection - the plasmid is not permanently integrated.";
+                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
+    
+    // Interactive Box 1: Transfection Method Choice
+    const methodChoiceContainer = document.getElementById('transfection-method-choice-quiz');
+    if (methodChoiceContainer) {
+        const methodQuizData = {
+            options: ["Lipofection (e.g., Lipofectamine)", "Electroporation", "Calcium Phosphate Precipitation", "Viral transduction (e.g. with lentiviruses)"],
+            answer: "Calcium Phosphate Precipitation",
+            feedback_correct: "Exactly! The calcium phosphate method is an established, cost-effective method well-suited for transfecting adherent cells like HEK293 and is ideal for our course objectives.",
+            feedback_incorrect: "Not quite. The calcium phosphate method is an established, cost-effective method well-suited for transfecting adherent cells like HEK293 and is ideal for our course objectives."
+        };
+        methodQuizData.options.forEach(optText => {
+            const btn = document.createElement('button');
+            btn.className = 'quiz-option text-xs sm:text-sm';
+            btn.textContent = optText;
+            btn.dataset.correct = (optText === methodQuizData.answer).toString();
+            btn.addEventListener('click', () => handleSimpleQuiz(btn, optText === methodQuizData.answer, methodQuizData.feedback_correct, methodQuizData.feedback_incorrect));
+            methodChoiceContainer.appendChild(btn);
+        });
+    }
+
+    // Interactive Box 2: Plasmid Calculator and Small Volume Quiz
+    document.getElementById('plasmid-calc-btn')?.addEventListener('click', calculatePlasmidVolume);
+    const smallVolumeQuizContainer = document.getElementById('small-volume-quiz');
+    if(smallVolumeQuizContainer) {
+        smallVolumeQuizContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                 const isCorrect = button.dataset.correct === 'true';
+                 const correctFeedback = "<strong>Correct!</strong> 0.416 µL is generally too small to pipette accurately with standard P2 or P10 pipettes. A good strategy is to prepare a master mix or a working dilution of the plasmid.";
+                 const incorrectFeedback = "<strong>Not quite.</strong> 0.416 µL is generally too small to pipette accurately with standard P2 or P10 pipettes. A good strategy is to prepare a master mix or a working dilution of the plasmid.";
+                 handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
+
+    // Interactive Box 4: Troubleshooting Quiz
+    const troubleshootingContainer = document.getElementById('transfection-troubleshooting-quiz');
+    if (troubleshootingContainer) {
+        const troubleshootingQuizData = [
+            {
+                question: "Your cells look very unhappy after transfection, and many have detached. What could be a primary reason related to the CaPi method?",
+                options: ["Too little DNA was used", "The precipitates were too fine or incubated for too short a time", "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long", "Cells were not confluent enough"],
+                answer: "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long",
+                explanation: "Coarse CaPi precipitates formed due to incorrect pH or overly long incubation with cells can be quite toxic, leading to cell stress and detachment."
+            },
+            {
+                question: "You see hardly any GFP-positive cells 24-48 hours post-transfection. Which is a common critical factor to check first for CaPi transfections?",
+                options: ["The incubator temperature was 36°C instead of 37°C", "The pH of the 2x BBS solution was incorrect", "You used 0.5 µg of DNA instead of 0.3 µg", "The cells were only 50% confluent"],
+                answer: "The pH of the 2x BBS solution was incorrect",
+                explanation: "The pH of the BBS is extremely critical for forming the right kind of fine precipitate for efficient uptake. Incorrect pH is a very common reason for CaPi transfection failure."
+            }
+        ];
+        renderInteractiveQuiz(troubleshootingContainer, troubleshootingQuizData);
+    }
+    
+    // 4. Render main module quiz
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-9');
+}

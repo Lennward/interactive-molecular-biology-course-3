@@ -1,236 +1,226 @@
 const TITLE = "Module 10: Fluorescence Microscopy of GFP as proof of fluorophore expression";
 const QUIZ_DATA = [
     {
-        question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",
-        options: ["To provide nutrients to the cells", "To permeabilize the cell membrane", "To form a DNA-calcium phosphate co-precipitate", "To select for transfected cells"],
-        answer: "To form a DNA-calcium phosphate co-precipitate",
+        question: "Why is GFP used in this experiment?",
+        options: ["To provide nutrients to the cells", "As a reporter molecule to visualize gene/protein expression", "To help cells attach to the plate", "To increase transfection efficiency"],
+        answer: "As a reporter molecule to visualize gene/protein expression",
         type: "mcq",
-        explanation: "2x BBS (Buffered Saline Solution) provides the phosphate ions that react with calcium chloride and DNA to form the fine precipitate that cells can take up."
+        explanation: "GFP serves as a reporter molecule to visualize the expression of a specific gene or protein, indicating whether the plasmid has been successfully introduced into the cells."
     },
     {
-        question: "True or False: For optimal calcium phosphate transfection, cells should ideally be 100% confluent.",
+        question: "What would happen if you used the wrong filter on the fluorescence microscope?",
+        options: ["The cells would die", "No signal or only a very weak signal would be visible", "The GFP would change color", "The microscope would break"],
+        answer: "No signal or only a very weak signal would be visible",
+        type: "mcq",
+        explanation: "If the wrong filter is used (one that doesn't match GFP's excitation/emission wavelengths), GFP won't be stimulated properly or the emitted light won't be detected."
+    },
+    {
+        question: "Where in the cell do you expect to see the H2B-GFP signal?",
+        options: ["Throughout the entire cell", "Only in the cytoplasm", "Only in the cell nucleus", "Only at the cell membrane"],
+        answer: "Only in the cell nucleus",
+        type: "mcq",
+        explanation: "Since H2B-GFP is coupled to histone protein H2B, which is part of the chromatin structure, the GFP signal is only visible in the cell nucleus, often appearing patchy as it reflects DNA organization."
+    },
+    {
+        question: "True or False: All cells in a well transfected with GFP will express GFP.",
         options: ["True", "False"],
         answer: "False",
         type: "tf",
-        explanation: "Cells should be actively dividing and typically at a confluency of 50-70% for efficient calcium phosphate transfection. 100% confluency often leads to lower efficiency."
-    },
-    {
-        question: "Which of the following is NOT a critical factor for successful calcium phosphate transfection?",
-        options: ["pH of the BBS solution", "Quality and quantity of plasmid DNA", "Vigorous vortexing after adding BBS", "Cell health and confluency"],
-        answer: "Vigorous vortexing after adding BBS",
-        type: "mcq",
-        explanation: "Vigorous vortexing after adding BBS can lead to large, irregular precipitates and shear DNA, reducing transfection efficiency. Gentle mixing by inversion is recommended."
+        explanation: "Not all cells take up the plasmid during transfection or express GFP efficiently. You typically see a mixture of GFP-positive and non-fluorescent cells, depending on transfection efficiency, plasmid quality, and culture conditions."
     }
 ];
 
 function getContent() {
     return `
         <div class="module-content">
-            <h2>Module 3: Cellular Alchemy: The Art of Transfection</h2>
-            <p>Welcome to the fascinating world of transfection! In this module, you'll learn how to introduce foreign genetic material into cells, a cornerstone technique in molecular biology that allows us to study gene function, produce proteins, and much more. It's like giving cells a new set of instructions!</p>
+            <h2>Module 10: Fluorescence Microscopy of GFP as proof of fluorophore expression</h2>
             
-            <h3>I. Module Overview & Learning Objectives</h3>
-            <p>This module will guide you through the principles and practical steps of transfecting eukaryotic cells, focusing on the calcium phosphate method.</p>
-            <ul class="list-disc list-inside mb-4 bg-sky-50 p-3 rounded-md">
-                <li>Understand the definition and goals of transfection.</li>
-                <li>Differentiate between transient and stable transfection.</li>
-                <li>Get an overview of various transfection methods and their applications.</li>
-                <li>Master the calcium phosphate transfection protocol for HEK293 cells.</li>
-                <li>Learn to calculate necessary reagent and plasmid amounts.</li>
-                <li>Identify key factors for successful transfection and basic troubleshooting.</li>
+            <p>Congratulations, you've theoretically performed a transfection! What's next? After sufficient incubation time (usually 24-48 hours for transient expression), the real fun begins: analyzing your results! For this, we will:</p>
+            
+            <ul class="list-disc list-inside ml-4 mb-4">
+                <li>Observe cells under a fluorescence microscope to detect GFP expression (green fluorescence).</li>
+                <li>Calculate transfection efficiency (percentage of GFP-positive cells).</li>
             </ul>
 
-            <h3>II. Content Sections</h3>
+            <h3>Theoretical Background</h3>
             
-            <h4 class="styled-h4">A. Introduction to Transfection</h4>
-            <p><strong>What is Transfection?</strong><br>
-            Transfection is a powerful biotechnological process used to introduce foreign nucleic acids – most commonly plasmid DNA – into eukaryotic cells. This allows scientists to manipulate the genetic makeup of cells in a controlled manner.</p>
+            <h4 class="styled-h4">What is fluorescence?</h4>
+            <p>Fluorescence describes the ability of certain molecules to absorb short-wavelength light (e.g., UV or blue light) and emit longer-wavelength light (e.g., visible light). This phenomenon is based on the excitation of electrons: when a fluorophore is excited by absorbed light, the electrons of the fluorophore briefly jump to a higher energy level. When they fall back to their ground state, they release this energy in the form of visible light (longer wavelength).</p>
             
-            <p><strong>Goals of Transfection:</strong><br>
-            The primary goals include:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <div class="goal-box"><strong>Gene Expression</strong><p class="text-sm">Introducing a gene to produce a specific protein (e.g., a fluorescent marker like GFP, or a therapeutic protein).</p></div>
-                <div class="goal-box"><strong>Gene Silencing/Knockdown</strong><p class="text-sm">Introducing constructs (like siRNA or shRNA) to reduce or eliminate the expression of a specific endogenous gene.</p></div>
-                <div class="goal-box"><strong>Reporter Assays</strong><p class="text-sm">Studying the activity of promoters or other regulatory elements by linking them to a reporter gene.</p></div>
-                <div class="goal-box"><strong>Protein Production</strong><p class="text-sm">Using cells as factories to produce large quantities of a desired protein.</p></div>
-            </div>
+            <p>Many dyes—known as fluorophores—use this principle. In molecular biology, they are used to make proteins, cell structures, or DNA visible in a targeted manner.</p>
             
+            <img src="images/image101.png" alt="Basic principle of fluorescence" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+101:+Fluorescence+Principle'; this.alt='Placeholder: Fluorescence Principle';">
+            <p class="text-sm text-center text-gray-600 -mt-2 mb-4"><strong>Figure 2:</strong> The basic principle of fluorescence.</p>
 
-            <p><strong>Transient vs. Stable Transfection:</strong><br>
-            Transfection can be either transient or stable:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Transient Transfection:</strong> The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</li>
-                <li><strong>Stable Transfection:</strong> The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</li>
-            </ul>
-            </p>
-            <img src="placeholder_transfection_overview.svg" alt="Schematic of plasmid DNA entering a cell and leading to protein expression" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
-
-            <h4 class="styled-h4">B. Overview of Transfection Methods</h4>
-            <p><strong>The Variety of Methods:</strong><br>
-            There are numerous ways to get nucleic acids into cells, broadly categorized as:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Chemical Methods:</strong> These involve using reagents that complex with DNA and facilitate its entry into cells. Examples include:
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Calcium Phosphate Precipitation:</strong> The method we'll use! DNA is mixed with calcium chloride and phosphate buffer, forming fine DNA-calcium phosphate co-precipitates that are taken up by cells via endocytosis. It's cost-effective and works well for many adherent cell lines like HEK293.</li>
-                        <li><strong>Lipid-based (Lipofection):</strong> Cationic lipids form complexes (lipoplexes) with negatively charged DNA, which then fuse with the cell membrane or are endocytosed. Reagents like Lipofectamine™ are common.</li>
-                        <li><strong>Cationic Polymers:</strong> Polymers like Polyethylenimine (PEI) or dendrimers bind DNA and form polyplexes, which are then endocytosed.</li>
-                    </ul>
-                </li>
-                <li><strong>Physical Methods:</strong> These use physical force to create transient pores in the cell membrane.
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Electroporation:</strong> Cells are exposed to a brief electrical pulse, creating temporary pores for DNA entry. Very efficient for many cell types, including those hard to transfect by chemical means.</li>
-                        <li><strong>Microinjection:</strong> DNA is directly injected into the cytoplasm or nucleus using a fine glass micropipette. Precise but low-throughput.</li>
-                        <li><strong>Gene Gun (Biolistics):</strong> DNA-coated gold or tungsten particles are shot into cells or tissues.</li>
-                    </ul>
-                </li>
-                <li><strong>Viral Methods (Transduction):</strong> Recombinant viruses (e.g., lentiviruses, adenoviruses, AAV) are used as vectors to deliver genetic material. Often very high efficiency, even in primary cells and in vivo, and can be used for stable integration.</li>
-            </ul>
-            In this course, we will focus on the <strong>Calcium Phosphate Precipitation</strong> method due to its effectiveness with HEK293 cells and its historical significance.
-            </p>
-            <div class="interactive-box">
-                <h4>Interactive Box 1: The Agony of Choice: Which Method for Which Purpose?</h4>
-                <p class="text-sm mb-2">Scenario: Imagine you want to express proteins quickly and cost-effectively in robust HEK293 cells. Which of the following methods would be most suitable for this project and our course?</p>
-                <div id="transfection-method-choice-quiz" class="space-y-1"></div>
-                <div id="transfection-method-choice-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
-            </div>
-
-            <h4 class="styled-h4">C. In Detail: Calcium Phosphate Transfection</h4>
-            <p><strong>The Principle – Magic with Calcium and Phosphate:</strong><br>
-            The calcium phosphate method relies on a simple chemical trick. Negatively charged plasmid DNA is mixed with calcium chloride (CaCl₂). When a phosphate-buffered saline solution (like 2x BBS - HEPES Buffered Saline) is added, insoluble calcium phosphate-DNA co-precipitates form. These fine, crystalline particles settle onto adherent cells. Cells naturally take up these particles through endocytosis (a process where the cell membrane engulfs external material). Once inside the cell, some of the DNA escapes the endosomes, makes its way to the nucleus, and can then be transcribed and translated by the cell's machinery to produce the desired protein (e.g., GFP or your FLAG-tagged protein).</p>
-
-            <p><strong>Our Tools and Ingredients:</strong>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cells:</strong> HEK293 cells (Human Embryonic Kidney cells, adherent).</li>
-                <li><strong>Plasmids:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>pH2B-GFP (Concentration: e.g., 682.3 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                        <li>pRKV-FLAG (Concentration: 1015 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                    </ul>
-                </li>
-                <li><strong>Main Reagents:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>0.25 M CaCl₂ solution</li>
-                        <li>2x BBS (Buffered Saline Solution, typically HEPES-buffered, pH is critical, usually around 7.05-7.12)</li>
-                    </ul>
-                </li>
-            </ul>
-            </p>
-            <img src="placeholder_calcium_phosphate_mechanism.svg" alt="Schematic of calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">
-
-            <h4 class="styled-h4">The Protocol – Step by Step to Success:</h4>
-            <p class="text-sm italic">The following protocol is for transfecting <strong>one well</strong> of a 24-well plate. Remember to scale up your calculations for the total number of wells you plan to transfect for each plasmid, and always prepare a little extra (e.g., 10%) to account for pipetting inaccuracies!</p>
+            <h4 class="styled-h4">What is GFP?</h4>
+            <p><strong>GFP</strong> (green fluorescent protein) is a fluorescent protein from the jellyfish <em>Aequorea victoria</em>. It is one of the best-known reporter genes in cell and molecular biology. GFP fluoresces green when excited by blue light (approx. 488 nm).</p>
+            
+            <p>Genetic engineering methods can be used to link GFP to another protein. When this protein is then expressed in cells, it is possible to see directly under the microscope whether and where it has been produced.</p>
             
             <div class="highlight-note">
-                <p><strong>Crucial Reminder:</strong> Always prepare all solutions for the required number of wells PLUS 10% extra volume to account for pipetting errors!</p>
+                <p><strong>→ GFP therefore serves as a visible indicator of successful transfection and gene expression.</strong></p>
             </div>
 
-            <ol class="list-decimal list-inside space-y-3">
-                <li>
-                    <strong>Prepare Solution (per well):</strong>
-                    <ul class="list-disc list-inside ml-5 mt-1 text-sm space-y-1">
-                        <li>In a sterile 1.5 mL microcentrifuge tube (Eppendorf tube), add <strong>25 µL of 0.25 M CaCl₂</strong>.</li>
-                        <li>
-                            <strong>Add Plasmid DNA:</strong> Add <strong>0.3 - 0.5 µg</strong> of your desired plasmid (pH2B-GFP or pRKV-FLAG) to the CaCl₂.
+            <h4 class="styled-h4">How does a fluorescence microscope work?</h4>
+            <p>A fluorescence microscope is specially designed to make fluorophores visible. It uses targeted light sources, such as LEDs or lasers, to irradiate the sample with light of a precisely defined <strong>excitation wavelength</strong>—i.e., exactly the wavelength that the fluorophore used can absorb.</p>
+            
+            <p>The optical system consists of mirrors and filters that direct the light in a specific way:</p>
+            <ul class="list-disc list-inside ml-4">
+                <li>Only the <strong>excitation light</strong> hits the sample.</li>
+                <li>Only the <strong>emitted fluorescence light</strong>—generated by the fluorophore—reaches the camera or eyepiece.</li>
+                <li>An <strong>emission filter</strong> blocks the original excitation light and allows only the fluorescence signal to pass through.</li>
+            </ul>
+            
+            <img src="images/image102.png" alt="How a fluorescence microscope works" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x400/e2e8f0/4a5568?text=Image+102:+Fluorescence+Microscope'; this.alt='Placeholder: Fluorescence Microscope';">
+            <p class="text-sm text-center text-gray-600 -mt-2 mb-4"><strong>Figure 3:</strong> How a fluorescence microscope works.</p>
+            
+            <p>This creates a bright, high-contrast image of fluorescent structures that stands out clearly against the dark background.</p>
+            
+            <p>Fluorescence microscopy can be used to visualize individual proteins or cell structures that would not be visible with conventional microscopy.</p>
+            
+            <ul class="list-disc list-inside ml-4 mb-4">
+                <li>It enables both the spatial localization of molecules and the observation of cellular processes and molecular interactions.</li>
+                <li>In addition to qualitative representation, it also allows quantitative analyses, e.g., of expression strength—especially when using reporter proteins such as GFP or fluorescence-labeled antibodies.</li>
+            </ul>
+
+            <h3>Practical Procedure</h3>
+            
+            <h4 class="styled-h4">Materials</h4>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li>Already transfected HEK293 cells (16–24 hours after transfection)</li>
+                <li>PBS (phosphate-buffered saline)</li>
+                <li>4% paraformaldehyde (PFA) for fixation</li>
+                <li>Hoechst33258 for cells that only contain GFP plasmid (and not FLAG tag)</li>
+                <li>Fluorescence microscope with GFP filter set (Ex: 488 nm, Em: 510 nm)</li>
+                <li>Digital camera with imaging software</li>
+            </ul>
+            
+            <h4 class="styled-h4">Steps</h4>
+            
+            <div class="space-y-6">
+                <div>
+                    <h5 class="font-semibold text-purple-700 mb-2">1. Fixation of cells</h5>
+                    <div class="highlight-note">
+                        <p><strong>The fixation keeps the proteins in place!</strong></p>
+                    </div>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Carefully remove the culture plates from the incubator.</li>
+                        <li>Check cells for adherence, density and morphology under the microscope.</li>
+                        <li>Carefully remove the culture medium (completely) with a pipette and wash the cells with 0.5 ml 1x PBS. 
                             <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
-                                <p><strong>Attention, Pipetting Pros!</strong> Pipetting volumes less than 2 µL is highly inaccurate. If your calculated volume is too small, consider preparing a master mix. For example, if you need 0.5 µL per well and are doing 4 wells, prepare a mix for 4.4 wells (4 wells + 10% extra), so 0.5 µL/well * 4.4 wells = 2.2 µL plasmid in a larger volume of CaCl₂.</p>
-                                <p class="mt-1"><strong>Storage & Handling:</strong> Plasmids are stored in the freezer. Always keep plasmids on ice when outside the freezer.</p>
+                                <p><strong>Caution:</strong> Tilt the plate relatively far and do not touch the bottom of the well so that the cells are not disturbed. Instead, pipette only at the side of the well by holding the pipette at an angle. Also, pipette very slowly! This applies in general to any major pipetting step in which the entire liquid is removed or added (medium change, washing, etc.) in the 24-well plates, regardless of whether pipetting up or down! Always pipette on the same side/to the same spot!</p>
                             </div>
                         </li>
+                        <li><strong>Next steps under the fume hood (not the cell culture hood!)!</strong></li>
+                        <li>Remove the 1x PBS and add 500 µl 4% PFA (= fixation buffer) (Caution: carcinogenic), incubate for 15 minutes at room temperature in the dark (= fixation).</li>
+                        <li>Then remove the PFA and wash the cells twice with PBS (500 µl PBS per wash step) and leave the PBS in the wells after the last wash step.</li>
+                        <li>Now you no longer need to work under the fume hood.</li>
                     </ul>
-                </li>
-                <li>
-                    <strong>Interactive Box 2: "Plasmid Calculation Wizards Wanted!"</strong>
-                    <div class="interactive-box">
-                        <h4>Plasmid Calculation Practice</h4>
-                        <p class="text-sm mb-2"><strong>Scenario 1: Volume Calculation</strong><br>You want to use 0.4 µg of Plasmid pH2B-GFP. Its stock concentration is 682.3 ng/µL. How many µL of the stock solution do you need?</p>
-                        <div class="calculator grid grid-cols-1 sm:grid-cols-2 gap-2 items-end mb-4">
-                            <div>
-                                <label for="desired_mass_pg" class="block text-xs font-medium text-gray-700">Desired Mass (µg):</label>
-                                <input type="number" id="desired_mass_pg" value="0.4" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div>
-                                <label for="stock_conc_pg" class="block text-xs font-medium text-gray-700">Stock Conc. (ng/µL):</label>
-                                <input type="number" id="stock_conc_pg" value="682.3" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <button id="plasmid-calc-btn" class="w-full py-1.5 text-sm">Calculate Volume</button>
-                            </div>
-                        </div>
-                        <div id="plasmid-volume-result-container" class="p-2 bg-white rounded-md shadow text-sm hidden">
-                            <p id="plasmid-volume-result" class="font-semibold text-purple-700"></p>
-                        </div>
-
-                        <p class="text-sm mb-2 mt-4"><strong>Scenario 2: Handling Small Volumes</strong><br>The calculated volume from Scenario 1 is approximately 0.586 µL. Can this be pipetted accurately and directly with standard lab pipettes? (Select Yes or No)</p>
-                        <div id="small-volume-quiz" class="space-y-1 mb-2">
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="false">Yes, it's fine.</button>
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="true">No, it's too small for accurate direct pipetting.</button>
-                        </div>
-                        <div id="small-volume-feedback" class="feedback-message text-xs mt-1 p-1.5 rounded-md hidden"></div>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold text-purple-700 mb-2">2. Hoechst staining of GFP-expressing cells</h5>
+                    <div class="highlight-note">
+                        <p><strong>Important:</strong> Only cells that will not be used for ICC the next day can now be stained with Hoechst33258. All cells (wells) that will be used for ICC will be stained with Hoechst33258 after ICC on the next day.</p>
                     </div>
-                </li>
-                <li>
-                    <strong>The Magic Ingredient:</strong> Slowly, while gently vortexing or flicking the tube containing the CaCl₂-DNA mixture, add <strong>25 µL of 2x BBS</strong>. *Critical: Add BBS to DNA/CaCl₂, not the other way around for optimal precipitate formation.*
-                </li>
-                <li>
-                    <strong>Mix Gently:</strong> Immediately after adding BBS, cap the tube and gently invert it 4-5 times to mix. **DO NOT VORTEX** at this stage, as it can shear the DNA or lead to suboptimal precipitate size.
-                </li>
-                <li>
-                    <strong>Patience Test (Precipitate Formation):</strong> Incubate the mixture for <strong>15 minutes at room temperature (RT)</strong>.
-                     <div class="text-xs p-2 mt-1 bg-orange-50 border-l-4 border-orange-400 text-orange-700 rounded-r-md">
-                        <em>Note on Centrifugation: Some older protocols mention a brief centrifugation. This step is not typical for modern CaPi protocols as it might compact the precipitate too much. We will proceed without centrifugation.</em>
-                    </div>
-                </li>
-                <li>
-                    <strong>"Feed" the Cells:</strong> After the 15-minute incubation, gently resuspend the fine precipitate and add <strong>50 µL of this suspension dropwise</strong> onto the cells in one well of a 24-well plate.
-                </li>
-                <li>
-                    <strong>Interactive Box 3: "My Plate Layout – Who Gets What?"</strong>
-                    <div class="interactive-box">
-                        <h4>Experimental Plate Setup</h4>
-                        <p class="text-sm mb-2">Plan your experiment! This is a conceptual representation.</p>
-                        <img src="placeholder_24_well_plate_interactive.png" alt="Schematic of a 24-well plate for transfection planning" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto bg-gray-200 p-2" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Placeholder:+24-Well+Plate'; this.alt='Placeholder: 24-Well Plate';">
-                        <p class="text-xs text-gray-600">Example conditions: Well A1: Untransfected Control, Well A2: pH2B-GFP, Well A3: pRKV-FLAG.</p>
-                    </div>
-                </li>
-                <li>
-                    <strong>Gentle Distribution:</strong> After adding the precipitate, gently swirl the plate in a "figure-eight" motion to ensure even distribution.
-                </li>
-                <li>
-                    <strong>Off to the Incubator:</strong> Place the plate carefully into the 37°C incubator with 5% CO₂ and incubate overnight (16-24 hours).
-                </li>
-                <li>
-                    <strong>Curious Observation:</strong>
-                    <p class="text-sm">The next day, check your cells under a phase-contrast microscope. Note any changes in cell morphology. Calcium phosphate precipitates can sometimes be slightly toxic, appearing as small, dark granules on or around them.</p>
-                    <img src="placeholder_HEK_cells_CaPi_phase_contrast.jpg" alt="HEK cells under phase contrast after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+HEK+Cells+CaPi'; this.alt='Placeholder: HEK Cells CaPi';">
-                </li>
-            </ol>
-
-            <h4 class="styled-h4">D. Important Tips & Troubleshooting Corner</h4>
-            <p>Successful transfection is an art as much as a science! Here are some key factors:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cell Confluency:</strong> Aim for 50-70% confluency for optimal results.</li>
-                <li><strong>DNA Quality & Quantity:</strong> Use high-purity, endotoxin-free DNA.</li>
-                <li><strong>pH of BBS:</strong> This is CRITICAL. A pH between 7.05 and 7.12 is required for proper precipitate formation.</li>
-                <li><strong>Pipetting Skills & Sterility:</strong> Accuracy and strict aseptic technique are paramount.</li>
-            </ul>
-            <div class="interactive-box">
-                <h4>Interactive Box 4: What Went Wrong? – Transfection Troubleshooting</h4>
-                <div id="transfection-troubleshooting-quiz"></div>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Wash 2 x 5 min with 200 μL 1 x PBS</li>
+                        <li>Leave 200 μL PBS in each well after the second washing step</li>
+                        <li>Remove the PBS and add 200 µl Hoechst33258 (Caution: stains DNA, carcinogenic) (usual stock concentration = 10 mg/ml; use it 1:5000 = 2 µg/ml) in 1x PBS <strong>per well</strong>, first prepare a 1:5 dilution of Hoechst 33258 in PBS (2 µl Hoechst33258 in 8 µl PBS) and then dilute this solution 1:1000 in PBS (10 µl of this solution in 10 ml PBS). Vortex the PBS/Hoechst mixture thoroughly to ensure even distribution of Hoechst in the solution. Incubate for 5 min at RT in the dark.</li>
+                        <li>Wash 2 x 5 min with 200 μL 1 x PBS.</li>
+                        <li>Leave 200 μL PBS in each well after the second washing step.</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold text-purple-700 mb-2">3. Microscopy</h5>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Turn on the fluorescence microscope</li>
+                        <li>Set up the microscope: select the appropriate objective (20x or 40x) and adjust the light source correctly</li>
+                        <li>First observe the cells in phase contrast (total cell count visible)</li>
+                        <li>Switch to the fluorescence channel and activate the appropriate filter set for GFP (excitation at 488 nm (= blue/UV), emission at 510 nm (= green)) (only cells transfected with GFP should be visible).</li>
+                        <li>Hoechst33258 excitation at 352 nm (UV light) and emission at 454 nm (blue).</li>
+                        <li>Adjust the exposure time and focus so that the image is sharp and clearly recognizable.</li>
+                        <li>Find the focus plane on the cell monolayer.</li>
+                        <li>Take at least 5 different images per well. Use a constant exposure time and resolution.</li>
+                        <li>Note any special observations, such as unusual fluorescence distribution or cell morphologies.</li>
+                        <li><strong>After microscopy, place the 24-well plate with the fixed cells in PBS in the fridge (overnight).</strong></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="font-semibold text-purple-700 mb-2">4. Documentation & Image Analysis</h5>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Note all relevant parameters (filter, exposure time, lenses used)</li>
+                        <li>Merge the images in the software of the microscope (if possible) and drag the raw images and merged images onto a USB drive.</li>
+                        <li>Now we will work with the software ImageJ (Fiji). You can download it for free on the internet.</li>
+                        <li>Using the ImageJ (Fiji) software, we can now easily determine the transfection efficiency. The "Multi-point" tool can be used for this purpose. This makes it easy to count the cells. Count the successfully transfected (=GFP-expressing) cells as well as the Hoechst-stained cells. The Hoechst staining indicates the total number of cells. By simple division, we now obtain the transfection efficiency. This can be stated as a percentage.</li>
+                        <li>Compare the fluorescence intensity of the different wells or conditions.</li>
+                        <li>Assess the efficiency of the transfection (e.g., proportion of fluorescent cells per image).</li>
+                    </ul>
+                </div>
             </div>
 
-            <h4 class="styled-h4">E. Outlook</h4>
-            <p>Congratulations, you've theoretically performed a transfection! What's next? After 24-48 hours, you would typically:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li>Observe cells under a fluorescence microscope to detect GFP expression.</li>
-                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein.</li>
-                <li>Calculate transfection efficiency.</li>
-                <li>Proceed with downstream experiments, such as Western blotting.</li>
-            </ul>
+            <div class="interactive-box">
+                <h4>Interactive: Transfection Efficiency Calculator</h4>
+                <p class="text-sm mb-3">Calculate the transfection efficiency based on your cell counts:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 items-center">
+                    <div>
+                        <label for="gfp-positive-cells" class="block text-sm font-medium text-gray-700">GFP-positive cells:</label>
+                        <input type="number" id="gfp-positive-cells" placeholder="e.g., 45" class="w-full mt-1">
+                    </div>
+                    <div>
+                        <label for="total-hoechst-cells" class="block text-sm font-medium text-gray-700">Total Hoechst-stained cells:</label>
+                        <input type="number" id="total-hoechst-cells" placeholder="e.g., 150" class="w-full mt-1">
+                    </div>
+                    <div class="sm:col-span-2 mt-2">
+                        <button id="calculate-efficiency-btn" class="text-sm w-full">Calculate Transfection Efficiency (%)</button>
+                    </div>
+                </div>
+                <p id="efficiency-output" class="mt-3 font-semibold text-green-700"></p>
+            </div>
+
+            <h3>Questions for Reflection</h3>
+            
+            <div class="space-y-4">
+                <div class="highlight-note">
+                    <p><strong>Why is GFP used in this experiment?</strong></p>
+                    <p class="text-sm mt-1"><strong>GFP (green fluorescent protein)</strong> serves as a <strong>reporter molecule</strong> to visualize the expression of a specific gene or protein. In this experiment, GFP indicates whether the plasmid has been successfully introduced into the cells and whether the target protein is being produced. It therefore enables simple and direct visualization of living or fixed cells under a fluorescence microscope.</p>
+                </div>
+                
+                <div class="highlight-note">
+                    <p><strong>What would happen if you used the wrong filter on the microscope?</strong></p>
+                    <p class="text-sm mt-1">If the <strong>wrong filter</strong> is used (e.g., one that does not match the excitation or emission wavelength of GFP), then:</p>
+                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
+                        <li>GFP is <strong>not stimulated</strong>, or</li>
+                        <li>the emitted light is <strong>not detected</strong>.</li>
+                    </ul>
+                    <p class="text-sm mt-2"><strong>Consequence: No signal or only a very weak signal</strong> is visible, even though GFP is actually being expressed.</p>
+                </div>
+                
+                <div class="highlight-note">
+                    <p><strong>Did all cells in a well that was transfected with GFP also express GFP?</strong></p>
+                    <p class="text-sm mt-1">As a rule: <strong>No.</strong></p>
+                    <p class="text-sm mt-1">Not all cells take up the plasmid during transfection or express GFP efficiently. The number of GFP-positive cells depends on:</p>
+                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
+                        <li><strong>transfection efficiency</strong> (e.g., depending on cell type, transfection reagent),</li>
+                        <li><strong>plasmid quality</strong>, and</li>
+                        <li><strong>culture conditions</strong>.</li>
+                    </ul>
+                    <p class="text-sm mt-2">This is why one often sees a mixture of <strong>GFP-positive</strong> and <strong>non-fluorescent</strong> cells.</p>
+                </div>
+                
+                <div class="highlight-note">
+                    <p><strong>Where in the cell can you see the signal?</strong></p>
+                    <p class="text-sm mt-1">Since you used <strong>H2B-GFP</strong>, GFP is coupled to the histone protein <strong>H2B</strong>. Histones are part of the <strong>chromatin structure in the cell nucleus</strong>.</p>
+                    <p class="text-sm mt-2"><strong>→ This means:</strong> The GFP signal is <strong>only visible in the cell nucleus</strong> — and there it <strong>often appears patchy or structured</strong>, as it reflects the DNA organization (chromatin).</p>
+                    <p class="text-sm mt-2">This targeted nuclear localization makes H2B-GFP particularly useful for studies on cell division, nuclear morphology, or live imaging of cell nuclei.</p>
+                </div>
+            </div>
         </div>
     `;
 }
 
-// Helper functions for this module
 function renderQuiz(quizData, containerId) {
     const quizContainer = document.getElementById(containerId);
     if (!quizContainer) return;
@@ -271,91 +261,40 @@ function renderQuiz(quizData, containerId) {
     });
 }
 
-function calculatePlasmidVolume() {
-    const desiredMassUg = parseFloat(document.getElementById('desired_mass_pg').value);
-    const stockConcNgUl = parseFloat(document.getElementById('stock_conc_pg').value);
-    const resultContainerEl = document.getElementById('plasmid-volume-result-container');
-    const resultEl = document.getElementById('plasmid-volume-result');
-    if (!resultContainerEl || !resultEl) return;
-    
-    resultContainerEl.classList.remove('hidden');
-    if (isNaN(desiredMassUg) || isNaN(stockConcNgUl) || desiredMassUg <= 0 || stockConcNgUl <= 0) {
-        resultEl.innerHTML = "<span class='text-red-500'>Please enter valid positive numbers.</span>";
+function calculateTransfectionEfficiency() {
+    const gfpCells = parseInt(document.getElementById('gfp-positive-cells').value);
+    const totalCells = parseInt(document.getElementById('total-hoechst-cells').value);
+    const outputP = document.getElementById('efficiency-output');
+    if (!outputP) return;
+
+    if (isNaN(gfpCells) || isNaN(totalCells) || gfpCells < 0 || totalCells <= 0) {
+        outputP.textContent = "Please enter valid, positive numbers.";
         return;
     }
-    const volumeUl = (desiredMassUg * 1000) / stockConcNgUl;
-    resultEl.innerHTML = `Required Volume: <strong>${volumeUl.toFixed(3)} &micro;L</strong>`;
-}
-
-function handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback) {
-    const parentDiv = button.parentElement;
-    const feedbackEl = parentDiv.nextElementSibling;
     
-    parentDiv.querySelectorAll('.quiz-option').forEach(btn => {
-        btn.disabled = true;
-        btn.classList.remove('correct', 'incorrect');
-    });
-
-    if (isCorrect) {
-        button.classList.add('correct');
-        feedbackEl.innerHTML = correctFeedback;
-    } else {
-        button.classList.add('incorrect');
-        feedbackEl.innerHTML = incorrectFeedback;
-        const correctButton = parentDiv.querySelector('[data-correct="true"]');
-        if (correctButton) correctButton.classList.add('correct');
+    if (gfpCells > totalCells) {
+        outputP.textContent = "GFP-positive cells cannot exceed total cells.";
+        return;
     }
-    feedbackEl.classList.remove('hidden');
+    
+    const efficiency = (gfpCells / totalCells) * 100;
+    outputP.innerHTML = `Transfection Efficiency: <strong>${efficiency.toFixed(1)}%</strong> (${gfpCells} GFP+ cells out of ${totalCells} total cells)`;
 }
 
-function renderInteractiveQuiz(container, quizData) {
-    container.innerHTML = '';
-    quizData.forEach((q, index) => {
-        const qDiv = document.createElement('div');
-        qDiv.className = 'quiz-question p-3 mb-2 bg-white rounded-md shadow-sm';
-        let optionsHtml = `<p class="font-medium mb-2 text-sm">${index + 1}. ${q.question}</p><div class="space-y-1">`;
-        q.options.forEach(optText => {
-            optionsHtml += `<button class="quiz-option text-xs">${optText}</button>`;
-        });
-        optionsHtml += `</div><div class="feedback-message text-xs mt-1 p-1 rounded-md hidden"></div>`;
-        qDiv.innerHTML = optionsHtml;
-        
-        qDiv.querySelectorAll('.quiz-option').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const isCorrect = btn.textContent === q.answer;
-                const correctFeedback = `<strong>Correct!</strong> ${q.explanation}`;
-                const incorrectFeedback = `<strong>Incorrect.</strong> ${q.explanation}`;
-                const parentDiv = btn.parentElement;
-                const feedbackEl = parentDiv.nextElementSibling;
-                parentDiv.querySelectorAll('.quiz-option').forEach(b => {
-                    b.disabled = true;
-                    b.classList.remove('correct', 'incorrect');
-                });
-                if (isCorrect) {
-                    btn.classList.add('correct');
-                    feedbackEl.innerHTML = correctFeedback;
-                } else {
-                    btn.classList.add('incorrect');
-                    feedbackEl.innerHTML = incorrectFeedback;
-                    parentDiv.querySelectorAll('.quiz-option').forEach(opt => {
-                         if (opt.textContent === q.answer) opt.classList.add('correct');
-                    });
-                }
-                feedbackEl.classList.remove('hidden');
-            });
-        });
-        container.appendChild(qDiv);
-    });
-}
-
-export default function initModule3(rootEl, sidebarEl) {
+export default function initModule10(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
-    link.href = '#module-3';
+    link.href = '#module-10';
     link.textContent = TITLE;
     link.className = 'sidebar-link block px-3 py-2 rounded-md';
-    // NEW, CORRECTED CODE
-    sidebarEl.querySelector('#sidebar-links').appendChild(link);;
+    
+    // Find the sidebar links container and add the link
+    const sidebarLinks = sidebarEl.querySelector('#sidebar-links');
+    if (sidebarLinks) {
+        sidebarLinks.appendChild(link);
+    } else {
+        console.error('Sidebar links container not found');
+    }
 
     // 2. Inject content
     rootEl.innerHTML = getContent();
@@ -365,64 +304,13 @@ export default function initModule3(rootEl, sidebarEl) {
         <div class="mt-8 pt-6 border-t-2 border-purple-300">
             <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
             <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
-            <div id="quiz-container-module-3"></div>
+            <div id="quiz-container-module-10"></div>
         </div>`;
     rootEl.insertAdjacentHTML('beforeend', quizHtml);
-
-    // 3. Attach event listeners and run init logic
-    // Interactive Box 1: Transfection Method Choice
-    const methodChoiceContainer = document.getElementById('transfection-method-choice-quiz');
-    if (methodChoiceContainer) {
-        const methodQuizData = {
-            options: ["Lipofection (e.g., Lipofectamine)", "Electroporation", "Calcium Phosphate Precipitation", "Viral Transduction (e.g., with lentiviruses)"],
-            answer: "Calcium Phosphate Precipitation",
-            feedback_correct: "Exactly! The calcium phosphate method is an established, cost-effective method well-suited for transfecting adherent cells like HEK293 and is ideal for our course objectives.",
-            feedback_incorrect: "Not quite. While other methods work, CaPi is a great balance of cost and efficiency for this specific purpose. Viral methods are more complex and costly, and Lipofection is often more expensive."
-        };
-        methodQuizData.options.forEach(optText => {
-            const btn = document.createElement('button');
-            btn.className = 'quiz-option text-xs sm:text-sm';
-            btn.textContent = optText;
-            btn.dataset.correct = (optText === methodQuizData.answer).toString();
-            btn.addEventListener('click', () => handleSimpleQuiz(btn, optText === methodQuizData.answer, methodQuizData.feedback_correct, methodQuizData.feedback_incorrect));
-            methodChoiceContainer.appendChild(btn);
-        });
-    }
-
-    // Interactive Box 2: Plasmid Calculator and Small Volume Quiz
-    document.getElementById('plasmid-calc-btn')?.addEventListener('click', calculatePlasmidVolume);
-    const smallVolumeQuizContainer = document.getElementById('small-volume-quiz');
-    if(smallVolumeQuizContainer) {
-        smallVolumeQuizContainer.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', () => {
-                 const isCorrect = button.dataset.correct === 'true';
-                 const correctFeedback = "<strong>Correct!</strong> 0.586 µL is generally too small to pipette accurately. A good strategy is to prepare a master mix or a working dilution.";
-                 const incorrectFeedback = "<strong>Not quite.</strong> This volume is very prone to error with standard lab equipment.";
-                 handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
-            });
-        });
-    }
-
-    // Interactive Box 4: Troubleshooting Quiz
-    const troubleshootingContainer = document.getElementById('transfection-troubleshooting-quiz');
-    if (troubleshootingContainer) {
-        const troubleshootingQuizData = [
-            {
-                question: "Your cells look very unhappy after transfection, and many have detached. What could be a primary reason related to the CaPi method?",
-                options: ["Too little DNA was used", "The precipitates were too fine or incubated for too short a time", "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long", "Cells were not confluent enough"],
-                answer: "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long",
-                explanation: "Coarse CaPi precipitates formed due to incorrect pH or overly long incubation with cells can be quite toxic, leading to cell stress and detachment."
-            },
-            {
-                question: "You see hardly any GFP-positive cells 24-48 hours post-transfection. Which is a common critical factor to check first for CaPi transfections?",
-                options: ["The incubator temperature was 36°C instead of 37°C", "The pH of the 2x BBS solution was incorrect", "You used 0.5 µg of DNA instead of 0.3 µg", "The cells were only 50% confluent"],
-                answer: "The pH of the 2x BBS solution was incorrect",
-                explanation: "The pH of the BBS is extremely critical for forming the right kind of fine precipitate for efficient uptake. Incorrect pH is a very common reason for CaPi transfection failure."
-            }
-        ];
-        renderInteractiveQuiz(troubleshootingContainer, troubleshootingQuizData);
-    }
     
+    // 3. Attach event listeners
+    document.getElementById('calculate-efficiency-btn')?.addEventListener('click', calculateTransfectionEfficiency);
+
     // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-3');
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-10');
 }

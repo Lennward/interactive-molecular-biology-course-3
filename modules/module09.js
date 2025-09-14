@@ -69,7 +69,7 @@ function getContent() {
                 <div id="transfection-type-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
             </div>
             
-            <img src="images/image91.png" alt="Transfection overview diagram" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+91:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
+            <img src="images/image091.png" alt="Transfection overview diagram" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+91:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
 
             <h3>B. Overview of Transfection Methods</h3>
             <p><strong>The Variety of Methods:</strong><br>
@@ -105,7 +105,7 @@ function getContent() {
             <h3>C. In Detail: Calcium Phosphate Transfection</h3>
             <p>The calcium phosphate method relies on a simple chemical trick. Negatively charged plasmid DNA (DNA is always negatively charged) is mixed with calcium chloride (CaCl₂). When a phosphate-buffered saline solution (like 2x BBS - HEPES Buffered Saline) is added, insoluble calcium phosphate-DNA co-precipitates form. These fine, crystalline DNA/Ca₃(PO₄)₂-particles are pipetted onto adherent cells. Cells naturally take up these crystals through endocytosis (a process where the cell membrane engulfs external material). Once inside the cell, some of the plasmids make their way to the nucleus, where genes of the transfected DNA can be transcribed and subsequently translated in the cytoplasm to produce the desired protein (e.g., in our case GFP or FLAG-tagged protein).</p>
             
-            <img src="images/image92.png" alt="Calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+92:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">
+            <img src="images/image092.png" alt="Calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+92:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">
 
             <h4 class="styled-h4">The Protocol – Step by Step to Success</h4>
             
@@ -146,7 +146,7 @@ function getContent() {
                 
                 <p class="text-sm mb-2"><strong>This is a conceptual representation. In the lab, you'd map out which wells get which plasmids or serve as controls.</strong> Design a pipetting scheme for the 24-well plate.</p>
                 
-                <img src="images/image93.png" alt="24-well plate pipetting scheme" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Image+93:+24-Well+Plate+Scheme'; this.alt='Placeholder: 24-Well Plate Scheme';">
+                <img src="images/image093.png" alt="24-well plate pipetting scheme" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Image+93:+24-Well+Plate+Scheme'; this.alt='Placeholder: 24-Well Plate Scheme';">
                 
                 <p class="text-sm text-gray-600 mt-2"><strong>Figure 3: Pipetting scheme for the 24-well plate.</strong></p>
                 
@@ -233,7 +233,7 @@ function getContent() {
             
             <p class="mt-4">The next day (or starting a few hours post-transfection), check your cells under a phase-contrast microscope or light microscope. Calcium phosphate precipitates appear as small, dark granules on or around the cells. Also, look for signs of contamination.</p>
             
-            <img src="images/image94.png" alt="HEK cells after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+94:+HEK+Cells+Post-Transfection'; this.alt='Placeholder: HEK Cells Post-Transfection';">
+            <img src="images/image094.png" alt="HEK cells after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+94:+HEK+Cells+Post-Transfection'; this.alt='Placeholder: HEK Cells Post-Transfection';">
 
             <h3>D. Important Tips & Troubleshooting Corner</h3>
             <p>Successful transfection is an art as much as a science! Here are some key factors and common pitfalls:</p>
@@ -334,11 +334,11 @@ function getContent() {
             <h4 class="styled-h4">Plasmid Maps</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div class="text-center">
-                    <img src="images/image95.png" alt="pH2B-GFP plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+95:+pH2B-GFP+Plasmid'; this.alt='Placeholder: pH2B-GFP Plasmid Map';">
+                    <img src="images/image095.png" alt="pH2B-GFP plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+95:+pH2B-GFP+Plasmid'; this.alt='Placeholder: pH2B-GFP Plasmid Map';">
                     <p class="text-sm mt-2 font-semibold">Figure 5: Plasmid map of pH2B-GFP used in the practical course</p>
                 </div>
                 <div class="text-center">
-                    <img src="images/image96.png" alt="pRKV-FLAG plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+pRKV-FLAG+Plasmid'; this.alt='Placeholder: pRKV-FLAG Plasmid Map';">
+                    <img src="images/image096.png" alt="pRKV-FLAG plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+pRKV-FLAG+Plasmid'; this.alt='Placeholder: pRKV-FLAG Plasmid Map';">
                     <p class="text-sm mt-2 font-semibold">Figure 6: Plasmid map of pRKV-FLAG used in the practical course</p>
                 </div>
             </div>

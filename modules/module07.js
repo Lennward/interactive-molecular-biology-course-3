@@ -89,9 +89,9 @@ function getContent() {
             <p>Suitable temperature, CO₂ and humidity are provided by an incubator.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
-                <img src="images/image071.jpg" alt="Incubator closed" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
-                <img src="images/image072.jpg" alt="Incubator open" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
-                <img src="images/image073.jpg" alt="Incubator interior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image071.png" alt="Incubator closed" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image072.png" alt="Incubator open" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image073.png" alt="Incubator interior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
 
             <p>Therefore, the (mammalian) cells are stored in the incubator all the time. Only if a step of an experiment is conducted the (mammalian) cells are taken out of the incubator.</p>
@@ -138,8 +138,8 @@ function getContent() {
             <p>Animal cells are cultured in sterile plastic vessels (bottles, plates and dishes) that have undergone special surface treatment.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <img src="images/image074.jpeg" alt="Flask with cells and medium" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
-                <img src="images/image075.jpg" alt="Cell culture vessels" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image074.png" alt="Flask with cells and medium" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image075.png" alt="Cell culture vessels" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
 
             <p>Flasks, plates and dishes are the three main types of cell culture vessels. All of them are available in different sizes. Thus, they have different growth areas and need different volumes of culture medium.</p>
@@ -150,8 +150,8 @@ function getContent() {
             <p>Aseptic technique refers to the practices used to prevent contamination (especially of mammalian cells with e.g. bacteria). For this the most important thing is that all work is performed aseptically under a laminar flow hood which provides a sterile environment. This includes experiments but also everything else that comes into contact with the cells e.g. culture media preparation. Thereby each culture media component is added aseptically under the laminar flow hood.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <img src="images/image077.jpg" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
-                <img src="images/image078.jpg" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image077.png" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
+                <img src="images/image078.png" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
 
             <h4 class="styled-h4">Laminar Flow Hood Principle</h4>

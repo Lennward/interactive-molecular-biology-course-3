@@ -1,236 +1,319 @@
-const TITLE = "Module 3: Cellular Alchemy: The Art of Transfection";
+const TITLE = "Module 11: Immunocytochemistry (ICC) for the detection of a protein with FLAG tag";
 const QUIZ_DATA = [
     {
-        question: "What is the primary purpose of adding 2x BBS in the calcium phosphate transfection method?",
-        options: ["To provide nutrients to the cells", "To permeabilize the cell membrane", "To form a DNA-calcium phosphate co-precipitate", "To select for transfected cells"],
-        answer: "To form a DNA-calcium phosphate co-precipitate",
+        question: "What is the primary purpose of permeabilization in ICC?",
+        options: ["To fix the cells permanently", "To enable antibodies to access the cell interior", "To visualize the nuclei", "To prevent non-specific binding"],
+        answer: "To enable antibodies to access the cell interior",
         type: "mcq",
-        explanation: "2x BBS (Buffered Saline Solution) provides the phosphate ions that react with calcium chloride and DNA to form the fine precipitate that cells can take up."
+        explanation: "Permeabilization opens cell membranes using detergents like Triton X-100, allowing antibodies to enter cells and bind to intracellular targets."
     },
     {
-        question: "True or False: For optimal calcium phosphate transfection, cells should ideally be 100% confluent.",
+        question: "What is the purpose of the blocking step in ICC?",
+        options: ["To wash away unbound antibodies", "To permeabilize the cell membrane", "To prevent non-specific binding of antibodies", "To conjugate the fluorophore to the antibody"],
+        answer: "To prevent non-specific binding of antibodies",
+        type: "mcq",
+        explanation: "Blocking with BSA or serum reduces background signal by preventing non-specific binding of antibodies to unwanted sites."
+    },
+    {
+        question: "True or False: In the indirect ICC method, the secondary antibody binds directly to the target protein.",
         options: ["True", "False"],
         answer: "False",
         type: "tf",
-        explanation: "Cells should be actively dividing and typically at a confluency of 50-70% for efficient calcium phosphate transfection. 100% confluency often leads to lower efficiency."
+        explanation: "In indirect ICC, the secondary antibody binds to the primary antibody, not directly to the target protein. The primary antibody binds to the target protein."
     },
     {
-        question: "Which of the following is NOT a critical factor for successful calcium phosphate transfection?",
-        options: ["pH of the BBS solution", "Quality and quantity of plasmid DNA", "Vigorous vortexing after adding BBS", "Cell health and confluency"],
-        answer: "Vigorous vortexing after adding BBS",
+        question: "Which of the following is NOT an essential control for antibody staining?",
+        options: ["No primary antibody control", "Secondary-only control", "Positive control sample", "High concentration antibody control"],
+        answer: "High concentration antibody control",
         type: "mcq",
-        explanation: "Vigorous vortexing after adding BBS can lead to large, irregular precipitates and shear DNA, reducing transfection efficiency. Gentle mixing by inversion is recommended."
+        explanation: "High concentration antibody control is not a standard control. Essential controls include no primary antibody, secondary-only, positive control, and negative control samples."
     }
 ];
 
 function getContent() {
     return `
         <div class="module-content">
-            <h2>Module 3: Cellular Alchemy: The Art of Transfection</h2>
-            <p>Welcome to the fascinating world of transfection! In this module, you'll learn how to introduce foreign genetic material into cells, a cornerstone technique in molecular biology that allows us to study gene function, produce proteins, and much more. It's like giving cells a new set of instructions!</p>
+            <h2>Module 11: Immunocytochemistry (ICC) for the detection of a protein with FLAG tag</h2>
             
-            <h3>I. Module Overview & Learning Objectives</h3>
-            <p>This module will guide you through the principles and practical steps of transfecting eukaryotic cells, focusing on the calcium phosphate method.</p>
-            <ul class="list-disc list-inside mb-4 bg-sky-50 p-3 rounded-md">
-                <li>Understand the definition and goals of transfection.</li>
-                <li>Differentiate between transient and stable transfection.</li>
-                <li>Get an overview of various transfection methods and their applications.</li>
-                <li>Master the calcium phosphate transfection protocol for HEK293 cells.</li>
-                <li>Learn to calculate necessary reagent and plasmid amounts.</li>
-                <li>Identify key factors for successful transfection and basic troubleshooting.</li>
+            <p>After we analyzed our GFP transfection efficiency, we will now perform an immunocytochemistry (ICC) experiment 24-48 hrs after the transfection. In this module we will:</p>
+            
+            <ul class="list-disc list-inside ml-4 mb-4 bg-sky-50 p-3 rounded-md">
+                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein</li>
+                <li>Observe cells under a fluorescence microscope to indirectly detect FLAG expression (red fluorescence).</li>
+                <li>Calculate transfection efficiency (percentage of FLAG-positive cells).</li>
             </ul>
 
-            <h3>II. Content Sections</h3>
+            <h3>Theoretical Background</h3>
             
-            <h4 class="styled-h4">A. Introduction to Transfection</h4>
-            <p><strong>What is Transfection?</strong><br>
-            Transfection is a powerful biotechnological process used to introduce foreign nucleic acids – most commonly plasmid DNA – into eukaryotic cells. This allows scientists to manipulate the genetic makeup of cells in a controlled manner.</p>
+            <h4 class="styled-h4">What is ICC?</h4>
+            <p><strong>Immunocytochemistry (ICC)</strong> is a method that can be used to visualize specific proteins in cells. This is done using antibodies that bind specifically to the desired target protein. These antibodies are often recognized by so-called secondary antibodies (indirect method), which are coupled with a fluorescent dye or other marker. This allows the location of the protein within the cell to be seen clearly under the microscope. ICC is used on fixed (i.e., no longer living) cells and helps to examine cell structures, signaling pathways, and the distribution pattern of proteins in detail.</p>
             
-            <p><strong>Goals of Transfection:</strong><br>
-            The primary goals include:</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <div class="goal-box"><strong>Gene Expression</strong><p class="text-sm">Introducing a gene to produce a specific protein (e.g., a fluorescent marker like GFP, or a therapeutic protein).</p></div>
-                <div class="goal-box"><strong>Gene Silencing/Knockdown</strong><p class="text-sm">Introducing constructs (like siRNA or shRNA) to reduce or eliminate the expression of a specific endogenous gene.</p></div>
-                <div class="goal-box"><strong>Reporter Assays</strong><p class="text-sm">Studying the activity of promoters or other regulatory elements by linking them to a reporter gene.</p></div>
-                <div class="goal-box"><strong>Protein Production</strong><p class="text-sm">Using cells as factories to produce large quantities of a desired protein.</p></div>
-            </div>
-            
+            <img src="images/image1.png" alt="The direct and indirect verification method of ICC" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x200/e2e8f0/4a5568?text=Figure+4:+Direct+and+Indirect+ICC+Methods'; this.alt='Placeholder: Direct and Indirect ICC Methods';">
+            <p class="text-sm text-center text-gray-600 -mt-2 mb-4"><strong>Figure 4:</strong> The direct and indirect verification method of ICC.</p>
 
-            <p><strong>Transient vs. Stable Transfection:</strong><br>
-            Transfection can be either transient or stable:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Transient Transfection:</strong> The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</li>
-                <li><strong>Stable Transfection:</strong> The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</li>
-            </ul>
-            </p>
-            <img src="placeholder_transfection_overview.svg" alt="Schematic of plasmid DNA entering a cell and leading to protein expression" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
+            <h4 class="styled-h4">Why is ICC an important tool?</h4>
+            <p>In cell and molecular biology, ICC is a key method for not only confirming the presence of a protein, but also for investigating its distribution within the cell. In research, it is used for diagnostics, confirming transfection, and characterizing cell lines, among other things.</p>
 
-            <h4 class="styled-h4">B. Overview of Transfection Methods</h4>
-            <p><strong>The Variety of Methods:</strong><br>
-            There are numerous ways to get nucleic acids into cells, broadly categorized as:
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Chemical Methods:</strong> These involve using reagents that complex with DNA and facilitate its entry into cells. Examples include:
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Calcium Phosphate Precipitation:</strong> The method we'll use! DNA is mixed with calcium chloride and phosphate buffer, forming fine DNA-calcium phosphate co-precipitates that are taken up by cells via endocytosis. It's cost-effective and works well for many adherent cell lines like HEK293.</li>
-                        <li><strong>Lipid-based (Lipofection):</strong> Cationic lipids form complexes (lipoplexes) with negatively charged DNA, which then fuse with the cell membrane or are endocytosed. Reagents like Lipofectamine™ are common.</li>
-                        <li><strong>Cationic Polymers:</strong> Polymers like Polyethylenimine (PEI) or dendrimers bind DNA and form polyplexes, which are then endocytosed.</li>
+            <h4 class="styled-h4">What is the FLAG tag?</h4>
+            <p>The FLAG tag is a short peptide marker that is bound to a target protein and can be used to label this protein. This tag can be made visible using a specific anti-FLAG antibody. This allows the expression and localization of the labeled protein in the cell to be detected.</p>
+
+            <h4 class="styled-h4">Overview of the procedure</h4>
+            <ol class="list-decimal list-inside ml-4 space-y-2 bg-slate-100 p-3 rounded-md shadow-sm">
+                <li><strong>Permeabilization</strong> with detergents (enables antibodies to access the cell interior)</li>
+                <li><strong>Blocking</strong> of non-specific binding sites (= minimization of background signal)</li>
+                <li><strong>Incubation</strong> with primary and then secondary antibody
+                    <ul class="list-disc list-inside ml-4 mt-1">
+                        <li>Primary antibody binds target protein</li>
+                        <li>Secondary antibody binds to the primary antibody and is coupled to a detectable marker (usually a fluorescent dye; in our case Alexa Fluor 594 (red fluorescent))</li>
                     </ul>
                 </li>
-                <li><strong>Physical Methods:</strong> These use physical force to create transient pores in the cell membrane.
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Electroporation:</strong> Cells are exposed to a brief electrical pulse, creating temporary pores for DNA entry. Very efficient for many cell types, including those hard to transfect by chemical means.</li>
-                        <li><strong>Microinjection:</strong> DNA is directly injected into the cytoplasm or nucleus using a fine glass micropipette. Precise but low-throughput.</li>
-                        <li><strong>Gene Gun (Biolistics):</strong> DNA-coated gold or tungsten particles are shot into cells or tissues.</li>
-                    </ul>
-                </li>
-                <li><strong>Viral Methods (Transduction):</strong> Recombinant viruses (e.g., lentiviruses, adenoviruses, AAV) are used as vectors to deliver genetic material. Often very high efficiency, even in primary cells and in vivo, and can be used for stable integration.</li>
-            </ul>
-            In this course, we will focus on the <strong>Calcium Phosphate Precipitation</strong> method due to its effectiveness with HEK293 cells and its historical significance.
-            </p>
-            <div class="interactive-box">
-                <h4>Interactive Box 1: The Agony of Choice: Which Method for Which Purpose?</h4>
-                <p class="text-sm mb-2">Scenario: Imagine you want to express proteins quickly and cost-effectively in robust HEK293 cells. Which of the following methods would be most suitable for this project and our course?</p>
-                <div id="transfection-method-choice-quiz" class="space-y-1"></div>
-                <div id="transfection-method-choice-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
-            </div>
-
-            <h4 class="styled-h4">C. In Detail: Calcium Phosphate Transfection</h4>
-            <p><strong>The Principle – Magic with Calcium and Phosphate:</strong><br>
-            The calcium phosphate method relies on a simple chemical trick. Negatively charged plasmid DNA is mixed with calcium chloride (CaCl₂). When a phosphate-buffered saline solution (like 2x BBS - HEPES Buffered Saline) is added, insoluble calcium phosphate-DNA co-precipitates form. These fine, crystalline particles settle onto adherent cells. Cells naturally take up these particles through endocytosis (a process where the cell membrane engulfs external material). Once inside the cell, some of the DNA escapes the endosomes, makes its way to the nucleus, and can then be transcribed and translated by the cell's machinery to produce the desired protein (e.g., GFP or your FLAG-tagged protein).</p>
-
-            <p><strong>Our Tools and Ingredients:</strong>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cells:</strong> HEK293 cells (Human Embryonic Kidney cells, adherent).</li>
-                <li><strong>Plasmids:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>pH2B-GFP (Concentration: e.g., 682.3 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                        <li>pRKV-FLAG (Concentration: 1015 ng/µL - *please use the actual concentration from your stock tube label*)</li>
-                    </ul>
-                </li>
-                <li><strong>Main Reagents:</strong>
-                    <ul class="list-circle list-inside ml-4">
-                        <li>0.25 M CaCl₂ solution</li>
-                        <li>2x BBS (Buffered Saline Solution, typically HEPES-buffered, pH is critical, usually around 7.05-7.12)</li>
-                    </ul>
-                </li>
-            </ul>
-            </p>
-            <img src="placeholder_calcium_phosphate_mechanism.svg" alt="Schematic of calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">
-
-            <h4 class="styled-h4">The Protocol – Step by Step to Success:</h4>
-            <p class="text-sm italic">The following protocol is for transfecting <strong>one well</strong> of a 24-well plate. Remember to scale up your calculations for the total number of wells you plan to transfect for each plasmid, and always prepare a little extra (e.g., 10%) to account for pipetting inaccuracies!</p>
-            
-            <div class="highlight-note">
-                <p><strong>Crucial Reminder:</strong> Always prepare all solutions for the required number of wells PLUS 10% extra volume to account for pipetting errors!</p>
-            </div>
-
-            <ol class="list-decimal list-inside space-y-3">
-                <li>
-                    <strong>Prepare Solution (per well):</strong>
-                    <ul class="list-disc list-inside ml-5 mt-1 text-sm space-y-1">
-                        <li>In a sterile 1.5 mL microcentrifuge tube (Eppendorf tube), add <strong>25 µL of 0.25 M CaCl₂</strong>.</li>
-                        <li>
-                            <strong>Add Plasmid DNA:</strong> Add <strong>0.3 - 0.5 µg</strong> of your desired plasmid (pH2B-GFP or pRKV-FLAG) to the CaCl₂.
-                            <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
-                                <p><strong>Attention, Pipetting Pros!</strong> Pipetting volumes less than 2 µL is highly inaccurate. If your calculated volume is too small, consider preparing a master mix. For example, if you need 0.5 µL per well and are doing 4 wells, prepare a mix for 4.4 wells (4 wells + 10% extra), so 0.5 µL/well * 4.4 wells = 2.2 µL plasmid in a larger volume of CaCl₂.</p>
-                                <p class="mt-1"><strong>Storage & Handling:</strong> Plasmids are stored in the freezer. Always keep plasmids on ice when outside the freezer.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Interactive Box 2: "Plasmid Calculation Wizards Wanted!"</strong>
-                    <div class="interactive-box">
-                        <h4>Plasmid Calculation Practice</h4>
-                        <p class="text-sm mb-2"><strong>Scenario 1: Volume Calculation</strong><br>You want to use 0.4 µg of Plasmid pH2B-GFP. Its stock concentration is 682.3 ng/µL. How many µL of the stock solution do you need?</p>
-                        <div class="calculator grid grid-cols-1 sm:grid-cols-2 gap-2 items-end mb-4">
-                            <div>
-                                <label for="desired_mass_pg" class="block text-xs font-medium text-gray-700">Desired Mass (µg):</label>
-                                <input type="number" id="desired_mass_pg" value="0.4" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div>
-                                <label for="stock_conc_pg" class="block text-xs font-medium text-gray-700">Stock Conc. (ng/µL):</label>
-                                <input type="number" id="stock_conc_pg" value="682.3" class="w-full mt-1 text-sm p-1">
-                            </div>
-                            <div class="sm:col-span-2">
-                                <button id="plasmid-calc-btn" class="w-full py-1.5 text-sm">Calculate Volume</button>
-                            </div>
-                        </div>
-                        <div id="plasmid-volume-result-container" class="p-2 bg-white rounded-md shadow text-sm hidden">
-                            <p id="plasmid-volume-result" class="font-semibold text-purple-700"></p>
-                        </div>
-
-                        <p class="text-sm mb-2 mt-4"><strong>Scenario 2: Handling Small Volumes</strong><br>The calculated volume from Scenario 1 is approximately 0.586 µL. Can this be pipetted accurately and directly with standard lab pipettes? (Select Yes or No)</p>
-                        <div id="small-volume-quiz" class="space-y-1 mb-2">
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="false">Yes, it's fine.</button>
-                            <button class="quiz-option text-xs sm:text-sm" data-correct="true">No, it's too small for accurate direct pipetting.</button>
-                        </div>
-                        <div id="small-volume-feedback" class="feedback-message text-xs mt-1 p-1.5 rounded-md hidden"></div>
-                    </div>
-                </li>
-                <li>
-                    <strong>The Magic Ingredient:</strong> Slowly, while gently vortexing or flicking the tube containing the CaCl₂-DNA mixture, add <strong>25 µL of 2x BBS</strong>. *Critical: Add BBS to DNA/CaCl₂, not the other way around for optimal precipitate formation.*
-                </li>
-                <li>
-                    <strong>Mix Gently:</strong> Immediately after adding BBS, cap the tube and gently invert it 4-5 times to mix. **DO NOT VORTEX** at this stage, as it can shear the DNA or lead to suboptimal precipitate size.
-                </li>
-                <li>
-                    <strong>Patience Test (Precipitate Formation):</strong> Incubate the mixture for <strong>15 minutes at room temperature (RT)</strong>.
-                     <div class="text-xs p-2 mt-1 bg-orange-50 border-l-4 border-orange-400 text-orange-700 rounded-r-md">
-                        <em>Note on Centrifugation: Some older protocols mention a brief centrifugation. This step is not typical for modern CaPi protocols as it might compact the precipitate too much. We will proceed without centrifugation.</em>
-                    </div>
-                </li>
-                <li>
-                    <strong>"Feed" the Cells:</strong> After the 15-minute incubation, gently resuspend the fine precipitate and add <strong>50 µL of this suspension dropwise</strong> onto the cells in one well of a 24-well plate.
-                </li>
-                <li>
-                    <strong>Interactive Box 3: "My Plate Layout – Who Gets What?"</strong>
-                    <div class="interactive-box">
-                        <h4>Experimental Plate Setup</h4>
-                        <p class="text-sm mb-2">Plan your experiment! This is a conceptual representation.</p>
-                        <img src="placeholder_24_well_plate_interactive.png" alt="Schematic of a 24-well plate for transfection planning" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto bg-gray-200 p-2" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Placeholder:+24-Well+Plate'; this.alt='Placeholder: 24-Well Plate';">
-                        <p class="text-xs text-gray-600">Example conditions: Well A1: Untransfected Control, Well A2: pH2B-GFP, Well A3: pRKV-FLAG.</p>
-                    </div>
-                </li>
-                <li>
-                    <strong>Gentle Distribution:</strong> After adding the precipitate, gently swirl the plate in a "figure-eight" motion to ensure even distribution.
-                </li>
-                <li>
-                    <strong>Off to the Incubator:</strong> Place the plate carefully into the 37°C incubator with 5% CO₂ and incubate overnight (16-24 hours).
-                </li>
-                <li>
-                    <strong>Curious Observation:</strong>
-                    <p class="text-sm">The next day, check your cells under a phase-contrast microscope. Note any changes in cell morphology. Calcium phosphate precipitates can sometimes be slightly toxic, appearing as small, dark granules on or around them.</p>
-                    <img src="placeholder_HEK_cells_CaPi_phase_contrast.jpg" alt="HEK cells under phase contrast after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto bg-gray-200 p-4" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Placeholder:+HEK+Cells+CaPi'; this.alt='Placeholder: HEK Cells CaPi';">
-                </li>
+                <li><strong>Hoechst33258 staining</strong> of nuclei (to determine the total cell count)</li>
+                <li><strong>Fluorescence microscopic evaluation</strong></li>
             </ol>
 
-            <h4 class="styled-h4">D. Important Tips & Troubleshooting Corner</h4>
-            <p>Successful transfection is an art as much as a science! Here are some key factors:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Cell Confluency:</strong> Aim for 50-70% confluency for optimal results.</li>
-                <li><strong>DNA Quality & Quantity:</strong> Use high-purity, endotoxin-free DNA.</li>
-                <li><strong>pH of BBS:</strong> This is CRITICAL. A pH between 7.05 and 7.12 is required for proper precipitate formation.</li>
-                <li><strong>Pipetting Skills & Sterility:</strong> Accuracy and strict aseptic technique are paramount.</li>
+            <h3>Materials</h3>
+            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
+                <li>Already transfected, fixed HEK293 cells</li>
+                <li>PBS (phosphate-buffered saline) for washing</li>
+                <li>0.1% Triton X-100 for permeabilization</li>
+                <li>Blocking solution (e.g., 5% BSA or FCS in PBS)</li>
+                <li>Primary Rabbit anti-FLAG antibody (stock concentration: 600 µg/ml)</li>
+                <li>Secondary antibody conjugated with Alexa Fluor 594 fluorophore (goat anti-rabbit 594) (stock concentration 0.5 mg/ml)</li>
+                <li>Hoechst33258 (staining after ICC)</li>
+                <li>Fluorescence microscope with appropriate filter (Alexa Fluor 594 excited using the 561 nm or even better at 594 nm laser lines)</li>
+                <li>Pipettes, sterile pipette tips</li>
             </ul>
-            <div class="interactive-box">
-                <h4>Interactive Box 4: What Went Wrong? – Transfection Troubleshooting</h4>
-                <div id="transfection-troubleshooting-quiz"></div>
+            
+            <div class="highlight-note">
+                <p><strong>Note:</strong> Only take AB stocks out of the freezer when needed! Dilutions (aliquots) can be stored at 6°C.</p>
             </div>
 
-            <h4 class="styled-h4">E. Outlook</h4>
-            <p>Congratulations, you've theoretically performed a transfection! What's next? After 24-48 hours, you would typically:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li>Observe cells under a fluorescence microscope to detect GFP expression.</li>
-                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein.</li>
-                <li>Calculate transfection efficiency.</li>
-                <li>Proceed with downstream experiments, such as Western blotting.</li>
-            </ul>
+            <h3>Protocol Steps</h3>
+            
+            <div class="space-y-6">
+                <div>
+                    <h4 class="styled-h4">1. Permeabilization of cells</h4>
+                    <div class="highlight-note">
+                        <p><strong>Permeabilization opens cell membranes!</strong></p>
+                    </div>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Take the 24-well plates with the cells out of the refrigerator.</li>
+                        <li>Remove the PBS from all wells used for ICC (= those that have not yet been stained with Hoechst before). 
+                            <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
+                                <p><strong>Caution:</strong> Tilt the plate at a relatively steep angle and do not touch the bottom of the well so as not to disturb the cells. Instead, pipette only at the side of the well by holding the pipette at an angle. Also, pipette extremely slowly!!! Always pipette on the same side/in the same place!</p>
+                            </div>
+                        </li>
+                        <li>Add 0.5 ml of a 0.1% Triton X-100 solution in 1x PBS per well to the cells.</li>
+                        <li>Incubate for 5-10 minutes.</li>
+                        <li>After permeabilization, wash again twice with PBS (500 µl each time).</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="styled-h4">2. Blocking of unspecific binding sites</h4>
+                    <div class="highlight-note">
+                        <p><strong>Blocking reduces the background!</strong></p>
+                    </div>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Remove PBS and add approximately 300 µl of blocking solution (5% BSA in PBS) per well to the cells.</li>
+                        <li>Incubate for 30-45 minutes at room temperature to block unspecific binding sites.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="styled-h4">3. Primary antibody</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Prepare a dilution of the primary antibody (rabbit anti-FLAG) in a ratio of 1:100 or 1:200 in blocking solution (depending on the manufacturer's recommendation) (= antibody solution).</li>
+                        <li>Remove the blocking solution from the cells and add 200 µl of the primary antibody solution per well. Care must be taken to ensure that the cells are evenly covered. 
+                            <div class="p-2 mt-1 bg-orange-50 border-l-4 border-orange-400 text-orange-700 text-xs rounded-r-md">
+                                <p><strong>Note:</strong> There should also be wells that serve as negative controls and contain only the 2nd antibody but no 1st antibody. These wells that serve as negative controls will only receive blocking solution in this step and no 1st antibody.</p>
+                            </div>
+                        </li>
+                        <li>Incubate the cells for 2 hours at room temperature.</li>
+                        <li>Then remove the primary antibody from the wells. 
+                            <div class="p-2 mt-1 bg-green-50 border-l-4 border-green-400 text-green-700 text-xs rounded-r-md">
+                                <p><strong>Note:</strong> The primary antibody is expensive and can also be reused. Just save it in a tube and store it at 6°C in the fridge. There it is stable for a couple of weeks. Similarly, the blocking solution is also removed from the negative control wells.</p>
+                            </div>
+                        </li>
+                        <li>Wash twice for 5 minutes with 200 µl PBS to remove unbound antibodies.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="styled-h4">4. Secondary antibody</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Prepare a dilution of the fluorophore-conjugated secondary antibody (goat anti-rabbit 594) in a ratio of 1:250, 1:500 or 1:1000 in blocking solution (depending on the manufacturer's recommendation).</li>
+                        <li>Add 200 µl of secondary antibody solution per well to the cells and incubate for 1 hour at room temperature in the dark (protection from light is necessary as the fluorophore conjugates are light-sensitive).</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="styled-h4">5. Hoechst staining of fixed cells</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Remove the secondary antibody solution and add 200 µl Hoechst33258 (Caution: stains DNA, carcinogenic!) (stock = 10 mg/ml; use it 1:5000 = 2 µg/ml) in 1x PBS <strong>per well</strong>. To do this, first prepare a 1:5 dilution of Hoechst 33258 in PBS (2 µl Hoechst33258 in 8 µl PBS) and then dilute this solution 1:1000 in PBS (10 µl of this solution in 10 ml PBS). Vortex the PBS/Hoechst mixture thoroughly to ensure even distribution of Hoechst in the solution.</li>
+                        <li>Incubate for 5 min at RT in the dark</li>
+                        <li>Wash 2 x 5 min with 200 μL 1 x PBS</li>
+                        <li>Leave 200 μL PBS in each well after the second washing step</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="styled-h4">6. Microscopy</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Place the 24-well plate in a suitable microscopy chamber.</li>
+                        <li>Set the fluorescence microscope to the appropriate channel for the fluorophore used. → Alexa Fluor 594 excited using the 561 nm or even better at 594 nm laser lines</li>
+                        <li>Search for the immunostained cells and document the results by taking images. Take at least 3-5 images per well</li>
+                        <li>Hoechst- and GFP-stained cells can also be searched for (GFP should only be present in co-transfection = wells to which GFP-Plasmid and FLAG tag-Plasmid was added).</li>
+                        <li><strong>Filter specifications:</strong>
+                            <ul class="list-circle list-inside ml-4 text-sm">
+                                <li>Hoechst33258 excitation at 352 nm (UV light) and emission at 454 nm</li>
+                                <li>GFP (excitation at 488 nm (= blue/UV), emission at 510 nm (= green))</li>
+                                <li>Alexa Fluor 594 (excitation at 594 nm, emission at 617 nm (= red))</li>
+                            </ul>
+                        </li>
+                        <li>Record all parameters (e.g., filters used, objective, exposure time)</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="styled-h4">7. Documentation & Analysis</h4>
+                    <ul class="list-disc list-inside ml-4 space-y-2">
+                        <li>Using ImageJ (Fiji) software, we can now easily determine transfection efficiency. The "Multi-point" tool can be used for this purpose. This makes it easy to count the cells.</li>
+                        <li>Count the cells that show FLAG-tag proteins made visible by ICC (red-fluorescent cells), as well as GFP-expressing cells and Hoechst-stained cells.</li>
+                        <li>The Hoechst staining indicates the total cell count. By simple division, we now obtain the transfection efficiency of the FLAG-tag expressing plasmid and the GFP-expressing plasmid. This can be indicated as a percentage.</li>
+                        <li>Note all steps, pay attention to any peculiarities in the fluorescence distribution and to possible confounding factors.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="highlight-note">
+                <p><strong>Important:</strong> Make sure to work in the dark as much as possible when handling fluorescent antibodies—this will preserve the signal and prevent bleaching!</p>
+            </div>
+
+            <div class="interactive-box">
+                <h4>Interactive: ICC Transfection Efficiency Calculator</h4>
+                <p class="text-sm mb-3">Calculate transfection efficiencies for both FLAG-tagged and GFP-expressing cells:</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-x-4 gap-y-3 items-center">
+                    <div>
+                        <label for="flag-positive-cells" class="block text-sm font-medium text-gray-700">FLAG-positive cells (red):</label>
+                        <input type="number" id="flag-positive-cells" placeholder="e.g., 32" class="w-full mt-1">
+                    </div>
+                    <div>
+                        <label for="gfp-positive-cells-icc" class="block text-sm font-medium text-gray-700">GFP-positive cells (green):</label>
+                        <input type="number" id="gfp-positive-cells-icc" placeholder="e.g., 28" class="w-full mt-1">
+                    </div>
+                    <div>
+                        <label for="total-hoechst-cells-icc" class="block text-sm font-medium text-gray-700">Total Hoechst-stained cells:</label>
+                        <input type="number" id="total-hoechst-cells-icc" placeholder="e.g., 150" class="w-full mt-1">
+                    </div>
+                    <div class="sm:col-span-3 mt-2">
+                        <button id="calculate-icc-efficiency-btn" class="text-sm w-full">Calculate Transfection Efficiencies (%)</button>
+                    </div>
+                </div>
+                <div id="icc-efficiency-output" class="mt-3 space-y-2"></div>
+            </div>
+
+            <h3>Questions for Reflection</h3>
+            
+            <div class="space-y-4">
+                <div class="highlight-note">
+                    <p><strong>11. What are the essential steps for antibody staining?</strong></p>
+                    <div class="text-sm mt-2">
+                        <p><strong>Essential Steps for Antibody Staining:</strong></p>
+                        <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
+                            <li><strong>Fixation:</strong> Preserves cell/tissue structure and immobilizes antigens. Common fixatives: paraformaldehyde (PFA), methanol.</li>
+                            <li><strong>Permeabilization (if intracellular targets):</strong> Allows antibodies to enter the cells. Common reagents: Triton X-100, saponin.</li>
+                            <li><strong>Blocking:</strong> Prevents non-specific binding of antibodies. Common blockers: BSA, serum, or commercial blocking buffers.</li>
+                            <li><strong>Primary antibody incubation:</strong> Antibody binds to the specific target (antigen). Incubation time/temperature depends on the antibody (e.g., 1 h RT or overnight 4°C).</li>
+                            <li><strong>Washing:</strong> Removes unbound primary antibody to reduce background.</li>
+                            <li><strong>Secondary antibody incubation:</strong> Binds to the primary antibody and is usually conjugated to a fluorophore or enzyme.</li>
+                            <li><strong>Washing:</strong> Again, to reduce background signal.</li>
+                            <li><strong>Counterstaining (optional):</strong> e.g., nuclear staining with DAPI or Hoechst.</li>
+                            <li><strong>Mounting and Imaging:</strong> Use appropriate mounting medium and acquire images with a fluorescence or confocal microscope.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="highlight-note">
+                    <p><strong>12. What are possible sources of error during staining and how could appropriate control experiments look like?</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-2">Possible Sources of Error:</h5>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-purple-100">
+                                    <th class="border border-gray-300 p-2 text-left font-semibold">Error Type</th>
+                                    <th class="border border-gray-300 p-2 text-left font-semibold">Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Non-specific binding</td>
+                                    <td class="border border-gray-300 p-2">Antibodies bind to unintended targets or background</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Poor fixation</td>
+                                    <td class="border border-gray-300 p-2">Leads to loss of target protein or poor morphology</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Insufficient washing</td>
+                                    <td class="border border-gray-300 p-2">Causes high background signal</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Wrong antibody dilution</td>
+                                    <td class="border border-gray-300 p-2">Too concentrated: high background; too dilute: weak/no signal</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Cross-reactivity</td>
+                                    <td class="border border-gray-300 p-2">Secondary antibody binds to endogenous immunoglobulins</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Photobleaching</td>
+                                    <td class="border border-gray-300 p-2">Fluorophores fade during imaging</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h5 class="font-semibold mt-4 mb-2">Control Experiments:</h5>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-green-100">
+                                    <th class="border border-gray-300 p-2 text-left font-semibold">Control Type</th>
+                                    <th class="border border-gray-300 p-2 text-left font-semibold">Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">No primary antibody control</td>
+                                    <td class="border border-gray-300 p-2">Detects background caused by secondary antibody alone</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Isotype control</td>
+                                    <td class="border border-gray-300 p-2">Uses a non-specific antibody of the same class as the primary; tests for non-specific Fc binding</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Positive control sample</td>
+                                    <td class="border border-gray-300 p-2">A sample known to express the target antigen ensures the staining worked</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Negative control sample</td>
+                                    <td class="border border-gray-300 p-2">A sample that lacks the target protein verifies specificity</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 p-2 font-medium">Secondary-only control</td>
+                                    <td class="border border-gray-300 p-2">Apply only secondary antibody to check for cross-reactivity or background fluorescence</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     `;
 }
 
-// Helper functions for this module
 function renderQuiz(quizData, containerId) {
     const quizContainer = document.getElementById(containerId);
     if (!quizContainer) return;
@@ -271,91 +354,59 @@ function renderQuiz(quizData, containerId) {
     });
 }
 
-function calculatePlasmidVolume() {
-    const desiredMassUg = parseFloat(document.getElementById('desired_mass_pg').value);
-    const stockConcNgUl = parseFloat(document.getElementById('stock_conc_pg').value);
-    const resultContainerEl = document.getElementById('plasmid-volume-result-container');
-    const resultEl = document.getElementById('plasmid-volume-result');
-    if (!resultContainerEl || !resultEl) return;
-    
-    resultContainerEl.classList.remove('hidden');
-    if (isNaN(desiredMassUg) || isNaN(stockConcNgUl) || desiredMassUg <= 0 || stockConcNgUl <= 0) {
-        resultEl.innerHTML = "<span class='text-red-500'>Please enter valid positive numbers.</span>";
+function calculateICCEfficiency() {
+    const flagCells = parseInt(document.getElementById('flag-positive-cells').value);
+    const gfpCells = parseInt(document.getElementById('gfp-positive-cells-icc').value);
+    const totalCells = parseInt(document.getElementById('total-hoechst-cells-icc').value);
+    const outputDiv = document.getElementById('icc-efficiency-output');
+    if (!outputDiv) return;
+
+    if (isNaN(totalCells) || totalCells <= 0) {
+        outputDiv.innerHTML = '<p class="text-red-600">Please enter a valid total cell count.</p>';
         return;
     }
-    const volumeUl = (desiredMassUg * 1000) / stockConcNgUl;
-    resultEl.innerHTML = `Required Volume: <strong>${volumeUl.toFixed(3)} &micro;L</strong>`;
-}
-
-function handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback) {
-    const parentDiv = button.parentElement;
-    const feedbackEl = parentDiv.nextElementSibling;
     
-    parentDiv.querySelectorAll('.quiz-option').forEach(btn => {
-        btn.disabled = true;
-        btn.classList.remove('correct', 'incorrect');
-    });
-
-    if (isCorrect) {
-        button.classList.add('correct');
-        feedbackEl.innerHTML = correctFeedback;
-    } else {
-        button.classList.add('incorrect');
-        feedbackEl.innerHTML = incorrectFeedback;
-        const correctButton = parentDiv.querySelector('[data-correct="true"]');
-        if (correctButton) correctButton.classList.add('correct');
+    let results = [];
+    
+    if (!isNaN(flagCells) && flagCells >= 0) {
+        if (flagCells > totalCells) {
+            results.push('<p class="text-red-600">FLAG-positive cells cannot exceed total cells.</p>');
+        } else {
+            const flagEfficiency = (flagCells / totalCells) * 100;
+            results.push(`<p class="font-semibold text-red-600">FLAG Transfection Efficiency: <strong>${flagEfficiency.toFixed(1)}%</strong> (${flagCells} FLAG+ cells out of ${totalCells} total cells)</p>`);
+        }
     }
-    feedbackEl.classList.remove('hidden');
+    
+    if (!isNaN(gfpCells) && gfpCells >= 0) {
+        if (gfpCells > totalCells) {
+            results.push('<p class="text-red-600">GFP-positive cells cannot exceed total cells.</p>');
+        } else {
+            const gfpEfficiency = (gfpCells / totalCells) * 100;
+            results.push(`<p class="font-semibold text-green-600">GFP Transfection Efficiency: <strong>${gfpEfficiency.toFixed(1)}%</strong> (${gfpCells} GFP+ cells out of ${totalCells} total cells)</p>`);
+        }
+    }
+    
+    if (results.length === 0) {
+        outputDiv.innerHTML = '<p class="text-gray-600">Please enter at least one type of positive cell count.</p>';
+    } else {
+        outputDiv.innerHTML = results.join('');
+    }
 }
 
-function renderInteractiveQuiz(container, quizData) {
-    container.innerHTML = '';
-    quizData.forEach((q, index) => {
-        const qDiv = document.createElement('div');
-        qDiv.className = 'quiz-question p-3 mb-2 bg-white rounded-md shadow-sm';
-        let optionsHtml = `<p class="font-medium mb-2 text-sm">${index + 1}. ${q.question}</p><div class="space-y-1">`;
-        q.options.forEach(optText => {
-            optionsHtml += `<button class="quiz-option text-xs">${optText}</button>`;
-        });
-        optionsHtml += `</div><div class="feedback-message text-xs mt-1 p-1 rounded-md hidden"></div>`;
-        qDiv.innerHTML = optionsHtml;
-        
-        qDiv.querySelectorAll('.quiz-option').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const isCorrect = btn.textContent === q.answer;
-                const correctFeedback = `<strong>Correct!</strong> ${q.explanation}`;
-                const incorrectFeedback = `<strong>Incorrect.</strong> ${q.explanation}`;
-                const parentDiv = btn.parentElement;
-                const feedbackEl = parentDiv.nextElementSibling;
-                parentDiv.querySelectorAll('.quiz-option').forEach(b => {
-                    b.disabled = true;
-                    b.classList.remove('correct', 'incorrect');
-                });
-                if (isCorrect) {
-                    btn.classList.add('correct');
-                    feedbackEl.innerHTML = correctFeedback;
-                } else {
-                    btn.classList.add('incorrect');
-                    feedbackEl.innerHTML = incorrectFeedback;
-                    parentDiv.querySelectorAll('.quiz-option').forEach(opt => {
-                         if (opt.textContent === q.answer) opt.classList.add('correct');
-                    });
-                }
-                feedbackEl.classList.remove('hidden');
-            });
-        });
-        container.appendChild(qDiv);
-    });
-}
-
-export default function initModule3(rootEl, sidebarEl) {
+export default function initModule11(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
-    link.href = '#module-3';
+    link.href = '#module-11';
     link.textContent = TITLE;
     link.className = 'sidebar-link block px-3 py-2 rounded-md';
-    // NEW, CORRECTED CODE
-    sidebarEl.querySelector('#sidebar-links').appendChild(link);;
+    
+    // Find the sidebar links container and add the link
+    const sidebarLinks = sidebarEl.querySelector('#sidebar-links');
+    if (sidebarLinks) {
+        sidebarLinks.appendChild(link);
+    } else {
+        console.error('Sidebar links container not found');
+    }
 
     // 2. Inject content
     rootEl.innerHTML = getContent();
@@ -365,64 +416,13 @@ export default function initModule3(rootEl, sidebarEl) {
         <div class="mt-8 pt-6 border-t-2 border-purple-300">
             <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
             <p class="text-sm text-gray-600 mb-4">Test your knowledge from this module.</p>
-            <div id="quiz-container-module-3"></div>
+            <div id="quiz-container-module-11"></div>
         </div>`;
     rootEl.insertAdjacentHTML('beforeend', quizHtml);
-
-    // 3. Attach event listeners and run init logic
-    // Interactive Box 1: Transfection Method Choice
-    const methodChoiceContainer = document.getElementById('transfection-method-choice-quiz');
-    if (methodChoiceContainer) {
-        const methodQuizData = {
-            options: ["Lipofection (e.g., Lipofectamine)", "Electroporation", "Calcium Phosphate Precipitation", "Viral Transduction (e.g., with lentiviruses)"],
-            answer: "Calcium Phosphate Precipitation",
-            feedback_correct: "Exactly! The calcium phosphate method is an established, cost-effective method well-suited for transfecting adherent cells like HEK293 and is ideal for our course objectives.",
-            feedback_incorrect: "Not quite. While other methods work, CaPi is a great balance of cost and efficiency for this specific purpose. Viral methods are more complex and costly, and Lipofection is often more expensive."
-        };
-        methodQuizData.options.forEach(optText => {
-            const btn = document.createElement('button');
-            btn.className = 'quiz-option text-xs sm:text-sm';
-            btn.textContent = optText;
-            btn.dataset.correct = (optText === methodQuizData.answer).toString();
-            btn.addEventListener('click', () => handleSimpleQuiz(btn, optText === methodQuizData.answer, methodQuizData.feedback_correct, methodQuizData.feedback_incorrect));
-            methodChoiceContainer.appendChild(btn);
-        });
-    }
-
-    // Interactive Box 2: Plasmid Calculator and Small Volume Quiz
-    document.getElementById('plasmid-calc-btn')?.addEventListener('click', calculatePlasmidVolume);
-    const smallVolumeQuizContainer = document.getElementById('small-volume-quiz');
-    if(smallVolumeQuizContainer) {
-        smallVolumeQuizContainer.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', () => {
-                 const isCorrect = button.dataset.correct === 'true';
-                 const correctFeedback = "<strong>Correct!</strong> 0.586 µL is generally too small to pipette accurately. A good strategy is to prepare a master mix or a working dilution.";
-                 const incorrectFeedback = "<strong>Not quite.</strong> This volume is very prone to error with standard lab equipment.";
-                 handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
-            });
-        });
-    }
-
-    // Interactive Box 4: Troubleshooting Quiz
-    const troubleshootingContainer = document.getElementById('transfection-troubleshooting-quiz');
-    if (troubleshootingContainer) {
-        const troubleshootingQuizData = [
-            {
-                question: "Your cells look very unhappy after transfection, and many have detached. What could be a primary reason related to the CaPi method?",
-                options: ["Too little DNA was used", "The precipitates were too fine or incubated for too short a time", "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long", "Cells were not confluent enough"],
-                answer: "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long",
-                explanation: "Coarse CaPi precipitates formed due to incorrect pH or overly long incubation with cells can be quite toxic, leading to cell stress and detachment."
-            },
-            {
-                question: "You see hardly any GFP-positive cells 24-48 hours post-transfection. Which is a common critical factor to check first for CaPi transfections?",
-                options: ["The incubator temperature was 36°C instead of 37°C", "The pH of the 2x BBS solution was incorrect", "You used 0.5 µg of DNA instead of 0.3 µg", "The cells were only 50% confluent"],
-                answer: "The pH of the 2x BBS solution was incorrect",
-                explanation: "The pH of the BBS is extremely critical for forming the right kind of fine precipitate for efficient uptake. Incorrect pH is a very common reason for CaPi transfection failure."
-            }
-        ];
-        renderInteractiveQuiz(troubleshootingContainer, troubleshootingQuizData);
-    }
     
+    // 3. Attach event listeners
+    document.getElementById('calculate-icc-efficiency-btn')?.addEventListener('click', calculateICCEfficiency);
+
     // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-3');
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-11');
 }

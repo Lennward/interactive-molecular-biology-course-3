@@ -312,4 +312,6 @@ function getContent() {
                     <ul class="text-sm mt-2 list-disc list-inside ml-4">
                         <li><strong>Inconsistency:</strong> Calcium phosphate precipitation is sensitive to pH and temperature, which can lead to batch-to-batch variability.</li>
                         <li><strong>Low efficiency:</strong> Particularly in primary cells or hard-to-transfect lines.</li>
-                        <li><strong>Toxicity:</strong> Large precipitates or long incubation times can be harmful
+                        <li><strong>Toxicity:</strong> Large precipitates or long incubation times can be harmful to cells.</li>
+                        <li><strong>Precipitate size:</strong> If the precipitate is too coarse, it won't be taken up efficiently.</li>
+                        <li><strong>Limited reproducibility:</strong

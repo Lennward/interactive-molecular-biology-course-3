@@ -1,4 +1,4 @@
-// CORRECTED APP.JS CODE
+// CORRECTED APP.JS CODE WITH MOBILE FUNCTIONALITY
 
 import initModule1 from './modules/module01.js';
 import initModule2 from './modules/module02.js';
@@ -27,20 +27,57 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebarLinks: !!sidebarLinks,
             titleElement: !!titleElement
         });
-
-/* Add to style.css: */
-/*
-#sidebar h1 {
-    transition: all 0.3s ease;
-}
-
-#sidebar h1:hover, #sidebar h1.active-title {
-    color: var(--orange-accent) !important;
-    transform: translateX(3px);
-}
-*/
         return;
     }
+
+    // Mobile menu functionality
+    const createMobileMenuButton = () => {
+        const button = document.createElement('button');
+        button.id = 'mobile-menu-btn';
+        button.innerHTML = `
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        `;
+        button.className = 'fixed top-4 left-4 z-50 bg-purple-600 text-white p-2 rounded-md shadow-lg md:hidden';
+        button.style.backgroundColor = 'var(--purple-dark)';
+        
+        button.addEventListener('click', () => {
+            sidebarEl.classList.toggle('mobile-open');
+            const overlay = document.getElementById('sidebar-overlay');
+            if (overlay) {
+                overlay.classList.toggle('active');
+            }
+        });
+        
+        document.body.appendChild(button);
+        return button;
+    };
+
+    // Create overlay for mobile
+    const createSidebarOverlay = () => {
+        const overlay = document.createElement('div');
+        overlay.id = 'sidebar-overlay';
+        overlay.className = 'sidebar-overlay';
+        overlay.addEventListener('click', () => {
+            sidebarEl.classList.remove('mobile-open');
+            overlay.classList.remove('active');
+        });
+        document.body.appendChild(overlay);
+        return overlay;
+    };
+
+    // Initialize mobile components
+    const mobileMenuBtn = createMobileMenuButton();
+    const sidebarOverlay = createSidebarOverlay();
+
+    // Close mobile menu when clicking on a link
+    sidebarEl.addEventListener('click', (e) => {
+        if (e.target.closest('.sidebar-link') || e.target.closest('h1')) {
+            sidebarEl.classList.remove('mobile-open');
+            sidebarOverlay.classList.remove('active');
+        }
+    });
 
     // Make the title clickable
     titleElement.style.cursor = 'pointer';

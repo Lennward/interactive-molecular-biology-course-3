@@ -65,9 +65,10 @@ function getContent() {
             <h3>Core Biology</h3>
             <h4 class="styled-h4">Prokaryotes vs. Eukaryotes</h4>
             <p>Living organisms are made of cells. The two main types are:</p>
-            <ul>
-                <li><strong class="interactive-term" data-term="Prokaryotes">Prokaryotes</strong> <strong class="interactive-term" data-term="Eukaryotes">Eukaryotes</strong></li>
-            </ul>
+            <div class="interactive-terms-grid">
+                <div class="interactive-term" data-term="Prokaryotes">Prokaryotes</div>
+                <div class="interactive-term" data-term="Eukaryotes">Eukaryotes</div>
+            </div>
             <p>In this course, we will work with prokaryotic cells (E. coli bacteria) and eukaryotic cells (HEK293), which are used as standard model organisms in molecular biology and are particularly well suited for molecular biological studies.</p>
 
             <h4 class="styled-h4">The Canonical Dogma</h4>
@@ -83,12 +84,12 @@ function getContent() {
             
             <p>Figure 1. Genetic information flow in living systems. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
-            <ul>
-                <li><strong class="interactive-term" data-term="Activation">Activation</strong></li>
-                <li><strong class="interactive-term" data-term="Transcription">Transcription</strong></li>
-                <li><strong class="interactive-term" data-term="Processing">Processing</strong></li>
-                <li><strong class="interactive-term" data-term="Translation">Translation</strong></li>
-            </ul>
+            <div class="interactive-terms-grid">
+                <div class="interactive-term" data-term="Activation">Activation</div>
+                <div class="interactive-term" data-term="Transcription">Transcription</div>
+                <div class="interactive-term" data-term="Processing">Processing</div>
+                <div class="interactive-term" data-term="Translation">Translation</div>
+            </div>
 
             <h4 class="styled-h4">Plasmids</h4>
             <p>A plasmid is a small, circular, double-stranded DNA molecule that is distinct from a cell's chromosomal DNA. It serves as a carrier of genetic information. Plasmids naturally exist in bacterial cells and they also occur in some eukaryotes. In the lab, scientists use plasmids to introduce new genes into cells. First, a plasmid needs to be cloned using bacteria. Afterwards, the functional plasmid can be introduced (=transfected) into mammalian cells. For both organisms (bacteria and mammalian cells), different components of a plasmid are needed.</p>
@@ -96,14 +97,14 @@ function getContent() {
             <p>General Plasmid Map; RE = Restriction Enzyme, MCS = Multiple Cloning Site</p>    
             
             <p>A functional plasmid typically contains the following components:</p>
-            <ul>
-                <li><strong class="interactive-term" data-term="Origin of Replication (ori)">Origin of Replication (ori)</strong></li>
-                <li><strong class="interactive-term" data-term="Promoter">Promoter</strong></li>
-                <li><strong class="interactive-term" data-term="Multiple Cloning Site (MCS) aka Polylinker">Multiple Cloning Site (MCS) aka Polylinker</strong></li>
-                <li><strong class="interactive-term" data-term="Gene of Interest (GOI)">Gene of Interest (GOI)</strong></li>
-                <li><strong class="interactive-term" data-term="Selection Marker">Selection Marker</strong></li>
-                <li><strong class="interactive-term" data-term="Tag">Tag</strong></li>
-            </ul>                      
+            <div class="interactive-terms-grid">
+                <div class="interactive-term" data-term="Origin of Replication (ori)">Origin of Replication (ori)</div>
+                <div class="interactive-term" data-term="Promoter">Promoter</div>
+                <div class="interactive-term" data-term="Multiple Cloning Site (MCS) aka Polylinker">Multiple Cloning Site (MCS)</div>
+                <div class="interactive-term" data-term="Gene of Interest (GOI)">Gene of Interest (GOI)</div>
+                <div class="interactive-term" data-term="Selection Marker">Selection Marker</div>
+                <div class="interactive-term" data-term="Tag">Tag</div>
+            </div>                      
 
             <h3>Module Quiz</h3>
             <div id="quiz-container"></div>
@@ -118,51 +119,92 @@ function getContent() {
         </div>
 
         <style>
+        .interactive-terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin: 1.5rem 0;
+            padding: 0.5rem;
+        }
+
         .interactive-term {
+            background: linear-gradient(145deg, #ffffff 0%, rgba(212, 43, 233, 0.05) 100%);
+            border: 2px solid rgba(212, 43, 233, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
             color: var(--purple-dark);
             cursor: pointer;
-            text-decoration: none;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            transition: all 0.3s ease;
-            border-radius: 8px;
-            padding: 8px 16px;
-            background: linear-gradient(135deg, rgba(212, 43, 233, 0.12), rgba(246, 75, 204, 0.1));
-            border: 2px solid rgba(212, 43, 233, 0.3);
-            display: inline-block;
-            margin: 3px 6px;
-            font-weight: 600;
-            font-size: 1.05em;
-            box-shadow: 0 2px 8px rgba(212, 43, 233, 0.15);
-            min-width: fit-content;
+            box-shadow: 0 2px 8px rgba(212, 43, 233, 0.1), 
+                        0 1px 3px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            user-select: none;
         }
 
         .interactive-term::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, var(--purple-light), var(--purple-accent));
-            opacity: 0;
-            border-radius: 6px;
-            transition: opacity 0.3s ease;
-            z-index: -1;
-        }
-
-        .interactive-term:hover {
-            color: white;
-            transform: translateY(-3px) scale(1.02);
-            box-shadow: 0 8px 20px rgba(212, 43, 233, 0.4);
-            border-color: var(--purple-light);
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(212, 43, 233, 0.1), 
+                transparent
+            );
+            transition: left 0.6s ease;
         }
 
         .interactive-term:hover::before {
-            opacity: 1;
+            left: 100%;
+        }
+
+        .interactive-term:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--purple-light);
+            box-shadow: 0 8px 25px rgba(212, 43, 233, 0.25),
+                        0 3px 12px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #ffffff 0%, rgba(246, 75, 204, 0.08) 100%);
         }
 
         .interactive-term:active {
-            transform: translateY(-1px) scale(1.01);
+            transform: translateY(-2px) scale(1.01);
+            transition: transform 0.1s ease;
+        }
+
+        .interactive-term.active {
+            background: linear-gradient(145deg, var(--purple-light), var(--purple-accent));
+            color: white;
+            border-color: var(--purple-accent);
+            box-shadow: 0 6px 20px rgba(212, 43, 233, 0.4),
+                        0 2px 8px rgba(0, 0, 0, 0.15);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .interactive-terms-grid {
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 10px;
+                padding: 0.25rem;
+            }
+            
+            .interactive-term {
+                padding: 12px 16px;
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .interactive-terms-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
         }
 
         .term-tooltip {

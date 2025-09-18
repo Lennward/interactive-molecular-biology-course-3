@@ -292,3 +292,13 @@ body {
 .progress { height: 8px; width: 100%; background: rgba(0,0,0,0.07); border-radius: 999px; overflow: hidden; }
 .progress .bar { height: 100%; width: 32%; background: linear-gradient(90deg, var(--orange-accent), var(--orange-light)); animation: wipPulse 1.8s infinite ease-in-out; }
 @keyframes wipPulse { 0%,100% { filter: brightness(1); } 50% { filter: brightness(1.2); } }
+
+/* Clickable title styling */
+#sidebar h1 {
+    transition: all 0.3s ease;
+}
+
+#sidebar h1:hover, #sidebar h1.active-title {
+    color: var(--orange-accent) !important;
+    transform: translateX(3px);
+}

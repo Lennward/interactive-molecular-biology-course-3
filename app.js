@@ -210,6 +210,7 @@ if (hash === '#introduction') {
     }, 100);
 
     // Function to get the course content    
+// Enhanced Function to get the course content
 function getCourseContent() {
     return `
         <div class="landing-hero mb-8">
@@ -312,15 +313,15 @@ function getCourseContent() {
         <div class="team-section">
             <div class="team-logos flex justify-center items-center gap-8 mb-4">
                 <div class="logo-container">
-                    <img src="images/Logo_Phoenix.svg" alt="Team Phoenix Logo" class="h-20 w-auto logo-hover">
+                    <img src="images/Logo_Phoenix.svg" alt="Team Phoenix Logo" class="h-28 w-auto logo-hover">
                 </div>
                 <div class="logo-container">
-                    <img src="images/Logo_Heidelberg.svg" alt="iGEM Heidelberg Logo" class="h-20 w-auto logo-hover">
+                    <img src="images/Logo_Heidelberg.svg" alt="iGEM Heidelberg Logo" class="h-28 w-auto logo-hover">
                 </div>
             </div>
             <p class="text-center text-lg font-medium team-credit">
                 <span style="color: var(--purple-dark);">Created by</span> 
-                <span style="color: var(--orange-medium);">Team Phoenix & iGEM Heidelberg</span>
+                <span style="color: var(--orange-medium);">PHOENICS iGEM Team Heidelberg 2025</span>
             </p>
         </div>
 

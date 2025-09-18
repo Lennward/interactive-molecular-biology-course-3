@@ -12,6 +12,32 @@ const QUIZ_DATA = [
         answer: "Ribosome (the organelle)",
         type: "mcq",
         explanation: "Plasmids contain DNA sequences like promoters and origins of replication. Ribosomes are cellular machinery for protein synthesis and are not part of the plasmid DNA itself."
+    },
+    {
+        question: "Which of these is a Eukaryotic cell?",
+        options: [
+            "E. coli",
+            "Bacillus subtilis",
+            "Human pancreatic cells",
+            "Streptococcus pneumoniae",
+            "Pseudomonas aeruginosa"
+        ],
+        answer: "Human pancreatic cells",
+        type: "mcq",
+        explanation: "Human pancreatic cells are eukaryotic cells with a nucleus and membrane-bound organelles. E. coli, Bacillus subtilis, Streptococcus pneumoniae, and Pseudomonas aeruginosa are all prokaryotic bacterial cells that lack a nucleus."
+    },
+    {
+        question: "What is NOT a step of the canonical dogma?",
+        options: [
+            "Processing",
+            "Translation", 
+            "Activation",
+            "Replication",
+            "Transcription"
+        ],
+        answer: "Replication",
+        type: "mcq",
+        explanation: "Replication is the process of copying DNA to produce identical DNA molecules, but it is not part of the canonical dogma of gene expression. The canonical dogma describes the flow from DNA to RNA to protein through activation, transcription, processing, and translation."
     }
 ];
 

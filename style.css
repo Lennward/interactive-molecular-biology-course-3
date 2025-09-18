@@ -159,15 +159,15 @@ body {
 }
 
 .quiz-option.correct, .practice-problem-box .correct-answer {
-    background-color: rgba(253, 172, 19, 0.2) !important; /* FDAC13 with alpha */
-    border-color: var(--orange-medium) !important;
-    color: var(--orange-dark) !important;
+    background-color: rgba(34, 197, 94, 0.2) !important; /* Green background */
+    border-color: #16a34a !important; /* Green border */
+    color: #15803d !important; /* Dark green text */
 }
 
 .quiz-option.incorrect, .practice-problem-box .incorrect-answer {
-    background-color: rgba(229, 74, 66, 0.2) !important; /* E54A42 with alpha */
-    border-color: var(--orange-dark) !important;
-    color: var(--orange-dark) !important;
+    background-color: rgba(229, 74, 66, 0.2) !important; /* Red background */
+    border-color: #E54A42 !important; /* Red border */
+    color: #dc2626 !important; /* Dark red text */
 }
 
 .feedback-message, .practice-feedback {

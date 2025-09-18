@@ -209,39 +209,404 @@ if (hash === '#introduction') {
         });
     }, 100);
 
-    // Function to get the course content
-    function getCourseContent() {
-        return `
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-4" style="color: var(--purple-dark);">Welcome to the Interactive Cell & Protein Analytics Course!</h2>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-4">This course serves to give you an idea of how to perform experiments in the field of molecular biology.</p>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-4">The first part introduces you to the general theory of the basics of molecular biology.</p>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-4">Further, you will learn how to perform your own biological experiment in the lab. For this, the course offers all steps including practical application examples that are needed for the general procedure of many molecular biological experiments.</p>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-4">This contains a guide on how to calculate dilutions, concentrations and how to count cells. This is followed by the "Cloning" section which focuses on a general procedure in molecular biology: The cloning of DNA-plasmids via bacteria. This section mainly contains several short videos about the steps that need to be considered during cloning with bacteria.</p>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-4">Additionally, there is a chapter about how to handle mammalian cells under the cell culture with the example of HEK-293T cells.</p>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-4">This is followed by a transfection of our mammalian cells with the plasmids that we produced during cloning in and afterwards purified from bacteria.</p>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-6">To validate our transfection, we examine GFP under the fluorescence microscope and perform our immunocytochemistry (ICC) experiment.</p>
-            
-            <div class="highlight-note mb-6">
-                <p><strong>Practical Application:</strong> If you have access to a lab and the required materials, you can also conduct the experiment in real life on your own in parallel.</p>
-                <p class="mt-2">However, if you do not have access to a lab or the required materials or just want to know what steps you need to consider when performing a similar experiment, this course serves as a great preparation for real life applications.</p>
+    // Function to get the course content    
+function getCourseContent() {
+    return `
+        <div class="landing-hero mb-8">
+            <div class="hero-gradient-bg p-8 rounded-2xl mb-8">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center leading-tight">
+                    <span class="hero-title-gradient">Interactive Molecular Cell Biology</span>
+                    <br>
+                    <span class="text-2xl sm:text-3xl font-medium" style="color: var(--orange-accent);">From Cloning to Imaging</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-center max-w-3xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
+                    Master the complete molecular biology workflow through hands-on simulations and interactive learning
+                </p>
             </div>
-            
-            <p class="text-base sm:text-lg text-gray-600 mb-6"><strong>Select a module from the sidebar to begin your learning journey.</strong></p>
-            
-            <div class="flex justify-center items-center gap-8 mb-2">
-                <img src="images/Logo_Phoenix.svg" alt="Team Phoenix Logo" class="h-16 w-auto">
-                <img src="images/Logo_Heidelberg.svg" alt="iGEM Heidelberg Logo" class="h-16 w-auto">
+        </div>
+
+        <div class="course-highlights grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="highlight-card">
+                <div class="highlight-icon">🧬</div>
+                <h3>DNA Cloning</h3>
+                <p>Learn plasmid cloning techniques with step-by-step video guides</p>
             </div>
-            <p class="text-sm text-gray-600 text-center"><em>Team Phoenix & iGEM Heidelberg</em></p>
-        `;
-    }
+            <div class="highlight-card">
+                <div class="highlight-icon">🔬</div>
+                <h3>Cell Culture</h3>
+                <p>Master mammalian cell handling with HEK-293T cells</p>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-icon">✨</div>
+                <h3>Microscopy</h3>
+                <p>Validate experiments using fluorescence imaging techniques</p>
+            </div>
+        </div>
+
+        <div class="course-journey mb-8">
+            <h2 class="section-title text-center mb-8">Your Learning Journey</h2>
+            
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <h4>Foundation</h4>
+                        <p>Discover the fundamental principles of molecular biology and essential laboratory calculations</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <h4>Cloning Mastery</h4>
+                        <p>Execute DNA-plasmid cloning using bacterial systems with comprehensive video tutorials</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <h4>Cell Culture</h4>
+                        <p>Handle mammalian cells safely and effectively in sterile culture conditions</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                        <h4>Transfection</h4>
+                        <p>Introduce your cloned plasmids into mammalian cells using modern techniques</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">5</div>
+                    <div class="timeline-content">
+                        <h4>Validation</h4>
+                        <p>Analyze results through GFP fluorescence and immunocytochemistry experiments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="practical-application-banner">
+            <div class="banner-content">
+                <div class="banner-icon">🥽</div>
+                <div class="banner-text">
+                    <h3>Ready for Real Lab Work?</h3>
+                    <p>This course bridges theory and practice - follow along with actual lab equipment or use it as comprehensive preparation for hands-on experiments.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section text-center mb-8">
+            <h3 class="text-2xl font-semibold mb-4" style="color: var(--purple-dark);">Ready to Start Exploring?</h3>
+            <p class="text-lg mb-6" style="color: var(--text-primary);">Choose any module from the sidebar to begin your molecular biology adventure</p>
+            <div class="cta-arrow">
+                <svg class="w-8 h-8 mx-auto animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="color: var(--orange-medium);">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <div class="team-logos flex justify-center items-center gap-8 mb-4">
+                <div class="logo-container">
+                    <img src="images/Logo_Phoenix.svg" alt="Team Phoenix Logo" class="h-20 w-auto logo-hover">
+                </div>
+                <div class="logo-container">
+                    <img src="images/Logo_Heidelberg.svg" alt="iGEM Heidelberg Logo" class="h-20 w-auto logo-hover">
+                </div>
+            </div>
+            <p class="text-center text-lg font-medium team-credit">
+                <span style="color: var(--purple-dark);">Created by</span> 
+                <span style="color: var(--orange-medium);">Team Phoenix & iGEM Heidelberg</span>
+            </p>
+        </div>
+
+        <style>
+        .landing-hero {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-gradient-bg {
+            background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple-medium) 50%, var(--purple-light) 100%);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+            animation: shimmer 3s infinite;
+        }
+
+        .hero-title-gradient {
+            background: linear-gradient(135deg, var(--orange-accent) 0%, var(--orange-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .course-highlights {
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .highlight-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+            border-color: var(--purple-light);
+        }
+
+        .highlight-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .highlight-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-card p {
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--purple-dark);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--orange-medium), var(--orange-accent));
+            border-radius: 2px;
+        }
+
+        .journey-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: 60px;
+            bottom: -20px;
+            width: 2px;
+            background: linear-gradient(180deg, var(--purple-light), var(--orange-medium));
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-marker {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--orange-medium), var(--orange-accent));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 2rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            z-index: 2;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            flex-grow: 1;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border: 2px solid var(--purple-light);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateX(10px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+        }
+
+        .timeline-content h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .practical-application-banner {
+            background: linear-gradient(135deg, rgba(246, 75, 204, 0.1), rgba(255, 208, 0, 0.1));
+            border: 2px solid var(--purple-light);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 2rem 0;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .banner-icon {
+            font-size: 3rem;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .banner-text h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .banner-text p {
+            color: var(--text-primary);
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .cta-section {
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+
+        .team-section {
+            animation: fadeInUp 0.8s ease-out 1s both;
+        }
+
+        .logo-container {
+            padding: 1rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .logo-hover:hover {
+            transform: scale(1.1);
+        }
+
+        .team-credit {
+            background: linear-gradient(135deg, var(--purple-dark), var(--orange-medium));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .hero-gradient-bg {
+                padding: 2rem 1.5rem;
+            }
+            
+            .course-highlights {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .highlight-card {
+                padding: 1.5rem;
+            }
+            
+            .banner-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .timeline-marker {
+                margin: 0 auto 1rem auto;
+            }
+            
+            .timeline-content {
+                margin-top: 0;
+            }
+            
+            .timeline-item::before {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .team-logos {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        </style>
+    `;
+}
 
     // Function to update welcome message content
     function updateWelcomeContent() {

@@ -32,26 +32,7 @@ function getContent() {
             <div class="strategy-note">
                 <p><strong>Learning Strategy:</strong> Each module builds upon the previous ones, so don't worry about memorizing every detail now. Focus on understanding the general flow and connections between different experimental steps.</p>
             </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
-                <div class="goal-box">
-                    <strong>Cell Culture Fundamentals</strong>
-                    <p class="text-sm">Learn how to work with mammalian cells, maintain sterile conditions, and prepare cells for experiments.</p>
-                </div>
-                <div class="goal-box">
-                    <strong>Transfection Techniques</strong>
-                    <p class="text-sm">Understand how to introduce genetic material into cells and the principles behind different transfection methods.</p>
-                </div>
-                <div class="goal-box">
-                    <strong>Protein Detection</strong>
-                    <p class="text-sm">Master fluorescence microscopy and immunocytochemistry techniques to visualize and quantify protein expression.</p>
-                </div>
-                <div class="goal-box">
-                    <strong>Data Analysis</strong>
-                    <p class="text-sm">Learn to calculate transfection efficiency, analyze results, and draw meaningful conclusions from your experiments.</p>
-                </div>
-            </div>
-
+           
             <h3>Ready for the Journey?</h3>
             <p>This experimental overview serves as your roadmap. As you progress through each module, you'll gain the knowledge and skills needed to successfully perform each step shown in the workflow diagram.</p>
             

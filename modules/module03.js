@@ -1,20 +1,4 @@
 const TITLE = "Module 3: Experimental overview";
-const QUIZ_DATA = [
-    {
-        question: "What is the purpose of this experimental overview module?",
-        options: ["To provide detailed protocols for each step", "To give a general overview of the entire experiment workflow", "To teach specific molecular biology techniques", "To calculate dilutions and concentrations"],
-        answer: "To give a general overview of the entire experiment workflow",
-        type: "mcq",
-        explanation: "This module provides a graphic illustration of the general steps of the whole experiment to give students an overview before diving into detailed explanations in subsequent modules."
-    },
-    {
-        question: "True or False: You need to understand every detail of the experimental workflow at this stage.",
-        options: ["True", "False"],
-        answer: "False",
-        type: "tf",
-        explanation: "It's perfectly normal not to understand everything right now. The following modules will go into more detail to thoroughly explain each step of the experiment."
-    }
-];
 
 function getContent() {
     return `
@@ -23,7 +7,7 @@ function getContent() {
             
             <p>Now that you have gotten familiar with the basics of molecular biology and standard calculations needed in the lab, we will go through a little overview of our experiment. To do so, here is a graphic that illustrates the general steps of the whole experiment. It's no problem if you do not understand everything right now. We will go into more detail in the following modules to thoroughly explain each step of the experiment.</p>
 
-            <div class="highlight-note">
+            <div class="info-note">
                 <p><strong>Don't worry if this seems complex!</strong> This overview is just to show you the big picture. Each step will be explained in detail in the upcoming modules.</p>
             </div>
 
@@ -45,9 +29,10 @@ function getContent() {
                 <div id="workflow-understanding-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
             </div>
 
-            <h3>What's Coming Next</h3>
-            <p>In the following modules, you will learn about each component of this experimental workflow in detail:</p>
-            
+            <div class="strategy-note">
+                <p><strong>Learning Strategy:</strong> Each module builds upon the previous ones, so don't worry about memorizing every detail now. Focus on understanding the general flow and connections between different experimental steps.</p>
+            </div>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
                 <div class="goal-box">
                     <strong>Cell Culture Fundamentals</strong>
@@ -67,56 +52,42 @@ function getContent() {
                 </div>
             </div>
 
-            <div class="highlight-note">
-                <p><strong>Learning Strategy:</strong> Each module builds upon the previous ones, so don't worry about memorizing every detail now. Focus on understanding the general flow and connections between different experimental steps.</p>
-            </div>
-
             <h3>Ready for the Journey?</h3>
             <p>This experimental overview serves as your roadmap. As you progress through each module, you'll gain the knowledge and skills needed to successfully perform each step shown in the workflow diagram.</p>
             
             <p><strong>Let's jump into more detail in the next modules!</strong></p>
         </div>
+
+        <style>
+        .info-note {
+            background-color: rgba(53, 34, 83, 0.08); /* Purple-dark with low alpha */
+            border-left: 4px solid var(--purple-medium);
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
+        }
+
+        .info-note p {
+            margin-bottom: 0 !important;
+            color: var(--purple-dark);
+        }
+
+        .strategy-note {
+            background-color: rgba(133, 39, 158, 0.08); /* Purple-medium with low alpha */
+            border-left: 4px solid var(--purple-light);
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            border-radius: 0.25rem;
+        }
+
+        .strategy-note p {
+            margin-bottom: 0 !important;
+            color: var(--purple-dark);
+        }
+        </style>
     `;
-}
-
-function renderQuiz(quizData, containerId) {
-    const quizContainer = document.getElementById(containerId);
-    if (!quizContainer) return;
-    quizContainer.innerHTML = '';
-
-    quizData.forEach((q, index) => {
-        const questionDiv = document.createElement('div');
-        questionDiv.className = 'quiz-question';
-        let optionsHtml = q.options.map(optionText => `<button class="quiz-option">${optionText}</button>`).join('');
-
-        questionDiv.innerHTML = `
-            <p class="font-medium mb-3">${index + 1}. ${q.question}</p>
-            <div class="space-y-2">${optionsHtml}</div>
-            <div class="feedback-message text-sm mt-2 p-2 rounded-md hidden"></div>
-        `;
-        
-        questionDiv.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', () => {
-                const feedbackDiv = questionDiv.querySelector('.feedback-message');
-                const allOptions = questionDiv.querySelectorAll('.quiz-option');
-                allOptions.forEach(btn => btn.disabled = true);
-                
-                if (button.textContent === q.answer) {
-                    button.classList.add('correct');
-                    feedbackDiv.innerHTML = '<strong>Correct!</strong> ';
-                } else {
-                    button.classList.add('incorrect');
-                    feedbackDiv.innerHTML = `<strong>Incorrect.</strong> The correct answer is: <span class="font-semibold">${q.answer}</span>. `;
-                    allOptions.forEach(btn => { if (btn.textContent === q.answer) btn.classList.add('correct'); });
-                }
-                if (q.explanation) {
-                    feedbackDiv.innerHTML += `<br><span class="text-xs">${q.explanation}</span>`;
-                }
-                feedbackDiv.classList.remove('hidden');
-            });
-        });
-        quizContainer.appendChild(questionDiv);
-    });
 }
 
 function handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback) {
@@ -158,15 +129,6 @@ export default function initModule3(rootEl, sidebarEl) {
     // 2. Inject content
     rootEl.innerHTML = getContent();
 
-    // Add quiz container
-    const quizHtml = `
-        <div class="mt-8 pt-6 border-t-2 border-purple-300">
-            <h3 class="text-xl font-semibold text-purple-700 mb-4">Module Quiz!</h3>
-            <p class="text-sm text-gray-600 mb-4">Test your understanding of this overview.</p>
-            <div id="quiz-container-module-3"></div>
-        </div>`;
-    rootEl.insertAdjacentHTML('beforeend', quizHtml);
-
     // 3. Attach event listeners for interactive elements
     const workflowQuizContainer = document.getElementById('workflow-understanding-quiz');
     if (workflowQuizContainer) {
@@ -179,7 +141,4 @@ export default function initModule3(rootEl, sidebarEl) {
             });
         });
     }
-    
-    // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-3');
 }

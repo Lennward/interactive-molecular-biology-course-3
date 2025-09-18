@@ -245,15 +245,20 @@ function getContent() {
 
         .interactive-term.active {
             background: linear-gradient(145deg, var(--purple-light), var(--purple-accent));
-            color: white;
             border-color: var(--purple-accent);
             box-shadow: 0 6px 20px rgba(212, 43, 233, 0.4),
                         0 2px 8px rgba(0, 0, 0, 0.15);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .interactive-term.active .term-title {
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
         }
 
         .interactive-term.active .term-explanation {
             color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
         }
 
         /* Responsive adjustments */

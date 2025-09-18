@@ -66,8 +66,7 @@ function getContent() {
             <h4 class="styled-h4">Prokaryotes vs. Eukaryotes</h4>
             <p>Living organisms are made of cells. The two main types are:</p>
             <ul>
-                <li><strong class="interactive-term" data-term="Prokaryotes">Prokaryotes</strong>: Simple cells (e.g., bacteria) lacking a nucleus. Their DNA is located in the cytoplasm. They are usually smaller and simpler in design.</li>
-                <li><strong class="interactive-term" data-term="Eukaryotes">Eukaryotes</strong>: Complex cells (e.g., animal including human, plant, fungal cells) with a nucleus enclosing the DNA, and various membrane-bound organelles like mitochondria and endoplasmic reticulum (ER).</li>
+                <li><strong class="interactive-term" data-term="Prokaryotes">Prokaryotes</strong> and <strong class="interactive-term" data-term="Eukaryotes">Eukaryotes</strong></li>
             </ul>
             <p>In this course, we will work with prokaryotic cells (E. coli bacteria) and eukaryotic cells (HEK293), which are used as standard model organisms in molecular biology and are particularly well suited for molecular biological studies.</p>
 
@@ -85,10 +84,10 @@ function getContent() {
             <p>Figure 1. Genetic information flow in living systems. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
             <ul>
-                <li><strong class="interactive-term" data-term="Activation">Activation</strong>: Transcription factors bind to promoter-specific sequences, allowing for the binding and assembly of the transcriptional machinery.</li>
-                <li><strong class="interactive-term" data-term="Transcription">Transcription</strong>: RNA polymerase II produces a new mRNA molecule using the coding region of the DNA sequence as a template.</li>
-                <li><strong class="interactive-term" data-term="Processing">Processing</strong>: Pre-mRNA molecules are edited to produce mature mRNA molecules.</li>
-                <li><strong class="interactive-term" data-term="Translation">Translation</strong>: Ribosomes produce a new polypeptide encoded in the mRNA by translating it from the start to the stop codon.</li>
+                <li><strong class="interactive-term" data-term="Activation">Activation</strong></li>
+                <li><strong class="interactive-term" data-term="Transcription">Transcription</strong></li>
+                <li><strong class="interactive-term" data-term="Processing">Processing</strong></li>
+                <li><strong class="interactive-term" data-term="Translation">Translation</strong></li>
             </ul>
 
             <h4 class="styled-h4">Plasmids</h4>
@@ -98,12 +97,12 @@ function getContent() {
             
             <p>A functional plasmid typically contains the following components:</p>
             <ul>
-                <li><strong class="interactive-term" data-term="Origin of Replication (ori)">Origin of Replication (ori)</strong>: The DNA sequence where replication of the plasmid begins, allowing it to be copied within the host cell (bacteria).</li>
-                <li><strong class="interactive-term" data-term="Promoter">Promoter</strong>: A DNA sequence that initiates transcription of a particular gene. For example, the CMV promoter for strong expression in mammalian cells (eukaryotes).</li>
-                <li><strong class="interactive-term" data-term="Multiple Cloning Site (MCS) aka Polylinker">Multiple Cloning Site (MCS) aka Polylinker</strong>: A short segment of DNA containing many restriction enzyme sites. This allows targeted insertion of a new gene (the gene of interest) using restriction enzymes.</li>
-                <li><strong class="interactive-term" data-term="Gene of Interest (GOI)">Gene of Interest (GOI)</strong>: The specific gene you want to study or express in host cells (e.g., a gene coding for a therapeutic protein or regulatory RNA).</li>
-                <li><strong class="interactive-term" data-term="Selection Marker">Selection Marker</strong>: A gene conferring a trait for artificial selection, e.g., an antibiotic resistance gene (like Ampicillin or Kanamycin resistance), allowing only cells that have successfully taken up the plasmid to grow in the presence of the antibiotic.</li>
-                <li><strong class="interactive-term" data-term="Tag">Tag</strong>: A short DNA sequence fused to the gene of interest, which can be used for protein detection or purification. Examples include GFP (Green Fluorescent Protein) for fluorescence and His-tag for affinity chromatography.</li>
+                <li><strong class="interactive-term" data-term="Origin of Replication (ori)">Origin of Replication (ori)</strong></li>
+                <li><strong class="interactive-term" data-term="Promoter">Promoter</strong></li>
+                <li><strong class="interactive-term" data-term="Multiple Cloning Site (MCS) aka Polylinker">Multiple Cloning Site (MCS) aka Polylinker</strong></li>
+                <li><strong class="interactive-term" data-term="Gene of Interest (GOI)">Gene of Interest (GOI)</strong></li>
+                <li><strong class="interactive-term" data-term="Selection Marker">Selection Marker</strong></li>
+                <li><strong class="interactive-term" data-term="Tag">Tag</strong></li>
             </ul>                      
 
             <h3>Module Quiz</h3>
@@ -122,17 +121,52 @@ function getContent() {
         .interactive-term {
             color: var(--purple-dark);
             cursor: pointer;
-            text-decoration: underline;
-            text-decoration-color: var(--purple-light);
-            text-decoration-thickness: 2px;
-            transition: all 0.2s ease;
+            text-decoration: none;
             position: relative;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            padding: 2px 6px;
+            background: linear-gradient(135deg, rgba(212, 43, 233, 0.1), rgba(246, 75, 204, 0.08));
+            border: 1px solid rgba(212, 43, 233, 0.2);
+            display: inline-block;
+            margin: 1px;
+        }
+
+        .interactive-term::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--purple-light), var(--purple-accent));
+            opacity: 0;
+            border-radius: 3px;
+            transition: opacity 0.3s ease;
+            z-index: -1;
         }
 
         .interactive-term:hover {
-            color: var(--purple-light);
-            text-decoration-color: var(--orange-medium);
-            transform: translateY(-1px);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 43, 233, 0.3);
+            border-color: var(--purple-light);
+        }
+
+        .interactive-term:hover::before {
+            opacity: 1;
+        }
+
+        .interactive-term::after {
+            content: '💡';
+            font-size: 0.8em;
+            margin-left: 4px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+        .interactive-term:hover::after {
+            opacity: 1;
         }
 
         .term-tooltip {

@@ -216,7 +216,7 @@ function getCourseContent() {
         <div class="landing-hero mb-8">
             <div class="hero-gradient-bg p-8 rounded-2xl mb-8">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-center leading-tight">
-                    <span class="hero-title-gradient">Interactive Molecular Cell Biology</span>
+                    <span class="hero-title-gradient">Interactive Molecular Cell Biology Course</span>
                     <br>
                     <span class="text-2xl sm:text-3xl font-medium" style="color: var(--orange-accent);">From Cloning to Imaging</span>
                 </h1>

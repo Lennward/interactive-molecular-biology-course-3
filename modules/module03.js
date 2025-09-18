@@ -13,7 +13,7 @@ function getContent() {
 
             <div class="my-8 text-center">
                 <img src="images/image031.png" alt="Experimental workflow overview diagram" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Experimental+Workflow+Overview'; this.alt='Placeholder: Experimental Workflow Overview';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure:</strong> Overview of the complete experimental workflow</p>
+                <p class="text-sm text-gray-600 mt-2"><strong>Figure:</strong> Overview of the complete experimental workflow. Created with BioRender.com</p>
             </div>
 
             <div class="interactive-box">

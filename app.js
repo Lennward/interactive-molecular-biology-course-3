@@ -236,8 +236,8 @@ if (hash === '#introduction') {
             <p class="text-base sm:text-lg text-gray-600 mb-6"><strong>Select a module from the sidebar to begin your learning journey.</strong></p>
             
             <div class="flex justify-center items-center gap-8 mb-2">
-                <img src="Logo_Phoenix.svg" alt="Team Phoenix Logo" class="h-16 w-auto">
-                <img src="Logo_Heidelberg.svg" alt="iGEM Heidelberg Logo" class="h-16 w-auto">
+                <img src="images/Logo_Phoenix.svg" alt="Team Phoenix Logo" class="h-16 w-auto">
+                <img src="images/Logo_Heidelberg.svg" alt="iGEM Heidelberg Logo" class="h-16 w-auto">
             </div>
             <p class="text-sm text-gray-600 text-center"><em>Team Phoenix & iGEM Heidelberg</em></p>
         `;

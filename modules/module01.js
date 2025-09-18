@@ -66,7 +66,7 @@ function getContent() {
             <h4 class="styled-h4">Prokaryotes vs. Eukaryotes</h4>
             <p>Living organisms are made of cells. The two main types are:</p>
             <ul>
-                <li><strong class="interactive-term" data-term="Prokaryotes">Prokaryotes</strong> and <strong class="interactive-term" data-term="Eukaryotes">Eukaryotes</strong></li>
+                <li><strong class="interactive-term" data-term="Prokaryotes">Prokaryotes</strong> <strong class="interactive-term" data-term="Eukaryotes">Eukaryotes</strong></li>
             </ul>
             <p>In this course, we will work with prokaryotic cells (E. coli bacteria) and eukaryotic cells (HEK293), which are used as standard model organisms in molecular biology and are particularly well suited for molecular biological studies.</p>
 
@@ -124,12 +124,16 @@ function getContent() {
             text-decoration: none;
             position: relative;
             transition: all 0.3s ease;
-            border-radius: 4px;
-            padding: 2px 6px;
-            background: linear-gradient(135deg, rgba(212, 43, 233, 0.1), rgba(246, 75, 204, 0.08));
-            border: 1px solid rgba(212, 43, 233, 0.2);
+            border-radius: 8px;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, rgba(212, 43, 233, 0.12), rgba(246, 75, 204, 0.1));
+            border: 2px solid rgba(212, 43, 233, 0.3);
             display: inline-block;
-            margin: 1px;
+            margin: 3px 6px;
+            font-weight: 600;
+            font-size: 1.05em;
+            box-shadow: 0 2px 8px rgba(212, 43, 233, 0.15);
+            min-width: fit-content;
         }
 
         .interactive-term::before {
@@ -141,15 +145,15 @@ function getContent() {
             bottom: 0;
             background: linear-gradient(135deg, var(--purple-light), var(--purple-accent));
             opacity: 0;
-            border-radius: 3px;
+            border-radius: 6px;
             transition: opacity 0.3s ease;
             z-index: -1;
         }
 
         .interactive-term:hover {
             color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(212, 43, 233, 0.3);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(212, 43, 233, 0.4);
             border-color: var(--purple-light);
         }
 
@@ -157,16 +161,8 @@ function getContent() {
             opacity: 1;
         }
 
-        .interactive-term::after {
-            content: '💡';
-            font-size: 0.8em;
-            margin-left: 4px;
-            opacity: 0.7;
-            transition: opacity 0.3s ease;
-        }
-
-        .interactive-term:hover::after {
-            opacity: 1;
+        .interactive-term:active {
+            transform: translateY(-1px) scale(1.01);
         }
 
         .term-tooltip {

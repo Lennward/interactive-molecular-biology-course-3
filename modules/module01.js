@@ -67,8 +67,9 @@ function getContent() {
 
             <h4 class="styled-h4">Plasmids</h4>
             <p>A plasmid is a small, circular, double-stranded DNA molecule that is distinct from a cell's chromosomal DNA. It serves as a carrier of genetic information. Plasmids naturally exist in bacterial cells and they also occur in some eukaryotes. In the lab, scientists use plasmids to introduce new genes into cells. First, a plasmid needs to be cloned using bacteria. Afterwards, the functional plasmid can be introduced (=transfected) into mammalian cells. For both organisms (bacteria and mammalian cells), different components of a plasmid are needed.</p>
-
-            <h4 class="styled-h4">Key Components of a Lab Plasmid</h4>
+            <img src="images/image013.png" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
+            <p>General Plasmid Map; RE = Restriction Enzyme, MCS = Multiple Cloning Site</p>    
+            
             <p>A functional plasmid typically contains the following components:</p>
             <ul>
                 <li><strong class="interactive-term" data-term="Origin of Replication (ori)">Origin of Replication (ori)</strong>: The DNA sequence where replication of the plasmid begins, allowing it to be copied within the host cell (bacteria).</li>
@@ -77,10 +78,7 @@ function getContent() {
                 <li><strong class="interactive-term" data-term="Gene of Interest (GOI)">Gene of Interest (GOI)</strong>: The specific gene you want to study or express in host cells (e.g., a gene coding for a therapeutic protein or regulatory RNA).</li>
                 <li><strong class="interactive-term" data-term="Selection Marker">Selection Marker</strong>: A gene conferring a trait for artificial selection, e.g., an antibiotic resistance gene (like Ampicillin or Kanamycin resistance), allowing only cells that have successfully taken up the plasmid to grow in the presence of the antibiotic.</li>
                 <li><strong class="interactive-term" data-term="Tag">Tag</strong>: A short DNA sequence fused to the gene of interest, which can be used for protein detection or purification. Examples include GFP (Green Fluorescent Protein) for fluorescence and His-tag for affinity chromatography.</li>
-            </ul>
-            
-            <h4 class="styled-h4">General Plasmid Map</h4>
-            <img src="images/image013.png" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
+            </ul>                      
 
             <h3>Module Quiz</h3>
             <div id="quiz-container"></div>

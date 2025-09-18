@@ -66,8 +66,14 @@ function getContent() {
             <h4 class="styled-h4">Prokaryotes vs. Eukaryotes</h4>
             <p>Living organisms are made of cells. The two main types are:</p>
             <div class="interactive-terms-grid">
-                <div class="interactive-term" data-term="Prokaryotes">Prokaryotes</div>
-                <div class="interactive-term" data-term="Eukaryotes">Eukaryotes</div>
+                <div class="interactive-term" data-term="Prokaryotes">
+                    <div class="term-title">Prokaryotes</div>
+                    <div class="term-explanation">Simple cells (e.g., bacteria) lacking a nucleus. Their DNA is located in the cytoplasm. They are usually smaller and simpler in design.</div>
+                </div>
+                <div class="interactive-term" data-term="Eukaryotes">
+                    <div class="term-title">Eukaryotes</div>
+                    <div class="term-explanation">Complex cells (e.g., animal including human, plant, fungal cells) with a nucleus enclosing the DNA, and various membrane-bound organelles like mitochondria and endoplasmic reticulum (ER).</div>
+                </div>
             </div>
             <p>In this course, we will work with prokaryotic cells (E. coli bacteria) and eukaryotic cells (HEK293), which are used as standard model organisms in molecular biology and are particularly well suited for molecular biological studies.</p>
 
@@ -85,10 +91,22 @@ function getContent() {
             <p>Figure 1. Genetic information flow in living systems. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
             <div class="interactive-terms-grid">
-                <div class="interactive-term" data-term="Activation">Activation</div>
-                <div class="interactive-term" data-term="Transcription">Transcription</div>
-                <div class="interactive-term" data-term="Processing">Processing</div>
-                <div class="interactive-term" data-term="Translation">Translation</div>
+                <div class="interactive-term" data-term="Activation">
+                    <div class="term-title">Activation</div>
+                    <div class="term-explanation">Transcription factors bind to promoter-specific sequences, allowing for the binding and assembly of the transcriptional machinery.</div>
+                </div>
+                <div class="interactive-term" data-term="Transcription">
+                    <div class="term-title">Transcription</div>
+                    <div class="term-explanation">RNA polymerase II produces a new mRNA molecule using the coding region of the DNA sequence as a template.</div>
+                </div>
+                <div class="interactive-term" data-term="Processing">
+                    <div class="term-title">Processing</div>
+                    <div class="term-explanation">Pre-mRNA molecules are edited to produce mature mRNA molecules.</div>
+                </div>
+                <div class="interactive-term" data-term="Translation">
+                    <div class="term-title">Translation</div>
+                    <div class="term-explanation">Ribosomes produce a new polypeptide encoded in the mRNA by translating it from the start to the stop codon.</div>
+                </div>
             </div>
 
             <h4 class="styled-h4">Plasmids</h4>
@@ -97,25 +115,35 @@ function getContent() {
             <p>General Plasmid Map; RE = Restriction Enzyme, MCS = Multiple Cloning Site</p>    
             
             <p>A functional plasmid typically contains the following components:</p>
-            <div class="interactive-terms-grid">
-                <div class="interactive-term" data-term="Origin of Replication (ori)">Origin of Replication (ori)</div>
-                <div class="interactive-term" data-term="Promoter">Promoter</div>
-                <div class="interactive-term" data-term="Multiple Cloning Site (MCS) aka Polylinker">Multiple Cloning Site (MCS)</div>
-                <div class="interactive-term" data-term="Gene of Interest (GOI)">Gene of Interest (GOI)</div>
-                <div class="interactive-term" data-term="Selection Marker">Selection Marker</div>
-                <div class="interactive-term" data-term="Tag">Tag</div>
+            <div class="interactive-terms-grid plasmid-components">
+                <div class="interactive-term" data-term="Origin of Replication (ori)">
+                    <div class="term-title">Origin of Replication (ori)</div>
+                    <div class="term-explanation">The DNA sequence where replication of the plasmid begins, allowing it to be copied within the host cell (bacteria).</div>
+                </div>
+                <div class="interactive-term" data-term="Promoter">
+                    <div class="term-title">Promoter</div>
+                    <div class="term-explanation">A DNA sequence that initiates transcription of a particular gene. For example, the CMV promoter for strong expression in mammalian cells (eukaryotes).</div>
+                </div>
+                <div class="interactive-term" data-term="Multiple Cloning Site (MCS) aka Polylinker">
+                    <div class="term-title">Multiple Cloning Site (MCS)</div>
+                    <div class="term-explanation">A short segment of DNA containing many restriction enzyme sites. This allows targeted insertion of a new gene (the gene of interest) using restriction enzymes.</div>
+                </div>
+                <div class="interactive-term" data-term="Gene of Interest (GOI)">
+                    <div class="term-title">Gene of Interest (GOI)</div>
+                    <div class="term-explanation">The specific gene you want to study or express in host cells (e.g., a gene coding for a therapeutic protein or regulatory RNA).</div>
+                </div>
+                <div class="interactive-term" data-term="Selection Marker">
+                    <div class="term-title">Selection Marker</div>
+                    <div class="term-explanation">A gene conferring a trait for artificial selection, e.g., an antibiotic resistance gene (like Ampicillin or Kanamycin resistance), allowing only cells that have successfully taken up the plasmid to grow in the presence of the antibiotic.</div>
+                </div>
+                <div class="interactive-term" data-term="Tag">
+                    <div class="term-title">Tag</div>
+                    <div class="term-explanation">A short DNA sequence fused to the gene of interest, which can be used for protein detection or purification. Examples include GFP (Green Fluorescent Protein) for fluorescence and His-tag for affinity chromatography.</div>
+                </div>
             </div>                      
 
             <h3>Module Quiz</h3>
             <div id="quiz-container"></div>
-        </div>
-
-        <!-- Tooltip/Popup for interactive terms -->
-        <div id="term-tooltip" class="term-tooltip">
-            <div class="tooltip-content">
-                <button class="tooltip-close">&times;</button>
-                <div class="tooltip-text"></div>
-            </div>
         </div>
 
         <style>
@@ -125,6 +153,10 @@ function getContent() {
             gap: 12px;
             margin: 1.5rem 0;
             padding: 0.5rem;
+        }
+
+        .interactive-terms-grid.plasmid-components {
+            grid-template-columns: repeat(3, 1fr);
         }
 
         .interactive-term {
@@ -143,6 +175,40 @@ function getContent() {
                         0 1px 3px rgba(0, 0, 0, 0.08);
             overflow: hidden;
             user-select: none;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .term-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: inherit;
+        }
+
+        .term-explanation {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 0;
+            font-size: 0.9em;
+            font-weight: 400;
+            line-height: 1.4;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            color: var(--text-primary);
+        }
+
+        .interactive-term.expanded {
+            min-height: auto;
+            padding: 20px;
+        }
+
+        .interactive-term.expanded .term-explanation {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 12px;
         }
 
         .interactive-term::before {
@@ -186,6 +252,10 @@ function getContent() {
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
+        .interactive-term.active .term-explanation {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .interactive-terms-grid {
@@ -194,14 +264,27 @@ function getContent() {
                 padding: 0.25rem;
             }
             
+            .interactive-terms-grid.plasmid-components {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
             .interactive-term {
                 padding: 12px 16px;
                 font-size: 1em;
             }
+
+            .term-title {
+                font-size: 1em;
+            }
+
+            .term-explanation {
+                font-size: 0.85em;
+            }
         }
 
         @media (max-width: 480px) {
-            .interactive-terms-grid {
+            .interactive-terms-grid,
+            .interactive-terms-grid.plasmid-components {
                 grid-template-columns: 1fr;
                 gap: 8px;
             }
@@ -324,93 +407,46 @@ function renderQuiz(quizData, containerId) {
 }
 
 function initializeInteractiveTerms() {
-    const tooltip = document.getElementById('term-tooltip');
-    const tooltipText = tooltip.querySelector('.tooltip-text');
-    const closeBtn = tooltip.querySelector('.tooltip-close');
-    
-    let currentActiveTerm = null;
-
-    // Handle interactive term clicks
+    // Handle interactive term clicks - no tooltip needed anymore
     document.querySelectorAll('.interactive-term').forEach(term => {
         term.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
             
-            const termName = term.dataset.term;
-            const explanation = INTERACTIVE_TERMS[termName];
+            // Toggle expanded state
+            const isExpanded = term.classList.contains('expanded');
             
-            if (!explanation) return;
-
-            // Remove active state from previous term
-            if (currentActiveTerm) {
-                currentActiveTerm.classList.remove('active');
-            }
-
-            // Set new active term
-            currentActiveTerm = term;
-            term.classList.add('active');
+            // Close all other expanded terms
+            document.querySelectorAll('.interactive-term.expanded').forEach(otherTerm => {
+                if (otherTerm !== term) {
+                    otherTerm.classList.remove('expanded', 'active');
+                }
+            });
             
-            // Update tooltip content
-            tooltipText.innerHTML = `<strong style="color: var(--purple-dark);">${termName}</strong><br><br>${explanation}`;
-            
-            // Position tooltip near the clicked term
-            const rect = term.getBoundingClientRect();
-            const tooltipRect = tooltip.querySelector('.tooltip-content').getBoundingClientRect();
-            
-            let left = rect.left + (rect.width / 2);
-            let top = rect.bottom + 10;
-            
-            // Adjust position to keep tooltip on screen
-            if (left + 175 > window.innerWidth) {
-                left = window.innerWidth - 175;
-            } else if (left - 175 < 0) {
-                left = 175;
-            }
-            left -= 175; // Center the tooltip
-            
-            if (top + 200 > window.innerHeight) {
-                top = rect.top - 10;
-                tooltip.style.transform = 'translateY(-100%)';
+            // Toggle current term
+            if (isExpanded) {
+                term.classList.remove('expanded', 'active');
             } else {
-                tooltip.style.transform = 'translateY(0)';
+                term.classList.add('expanded', 'active');
             }
-            
-            tooltip.style.left = left + 'px';
-            tooltip.style.top = top + 'px';
-            
-            // Show tooltip
-            tooltip.classList.add('active');
         });
     });
 
-    // Close tooltip when clicking the close button
-    closeBtn.addEventListener('click', () => {
-        tooltip.classList.remove('active');
-        if (currentActiveTerm) {
-            currentActiveTerm.classList.remove('active');
-            currentActiveTerm = null;
-        }
-    });
-
-    // Close tooltip when clicking outside
+    // Close expanded terms when clicking outside
     document.addEventListener('click', (e) => {
-        if (!tooltip.contains(e.target) && !e.target.classList.contains('interactive-term')) {
-            tooltip.classList.remove('active');
-            if (currentActiveTerm) {
-                currentActiveTerm.classList.remove('active');
-                currentActiveTerm = null;
-            }
+        if (!e.target.closest('.interactive-term')) {
+            document.querySelectorAll('.interactive-term.expanded').forEach(term => {
+                term.classList.remove('expanded', 'active');
+            });
         }
     });
 
-    // Close tooltip on escape key
+    // Close expanded terms on escape key
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && tooltip.classList.contains('active')) {
-            tooltip.classList.remove('active');
-            if (currentActiveTerm) {
-                currentActiveTerm.classList.remove('active');
-                currentActiveTerm = null;
-            }
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.interactive-term.expanded').forEach(term => {
+                term.classList.remove('expanded', 'active');
+            });
         }
     });
 }

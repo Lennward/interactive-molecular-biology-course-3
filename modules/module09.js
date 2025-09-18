@@ -114,7 +114,7 @@ function getContent() {
                 <li>HEK293-cells in 24-well-plate (roughly 70% confluency)</li>
                 <li><strong>Plasmids:</strong>
                     <ul class="list-disc list-inside ml-4">
-                        <li>pH2B-GFP (Concentration: e.g. 680 ng/µl - *please use the actual concentration from your stock tube label*)</li>
+                        <li>pH2B-GFP (Concentration: e.g. 680 ng/µl - *please use the actual concentration from your stock tube label*; can be bought on e.g. Addgene)</li>
                         <li>pRKV-FLAG (Concentration: e.g. 1015 ng/µl - *please use the actual concentration from your stock tube label*)</li>
                     </ul>
                 </li>
@@ -335,7 +335,7 @@ function getContent() {
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div class="text-center">
                     <img src="images/image095.png" alt="pH2B-GFP plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+95:+pH2B-GFP+Plasmid'; this.alt='Placeholder: pH2B-GFP Plasmid Map';">
-                    <p class="text-sm mt-2 font-semibold">Figure 5: Plasmid map of pH2B-GFP used in the practical course</p>
+                    <p class="text-sm mt-2 font-semibold">Figure 5: Plasmid map of pH2B-GFP used in the practical course. Can be bought e.g. on addgene</p>
                 </div>
                 <div class="text-center">
                     <img src="images/image096.png" alt="pRKV-FLAG plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+pRKV-FLAG+Plasmid'; this.alt='Placeholder: pRKV-FLAG Plasmid Map';">

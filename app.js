@@ -162,21 +162,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         
         // Show appropriate content
-        if (hash === '#introduction') {
-            welcomeMessage.style.display = 'none';
-            const introSection = document.getElementById('introduction');
-            if (introSection) {
-                introSection.style.display = 'block';
-            }
-        } else if (hash.startsWith('#module-')) {
-            welcomeMessage.style.display = 'none';
-            const targetModule = document.querySelector(hash);
-            if (targetModule) {
-                targetModule.style.display = 'block';
-            }
-        } else {
-            welcomeMessage.style.display = 'block';
-        }
+if (hash === '#introduction') {
+    welcomeMessage.style.display = 'none';
+    const introSection = document.getElementById('introduction');
+    if (introSection) {
+        introSection.style.display = 'block';
+        // Scroll to top when switching to introduction
+        mainEl.scrollTop = 0;
+        window.scrollTo(0, 0);
+    }
+} else if (hash.startsWith('#module-')) {
+    welcomeMessage.style.display = 'none';
+    const targetModule = document.querySelector(hash);
+    if (targetModule) {
+        targetModule.style.display = 'block';
+        // Scroll to top when switching to any module
+        mainEl.scrollTop = 0;
+        window.scrollTo(0, 0);
+    }
+} else {
+    welcomeMessage.style.display = 'block';
+    // Scroll to top when going to welcome message
+    mainEl.scrollTop = 0;
+    window.scrollTo(0, 0);
+}
     };
     
     window.addEventListener('hashchange', updateActiveLink);

@@ -1,4 +1,4 @@
-const TITLE = "Module 2: Mastering Dilutions & Concentrations";
+const TITLE = "Module 2: Mastering Dilutions & Concentratiosns";
 const QUIZ_DATA = [
     {
         question: "If you have a stock solution of 10M NaOH and you want to make 500 mL of 0.5M NaOH, how much of the stock solution do you need?",

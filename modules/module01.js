@@ -1,4 +1,4 @@
-const TITLE = "Module 1: Fundamentals of Cell & Molecular Biologyf";
+const TITLE = "Module 1: Fundamentals of Cell & Molecular Biology";
 
 const QUIZ_DATA = [
     {

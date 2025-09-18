@@ -20,7 +20,7 @@ function getContent() {
         <div class="module-content">
             <h2>Module 1: Fundamentals of Cell & Molecular Biology</h2>
             
-            <h3>Part A: Core Biology</h3>
+            <h3>Core Biology</h3>
             <h4 class="styled-h4">Prokaryotes vs. Eukaryotes</h4>
             <p>Living organisms are made of cells. The two main types are:</p>
             <ul>

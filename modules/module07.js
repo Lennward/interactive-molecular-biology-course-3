@@ -143,8 +143,9 @@ function getContent() {
                 <img src="images/image074.png" alt="Flask with cells and medium" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
                 <img src="images/image075.png" alt="Cell culture vessels" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
+            <p>The pictures show a flask that contains cells (not visible) and growth medium.</p>
 
-            <p>Flasks, plates and dishes are the three main types of cell culture vessels. All of them are available in different sizes. Thus, they have different growth areas and need different volumes of culture medium.</p>
+            <p>Flasks, plates and dishes are the three main types of cell culture vessels. All of them are available in different sizes. Thus, they have different growth areas and need different volumes of culture medium. The common vessels for cell culture and their needed volume of culture medium as well as their growth area are shown in the following table.</p>
             
             <img src="images/image076.png" alt="Different cell culture vessel types and sizes" class="my-4 rounded-lg shadow-md mx-auto block max-w-full w-auto">
 
@@ -155,6 +156,7 @@ function getContent() {
                 <img src="images/image077.png" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
                 <img src="images/image078.png" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
+            <p>The left pciture shows the theory of a laminar flow hood's airflow. On the right picture a real laminar flow hood in the cell culture room can be seen.</p>
 
             <h4 class="styled-h4">Laminar Flow Hood Principle</h4>
             <p>A laminar flow hood's principle relies on:</p>

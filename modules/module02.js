@@ -20,7 +20,7 @@ function getContent() {
     return `
         <div class="module-content">
             <h2>Module 2: Mastering Dilutions & Concentrations</h2>
-            <p>In molecular biology research, it is often necessary to prepare samples in different concentrations. Volume and concentration play a key role here. Dilution series are a common method for obtaining and analyzing accurate concentrations. This module will guide you through essential concepts and practical applications.</p>
+            <p>In molecular biology research, it is often necessary to prepare samples in different concentrations. Thereby volume and concentration play a key role here. Further, you will learn about dilution series which are a common method for obtaining and analyzing accurate concentrations. This module will guide you through essential concepts and practical applications.</p>
 
             <h3>Units and Conversions</h3>
             <p>Understanding and converting between different units of volume and concentration is crucial for accurate lab work.</p>
@@ -50,7 +50,7 @@ function getContent() {
             </div>
 
             <h4>Concentration (c):</h4>
-            <p>Concentration indicates how much of a particular substance is present in a solution and is often expressed as molarity (M = mol/L), milligrams per milliliter (mg/mL), or micrograms per microliter (µg/µL).</p>
+            <p>Concentration indicates how much of a particular substance is present in a solution and is often expressed as molarity (M = moles/L), milligrams per milliliter (mg/mL), micrograms per microliter (µg/µL) or percentages (%).</p>
             
             <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
                 <li><strong>Concentration:</strong> Molarity (M = moles/Liter), mg/mL, &mu;g/&mu;L, percentages (%)</li>
@@ -90,7 +90,7 @@ function getContent() {
                 <li>c<sub>2</sub> = 0.1 mg/mL (desired final concentration)</li>
                 <li>V<sub>2</sub> = 10 mL (desired final volume)</li>
             </ul>
-            <p>We need to find V<sub>1</sub> (the volume of stock to use).</p>
+            <p>We need to find V<sub>1</sub> (the volume of the stock you use).</p>
             <p>Rearranging the formula: <span class="formula">V<sub>1</sub> = (c<sub>2</sub> &times; V<sub>2</sub>) / c<sub>1</sub></span></p>
             <p><span class="formula">V<sub>1</sub> = (0.1 mg/mL &times; 10 mL) / 1 mg/mL = 1 mL</span></p>
             <p><strong>Conclusion:</strong> You would take 1 mL of the 1 mg/mL stock solution and add 9 mL of diluent (e.g., water or buffer) to make a total final volume of 10 mL with a concentration of 0.1 mg/mL.</p>

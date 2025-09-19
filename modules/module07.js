@@ -407,9 +407,9 @@ function handleContaminationScenario(button, scenario, isCorrect) {
     feedbackDiv.classList.remove('hidden');
 }
 
-function initializeInteractiveTerms() {
-    // Handle interactive term clicks
-    document.querySelectorAll('.interactive-term').forEach(term => {
+function initializeInteractiveTerms(rootElement) {
+    // Handle interactive term clicks - scoped to this module only
+    rootElement.querySelectorAll('.interactive-term').forEach(term => {
         term.addEventListener('click', (e) => {
             e.preventDefault();
             e.stopPropagation();
@@ -417,8 +417,8 @@ function initializeInteractiveTerms() {
             // Toggle expanded state
             const isExpanded = term.classList.contains('expanded');
             
-            // Close all other expanded terms
-            document.querySelectorAll('.interactive-term.expanded').forEach(otherTerm => {
+            // Close all other expanded terms IN THIS MODULE ONLY
+            rootElement.querySelectorAll('.interactive-term.expanded').forEach(otherTerm => {
                 if (otherTerm !== term) {
                     otherTerm.classList.remove('expanded', 'active');
                 }
@@ -433,19 +433,19 @@ function initializeInteractiveTerms() {
         });
     });
 
-    // Close expanded terms when clicking outside
+    // Close expanded terms when clicking outside - scoped to this module
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.interactive-term')) {
-            document.querySelectorAll('.interactive-term.expanded').forEach(term => {
+        if (!e.target.closest('.interactive-term') || !rootElement.contains(e.target)) {
+            rootElement.querySelectorAll('.interactive-term.expanded').forEach(term => {
                 term.classList.remove('expanded', 'active');
             });
         }
     });
 
-    // Close expanded terms on escape key
+    // Close expanded terms on escape key - scoped to this module
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            document.querySelectorAll('.interactive-term.expanded').forEach(term => {
+            rootElement.querySelectorAll('.interactive-term.expanded').forEach(term => {
                 term.classList.remove('expanded', 'active');
             });
         }
@@ -501,7 +501,7 @@ export default function initModule7(rootEl, sidebarEl) {
     renderQuiz(QUIZ_DATA, 'quiz-container-module-7');
 
     // 5. Initialize interactive terms functionality
-initializeInteractiveTerms();
+initializeInteractiveTerms(rootEl);
 }
 
 

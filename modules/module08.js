@@ -127,7 +127,7 @@ function getContent() {
                 </ol>
 
                 <div class="highlight-note-module8">
-                    <p><strong>Afterwards, cells can be passaged (and plated if necessary). The protocol splits at this point!</strong></p>
+                    <p><strong>Afterwards, cells can be passaged (and plated if necessary). The protocol differs at this point!</strong></p>
                 </div>
             </div>
 

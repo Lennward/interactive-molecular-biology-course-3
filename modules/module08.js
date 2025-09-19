@@ -20,8 +20,8 @@ function getContent() {
             
             <div class="interactive-terms-grid hek-cells-section">
                 <div class="interactive-term" data-term="HEK293 cells">
-                    <div class="term-title">HEK293 cells:</div>
-                    <div class="term-explanation">are eukaryotes derived from <u><strong>H</strong></u>uman <u><strong>E</strong></u>mbryonic <u><strong>K</strong></u>idney cells. The number 293 refers to the specific cell line that was produced in the 1970s by transformation with a fragment of adenovirus type 5. HEK293 cells are among the most frequently used cell lines in molecular biology. They are adherent epithelial cells commonly used for their high transfection efficiency and protein production capabilities.</div>
+                    <div class="term-title">HEK293 cells are...</div>
+                    <div class="term-explanation">eukaryotes derived from <u><strong>H</strong></u>uman <u><strong>E</strong></u>mbryonic <u><strong>K</strong></u>idney cells. The number 293 refers to the specific cell line that was produced in the 1970s by transformation with a fragment of adenovirus type 5. HEK293 cells are among the most frequently used cell lines in molecular biology. They are adherent epithelial cells commonly used for their high transfection efficiency and protein production capabilities.</div>
                 </div>
             </div>
 

@@ -120,40 +120,48 @@ function getContent() {
             <p><strong>Culture Media:</strong> Provides nutrients for cell growth.</p>
             <p>The culture medium for cell culture must be such that it enables the cells to proliferate and grow and, if necessary, also to differentiate and perform typical cell functions. The first successful chemically defined medium was created by Harry Eagle in 1955, after previous work had been done with culture media that contained complex organic additives and were not standardized.</p>
 
-            <div class="interactive-box">
-                <h4>Interactive: Media Prep Station</h4>
-                <p class="text-sm mb-3"><strong>You are preparing complete DMEM. Click on each component you would add to the basal DMEM to learn more about it.</strong></p>
-                
-                <div id="media-components" class="space-y-3">
-                    <div class="media-component-info-box hidden bg-blue-50 border-l-4 border-blue-400 p-3" id="component-1">
-                        <h5 class="font-semibold text-blue-800">Basal DMEM (salts, amino acids, vitamins, glucose)</h5>
-                        <p class="text-sm text-blue-700">Basal DMEM (Dulbecco's Modified Eagle's Medium): Contains a mixture of inorganic salts (for osmotic balance and membrane potential), L-amino acids (building blocks for proteins), vitamins (cofactors for enzymes), D-glucose (energy source), and often sodium pyruvate (additional energy source). This is the foundation of your complete medium.</p>
-                    </div>
-                    <div class="media-component-info-box hidden bg-green-50 border-l-4 border-green-400 p-3" id="component-2">
-                        <h5 class="font-semibold text-green-800">Fetal Bovine Serum (FBS/FCS) - typically 10%</h5>
-                        <p class="text-sm text-green-700">Fetal Bovine Serum (FBS) or Fetal Calf Serum (FCS): Typically added at 5-20% (10% is common). It's a complex mixture providing growth factors, hormones, attachment factors, transport proteins, and trace elements. Crucial for the growth of many cell lines. Batch-to-batch variability is a concern. Can be heat-inactivated (56°C for 30 min) to destroy complement proteins that might lyse cells.</p>
-                    </div>
-                    <div class="media-component-info-box hidden bg-yellow-50 border-l-4 border-yellow-400 p-3" id="component-3">
-                        <h5 class="font-semibold text-yellow-800">L-Glutamine (or GlutaMAX™) - typically 2-4 mM</h5>
-                        <p class="text-sm text-yellow-700">L-Glutamine: An essential amino acid required by cells in culture, serving as a nitrogen source for nucleotide and amino acid synthesis, and an energy source. It's unstable in liquid media at 37°C, degrading over time (half-life ~1 week). Often added fresh or a stable dipeptide form like GlutaMAX™ is used. Typical concentration is 2-4 mM.</p>
-                    </div>
-                    <div class="media-component-info-box hidden bg-purple-50 border-l-4 border-purple-400 p-3" id="component-4">
-                        <h5 class="font-semibold text-purple-800">Penicillin-Streptomycin (optional, but common) - typically 1%</h5>
-                        <p class="text-sm text-purple-700">Penicillin-Streptomycin (Pen-Strep): An antibiotic/antimycotic solution typically added at 1% (final concentration ~100 U/mL Penicillin, ~100 µg/mL Streptomycin). Used to prevent bacterial contamination. While common, routine use can mask poor aseptic technique and may lead to antibiotic-resistant strains or affect cell physiology. Should be used judiciously.</p>
-                    </div>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-2 mt-4">
-                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="1">1. Basal DMEM</button>
-                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="2">2. FBS/FCS (10%)</button>
-                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="3">3. L-Glutamine</button>
-                    <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="4">4. Pen-Strep</button>
-                </div>
-            </div>
+           <div class="interactive-box">
+    <h4>Interactive: Media Prep Station</h4>
+    <p class="text-sm mb-3"><strong>You are preparing complete DMEM. Click on each component you would add to the basal DMEM to learn more about it.</strong></p>
+    
+    <div id="media-components" class="space-y-3">
+        <div class="media-component-info-box hidden bg-blue-50 border-l-4 border-blue-400 p-3" id="component-1">
+            <h5 class="font-semibold text-blue-800">Basal DMEM (salts, amino acids, vitamins, glucose)</h5>
+            <p class="text-sm text-blue-700">Basal DMEM (Dulbecco's Modified Eagle's Medium): Contains a mixture of inorganic salts (for osmotic balance and membrane potential), L-amino acids (building blocks for proteins), vitamins (cofactors for enzymes), D-glucose (energy source), and often sodium pyruvate (additional energy source). This is the foundation of your complete medium.</p>
+        </div>
+        <div class="media-component-info-box hidden bg-green-50 border-l-4 border-green-400 p-3" id="component-2">
+            <h5 class="font-semibold text-green-800">Fetal Bovine Serum (FBS/FCS) - typically 10%</h5>
+            <p class="text-sm text-green-700">Fetal Bovine Serum (FBS) or Fetal Calf Serum (FCS): Typically added at 5-20% (10% is common). It's a complex mixture providing growth factors, hormones, attachment factors, transport proteins, and trace elements. Crucial for the growth of many cell lines. Batch-to-batch variability is a concern. Can be heat-inactivated (56°C for 30 min) to destroy complement proteins that might lyse cells.</p>
+        </div>
+        <div class="media-component-info-box hidden bg-yellow-50 border-l-4 border-yellow-400 p-3" id="component-3">
+            <h5 class="font-semibold text-yellow-800">L-Glutamine (or GlutaMAX™) - typically 2-4 mM</h5>
+            <p class="text-sm text-yellow-700">L-Glutamine: An essential amino acid required by cells in culture, serving as a nitrogen source for nucleotide and amino acid synthesis, and an energy source. It's unstable in liquid media at 37°C, degrading over time (half-life ~1 week). Often added fresh or a stable dipeptide form like GlutaMAX™ is used. Typical concentration is 2-4 mM.</p>
+        </div>
+        <div class="media-component-info-box hidden bg-purple-50 border-l-4 border-purple-400 p-3" id="component-4">
+            <h5 class="font-semibold text-purple-800">Penicillin-Streptomycin (optional, but common) - typically 1%</h5>
+            <p class="text-sm text-purple-700">Penicillin-Streptomycin (Pen-Strep): An antibiotic/antimycotic solution typically added at 1% (final concentration ~100 U/mL Penicillin, ~100 µg/mL Streptomycin). Used to prevent bacterial contamination. While common, routine use can mask poor aseptic technique and may lead to antibiotic-resistant strains or affect cell physiology. Should be used judiciously.</p>
+        </div>
+        <div class="media-component-info-box hidden bg-red-50 border-l-4 border-red-400 p-3" id="component-5">
+            <h5 class="font-semibold text-red-800">Phenol Red</h5>
+            <p class="text-sm text-red-700">A pH indicator. Medium is typically reddish-orange at pH 7.4. It turns yellow if acidic (e.g., due to excessive cell metabolism or bacterial contamination) and purple if alkaline.</p>
+        </div>
+        <div class="media-component-info-box hidden bg-indigo-50 border-l-4 border-indigo-400 p-3" id="component-6">
+            <h5 class="font-semibold text-indigo-800">Other Additives (depending on cell type/media)</h5>
+            <p class="text-sm text-indigo-700">Sodium Bicarbonate (NaHCO₃ - primary buffering component with incubator CO₂), HEPES buffer (alternative non-CO₂ dependent buffer), non-essential amino acids, specific growth factors.</p>
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-3 gap-2 mt-4">
+        <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="1">1. Basal DMEM</button>
+        <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="2">2. FBS/FCS (10%)</button>
+        <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="3">3. L-Glutamine</button>
+        <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="4">4. Pen-Strep</button>
+        <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="5">5. Phenol Red</button>
+        <button class="media-component-button px-3 py-2 rounded text-sm text-white transition-colors" data-component="6">6. Other Additives</button>
+    </div>
+</div>
 
-            <p><strong>Phenol Red:</strong> A pH indicator. Medium is typically reddish-orange at pH 7.4. It turns yellow if acidic (e.g., due to excessive cell metabolism or bacterial contamination) and purple if alkaline.</p>
-            <p><strong>Other Additives (depending on cell type/media):</strong> Sodium Bicarbonate (NaHCO₃ - primary buffering component with incubator CO₂), HEPES buffer (alternative non-CO₂ dependent buffer), non-essential amino acids, specific growth factors.</p>
-
+           
             <h4 class="styled-h4">Vessels for storing the cells</h4>
             <p>Animal cells are cultured in sterile plastic vessels (bottles, plates and dishes) that have undergone special surface treatment.</p>
             
@@ -311,7 +319,22 @@ function getContent() {
                 grid-template-columns: 1fr;
             }
         }
-        </style>
+        
+        .media-component-button {
+    background-color: rgba(133, 39, 158, 0.7) !important;
+    border: 1px solid rgba(133, 39, 158, 0.5) !important;
+    color: white !important;
+}
+
+.media-component-button:hover {
+    background-color: rgba(133, 39, 158, 0.9) !important;
+}
+
+.media-component-button.selected {
+    background-color: var(--purple-dark) !important;
+    color: var(--text-secondary) !important;
+    font-weight: bold !important;
+}</style>
     `;
 }
 

@@ -18,24 +18,29 @@ function getContent() {
             
             <p>In this course we will work with HEK293 cells.</p>
             
-            <p><strong>HEK293 cells:</strong> are eukaryotes derived from <u><strong>H</strong></u>uman <u><strong>E</strong></u>mbryonic <u><strong>K</strong></u>idney cells. The number 293 refers to the specific cell line that was produced in the 1970s by transformation with a fragment of adenovirus type 5. HEK293 cells are among the most frequently used cell lines in molecular biology. They are adherent epithelial cells commonly used for their high transfection efficiency and protein production capabilities.</p>
+            <div class="interactive-terms-grid hek-cells-section">
+                <div class="interactive-term" data-term="HEK293 cells">
+                    <div class="term-title">HEK293 cells:</div>
+                    <div class="term-explanation">are eukaryotes derived from <u><strong>H</strong></u>uman <u><strong>E</strong></u>mbryonic <u><strong>K</strong></u>idney cells. The number 293 refers to the specific cell line that was produced in the 1970s by transformation with a fragment of adenovirus type 5. HEK293 cells are among the most frequently used cell lines in molecular biology. They are adherent epithelial cells commonly used for their high transfection efficiency and protein production capabilities.</div>
+                </div>
+            </div>
 
             <p>Adherent cells grow as a monolayer (a single layer) until they reach confluence, meaning that the cells form a continuous layer without gaps. The cells then stop growing because they are subject to contact inhibition.</p>
 
             <p>At this point at the latest, the cells should be passaged/split, i.e., divided. To do this, they are detached from the culture vessel using trypsin, a protease, and resuspended in serum-containing medium (the serum inhibits trypsin). In order to track the age of a cell culture, the number of subcultures is noted on the culture dish. Subcultivation is often referred to as "passaging" in laboratory jargon, which is why the age is indicated in the form of "passages," e.g., "P21."</p>
 
-            <div class="highlight-note">
+            <div class="highlight-note-module8">
                 <p><strong>Confluency:</strong> Proportion of the vessel's surface that is covered by cells. Cells should be split when they are at 70% confluency.</p>
             </div>
 
-            <img src="images/image081.png" alt="Cell confluency diagram showing different confluence levels" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
+            <img src="images/image081.png" alt="Cell confluency diagram showing different confluence levels" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
 
             <p>The image shows examples of how the cell density looks at different percentages in confluency. A higher percentage in confluency indicates a higher cell density.</p>
             
             <h3>Cell Counting with a Hemocytometer (Neubauer Chamber)</h3>
             <p>A hemocytometer is a specialized counting chamber slide used to determine the concentration of cells in a liquid sample.</p>
 
-            <img src="images/image082.png" alt="Neubauer chamber counting grid with example cells" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
+            <img src="images/image082.png" alt="Neubauer chamber counting grid with example cells" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
             <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Example of cell counting in <strong>one big</strong> square of a Neubauer grid. Green checks indicate cells to count; red X's indicate cells not to count based on a common counting rule (e.g., count cells on top and left lines, exclude bottom and right).</p>
 
             <h4 class="styled-h4">General Procedure</h4>
@@ -102,7 +107,7 @@ function getContent() {
 
             <h3>Protocol</h3>
             <div class="space-y-4">
-                <div class="highlight-note">
+                <div class="highlight-note-module8">
                     <p>Before starting, warm up the medium, PBS, and trypsin in the incubator for at least 30 minutes (in a glass beaker to collect condensation and slightly loosen the Falcon tube with medium).</p>
                 </div>
 
@@ -121,7 +126,7 @@ function getContent() {
                     <li>Transfer to a new 15 mL Falcon tube and centrifuge for 2 min at 2000 rpm.</li>
                 </ol>
 
-                <div class="highlight-note">
+                <div class="highlight-note-module8">
                     <p><strong>Afterwards, cells can be passaged (and plated if necessary). The protocol splits at this point!</strong></p>
                 </div>
             </div>
@@ -146,7 +151,7 @@ function getContent() {
                 </li>
             </ol>
 
-            <img src="images/image083.png" alt="Neubauer counting chamber under the microscope" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
+            <img src="images/image083.png" alt="Neubauer counting chamber under the microscope" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
             <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Fig.: Neubauer counting chamber under the microscope</p>
 
             <ol class="list-decimal list-inside space-y-2" start="3">
@@ -231,6 +236,164 @@ function getContent() {
                 <li>24h incubation at 37°C for transfection</li>
             </ul>
         </div>
+
+        <style>
+        /* HEK Cells Interactive Terms - scoped to this module */
+        .hek-cells-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 1.5rem 0;
+            padding: 0.5rem;
+            max-width: 800px;
+        }
+
+        .hek-cells-section .interactive-term {
+            background: linear-gradient(145deg, #ffffff 0%, rgba(212, 43, 233, 0.05) 100%);
+            border: 2px solid rgba(212, 43, 233, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--purple-dark);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: 0 2px 8px rgba(212, 43, 233, 0.1), 
+                        0 1px 3px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            user-select: none;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hek-cells-section .term-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: inherit;
+        }
+
+        .hek-cells-section .term-explanation {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 0;
+            font-size: 0.9em;
+            font-weight: 400;
+            line-height: 1.4;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            color: var(--text-primary);
+        }
+
+        .hek-cells-section .interactive-term.expanded {
+            min-height: auto;
+            padding: 20px;
+        }
+
+        .hek-cells-section .interactive-term.expanded .term-explanation {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 12px;
+        }
+
+        .hek-cells-section .interactive-term::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(212, 43, 233, 0.1), 
+                transparent
+            );
+            transition: left 0.6s ease;
+        }
+
+        .hek-cells-section .interactive-term:hover::before {
+            left: 100%;
+        }
+
+        .hek-cells-section .interactive-term:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--purple-light);
+            box-shadow: 0 8px 25px rgba(212, 43, 233, 0.25),
+                        0 3px 12px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #ffffff 0%, rgba(246, 75, 204, 0.08) 100%);
+        }
+
+        .hek-cells-section .interactive-term:active {
+            transform: translateY(-2px) scale(1.01);
+            transition: transform 0.1s ease;
+        }
+
+        .hek-cells-section .interactive-term.active {
+            background: linear-gradient(145deg, var(--purple-light), var(--purple-accent));
+            border-color: var(--purple-accent);
+            box-shadow: 0 6px 20px rgba(212, 43, 233, 0.4),
+                        0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .hek-cells-section .interactive-term.active .term-title {
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .hek-cells-section .interactive-term.active .term-explanation {
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Module 8 specific highlight note styling */
+        .highlight-note-module8 {
+            background-color: rgba(212, 43, 233, 0.1); /* Purple light with alpha */
+            border-left: 4px solid var(--purple-light);
+            padding: 0.75rem 1rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
+        }
+
+        .highlight-note-module8 p {
+            margin-bottom: 0 !important;
+        }
+
+        /* Enlarged images */
+        .enlarged-image {
+            max-width: 100% !important;
+            height: auto !important;
+            width: 350px !important;
+        }
+        
+        @media (max-width: 640px) {
+            .enlarged-image {
+                width: 100% !important;
+                max-width: 300px !important;
+            }
+        }
+
+        /* Responsive adjustments for HEK cells section */
+        @media (max-width: 768px) {
+            .hek-cells-section .interactive-term {
+                padding: 12px 16px;
+                font-size: 1em;
+            }
+
+            .hek-cells-section .term-title {
+                font-size: 1em;
+            }
+
+            .hek-cells-section .term-explanation {
+                font-size: 0.85em;
+            }
+        }
+        </style>
     `;
 }
 
@@ -344,6 +507,51 @@ function calculateAverage() {
     resultsDiv.classList.remove('hidden');
 }
 
+function initializeInteractiveTerms(rootElement) {
+    // Handle interactive term clicks - scoped to this module only
+    rootElement.querySelectorAll('.hek-cells-section .interactive-term').forEach(term => {
+        term.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle expanded state
+            const isExpanded = term.classList.contains('expanded');
+            
+            // Close all other expanded terms IN THIS MODULE ONLY
+            rootElement.querySelectorAll('.hek-cells-section .interactive-term.expanded').forEach(otherTerm => {
+                if (otherTerm !== term) {
+                    otherTerm.classList.remove('expanded', 'active');
+                }
+            });
+            
+            // Toggle current term
+            if (isExpanded) {
+                term.classList.remove('expanded', 'active');
+            } else {
+                term.classList.add('expanded', 'active');
+            }
+        });
+    });
+
+    // Close expanded terms when clicking outside - scoped to this module
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.hek-cells-section .interactive-term') || !rootElement.contains(e.target)) {
+            rootElement.querySelectorAll('.hek-cells-section .interactive-term.expanded').forEach(term => {
+                term.classList.remove('expanded', 'active');
+            });
+        }
+    });
+
+    // Close expanded terms on escape key - scoped to this module
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            rootElement.querySelectorAll('.hek-cells-section .interactive-term.expanded').forEach(term => {
+                term.classList.remove('expanded', 'active');
+            });
+        }
+    });
+}
+
 export default function initModule8(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -380,4 +588,7 @@ export default function initModule8(rootEl, sidebarEl) {
 
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-8');
+
+    // 5. Initialize interactive terms functionality
+    initializeInteractiveTerms(rootEl);
 }

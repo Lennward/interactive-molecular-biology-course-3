@@ -85,12 +85,24 @@ function getContent() {
 
             <h4 class="styled-h4">Cell Culture Environment & Media</h4>
             <p>Most cultured mammalian (and human) cells require the following for optimal growth:</p>
-            <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
-                <li><strong>Temperature:</strong> Typically 37°C for mammalian cells (= body temperature).</li>
-                <li><strong>CO₂:</strong> Usually 5% in the incubator to work with the NaHCO₃ buffer system in the medium to maintain physiological pH of 7.2-7.4.</li>
-                <li><strong>Humidity:</strong> High (70-100%) to prevent evaporation of medium.</li>
-                <li><strong>Sterility:</strong> Essential to prevent contamination.</li>
-            </ul>
+<div class="interactive-terms-grid environment-conditions">
+    <div class="interactive-term" data-term="Temperature">
+        <div class="term-title">Temperature</div>
+        <div class="term-explanation">Typically 37°C for mammalian cells (= body temperature).</div>
+    </div>
+    <div class="interactive-term" data-term="CO₂">
+        <div class="term-title">CO₂</div>
+        <div class="term-explanation">Usually 5% in the incubator to work with the NaHCO₃ buffer system in the medium to maintain physiological pH of 7.2-7.4.</div>
+    </div>
+    <div class="interactive-term" data-term="Humidity">
+        <div class="term-title">Humidity</div>
+        <div class="term-explanation">High (70-100%) to prevent evaporation of medium.</div>
+    </div>
+    <div class="interactive-term" data-term="Sterility">
+        <div class="term-title">Sterility</div>
+        <div class="term-explanation">Essential to prevent contamination.</div>
+    </div>
+</div>
 
             <p>Suitable temperature, CO₂ and humidity are provided by an incubator.</p>
             

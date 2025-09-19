@@ -5,14 +5,14 @@ const QUIZ_DATA = [
         options: ["2.5 mL", "25 mL", "50 mL", "5 mL"],
         answer: "25 mL",
         type: "mcq",
-        explanation: "Using c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>: (10M)(V<sub>1</sub>) = (0.5M)(500mL). So, V<sub>1</sub> = (0.5 &times; 500) / 10 = 250 / 10 = 25 mL."
+        explanation: "Using the dilution formula c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>:<br>• c<sub>1</sub> = 10M (stock concentration)<br>• c<sub>2</sub> = 0.5M (desired concentration)<br>• V<sub>2</sub> = 500mL (final volume)<br>• V<sub>1</sub> = ?<br><br>Solving: V<sub>1</sub> = (c<sub>2</sub> × V<sub>2</sub>) / c<sub>1</sub> = (0.5M × 500mL) / 10M = 250 / 10 = <strong>25 mL</strong>"
     },
     {
         question: "To make 50 mL of a 200 &mu;M solution from a 10 mM stock, how much stock solution is required?",
         options: ["10 &mu;L", "100 &mu;L", "1 mL", "0.1 &mu;L"],
         answer: "1 mL",
         type: "mcq",
-        explanation: "First, ensure units are consistent. 10 mM = 10,000 &mu;M. c<sub>1</sub> = 10,000 &mu;M, V<sub>1</sub> = ?, c<sub>2</sub> = 200 &mu;M, V<sub>2</sub> = 50 mL. V<sub>1</sub> = (200 &mu;M &times; 50 mL) / 10,000 &mu;M = 10,000 / 10,000 mL = 1 mL."
+        explanation: "First, convert units to be consistent:<br>• 10 mM = 10,000 &mu;M<br><br>Using c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>:<br>• c<sub>1</sub> = 10,000 &mu;M (stock)<br>• c<sub>2</sub> = 200 &mu;M (desired)<br>• V<sub>2</sub> = 50 mL (final volume)<br><br>Solving: V<sub>1</sub> = (200 &mu;M × 50 mL) / 10,000 &mu;M = 10,000 / 10,000 = <strong>1 mL</strong>"
     }
 ];
 
@@ -166,11 +166,11 @@ function getContent() {
                     <div class="mt-2 space-y-2 sm:space-y-0 sm:flex sm:items-end sm:gap-3">
                         <div>
                             <label for="bsa-stock-input" class="block text-xs font-medium text-gray-600">Stock BSA (&mu;L):</label>
-                            <input type="number" id="bsa-stock-input" placeholder="e.g., 50" class="text-sm p-1 w-28">
+                            <input type="number" id="bsa-stock-input" placeholder="" class="text-sm p-1 w-28">
                         </div>
                         <div>
                             <label for="pbs-input" class="block text-xs font-medium text-gray-600">PBS (&mu;L):</label>
-                            <input type="number" id="pbs-input" placeholder="e.g., 950" class="text-sm p-1 w-28">
+                            <input type="number" id="pbs-input" placeholder="" class="text-sm p-1 w-28">
                         </div>
                         <button id="check-bsa-btn" class="text-sm px-3 py-1.5">Check Answer</button>
                     </div>
@@ -194,11 +194,11 @@ function getContent() {
                     <div class="mt-2 space-y-2 sm:space-y-0 sm:flex sm:items-end sm:gap-3">
                         <div>
                             <label for="triton-stock-input" class="block text-xs font-medium text-gray-600">Stock Triton X-100 (&mu;L):</label>
-                            <input type="number" id="triton-stock-input" placeholder="e.g., 100" class="text-sm p-1 w-36">
+                            <input type="number" id="triton-stock-input" placeholder="" class="text-sm p-1 w-36">
                         </div>
                         <div>
                             <label for="triton-diluent-input" class="block text-xs font-medium text-gray-600">Diluent (mL):</label>
-                            <input type="number" step="0.1" id="triton-diluent-input" placeholder="e.g., 9.9" class="text-sm p-1 w-28">
+                            <input type="number" step="0.1" id="triton-diluent-input" placeholder="" class="text-sm p-1 w-28">
                         </div>
                         <button id="check-triton-btn" class="text-sm px-3 py-1.5">Check Answer</button>
                     </div>
@@ -221,11 +221,11 @@ function getContent() {
                     <div class="mt-2 space-y-2 sm:space-y-0 sm:flex sm:items-end sm:gap-3">
                         <div>
                             <label for="antibody-stock-input" class="block text-xs font-medium text-gray-600">Antibody Stock (&mu;L):</label>
-                            <input type="number" step="0.1" id="antibody-stock-input" placeholder="e.g., 1.2" class="text-sm p-1 w-32">
+                            <input type="number" step="0.1" id="antibody-stock-input" placeholder="" class="text-sm p-1 w-32">
                         </div>
                         <div>
                             <label for="antibody-buffer-input" class="block text-xs font-medium text-gray-600">Buffer (&mu;L):</label>
-                            <input type="number" step="0.1" id="antibody-buffer-input" placeholder="e.g., 1198.8" class="text-sm p-1 w-32">
+                            <input type="number" step="0.1" id="antibody-buffer-input" placeholder="" class="text-sm p-1 w-32">
                         </div>
                         <button id="check-antibody-btn" class="text-sm px-3 py-1.5">Check Answer</button>
                     </div>

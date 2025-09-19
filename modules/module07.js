@@ -156,7 +156,7 @@ function getContent() {
                 <img src="images/image077.png" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
                 <img src="images/image078.png" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
-            <p>The left pciture shows the theory of a laminar flow hood's airflow. On the right picture a real laminar flow hood in the cell culture room can be seen.</p>
+            <p>The left pciture shows the theory of a laminar flow hood's airflow. On the right picture a real laminar flow hood in the cell culture room can be seen. Left image from <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROi7BIO591EaISDUqK7cwWF5Vkw7dA24fi7w&s" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a></p>
 
             <h4 class="styled-h4">Laminar Flow Hood Principle</h4>
             <p>A laminar flow hood's principle relies on:</p>

@@ -114,7 +114,7 @@ function getContent() {
             <h4 class="styled-h4">Plasmids</h4>
             <p>A plasmid is a small, circular, double-stranded DNA molecule that is distinct from a cell's chromosomal DNA. It serves as a carrier of genetic information. Plasmids naturally exist in bacterial cells and they also occur in some eukaryotes. In the lab, scientists use plasmids to introduce new genes into cells. First, a plasmid needs to be cloned using bacteria. Afterwards, the functional plasmid can be introduced (=transfected) into mammalian cells. For both organisms (bacteria and mammalian cells), different components of a plasmid are needed.</p>
             <img src="images/image013.png" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
-            <p>General Plasmid Map; RE = Restriction Enzyme, MCS = Multiple Cloning Site</p>    
+            <p>General Plasmid Map; RE = Restriction Enzyme, MCS = Multiple Cloning Site from <a href="https://lh5.googleusercontent.com/Re2XXSHN3W10HJ7u7mT63-HS4OEegHGeETTeyhaVxOsT3EWM0ISlGhjlUUATlvKnT33eXaL1Yv3aJHDh7_jNqSUQTwrwtaNj-2K5qTq47I4ZaK6iiEol1mc8KaqBQw=s0" target="_blank" rel="noopener noreferrer">here</a></p>    
             
             <p>A functional plasmid typically contains the following components:</p>
             <div class="interactive-terms-grid plasmid-components">

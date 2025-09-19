@@ -39,11 +39,17 @@ function getContent() {
             <p>In the lab, cells derived from a wide variety of tissues and organisms can be cultivated. Cell culture is the process by which cells (especially mammalian cells) are grown under controlled conditions in the lab, generally outside their natural environment which is referred to as <em>"in vitro"</em>. Cell culture technology makes it possible to establish long-term or permanent cultures that can serve as "in vitro" models for cells in vivo (in living organisms).</p>
 
             <p>Cells can be grown as:</p>
-            <ul>
-                <li><strong>Adherent cell cultures:</strong> Cells grow attached to a surface (e.g., flask, plate). Adherent cells are derived from specific tissues and organs such as the liver, kidneys, muscles, nerves, endothelium, and epithelium.</li>
-                <li><strong>Suspension (non-adherent) cell cultures:</strong> Cells float freely in the culture medium. Immune system cells and their precursors, on the other hand, are cultivated as a suspension.</li>
-            </ul>
-
+<div class="interactive-terms-grid">
+    <div class="interactive-term" data-term="Adherent cell cultures">
+        <div class="term-title">Adherent cell cultures</div>
+        <div class="term-explanation">Cells grow attached to a surface (e.g., flask, plate). Adherent cells are derived from specific tissues and organs such as the liver, kidneys, muscles, nerves, endothelium, and epithelium.</div>
+    </div>
+    <div class="interactive-term" data-term="Suspension (non-adherent) cell cultures">
+        <div class="term-title">Suspension (non-adherent) cell cultures</div>
+        <div class="term-explanation">Cells float freely in the culture medium. Immune system cells and their precursors, on the other hand, are cultivated as a suspension.</div>
+    </div>
+</div>
+            
             <h4 class="styled-h4">Primary Cell Cultures vs. Cell Lines</h4>
             <table class="w-full border-collapse border border-gray-300 bg-slate-100 p-3 rounded-md shadow-sm mb-4">
                 <thead>
@@ -375,6 +381,51 @@ function handleContaminationScenario(button, scenario, isCorrect) {
     feedbackDiv.classList.remove('hidden');
 }
 
+function initializeInteractiveTerms() {
+    // Handle interactive term clicks
+    document.querySelectorAll('.interactive-term').forEach(term => {
+        term.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle expanded state
+            const isExpanded = term.classList.contains('expanded');
+            
+            // Close all other expanded terms
+            document.querySelectorAll('.interactive-term.expanded').forEach(otherTerm => {
+                if (otherTerm !== term) {
+                    otherTerm.classList.remove('expanded', 'active');
+                }
+            });
+            
+            // Toggle current term
+            if (isExpanded) {
+                term.classList.remove('expanded', 'active');
+            } else {
+                term.classList.add('expanded', 'active');
+            }
+        });
+    });
+
+    // Close expanded terms when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.interactive-term')) {
+            document.querySelectorAll('.interactive-term.expanded').forEach(term => {
+                term.classList.remove('expanded', 'active');
+            });
+        }
+    });
+
+    // Close expanded terms on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            document.querySelectorAll('.interactive-term.expanded').forEach(term => {
+                term.classList.remove('expanded', 'active');
+            });
+        }
+    });
+}
+
 export default function initModule7(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -423,3 +474,6 @@ export default function initModule7(rootEl, sidebarEl) {
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-7');
 }
+
+// 5. Initialize interactive terms functionality
+initializeInteractiveTerms();

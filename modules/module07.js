@@ -489,7 +489,6 @@ function getContent() {
             <div class="contamination-types">
                 <div class="contamination-type" data-type="bacteria">
                     <div class="contamination-header">
-                        <span class="contamination-icon">🦠</span>
                         <span class="contamination-title">Bacteria</span>
                         <span class="contamination-indicator">+</span>
                     </div>
@@ -501,7 +500,6 @@ function getContent() {
                 
                 <div class="contamination-type" data-type="yeasts">
                     <div class="contamination-header">
-                        <span class="contamination-icon">🍄</span>
                         <span class="contamination-title">Yeasts</span>
                         <span class="contamination-indicator">+</span>
                     </div>
@@ -513,7 +511,6 @@ function getContent() {
                 
                 <div class="contamination-type" data-type="molds">
                     <div class="contamination-header">
-                        <span class="contamination-icon">🌿</span>
                         <span class="contamination-title">Molds (Fungi)</span>
                         <span class="contamination-indicator">+</span>
                     </div>
@@ -525,7 +522,6 @@ function getContent() {
                 
                 <div class="contamination-type" data-type="mycoplasma">
                     <div class="contamination-header">
-                        <span class="contamination-icon">🔬</span>
                         <span class="contamination-title">Mycoplasma</span>
                         <span class="contamination-indicator">+</span>
                     </div>
@@ -537,7 +533,6 @@ function getContent() {
                 
                 <div class="contamination-type" data-type="viruses">
                     <div class="contamination-header">
-                        <span class="contamination-icon">⚡</span>
                         <span class="contamination-title">Viruses</span>
                         <span class="contamination-indicator">+</span>
                     </div>
@@ -549,7 +544,6 @@ function getContent() {
                 
                 <div class="contamination-type" data-type="cross">
                     <div class="contamination-header">
-                        <span class="contamination-icon">🔄</span>
                         <span class="contamination-title">Cross-contamination (other cell lines)</span>
                         <span class="contamination-indicator">+</span>
                     </div>
@@ -883,13 +877,7 @@ function getContent() {
         .contamination-header:hover {
             background: linear-gradient(135deg, rgba(246, 75, 204, 0.12), rgba(255, 208, 0, 0.12));
         }
-        
-        .contamination-icon {
-            font-size: 1.5rem;
-            margin-right: 0.75rem;
-            flex-shrink: 0;
-        }
-        
+                       
         .contamination-title {
             flex-grow: 1;
             font-weight: 600;

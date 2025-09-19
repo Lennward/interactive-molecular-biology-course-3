@@ -236,7 +236,7 @@ function getContent() {
                         Dilution factor = 1000.<br>
                         Volume of antibody stock (V<sub>stock</sub>) = V<sub>final</sub> / Dilution factor = 1200 &mu;L / 1000 = <strong>1.2 &mu;L</strong>.<br>
                         Volume of buffer = V<sub>final</sub> - V<sub>stock</sub> = 1200 &mu;L - 1.2 &mu;L = <strong>1198.8 &mu;L</strong>.<br>
-                        <em>(Note: In practice, you'd prepare a bit extra, e.g., for 6.5 or 7 wells, to account for pipetting inaccuracies.)</em>
+                        <em>(Note: In practice, you'd prepare a bit extra for 6.5 or 7 wells, to account for pipetting inaccuracies.)</em>
                     </div>
                 </div>
             </div>

@@ -175,51 +175,51 @@ function getContent() {
             <table class="w-full border-collapse border border-gray-300 bg-slate-100 p-3 rounded-md shadow-sm mb-4">
                 <thead>
                     <tr class="bg-purple-100">
-                        <th class="border border-gray-300 p-2 text-left font-semibold">Vessel Type</th>
-                        <th class="border border-gray-300 p-2 text-left font-semibold">Size/Volume</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Dish Size</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Volume of culture medium (ml) per flask or well</th>
                         <th class="border border-gray-300 p-2 text-left font-semibold">Growth Area (cm²)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">75 cm² flask</td>
+                        <td class="border border-gray-300 p-2">12</td>
+                        <td class="border border-gray-300 p-2">75</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">25 cm² flask</td>
+                        <td class="border border-gray-300 p-2">6</td>
+                        <td class="border border-gray-300 p-2">25</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">100 mm dish</td>
+                        <td class="border border-gray-300 p-2">10</td>
+                        <td class="border border-gray-300 p-2">56</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">60 mm dish</td>
+                        <td class="border border-gray-300 p-2">5</td>
+                        <td class="border border-gray-300 p-2">21</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">35 mm dish or 6-well plate</td>
+                        <td class="border border-gray-300 p-2">3</td>
+                        <td class="border border-gray-300 p-2">9.5</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">12-well plate</td>
+                        <td class="border border-gray-300 p-2">2</td>
+                        <td class="border border-gray-300 p-2">4</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">24-well plate or 4-well plate</td>
+                        <td class="border border-gray-300 p-2">1</td>
+                        <td class="border border-gray-300 p-2">2</td>
                     </tr>
                     <tr>
-                        <td class="border border-gray-300 p-2 font-medium">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
-                        <td class="border border-gray-300 p-2">XXXX</td>
+                        <td class="border border-gray-300 p-2 font-medium">96-well plate</td>
+                        <td class="border border-gray-300 p-2">0.1</td>
+                        <td class="border border-gray-300 p-2">0.32</td>
                     </tr>
                 </tbody>
             </table>

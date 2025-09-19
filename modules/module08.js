@@ -17,8 +17,7 @@ function getContent() {
             <p>In order to use cells for experiments, they are kept in culture and must be cared for. Every 3-4 days, cells are passaged, i.e., only a certain portion of the cells is used for further cultivation, and they are given new nutrients. During passaging, some of the cells that are no longer needed for further cultivation can be used for experiments. To do this, this portion of the cells is seeded in plates or dishes after the first steps of passaging.</p>
             
             <p>In this course we will work with HEK293 cells.</p>
-
-            <h3>HEK293 Cells</h3>
+            
             <p><strong>HEK293 cells:</strong> are eukaryotes derived from <u><strong>H</strong></u>uman <u><strong>E</strong></u>mbryonic <u><strong>K</strong></u>idney cells. The number 293 refers to the specific cell line that was produced in the 1970s by transformation with a fragment of adenovirus type 5. HEK293 cells are among the most frequently used cell lines in molecular biology. They are adherent epithelial cells commonly used for their high transfection efficiency and protein production capabilities.</p>
 
             <p>Adherent cells grow as a monolayer (a single layer) until they reach confluence, meaning that the cells form a continuous layer without gaps. The cells then stop growing because they are subject to contact inhibition.</p>

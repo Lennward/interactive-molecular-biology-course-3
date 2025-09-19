@@ -36,7 +36,7 @@ function getContent() {
             <h2>Module 7: Introduction to Cell Culture & work with mammalian cells</h2>
             
             <h3>Cell Culture Deep Dive</h3>
-            <p>In the lab, cells derived from a wide variety of tissues and organisms can be cultivated. Cell culture is the process by which cells (especially mammalian cells) are grown under controlled conditions in the lab, generally outside their natural environment which is referred to as <em>"in vitro"</em>. Cell culture technology makes it possible to establish long-term or permanent cultures that can serve as "in vitro" models for cells in vivo (in living organisms). Furthermore, there are techniques (e.g., cytotoxicity tests and mutagenicity tests) that make it possible to reduce the number of animal experiments.</p>
+            <p>In the lab, cells derived from a wide variety of tissues and organisms can be cultivated. Cell culture is the process by which cells (especially mammalian cells) are grown under controlled conditions in the lab, generally outside their natural environment which is referred to as <em>"in vitro"</em>. Cell culture technology makes it possible to establish long-term or permanent cultures that can serve as "in vitro" models for cells in vivo (in living organisms).</p>
 
             <p>Cells can be grown as:</p>
             <ul>
@@ -94,6 +94,8 @@ function getContent() {
                 <img src="images/image073.png" alt="Incubator interior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto">
             </div>
 
+            <p>On the pictures you can see an incubator in different states (open & closed). It has 2 doors that need to be opened to place vessels with cells inside/take them out of the incubator; the outer door and another glass door.</p>
+            
             <p>Therefore, the (mammalian) cells are stored in the incubator all the time. Only if a step of an experiment is conducted the (mammalian) cells are taken out of the incubator.</p>
 
             <h4 class="styled-h4">Culture Media</h4>

@@ -82,13 +82,15 @@ function getContent() {
             
             <!-- Broad Canonical Dogma Image -->
             <img src="images/image011.png" alt="Broad Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
+
+             <p>(Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
             <p>This dogma includes the following four steps in eukaryotes:</p>
 
             <!-- Detailed Canonical Dogma Image -->
             <img src="images/image012.png" alt="Detailed Canonical Dogma in the Cell" class="my-4 w-full max-w-xl mx-auto" />
             
-            <p>Figure 1. Genetic information flow in living systems. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+            <p>Genetic information flow in living systems. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
             <div class="interactive-terms-grid">
                 <div class="interactive-term" data-term="Activation">

@@ -230,15 +230,15 @@ function getCourseContent() {
             <div class="highlight-card">
                 <div class="highlight-icon">🧬</div>
                 <h3>DNA Cloning</h3>
-                <p>Learn plasmid cloning techniques with step-by-step video guides</p>
+                <p>Learn plasmid cloning techniques with videos of our Wetlab series</p>
             </div>
             <div class="highlight-card">
-                <div class="highlight-icon">🔬</div>
+                <div class="highlight-icon">✨</div>
                 <h3>Cell Culture</h3>
                 <p>Master mammalian cell handling with HEK-293T cells</p>
             </div>
             <div class="highlight-card">
-                <div class="highlight-icon">✨</div>
+                <div class="highlight-icon">🔬</div>
                 <h3>Microscopy</h3>
                 <p>Validate experiments using fluorescence imaging techniques</p>
             </div>
@@ -260,7 +260,7 @@ function getCourseContent() {
                     <div class="timeline-marker">2</div>
                     <div class="timeline-content">
                         <h4>Cloning Mastery</h4>
-                        <p>Execute DNA-plasmid cloning using bacterial systems with comprehensive video tutorials</p>
+                        <p>Execute DNA-plasmid cloning using bacterial systems with additional video tutorials</p>
                     </div>
                 </div>
                 

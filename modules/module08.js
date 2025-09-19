@@ -231,7 +231,7 @@ function getContent() {
                     </ul>
                 </li>
                 <li>Seed 500 μL of the cell suspension per 24-well (see scheme 24-well plate)</li>
-                <li>Label your plate with initials, date, group, cell line, ...</li>
+                <li>Label your plate with initials, date, cell line, passage number</li>
                 <li>Mix carefully making moves in shape of number 8 - no circular movements!</li>
                 <li>24h incubation at 37°C for transfection</li>
             </ul>

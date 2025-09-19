@@ -30,6 +30,8 @@ function getContent() {
 
             <img src="images/image081.png" alt="Cell confluency diagram showing different confluence levels" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto">
 
+            <p>The image shows examples of how the cell density looks at different percentages in confluency. A higher percentage in confluency indicates a higher cell density.</p>
+            
             <h3>Cell Counting with a Hemocytometer (Neubauer Chamber)</h3>
             <p>A hemocytometer is a specialized counting chamber slide used to determine the concentration of cells in a liquid sample.</p>
 

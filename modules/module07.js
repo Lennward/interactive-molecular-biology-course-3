@@ -473,7 +473,9 @@ export default function initModule7(rootEl, sidebarEl) {
 
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-7');
+
+    // 5. Initialize interactive terms functionality
+initializeInteractiveTerms();
 }
 
-// 5. Initialize interactive terms functionality
-initializeInteractiveTerms();
+

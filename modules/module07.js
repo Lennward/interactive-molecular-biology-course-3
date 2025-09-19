@@ -298,6 +298,20 @@ function getContent() {
                 </div>
             </div>
         </div>
+
+        <style>
+        .interactive-terms-grid.environment-conditions {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 600px;
+            margin: 1.5rem auto;
+        }
+
+        @media (max-width: 600px) {
+            .interactive-terms-grid.environment-conditions {
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
     `;
 }
 

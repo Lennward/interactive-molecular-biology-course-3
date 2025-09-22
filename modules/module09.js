@@ -503,7 +503,7 @@ function renderInteractiveQuiz(container, quizData) {
         qDiv.className = 'quiz-question p-3 mb-2 bg-white rounded-md shadow-sm';
         let optionsHtml = `<p class="font-medium mb-2 text-sm">${index + 1}. ${q.question}</p><div class="space-y-1">`;
         q.options.forEach(optText => {
-            optionsHtml += `<button class="quiz-option text-xs">${optText}</button>`;
+            optionsHtml += `<button class="quiz-option">${optText}</button>`;
         });
         optionsHtml += `</div><div class="feedback-message text-xs mt-1 p-1 rounded-md hidden"></div>`;
         qDiv.innerHTML = optionsHtml;

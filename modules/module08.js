@@ -79,7 +79,7 @@ function getContent() {
                 <div class="mt-2 space-y-2 sm:space-y-0 sm:flex sm:items-end sm:gap-3">
                     <div>
                         <label for="cell-plating-input-8" class="block text-xs font-medium text-gray-600">Cell Stock Volume per well (μL):</label>
-                        <input type="number" id="cell-plating-input-8" placeholder="e.g., 200" class="text-sm p-1 w-48">
+                        <input type="number" id="cell-plating-input-8" class="text-sm p-1 w-48">
                     </div>
                     <button id="check-plating-btn-8" class="text-sm px-3 py-1.5">Check Answer</button>
                 </div>

@@ -105,15 +105,15 @@ function getContent() {
                         <p><strong>The fixation keeps the proteins in place!</strong></p>
                     </div>
                     <ul class="list-disc list-inside ml-4 space-y-2">
-                        <li>Carefully remove the culture plates from the incubator.</li>
+                        <li>Carefully take the culture plates out of the incubator.</li>
                         <li>Check cells for adherence, density and morphology under the microscope.</li>
-                        <li>Carefully remove the culture medium (completely) with a pipette and wash the cells with 0.5 ml 1x PBS. 
+                        <li>Carefully remove the culture medium with a pipette and wash the cells with 0.5 ml 1x PBS. 
                             <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
                                 <p><strong>Caution:</strong> Tilt the plate relatively far and do not touch the bottom of the well so that the cells are not disturbed. Instead, pipette only at the side of the well by holding the pipette at an angle. Also, pipette very slowly! This applies in general to any major pipetting step in which the entire liquid is removed or added (medium change, washing, etc.) in the 24-well plates, regardless of whether pipetting up or down! Always pipette on the same side/to the same spot!</p>
                             </div>
                         </li>
                         <li><strong>Next steps under the fume hood (not the cell culture hood!)!</strong></li>
-                        <li>Remove the 1x PBS and add 500 µl 4% PFA (= fixation buffer) (Caution: carcinogenic), incubate for 15 minutes at room temperature in the dark (= fixation).</li>
+                        <li>Remove the 1x PBS and add 500 µl 4% PFA (= fixation buffer; Caution: carcinogenic), incubate for 15 minutes at room temperature in the dark (= fixation).</li>
                         <li>Then remove the PFA and wash the cells twice with PBS (500 µl PBS per wash step) and leave the PBS in the wells after the last wash step.</li>
                         <li>Now you no longer need to work under the fume hood.</li>
                     </ul>
@@ -122,12 +122,12 @@ function getContent() {
                 <div>
                     <h5 class="font-semibold text-purple-700 mb-2">2. Hoechst staining of GFP-expressing cells</h5>
                     <div class="highlight-note">
-                        <p><strong>Important:</strong> Only cells that will not be used for ICC the next day can now be stained with Hoechst33258. All cells (wells) that will be used for ICC will be stained with Hoechst33258 after ICC on the next day.</p>
+                        <p><strong>Important:</strong> Only cells that will not be used for ICC the next day can now be stained with Hoechst33258. All cells (wells) that contain the FLAG-tagged protein will be used for ICC and are stained with Hoechst33258 on the next day.</p>
                     </div>
                     <ul class="list-disc list-inside ml-4 space-y-2">
                         <li>Wash 2 x 5 min with 200 μL 1 x PBS</li>
                         <li>Leave 200 μL PBS in each well after the second washing step</li>
-                        <li>Remove the PBS and add 200 µl Hoechst33258 (Caution: stains DNA, carcinogenic) (usual stock concentration = 10 mg/ml; use it 1:5000 = 2 µg/ml) in 1x PBS <strong>per well</strong>, first prepare a 1:5 dilution of Hoechst 33258 in PBS (2 µl Hoechst33258 in 8 µl PBS) and then dilute this solution 1:1000 in PBS (10 µl of this solution in 10 ml PBS). Vortex the PBS/Hoechst mixture thoroughly to ensure even distribution of Hoechst in the solution. Incubate for 5 min at RT in the dark.</li>
+                        <li>Remove the PBS and add 200 µl Hoechst33258 (Caution: stains DNA, carcinogenic) (usual stock concentration = 10 mg/ml; use it 1:5000 = 2 µg/ml) in 1x PBS <strong>per well</strong>, first prepare a 1:5 dilution of Hoechst33258 in PBS (2 µl Hoechst33258 in 8 µl PBS) and then dilute this solution 1:1000 in PBS (10 µl of this solution in 10 ml PBS). Vortex the PBS/Hoechst mixture thoroughly to ensure even distribution of Hoechst in the solution. Incubate for 5 min at RT in the dark.</li>
                         <li>Wash 2 x 5 min with 200 μL 1 x PBS.</li>
                         <li>Leave 200 μL PBS in each well after the second washing step.</li>
                     </ul>
@@ -139,10 +139,9 @@ function getContent() {
                         <li>Turn on the fluorescence microscope</li>
                         <li>Set up the microscope: select the appropriate objective (20x or 40x) and adjust the light source correctly</li>
                         <li>First observe the cells in phase contrast (total cell count visible)</li>
-                        <li>Switch to the fluorescence channel and activate the appropriate filter set for GFP (excitation at 488 nm (= blue/UV), emission at 510 nm (= green)) (only cells transfected with GFP should be visible).</li>
-                        <li>Hoechst33258 excitation at 352 nm (UV light) and emission at 454 nm (blue).</li>
+                        <li>Switch to the fluorescence channel and activate the appropriate filter set for GFP with an excitation at 488 nm (= blue/UV) and an emission at 510 nm (= green). Now cells transfected with GFP should be visible.</li>
+                        <li>Change to the appropriate filter set for Hoechst33258 with excitation at 352 nm (UV light) and emission at 454 nm (blue).</li>
                         <li>Adjust the exposure time and focus so that the image is sharp and clearly recognizable.</li>
-                        <li>Find the focus plane on the cell monolayer.</li>
                         <li>Take at least 5 different images per well. Use a constant exposure time and resolution.</li>
                         <li>Note any special observations, such as unusual fluorescence distribution or cell morphologies.</li>
                         <li><strong>After microscopy, place the 24-well plate with the fixed cells in PBS in the fridge (overnight).</strong></li>
@@ -157,7 +156,7 @@ function getContent() {
                         <li>Now we will work with the software ImageJ (Fiji). You can download it for free on the internet.</li>
                         <li>Using the ImageJ (Fiji) software, we can now easily determine the transfection efficiency. The "Multi-point" tool can be used for this purpose. This makes it easy to count the cells. Count the successfully transfected (=GFP-expressing) cells as well as the Hoechst-stained cells. The Hoechst staining indicates the total number of cells. By simple division, we now obtain the transfection efficiency. This can be stated as a percentage.</li>
                         <li>Compare the fluorescence intensity of the different wells or conditions.</li>
-                        <li>Assess the efficiency of the transfection (e.g., proportion of fluorescent cells per image).</li>
+                        <li>Assess the efficiency of the transfection (e.g., proportion of fluorescent cells per image). Is it high/low?</li>
                     </ul>
                 </div>
             </div>

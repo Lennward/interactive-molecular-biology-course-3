@@ -348,6 +348,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
             <p class="mt-4">The next day (or starting a few hours post-transfection), check your cells under a phase-contrast microscope or light microscope. Calcium phosphate precipitates appear as small, dark granules on or around the cells. Also, look for signs of contamination.</p>
             
             <img src="images/image094.png" alt="HEK cells after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+94:+HEK+Cells+Post-Transfection'; this.alt='Placeholder: HEK Cells Post-Transfection';">
+            <p class="text-sm text-gray-600 text-center mb-4">Image shows cells and calcium phosphate precipitates (small, dark granules). Image adapted from <a href="https://www.researchgate.net/profile/Frederic-Grosjean/publication/37413559/figure/fig2/AS:669017228468225@1536517545090/Small-calcium-phosphate-DNA-precipitates-left-results-in-higher-reporter-gene.ppm" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
 
             <h3>Important Tips & Troubleshooting Corner</h3>
             <p>Successful transfection is an art as much as a science! Here are some key factors and common pitfalls:</p>

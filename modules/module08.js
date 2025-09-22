@@ -133,7 +133,7 @@ function getContent() {
 
             <h4 class="styled-h4">Option 1: Passaging cells</h4>
             <ul class="list-disc list-inside ml-4 space-y-2">
-                <li>Meanwhile, prepare a new cell culture bottle, label it with the cell line, date, initials, and add 5 mL of fresh medium to this bottle.</li>
+                <li>Meanwhile, prepare a new cell culture bottle, label it with the cell line, date, initials, passage number and add 5 mL of fresh medium to this bottle.</li>
                 <li>After centrifugation, discard the supernatant (pour it into the waste container, but do not touch it) and resuspend the cell pellet in 1 mL of fresh medium.</li>
                 <li>Transfer 250 μL of cells (split factor: 1:4) to the new prepared cell culture bottle (several new bottles can also be prepared).</li>
                 <li>Swirl "in a cross" so that the cells are evenly distributed on the bottom and place in the incubator.</li>
@@ -231,7 +231,7 @@ function getContent() {
                     </ul>
                 </li>
                 <li>Seed 500 μL of the cell suspension per 24-well (see scheme 24-well plate)</li>
-                <li>Label your plate with initials, date, cell line, passage number</li>
+                <li>Label your plate with initials, date and cell line</li>
                 <li>Mix carefully making moves in shape of number 8 - no circular movements!</li>
                 <li>Now the cells are incubated for 24 h at 37 °C and afterwards the experiment continues with the transfection</li>
             </ul>

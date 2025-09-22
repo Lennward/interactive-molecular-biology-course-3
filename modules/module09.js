@@ -164,16 +164,9 @@ function getContent() {
             
             <div class="highlight-note">
                 <p><strong>The following protocol is for transfecting one well of a 24-well plate. Remember to scale up your calculations for the total number of wells you plan to transfect for each plasmid, and always prepare a little extra (e.g., 10%) to account for pipetting inaccuracies!</strong></p>
+                <p><strong>Further Note:</strong> Calcium phosphate precipitates can be toxic or stressful to cells. If you plan to transfect both plasmids into the same well i.e. to the same cells, then prepare separate reactions (i.e. one tube per plasmid) and add a total of 50 µl of your DNA-calcium phosphate co-precipitate solutions (i.e. only 25 µl of each tube) to the cells.</p>
             </div>
-            
-            <div class="highlight-note">
-                <p><strong>Crucial Reminder:</strong> Always prepare all solutions for the required number of wells PLUS 10% extra volume to account for pipetting errors!</p>
-            </div>
-            
-            <div class="highlight-note">
-                <p><strong>Note:</strong> Calcium phosphate precipitates can be toxic or stressful to cells. If you plan to transfect both plasmids into the same well i.e. to the same cells, then prepare separate reactions (i.e. one tube per plasmid) and add a total of 50 µl of your DNA-calcium phosphate co-precipitate solutions (i.e. only 25 µl of each tube) to the cells.</p>
-            </div>
-
+                                                      
             <h4 class="styled-h4">1. Transfection</h4>
             <p><strong>Prepare Solution (per well):</strong></p>
             

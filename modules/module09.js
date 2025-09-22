@@ -111,26 +111,104 @@ function getContent() {
             </table>
             
             <h3>Overview of Transfection Methods</h3>
-            <p><strong>The Variety of Methods:</strong><br>
-            There are numerous ways to get nucleic acids into cells, broadly categorized as:</p>
+<p><strong>The Variety of Methods:</strong><br>
+There are numerous ways to get nucleic acids into cells, broadly categorized as:</p>
+
+<div class="transfection-methods">
+    <div class="transfection-method-category" data-category="chemical">
+        <div class="category-header">
+            <span class="category-title"><strong>Chemical Methods</strong></span>
+            <span class="category-indicator">+</span>
+        </div>
+        <div class="category-details hidden">
+            <p class="mb-3">These involve using reagents that complex with DNA and facilitate its entry into cells. Examples include:</p>
             
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Chemical Methods:</strong> These involve using reagents that complex with DNA and facilitate its entry into cells. Examples include:
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Calcium Phosphate Precipitation:</strong> The method we'll use! DNA is mixed with calcium chloride and phosphate buffer, forming fine DNA-calcium phosphate co-precipitates that are taken up by cells via endocytosis. It's cost-effective and works well for many adherent cell lines like HEK293.</li>
-                        <li><strong>Lipid-based (Lipofection):</strong> Cationic lipids form complexes (lipoplexes) with negatively charged DNA, which then fuse with the cell membrane or are endocytosed. Reagents like Lipofectamine™ are common.</li>
-                        <li><strong>Cationic Polymers:</strong> Polymers like Polyethylenimine (PEI) or dendrimers bind DNA and form polyplexes, which are then endocytosed.</li>
-                    </ul>
-                </li>
-                <li><strong>Physical Methods:</strong> These use physical force to create transient pores in the cell membrane.
-                    <ul class="list-circle list-inside ml-4">
-                        <li><strong>Electroporation:</strong> Cells are exposed to a brief electrical pulse, creating temporary pores for DNA entry. Very efficient for many cell types, including those hard to transfect by chemical means.</li>
-                        <li><strong>Microinjection:</strong> DNA is directly injected into the cytoplasm or nucleus using a fine glass micropipette. Precise but low-throughput.</li>
-                        <li><strong>Gene Gun (Biolistics):</strong> DNA-coated gold or tungsten particles are shot into cells or tissues.</li>
-                    </ul>
-                </li>
-                <li><strong>Viral Methods (Transduction):</strong> Recombinant viruses (e.g., lentiviruses, adenoviruses, AAV) are used as vectors to deliver genetic material. Often very high efficiency, even in primary cells and in vivo, and can be used for stable integration.</li>
-            </ul>
+            <div class="subcategory-grid">
+                <div class="subcategory-item" data-subcategory="calcium-phosphate">
+                    <div class="subcategory-header">
+                        <span class="subcategory-title">Calcium Phosphate Precipitation</span>
+                        <span class="subcategory-indicator">ℹ</span>
+                    </div>
+                    <div class="subcategory-details hidden">
+                        The method we'll use! DNA is mixed with calcium chloride and phosphate buffer, forming fine DNA-calcium phosphate co-precipitates that are taken up by cells via endocytosis. It's cost-effective and works well for many adherent cell lines like HEK293.
+                    </div>
+                </div>
+                
+                <div class="subcategory-item" data-subcategory="lipofection">
+                    <div class="subcategory-header">
+                        <span class="subcategory-title">Lipid-based (Lipofection)</span>
+                        <span class="subcategory-indicator">ℹ</span>
+                    </div>
+                    <div class="subcategory-details hidden">
+                        Cationic lipids form complexes (lipoplexes) with negatively charged DNA, which then fuse with the cell membrane or are endocytosed. Reagents like Lipofectamine™ are common.
+                    </div>
+                </div>
+                
+                <div class="subcategory-item" data-subcategory="polymers">
+                    <div class="subcategory-header">
+                        <span class="subcategory-title">Cationic Polymers</span>
+                        <span class="subcategory-indicator">ℹ</span>
+                    </div>
+                    <div class="subcategory-details hidden">
+                        Polymers like Polyethylenimine (PEI) or dendrimers bind DNA and form polyplexes, which are then endocytosed.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="transfection-method-category" data-category="physical">
+        <div class="category-header">
+            <span class="category-title"><strong>Physical Methods</strong></span>
+            <span class="category-indicator">+</span>
+        </div>
+        <div class="category-details hidden">
+            <p class="mb-3">These use physical force to create transient pores in the cell membrane.</p>
+            
+            <div class="subcategory-grid">
+                <div class="subcategory-item" data-subcategory="electroporation">
+                    <div class="subcategory-header">
+                        <span class="subcategory-title">Electroporation</span>
+                        <span class="subcategory-indicator">ℹ</span>
+                    </div>
+                    <div class="subcategory-details hidden">
+                        Cells are exposed to a brief electrical pulse, creating temporary pores for DNA entry. Very efficient for many cell types, including those hard to transfect by chemical means.
+                    </div>
+                </div>
+                
+                <div class="subcategory-item" data-subcategory="microinjection">
+                    <div class="subcategory-header">
+                        <span class="subcategory-title">Microinjection</span>
+                        <span class="subcategory-indicator">ℹ</span>
+                    </div>
+                    <div class="subcategory-details hidden">
+                        DNA is directly injected into the cytoplasm or nucleus using a fine glass micropipette. Precise but low-throughput.
+                    </div>
+                </div>
+                
+                <div class="subcategory-item" data-subcategory="gene-gun">
+                    <div class="subcategory-header">
+                        <span class="subcategory-title">Gene Gun (Biolistics)</span>
+                        <span class="subcategory-indicator">ℹ</span>
+                    </div>
+                    <div class="subcategory-details hidden">
+                        DNA-coated gold or tungsten particles are shot into cells or tissues.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="transfection-method-category" data-category="viral">
+        <div class="category-header">
+            <span class="category-title"><strong>Viral Methods (Transduction)</strong></span>
+            <span class="category-indicator">+</span>
+        </div>
+        <div class="category-details hidden">
+            <p>Recombinant viruses (e.g., lentiviruses, adenoviruses, AAV) are used as vectors to deliver genetic material. Often very high efficiency, even in primary cells and in vivo, and can be used for stable integration.</p>
+        </div>
+    </div>
+</div>
             
             <p>In this course, we will use the <strong>Calcium Phosphate Precipitation</strong> method!</p>
 
@@ -483,6 +561,53 @@ function initializeInteractiveTerms(rootElement) {
     });
 }
 
+function initializeTransfectionMethods(rootElement) {
+    // Main category handlers
+    rootElement.querySelectorAll('.transfection-method-category').forEach(category => {
+        const header = category.querySelector('.category-header');
+        const details = category.querySelector('.category-details');
+        
+        header.addEventListener('click', () => {
+            const isExpanded = category.classList.contains('expanded');
+            
+            // Toggle current category
+            if (isExpanded) {
+                category.classList.remove('expanded');
+                details.classList.add('hidden');
+            } else {
+                category.classList.add('expanded');
+                details.classList.remove('hidden');
+            }
+        });
+    });
+    
+    // Subcategory handlers
+    rootElement.querySelectorAll('.subcategory-item').forEach(subcategory => {
+        const header = subcategory.querySelector('.subcategory-header');
+        const details = subcategory.querySelector('.subcategory-details');
+        
+        header.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevent triggering parent category
+            const isExpanded = !details.classList.contains('hidden');
+            
+            // Close all other subcategories in the same category
+            const parentCategory = subcategory.closest('.transfection-method-category');
+            parentCategory.querySelectorAll('.subcategory-item').forEach(otherSub => {
+                if (otherSub !== subcategory) {
+                    otherSub.querySelector('.subcategory-details').classList.add('hidden');
+                }
+            });
+            
+            // Toggle current subcategory
+            if (isExpanded) {
+                details.classList.add('hidden');
+            } else {
+                details.classList.remove('hidden');
+            }
+        });
+    });
+}
+
 export default function initModule9(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -600,4 +725,9 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
+    // 5. Initialize interactive terms functionality
+initializeInteractiveTerms(rootEl);
+
+// 6. Initialize transfection methods functionality  
+initializeTransfectionMethods(rootEl);
 }

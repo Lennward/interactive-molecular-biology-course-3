@@ -46,7 +46,7 @@ function getContent() {
             <h4 class="styled-h4">General Procedure</h4>
             <ol class="list-decimal list-inside bg-slate-100 p-3 rounded-md shadow-sm">
                 <li>Under a microscope (typically at 10x objective), focus on the grid lines.</li>
-                <li>Count the cells in the 4 large corner squares (each 1mm × 1mm, subdivided into 16 smaller squares). For consistency, establish a counting rule (e.g., count cells touching the top and left lines, but not the bottom and right lines).</li>
+                <li>Count the cells in the 4 large corner squares (each 1mm × 1mm, subdivided into 16 smaller squares). For consistency, establish a counting rule whereby cells touching the top and left lines are counted, but not the cells touching the bottom and right lines.</li>
             </ol>
 
             <h4 class="styled-h4">Calculation</h4>

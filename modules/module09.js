@@ -1,13 +1,6 @@
 const TITLE = "Module 9: Transfection - Introduction of plasmids into mammalian cells";
 const QUIZ_DATA = [
     {
-        question: "In our case, after transfection, what type of transfection will we perform?",
-        options: ["Transient transfection", "Stable transfection"],
-        answer: "Transient transfection",
-        type: "mcq",
-        explanation: "After transfection, the plasmid is not permanently integrated into the genome, but remains in the cell nucleus as a free DNA molecule where it is read by the cell's own RNA polymerase."
-    },
-    {
         question: "Which method would be most suitable for expressing proteins quickly and cost-effectively in robust HEK293 cells?",
         options: ["Lipofection (e.g., Lipofectamine)", "Electroporation", "Calcium Phosphate Precipitation", "Viral transduction (e.g. with lentiviruses)"],
         answer: "Calcium Phosphate Precipitation",

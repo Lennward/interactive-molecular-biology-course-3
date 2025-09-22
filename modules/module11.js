@@ -49,11 +49,8 @@ function getContent() {
             <p><strong>Immunocytochemistry (ICC)</strong> is a method that can be used to visualize specific proteins in cells. This is done using antibodies that bind specifically to the desired target protein. These antibodies are often recognized by so-called secondary antibodies (indirect method), which are coupled with a fluorescent dye or other marker. This allows the location of the protein within the cell to be seen clearly under the microscope. ICC is used on fixed (i.e., no longer living) cells and helps to examine cell structures, signaling pathways, and the distribution pattern of proteins in detail.</p>
             
             <img src="images/image111.png" alt="The direct and indirect verification method of ICC" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x200/e2e8f0/4a5568?text=Figure+4:+Direct+and+Indirect+ICC+Methods'; this.alt='Placeholder: Direct and Indirect ICC Methods';">
-            <p class="text-sm text-center text-gray-600 -mt-2 mb-4"><strong>Figure 4:</strong> The direct and indirect verification method of ICC.</p>
-
-
-            https://ruo.mbl.co.jp/bio/e/support/method/images/ic01_e.png
-
+            <p class="text-sm text-center text-gray-600 -mt-2 mb-4">The image shows the direct and indirect verification method of ICC. Image from <a href="https://ruo.mbl.co.jp/bio/e/support/method/images/ic01_e.png" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
+                      
             <h4 class="styled-h4">Why is ICC an important tool?</h4>
             <p>In cell and molecular biology, ICC is a key method for not only confirming the presence of a protein, but also for investigating its distribution within the cell. In research, it is used for diagnostics, confirming transfection, and characterizing cell lines, among other things.</p>
 

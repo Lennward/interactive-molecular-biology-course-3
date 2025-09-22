@@ -97,7 +97,7 @@ function getContent() {
             <h3>Materials</h3>
             <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
                 <li>Waste bottle</li>
-                <li>5mL glass pipettes</li>
+                <li>5mL serological plastic or glass pipettes</li>
                 <li>New small cell culture bottle (T25 flask)</li>
                 <li>Culture medium with additives (see Module "Introduction to Cell Culture"), trypsin</li>
                 <li>15mL Falcon</li>

@@ -71,7 +71,7 @@ function getContent() {
             
             <img src="images/image091.png" alt="Transfection overview diagram" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+91:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
 
-            <h3>B. Overview of Transfection Methods</h3>
+            <h3>Overview of Transfection Methods</h3>
             <p><strong>The Variety of Methods:</strong><br>
             There are numerous ways to get nucleic acids into cells, broadly categorized as:</p>
             
@@ -102,7 +102,7 @@ function getContent() {
                 <div id="transfection-method-choice-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
             </div>
 
-            <h3>C. In Detail: Calcium Phosphate Transfection</h3>
+            <h3>In Detail: Calcium Phosphate Transfection</h3>
             <p>The calcium phosphate method relies on a simple chemical trick. Negatively charged plasmid DNA (DNA is always negatively charged) is mixed with calcium chloride (CaCl₂). When a phosphate-buffered saline solution (like 2x BBS - HEPES Buffered Saline) is added, insoluble calcium phosphate-DNA co-precipitates form. These fine, crystalline DNA/Ca₃(PO₄)₂-particles are pipetted onto adherent cells. Cells naturally take up these crystals through endocytosis (a process where the cell membrane engulfs external material). Once inside the cell, some of the plasmids make their way to the nucleus, where genes of the transfected DNA can be transcribed and subsequently translated in the cytoplasm to produce the desired protein (e.g., in our case GFP or FLAG-tagged protein).</p>
             
             <img src="images/image092.png" alt="Calcium phosphate transfection mechanism" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+92:+CaPi+Mechanism'; this.alt='Placeholder: CaPi Mechanism';">

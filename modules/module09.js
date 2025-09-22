@@ -70,8 +70,9 @@ function getContent() {
             </div>
             
             <img src="images/image091.png" alt="Transfection overview diagram" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+91:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
-       
-        <h4 class="styled-h4">Comparison Table: Transient vs. Stable Transfection</h4>
+    <p class="text-sm text-gray-600 text-center mb-4">Image shows the principle of transient vs. stable transfection. Image from <a href="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs00216-010-3821-6/MediaObjects/216_2010_3821_Fig1_HTML.gif?as=webp" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
+
+    <h4 class="styled-h4">Comparison Table: Transient vs. Stable Transfection</h4>
             <table class="w-full border-collapse border border-gray-300 bg-slate-100 p-3 rounded-md shadow-sm mb-4">
                 <thead>
                     <tr class="bg-purple-100">

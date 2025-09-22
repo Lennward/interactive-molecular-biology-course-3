@@ -1,4 +1,64 @@
 const TITLE = "Module 9: Transfection - Introduction of plasmids into mammalian cells";
+
+function setupImageEnlargement(container) {
+    const images = container.querySelectorAll('img');
+    
+    images.forEach(img => {
+        if (img.dataset.enlargementSetup) return;
+        img.dataset.enlargementSetup = 'true';
+        
+        img.style.cursor = 'zoom-in';
+        
+        img.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const overlay = document.createElement('div');
+            overlay.className = 'image-overlay';
+            
+            const enlargedImg = img.cloneNode(true);
+            enlargedImg.className = 'image-enlarged';
+            enlargedImg.style.cursor = 'zoom-out';
+            
+            const closeBtn = document.createElement('button');
+            closeBtn.className = 'image-close-btn';
+            closeBtn.innerHTML = '×';
+            closeBtn.setAttribute('aria-label', 'Close enlarged image');
+            
+            overlay.appendChild(enlargedImg);
+            overlay.appendChild(closeBtn);
+            document.body.appendChild(overlay);
+            
+            requestAnimationFrame(() => {
+                overlay.classList.add('active');
+            });
+            
+            const closeImage = () => {
+                overlay.classList.remove('active');
+                setTimeout(() => {
+                    if (overlay.parentNode) {
+                        overlay.parentNode.removeChild(overlay);
+                    }
+                }, 300);
+            };
+            
+            closeBtn.addEventListener('click', closeImage);
+            enlargedImg.addEventListener('click', closeImage);
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) closeImage();
+            });
+            
+            const escapeHandler = (e) => {
+                if (e.key === 'Escape') {
+                    closeImage();
+                    document.removeEventListener('keydown', escapeHandler);
+                }
+            };
+            document.addEventListener('keydown', escapeHandler);
+        });
+    });
+}
+
 const QUIZ_DATA = [
     {
         question: "Which method would be most suitable for expressing proteins quickly and cost-effectively in robust HEK293 cells?",
@@ -746,4 +806,7 @@ initializeTransfectionMethods(rootEl);
 
 // 7. Initialize Q&A functionality
 initializeQAItems(rootEl);
+    
+// Setup image enlargement functionality
+setupImageEnlargement(rootEl);
 }

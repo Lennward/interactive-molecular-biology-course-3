@@ -91,7 +91,7 @@ function getContent() {
                 <li>Already transfected HEK293 cells (16–24 hours after transfection)</li>
                 <li>PBS (phosphate-buffered saline)</li>
                 <li>4% paraformaldehyde (PFA) for fixation</li>
-                <li>Hoechst33258 for cells that only contain GFP plasmid (and not FLAG tag)</li>
+                <li>Hoechst33258</li>
                 <li>Fluorescence microscope with GFP filter set (Ex: 488 nm, Em: 510 nm)</li>
                 <li>Digital camera with imaging software</li>
             </ul>

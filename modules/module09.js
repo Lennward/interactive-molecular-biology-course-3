@@ -70,7 +70,45 @@ function getContent() {
             </div>
             
             <img src="images/image091.png" alt="Transfection overview diagram" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+91:+Transfection+Overview'; this.alt='Placeholder: Transfection Overview';">
-
+       
+        <h4 class="styled-h4">Comparison Table: Transient vs. Stable Transfection</h4>
+            <table class="w-full border-collapse border border-gray-300 bg-slate-100 p-3 rounded-md shadow-sm mb-4">
+                <thead>
+                    <tr class="bg-purple-100">
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Feature</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Transient Transfection (as in this experiment)</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Stable Transfection</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">DNA integration</td>
+                        <td class="border border-gray-300 p-2">No; DNA remains episomal (non-integrated)</td>
+                        <td class="border border-gray-300 p-2">Yes; DNA integrates into host genome</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Duration of expression</td>
+                        <td class="border border-gray-300 p-2">Short-term (1–4 days)</td>
+                        <td class="border border-gray-300 p-2">Long-term (weeks to permanent)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Selection required?</td>
+                        <td class="border border-gray-300 p-2">No</td>
+                        <td class="border border-gray-300 p-2">Yes (e.g. with antibiotics to select stable clones)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Speed</td>
+                        <td class="border border-gray-300 p-2">Fast (results in 1–2 days)</td>
+                        <td class="border border-gray-300 p-2">Slow (weeks of clone selection)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 font-medium">Use case</td>
+                        <td class="border border-gray-300 p-2">Protein expression, imaging, short-term assays</td>
+                        <td class="border border-gray-300 p-2">Stable protein production, long-term studies</td>
+                    </tr>
+                </tbody>
+            </table>
+            
             <h3>Overview of Transfection Methods</h3>
             <p><strong>The Variety of Methods:</strong><br>
             There are numerous ways to get nucleic acids into cells, broadly categorized as:</p>
@@ -246,45 +284,7 @@ function getContent() {
                 <h4>Interactive Box 4: What Went Wrong? – Transfection Troubleshooting</h4>
                 <div id="transfection-troubleshooting-quiz"></div>
             </div>
-            
-            <h4 class="styled-h4">Comparison Table: Transient vs. Stable Transfection</h4>
-            <table class="w-full border-collapse border border-gray-300 bg-slate-100 p-3 rounded-md shadow-sm mb-4">
-                <thead>
-                    <tr class="bg-purple-100">
-                        <th class="border border-gray-300 p-2 text-left font-semibold">Feature</th>
-                        <th class="border border-gray-300 p-2 text-left font-semibold">Transient Transfection (as in this experiment)</th>
-                        <th class="border border-gray-300 p-2 text-left font-semibold">Stable Transfection</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border border-gray-300 p-2 font-medium">DNA integration</td>
-                        <td class="border border-gray-300 p-2">No; DNA remains episomal (non-integrated)</td>
-                        <td class="border border-gray-300 p-2">Yes; DNA integrates into host genome</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2 font-medium">Duration of expression</td>
-                        <td class="border border-gray-300 p-2">Short-term (1–4 days)</td>
-                        <td class="border border-gray-300 p-2">Long-term (weeks to permanent)</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2 font-medium">Selection required?</td>
-                        <td class="border border-gray-300 p-2">No</td>
-                        <td class="border border-gray-300 p-2">Yes (e.g. with antibiotics to select stable clones)</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2 font-medium">Speed</td>
-                        <td class="border border-gray-300 p-2">Fast (results in 1–2 days)</td>
-                        <td class="border border-gray-300 p-2">Slow (weeks of clone selection)</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2 font-medium">Use case</td>
-                        <td class="border border-gray-300 p-2">Protein expression, imaging, short-term assays</td>
-                        <td class="border border-gray-300 p-2">Stable protein production, long-term studies</td>
-                    </tr>
-                </tbody>
-            </table>
-            
+                                   
             <h4 class="styled-h4">Key Questions and Answers</h4>
             <div class="space-y-4">
                 <div class="highlight-note">

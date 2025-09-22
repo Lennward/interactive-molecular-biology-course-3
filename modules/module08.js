@@ -52,7 +52,7 @@ function getContent() {
             <h4 class="styled-h4">Calculation</h4>
             <p><span class="formula">Cells/mL = (Average cells per large square) × Dilution Factor × 10⁴</span></p>
             <p>The dilution factor is only important if you diluted the cell suspension. This is often done in Trypan Blue, as this reagent stains dead cells blue. A typical dilution would be 1:10 or 1:2, i.e. dilution factor 10 or 2.</p>
-            <p>10⁴ is the conversion factor (since each large square is 10⁻⁴ mL).</p>
+            <p>10⁴ is the conversion factor since each large square is 10⁻⁴ mL resulting from the size of the counting chamber, since the area of a square is 1 mm x 1 mm = 1 mm² and the depth is 0.1 mm -> volume = 0.1 mm³ = 1 × 10⁻⁴ ml.</p>
 
             <div class="interactive-box">
                 <h4>Interactive: Cell Count Calculator</h4>

@@ -51,6 +51,9 @@ function getContent() {
             <img src="images/image111.png" alt="The direct and indirect verification method of ICC" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x200/e2e8f0/4a5568?text=Figure+4:+Direct+and+Indirect+ICC+Methods'; this.alt='Placeholder: Direct and Indirect ICC Methods';">
             <p class="text-sm text-center text-gray-600 -mt-2 mb-4"><strong>Figure 4:</strong> The direct and indirect verification method of ICC.</p>
 
+
+            https://ruo.mbl.co.jp/bio/e/support/method/images/ic01_e.png
+
             <h4 class="styled-h4">Why is ICC an important tool?</h4>
             <p>In cell and molecular biology, ICC is a key method for not only confirming the presence of a protein, but also for investigating its distribution within the cell. In research, it is used for diagnostics, confirming transfection, and characterizing cell lines, among other things.</p>
 

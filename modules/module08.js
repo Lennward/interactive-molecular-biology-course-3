@@ -108,7 +108,7 @@ function getContent() {
             <h3>Protocol</h3>
             <div class="space-y-4">
                 <div class="highlight-note-module8">
-                    <p>Before starting, warm up the medium, PBS, and trypsin in the incubator for at least 30 minutes (in a glass beaker to collect condensation and slightly loosen the Falcon tube with medium).</p>
+                    <p>Before starting, warm up the medium, PBS, and trypsin in the incubator for at least 30 minutes (in a glass beaker to collect condensation and slightly loosen the lid of the Falcon tube with medium).</p>
                 </div>
 
                 <ol class="list-decimal list-inside space-y-3">

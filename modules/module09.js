@@ -45,10 +45,17 @@ function getContent() {
             
             <h4 class="styled-h4">Transient vs. Stable Transfection</h4>
             <p>Transfection can be either transient or stable:</p>
-            <ul class="list-disc list-inside ml-4">
-                <li><strong>Transient Transfection:</strong> The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</li>
-                <li><strong>Stable Transfection:</strong> The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</li>
-            </ul>
+
+            <div class="interactive-terms-grid transfection-types">
+                <div class="interactive-term" data-term="Transient Transfection">
+                    <div class="term-title"><strong>Transient Transfection:</strong></div>
+                    <div class="term-explanation">The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</div>
+                </div>
+                <div class="interactive-term" data-term="Stable Transfection">
+                    <div class="term-title"><strong>Stable Transfection:</strong></div>
+                    <div class="term-explanation">The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</div>
+                </div>
+            </div>
             
             <p>In our case: After transfection, the plasmid is not permanently integrated into the genome, but remains in the cell nucleus as a free DNA molecule. There it is read by the cell's own RNA polymerase, and the encoded protein is then produced in the cytoplasm.</p>
             
@@ -448,6 +455,33 @@ function renderInteractiveQuiz(container, quizData) {
     });
 }
 
+function initializeInteractiveTerms(rootElement) {
+    // Handle interactive term clicks - scoped to this module only
+    rootElement.querySelectorAll('.interactive-term').forEach(term => {
+        term.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Toggle expanded state
+            const isExpanded = term.classList.contains('expanded');
+            
+            // Close all other expanded terms IN THIS MODULE ONLY
+            rootElement.querySelectorAll('.interactive-term.expanded').forEach(otherTerm => {
+                if (otherTerm !== term) {
+                    otherTerm.classList.remove('expanded', 'active');
+                }
+            });
+            
+            // Toggle current term
+            if (isExpanded) {
+                term.classList.remove('expanded', 'active');
+            } else {
+                term.classList.add('expanded', 'active');
+            }
+        });
+    });
+}
+
 export default function initModule9(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -544,4 +578,25 @@ export default function initModule9(rootEl, sidebarEl) {
     
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-9');
+    
+    // Initialize interactive terms functionality
+initializeInteractiveTerms(rootEl);
+
+// Close expanded terms when clicking outside - scoped to this module
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.interactive-term') || !rootEl.contains(e.target)) {
+        rootEl.querySelectorAll('.interactive-term.expanded').forEach(term => {
+            term.classList.remove('expanded', 'active');
+        });
+    }
+});
+
+// Close expanded terms on escape key - scoped to this module
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        rootEl.querySelectorAll('.interactive-term.expanded').forEach(term => {
+            term.classList.remove('expanded', 'active');
+        });
+    }
+});
 }

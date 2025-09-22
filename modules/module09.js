@@ -767,4 +767,7 @@ initializeInteractiveTerms(rootEl);
 
 // 6. Initialize transfection methods functionality  
 initializeTransfectionMethods(rootEl);
+
+// 7. Initialize Q&A functionality
+initializeQAItems(rootEl);
 }

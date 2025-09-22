@@ -359,12 +359,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                 <li><strong>pH of BBS:</strong> This is CRITICAL for the calcium phosphate method. The pH of the 2x BBS solution directly influences the size and quality of the precipitate. Even slight deviations can drastically affect efficiency. Typically, a pH between 7.05 and 7.12 is required.</li>
                 <li><strong>Pipetting Skills:</strong> Accuracy, especially with small volumes of plasmids and reagents, is paramount.</li>
                 <li><strong>Cleanliness and Sterility:</strong> As always in cell culture, maintain strict aseptic technique to avoid contamination, which can ruin your experiment.</li>
-            </ul>
-
-            <div class="interactive-box">
-                <h4>Interactive Box 4: What Went Wrong? – Transfection Troubleshooting</h4>
-                <div id="transfection-troubleshooting-quiz"></div>
-            </div>
+            </ul>   
                                    
             <h4 class="styled-h4">Key Questions and Answers</h4>
 <div class="space-y-4">
@@ -719,26 +714,7 @@ export default function initModule9(rootEl, sidebarEl) {
         });
     }
 
-    // Interactive Box 4: Troubleshooting Quiz
-    const troubleshootingContainer = document.getElementById('transfection-troubleshooting-quiz');
-    if (troubleshootingContainer) {
-        const troubleshootingQuizData = [
-            {
-                question: "Your cells look very unhappy after transfection, and many have detached. What could be a primary reason related to the CaPi method?",
-                options: ["Too little DNA was used", "The precipitates were too fine or incubated for too short a time", "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long", "Cells were not confluent enough"],
-                answer: "The pH of the BBS was too high, leading to coarse, toxic precipitates, or precipitates were left on cells too long",
-                explanation: "Coarse CaPi precipitates formed due to incorrect pH or overly long incubation with cells can be quite toxic, leading to cell stress and detachment."
-            },
-            {
-                question: "You see hardly any GFP-positive cells 24-48 hours post-transfection. Which is a common critical factor to check first for CaPi transfections?",
-                options: ["The incubator temperature was 36°C instead of 37°C", "The pH of the 2x BBS solution was incorrect", "You used 0.5 µg of DNA instead of 0.3 µg", "The cells were only 50% confluent"],
-                answer: "The pH of the 2x BBS solution was incorrect",
-                explanation: "The pH of the BBS is extremely critical for forming the right kind of fine precipitate for efficient uptake. Incorrect pH is a very common reason for CaPi transfection failure."
-            }
-        ];
-        renderInteractiveQuiz(troubleshootingContainer, troubleshootingQuizData);
-    }
-    
+       
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-9');
     

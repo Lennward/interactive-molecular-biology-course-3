@@ -426,6 +426,145 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                 </div>
             </div>
         </div>
+        
+        <style>
+        /* Interactive Terms Grid - using Module 8 styling */
+        .interactive-terms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+            margin: 1.5rem 0;
+            padding: 0.5rem;
+        }
+
+        .interactive-terms-grid.transfection-types {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .interactive-term {
+            background: linear-gradient(145deg, #ffffff 0%, rgba(212, 43, 233, 0.05) 100%);
+            border: 2px solid rgba(212, 43, 233, 0.2);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: var(--purple-dark);
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            box-shadow: 0 2px 8px rgba(212, 43, 233, 0.1), 
+                        0 1px 3px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            user-select: none;
+            min-height: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .term-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: inherit;
+        }
+
+        .term-explanation {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            margin-top: 0;
+            font-size: 0.9em;
+            font-weight: 400;
+            line-height: 1.4;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: left;
+            color: var(--text-primary);
+        }
+
+        .interactive-term.expanded {
+            min-height: auto;
+            padding: 20px;
+        }
+
+        .interactive-term.expanded .term-explanation {
+            opacity: 1;
+            max-height: 200px;
+            margin-top: 12px;
+        }
+
+        .interactive-term::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(212, 43, 233, 0.1), 
+                transparent
+            );
+            transition: left 0.6s ease;
+        }
+
+        .interactive-term:hover::before {
+            left: 100%;
+        }
+
+        .interactive-term:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--purple-light);
+            box-shadow: 0 8px 25px rgba(212, 43, 233, 0.25),
+                        0 3px 12px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(145deg, #ffffff 0%, rgba(246, 75, 204, 0.08) 100%);
+        }
+
+        .interactive-term:active {
+            transform: translateY(-2px) scale(1.01);
+            transition: transform 0.1s ease;
+        }
+
+        .interactive-term.active {
+            background: linear-gradient(145deg, var(--purple-light), var(--purple-accent));
+            border-color: var(--purple-accent);
+            box-shadow: 0 6px 20px rgba(212, 43, 233, 0.4),
+                        0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .interactive-term.active .term-title {
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .interactive-term.active .term-explanation {
+            color: rgba(255, 255, 255, 0.95);
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .interactive-terms-grid.transfection-types {
+                gap: 0.75rem;
+            }
+            
+            .interactive-term {
+                padding: 12px 16px;
+                font-size: 1em;
+            }
+
+            .term-title {
+                font-size: 1em;
+            }
+
+            .term-explanation {
+                font-size: 0.85em;
+            }
+        }
+        </style>
     `;
 }
 

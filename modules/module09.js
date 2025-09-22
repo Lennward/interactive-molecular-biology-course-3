@@ -287,11 +287,7 @@ function getContent() {
                                    
             <h4 class="styled-h4">Key Questions and Answers</h4>
             <div class="space-y-4">
-                <div class="highlight-note">
-                    <p><strong>How does the DNA get into the cell?</strong></p>
-                    <p class="text-sm mt-1">In calcium phosphate transfection, DNA is mixed with calcium chloride and then added to a phosphate buffer, forming a fine calcium phosphate-DNA precipitate. This precipitate settles onto the cell membrane, where it is taken up by the cells—mainly via endocytosis or pinocytosis. Once inside, the DNA can reach the nucleus and be transiently expressed.</p>
-                </div>
-                
+                    
                 <div class="highlight-note">
                     <p><strong>What other possibilities are there to introduce foreign DNA into cells?</strong></p>
                     <p class="text-sm mt-1">In addition to calcium phosphate, several other methods exist:</p>

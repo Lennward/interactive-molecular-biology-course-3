@@ -632,3 +632,28 @@ body {
         padding: 0.6rem 0.8rem;
     }
 }
+
+/* Orange highlight notes for module 09 */
+.orange-highlight-note {
+    background: linear-gradient(135deg, rgba(251, 136, 37, 0.1), rgba(253, 172, 19, 0.1));
+    border-left: 4px solid var(--orange-medium);
+    padding: 0.75rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.orange-highlight-note h4 {
+    color: var(--orange-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.orange-highlight-note p {
+    margin-bottom: 0.5rem !important;
+    color: var(--text-primary);
+}
+
+.orange-highlight-note ul {
+    margin-bottom: 0.5rem !important;
+}

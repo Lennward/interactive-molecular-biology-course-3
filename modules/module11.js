@@ -59,15 +59,15 @@ function getContent() {
 
             <h4 class="styled-h4">Overview of the procedure</h4>
             <ol class="list-decimal list-inside ml-4 space-y-2 bg-slate-100 p-3 rounded-md shadow-sm">
-                <li><strong>Permeabilization</strong> with detergents (enables antibodies to access the cell interior)</li>
-                <li><strong>Blocking</strong> of non-specific binding sites (= minimization of background signal)</li>
+                <li><strong>Permeabilization</strong> of cells with detergents to enable antibodies to enter the cell interior</li>
+                <li><strong>Blocking</strong> of non-specific binding sites</li>
                 <li><strong>Incubation</strong> with primary and then secondary antibody
                     <ul class="list-disc list-inside ml-4 mt-1">
                         <li>Primary antibody binds target protein</li>
                         <li>Secondary antibody binds to the primary antibody and is coupled to a detectable marker (usually a fluorescent dye; in our case Alexa Fluor 594 (red fluorescent))</li>
                     </ul>
                 </li>
-                <li><strong>Hoechst33258 staining</strong> of nuclei (to determine the total cell count)</li>
+                <li><strong>Hoechst33258 staining</strong> of nuclei to determine the total cell count</li>
                 <li><strong>Fluorescence microscopic evaluation</strong></li>
             </ol>
 
@@ -77,10 +77,10 @@ function getContent() {
                 <li>PBS (phosphate-buffered saline) for washing</li>
                 <li>0.1% Triton X-100 for permeabilization</li>
                 <li>Blocking solution (e.g., 5% BSA or FCS in PBS)</li>
-                <li>Primary Rabbit anti-FLAG antibody (stock concentration: 600 µg/ml)</li>
-                <li>Secondary antibody conjugated with Alexa Fluor 594 fluorophore (goat anti-rabbit 594) (stock concentration 0.5 mg/ml)</li>
-                <li>Hoechst33258 (staining after ICC)</li>
-                <li>Fluorescence microscope with appropriate filter (Alexa Fluor 594 excited using the 561 nm or even better at 594 nm laser lines)</li>
+                <li>Primary Rabbit anti-FLAG antibody (stock concentration: 600 µg/ml; stock concentration can differ)</li>
+                <li>Secondary antibody conjugated with Alexa Fluor 594 fluorophore (goat anti-rabbit 594) (stock concentration 0.5 mg/ml; stock concentration can differ)</li>
+                <li>Hoechst33258</li>
+                <li>Fluorescence microscope with appropriate filter (Alexa Fluor 594 excited at  561 nm or even better at 594 nm)</li>
                 <li>Pipettes, sterile pipette tips</li>
             </ul>
             
@@ -112,7 +112,7 @@ function getContent() {
                 <div>
                     <h4 class="styled-h4">2. Blocking of unspecific binding sites</h4>
                     <div class="highlight-note">
-                        <p><strong>Blocking reduces the background!</strong></p>
+                        <p><strong>Blocking reduces the background signal!</strong></p>
                     </div>
                     <ul class="list-disc list-inside ml-4 space-y-2">
                         <li>Remove PBS and add approximately 300 µl of blocking solution (5% BSA in PBS) per well to the cells.</li>
@@ -131,7 +131,7 @@ function getContent() {
                         </li>
                         <li>Incubate the cells for 2 hours at room temperature.</li>
                         <li>Then remove the primary antibody from the wells. 
-                            <div class="p-2 mt-1 bg-green-50 border-l-4 border-green-400 text-green-700 text-xs rounded-r-md">
+                            <div class="p-2 mt-1 bg-orange-50 border-l-4 border-orange-400 text-orange-700 text-xs rounded-r-md">
                                 <p><strong>Note:</strong> The primary antibody is expensive and can also be reused. Just save it in a tube and store it at 6°C in the fridge. There it is stable for a couple of weeks. Similarly, the blocking solution is also removed from the negative control wells.</p>
                             </div>
                         </li>
@@ -150,7 +150,7 @@ function getContent() {
                 <div>
                     <h4 class="styled-h4">5. Hoechst staining of fixed cells</h4>
                     <ul class="list-disc list-inside ml-4 space-y-2">
-                        <li>Remove the secondary antibody solution and add 200 µl Hoechst33258 (Caution: stains DNA, carcinogenic!) (stock = 10 mg/ml; use it 1:5000 = 2 µg/ml) in 1x PBS <strong>per well</strong>. To do this, first prepare a 1:5 dilution of Hoechst 33258 in PBS (2 µl Hoechst33258 in 8 µl PBS) and then dilute this solution 1:1000 in PBS (10 µl of this solution in 10 ml PBS). Vortex the PBS/Hoechst mixture thoroughly to ensure even distribution of Hoechst in the solution.</li>
+                        <li>Remove the secondary antibody solution and add 200 µl Hoechst33258 (Caution: stains DNA, carcinogenic!) (stock = 10 mg/ml; use it 1:5000 = 2 µg/ml) in 1x PBS <strong>per well</strong>. To do this, first prepare a 1:5 dilution of Hoechst33258 in PBS (2 µl Hoechst33258 in 8 µl PBS) and then dilute this solution 1:1000 in PBS (10 µl of this solution in 10 ml PBS). Vortex the PBS/Hoechst mixture thoroughly to ensure even distribution of Hoechst in the solution.</li>
                         <li>Incubate for 5 min at RT in the dark</li>
                         <li>Wash 2 x 5 min with 200 μL 1 x PBS</li>
                         <li>Leave 200 μL PBS in each well after the second washing step</li>

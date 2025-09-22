@@ -155,7 +155,7 @@ function getContent() {
             <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Fig.: Neubauer counting chamber under the microscope</p>
 
             <ol class="list-decimal list-inside space-y-2" start="3">
-                <li>Moisten the bridges of the Neubauer counting chamber with water (or breathe on them), place the cover glass on top and press down until the "Newton's rings" (rainbow-like) are visible.</li>
+                <li>Moisten the bridges of the Neubauer counting chamber with water (or breathe on them), place the cover glass on top and press down until it sticks to the counting chamber (and the "Newton's rings" (rainbow-like) are visible).</li>
                 <li>Carefully fill one side of the Neubauer counting chamber with 10 μL of the 1:10 trypan blue diluted cell suspension (as described above).</li>
                 <li>If cell clumps are still present, then the cell suspension has not yet been adequately triturated/mixed → triturate cell suspension (pipette up and down) 10-20 times and use a new Eppi and dilute cell suspension in trypan blue as before and check again.</li>
                 <li>Many dead cells mean that the trituration was too coarse.</li>

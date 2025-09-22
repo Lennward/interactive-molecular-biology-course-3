@@ -231,7 +231,7 @@ function getContent() {
             
             <img src="images/image094.png" alt="HEK cells after calcium phosphate transfection" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+94:+HEK+Cells+Post-Transfection'; this.alt='Placeholder: HEK Cells Post-Transfection';">
 
-            <h3>D. Important Tips & Troubleshooting Corner</h3>
+            <h3>Important Tips & Troubleshooting Corner</h3>
             <p>Successful transfection is an art as much as a science! Here are some key factors and common pitfalls:</p>
             
             <ul class="list-disc list-inside ml-4 space-y-2">

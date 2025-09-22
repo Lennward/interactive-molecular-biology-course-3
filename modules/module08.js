@@ -56,10 +56,10 @@ function getContent() {
 
             <div class="interactive-box">
                 <h4>Interactive: Cell Count Calculator</h4>
-                <p class="text-sm mb-3">Enter the total number of live (unstained) cells counted in the 4 large corner squares and the dilution factor used.</p>
+                <p class="text-sm mb-3">Enter the total number of live (unstained) cells counted in the <strong>4 large</strong> corner squares and the dilution factor used. (Note: for calculating the cell count the average cell number per large square is taken i.e. cells counted in the 4 large corner squares divided by 4.)</p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-3 items-center">
                     <div>
-                        <label for="cells-counted-8" class="block text-sm font-medium text-gray-700">Total live cells in 4 large squares:</label>
+                        <label for="cells-counted-8" class="block text-sm font-medium text-gray-700">Total live cells in <strong>4</strong> large squares:</label>
                         <input type="number" id="cells-counted-8" placeholder="e.g., 240" class="w-full mt-1">
                     </div>
                     <div>

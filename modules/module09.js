@@ -227,7 +227,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
 
             <h4 class="styled-h4">The Protocol – Step by Step to Success</h4>
             
-            <h4 class="styled-h4">Materials</h4>
+            <h3>Materials</h3>
             <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
                 <li>HEK293-cells in 24-well-plate (or other plate; roughly 70% confluency)</li>
                 <li><strong>Plasmids:</strong>

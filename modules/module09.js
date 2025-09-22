@@ -143,7 +143,7 @@ function getContent() {
             </div>
 
             <div class="interactive-box">
-                <h4>Interactive Box 3: Experimental Plate Setup</h4>
+                <h4>Experimental Plate Setup:</h4>
                 <p class="text-sm mb-2">Before you begin with your experiment you need to plan your experiment! Our goal is to transfect our cells in different wells of a 24 well plate. For all experiments it is always important to have proper controls (e.g. a negative control, meaning a condition in which nothing is transfected). Also it is useful to test different conditions in parallel in different wells. Additionally to that, it is important to have duplicates (or even higher repetitions) for each condition to be able to draw more meaningful conclusions and to be able to exclude outliers.</p>
                 
                 <p class="text-sm mb-2"><strong>This is a conceptual representation. In the lab, you'd map out which wells get which plasmids or serve as controls.</strong> Design a pipetting scheme for the 24-well plate.</p>
@@ -155,9 +155,10 @@ function getContent() {
                 <p class="text-sm mt-2"><strong>Example Conditions:</strong></p>
                 <ul class="text-xs list-disc list-inside ml-4">
                     <li>A1-2: Plasmid pH2B-GFP</li>
-                    <li>B1-4: Plasmid pRKV-FLAG (B3-4 for control with only secondary antibody)</li>
+                    <li>B1-2: Plasmid pRKV-FLAG (B3-4 for control with only secondary antibody)</li>
+                    <li>B3-4: Plasmid pRKV-FLAG (for control during ICC with secondary antibody only)</li>
                     <li>C1-2: Plasmid pH2B-GFP + Plasmid pRKV-FLAG</li>
-                    <li>D1-2: negative control (no plasmid) (control for GFP (or rather general transfection))</li>
+                    <li>D1-2: negative control (no plasmid = control for general transfection)</li>
                 </ul>
             </div>
             

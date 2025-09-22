@@ -111,7 +111,7 @@ function getContent() {
             
             <h4 class="styled-h4">Materials</h4>
             <ul class="bg-slate-100 p-3 rounded-md shadow-sm">
-                <li>HEK293-cells in 24-well-plate (roughly 70% confluency)</li>
+                <li>HEK293-cells in 24-well-plate (or other plate; roughly 70% confluency)</li>
                 <li><strong>Plasmids:</strong>
                     <ul class="list-disc list-inside ml-4">
                         <li>pH2B-GFP (Concentration: e.g. 680 ng/µl - *please use the actual concentration from your stock tube label*; can be bought on e.g. Addgene)</li>
@@ -131,11 +131,13 @@ function getContent() {
             </ul>
             
             <div class="highlight-note">
-                <h4>2x BBS pH 6.95 (100mL)</h4>
+                <h4>How to prepare 2x BBS pH 6.95 (100mL):</h4>
                 <ul class="text-sm">
+                    <li>You need:</li>
                     <li>280mM NaCl: 1.637g</li>
                     <li>50mM BES: 1.0665g</li>
                     <li>1.5mM Na₂HPO₄: 0.027g</li>
+                    <li>100 ml dH₂O</li>
                 </ul>
                 <p class="text-sm mt-2">Adjust pH very precisely → sterile filter → store @ 4°C</p>
             </div>

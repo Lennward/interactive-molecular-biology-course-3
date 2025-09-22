@@ -162,7 +162,7 @@ function getContent() {
                     <ul class="list-disc list-inside ml-4 space-y-2">
                         <li>Place the 24-well plate in a suitable microscopy chamber.</li>
                         <li>Set the fluorescence microscope to the appropriate channel for the fluorophore used. → Alexa Fluor 594 excited using the 561 nm or even better at 594 nm laser lines</li>
-                        <li>Search for the immunostained cells and document the results by taking images. Take at least 3-5 images per well</li>
+                        <li>Search for the immunostained (=fluorescent) cells and document the results by taking images. Take at least 3-5 images per well</li>
                         <li>Hoechst- and GFP-stained cells can also be searched for (GFP should only be present in co-transfection = wells to which GFP-Plasmid and FLAG tag-Plasmid was added).</li>
                         <li><strong>Filter specifications:</strong>
                             <ul class="list-circle list-inside ml-4 text-sm">

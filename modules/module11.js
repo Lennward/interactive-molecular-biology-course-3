@@ -162,8 +162,8 @@ function getContent() {
                     <ul class="list-disc list-inside ml-4 space-y-2">
                         <li>Place the 24-well plate in a suitable microscopy chamber.</li>
                         <li>Set the fluorescence microscope to the appropriate channel for the fluorophore used. → Alexa Fluor 594 excited using the 561 nm or even better at 594 nm laser lines</li>
-                        <li>Search for the immunostained (=fluorescent) cells and document the results by taking images. Take at least 3-5 images per well</li>
-                        <li>Hoechst- and GFP-stained cells can also be searched for (GFP should only be present in co-transfection = wells to which GFP-Plasmid and FLAG tag-Plasmid was added).</li>
+                        <li>Look for immunostained (=fluorescent) cells and document the results by taking images. Take at least 3-5 images per well</li>
+                        <li>Also take a look at Hoechst- and GFP-stained cells (GFP should only be present in co-transfection = wells to which GFP-Plasmid and FLAG tag-Plasmid were added).</li>
                         <li><strong>Filter specifications:</strong>
                             <ul class="list-circle list-inside ml-4 text-sm">
                                 <li>Hoechst33258 excitation at 352 nm (UV light) and emission at 454 nm</li>
@@ -217,7 +217,7 @@ function getContent() {
             
             <div class="space-y-4">
                 <div class="highlight-note">
-                    <p><strong>11. What are the essential steps for antibody staining?</strong></p>
+                    <p><strong>What are the essential steps for antibody staining?</strong></p>
                     <div class="text-sm mt-2">
                         <p><strong>Essential Steps for Antibody Staining:</strong></p>
                         <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
@@ -235,7 +235,7 @@ function getContent() {
                 </div>
                 
                 <div class="highlight-note">
-                    <p><strong>12. What are possible sources of error during staining and how could appropriate control experiments look like?</strong></p>
+                    <p><strong>What are possible sources of error during staining and how could appropriate control experiments look like?</strong></p>
                     
                     <h5 class="font-semibold mt-3 mb-2">Possible Sources of Error:</h5>
                     <div class="overflow-x-auto">

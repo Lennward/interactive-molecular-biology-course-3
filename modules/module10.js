@@ -49,8 +49,8 @@ function getContent() {
             
             <p>Many dyes—known as fluorophores—use this principle. In molecular biology, they are used to make proteins, cell structures, or DNA visible in a targeted manner.</p>
             
-            <img src="images/image101.png" alt="THe image shows the basic principle of fluorescence" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+101:+Fluorescence+Principle'; this.alt='Placeholder: Fluorescence Principle';">
-            <p class="text-sm text-center text-gray-600 -mt-2 mb-4">The basic principle of fluorescence.</p>
+            <img src="images/image101.png" alt="The image shows the basic principle of fluorescence" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-lg w-auto" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+101:+Fluorescence+Principle'; this.alt='Placeholder: Fluorescence Principle';">
+            <p class="text-sm text-center text-gray-600 -mt-2 mb-4">The image shows the basic principle of fluorescence. Image from <a href="https://www.photonics.com/images/Web/Articles/2023/6/20/Feat_FluorMic_Fig_3.jpg" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
 
             <h4 class="styled-h4">What is GFP?</h4>
             <p><strong>GFP</strong> (green fluorescent protein) is a fluorescent protein from the jellyfish <em>Aequorea victoria</em>. It is one of the best-known reporter genes in cell and molecular biology. GFP fluoresces green when excited by blue light (approx. 488 nm).</p>
@@ -72,7 +72,8 @@ function getContent() {
             </ul>
             
             <img src="images/image102.png" alt="How a fluorescence microscope works" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x400/e2e8f0/4a5568?text=Image+102:+Fluorescence+Microscope'; this.alt='Placeholder: Fluorescence Microscope';">
-            <p class="text-sm text-center text-gray-600 -mt-2 mb-4">The image shows how a fluorescence microscope works</p>
+            <p class="text-sm text-center text-gray-600 -mt-2 mb-4">The image shows how a fluorescence microscope works. Image from <a href="https://microbeonline.com/wp-content/uploads/2020/05/Fluorescence-Microscope-working-mechanism.png" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
+
             
             <p>This creates a bright, high-contrast image of fluorescent structures that stands out clearly against the dark background.</p>
             

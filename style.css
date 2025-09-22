@@ -722,3 +722,23 @@ body {
         padding: 0.75rem 1rem 1rem 1rem;
     }
 }
+
+/* Enhanced image sizing for module09 */
+.enlarged-image {
+    max-width: 100% !important;
+    height: auto !important;
+    width: 500px !important;
+}
+
+@media (min-width: 640px) {
+    .enlarged-image {
+        width: 600px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .enlarged-image {
+        width: 100% !important;
+        max-width: 400px !important;
+    }
+}

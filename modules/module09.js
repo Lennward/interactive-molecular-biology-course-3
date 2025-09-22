@@ -367,52 +367,67 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
             </div>
                                    
             <h4 class="styled-h4">Key Questions and Answers</h4>
-            <div class="space-y-4">
-                    
-                <div class="orange-highlight-note">
-                    <p><strong>What other possibilities are there to introduce foreign DNA into cells?</strong></p>
-                    <p class="text-sm mt-1">In addition to calcium phosphate, several other methods exist:</p>
-                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
-                        <li><strong>Chemical methods:</strong> Lipofection (lipid-based transfection reagents), PEI (polyethylenimine-based methods)</li>
-                        <li><strong>Physical methods:</strong> Electroporation (electric pulses create temporary pores in the membrane), Microinjection (direct injection into the cell or nucleus), Gene gun (mainly for tissues or plant cells)</li>
-                        <li><strong>Biological methods:</strong> Viral transduction (e.g., using lentivirus or adenovirus to deliver DNA)</li>
-                    </ul>
-                    <p class="text-sm mt-2">Each method varies in efficiency, toxicity, and suitability for different cell types.</p>
-                </div>
-                
-                <div class="orange-highlight-note">
-                    <p><strong>What are the potential problems with transfection? (especially Calcium phosphate)</strong></p>
-                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
-                        <li><strong>Inconsistency:</strong> Calcium phosphate precipitation is sensitive to pH and temperature, which can lead to batch-to-batch variability.</li>
-                        <li><strong>Low efficiency:</strong> Particularly in primary cells or hard-to-transfect lines.</li>
-                        <li><strong>Toxicity:</strong> Large precipitates or long incubation times can be harmful to cells.</li>
-                        <li><strong>Precipitate size:</strong> If the precipitate is too coarse, it won't be taken up efficiently.</li>
-                        <li><strong>Limited reproducibility:</strong> Small changes in mixing or timing can affect results.</li>
-                    </ul>
-                </div>
-                
-                <div class="orange-highlight-note">
-                    <p><strong>How can the transfection efficiency be influenced? (especially Calcium phosphate)</strong></p>
-                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
-                        <li><strong>Precise pH control:</strong> Optimal pH for precipitate formation is usually around 7.05–7.12. Slight deviations can strongly affect efficiency.</li>
-                        <li><strong>Precipitate quality:</strong> A fine, even precipitate increases uptake—this depends on mixing speed and incubation time before adding to cells.</li>
-                        <li><strong>DNA amount and purity:</strong> Using clean, endotoxin-free DNA in the right concentration improves results.</li>
-                        <li><strong>Cell confluency:</strong> Ideal confluency is 50–80%—cells that are too sparse or too confluent transfect less efficiently.</li>
-                        <li><strong>Incubation time with precipitate:</strong> Typically 4–8 hours, but too long can cause toxicity.</li>
-                        <li><strong>Glycerol shock or DMSO shock (optional):</strong> Brief exposure after transfection can boost efficiency.</li>
-                    </ul>
-                </div>
-            </div>
+<div class="space-y-4">
+        
+    <div class="qa-item">
+        <div class="qa-header">
+            <span class="qa-question"><strong>What other possibilities are there to introduce foreign DNA into cells?</strong></span>
+            <span class="qa-toggle">+</span>
+        </div>
+        <div class="qa-answer hidden">
+            <p class="text-sm mt-1">In addition to calcium phosphate, several other methods exist:</p>
+            <ul class="text-sm mt-2 list-disc list-inside ml-4">
+                <li><strong>Chemical methods:</strong> Lipofection (lipid-based transfection reagents), PEI (polyethylenimine-based methods)</li>
+                <li><strong>Physical methods:</strong> Electroporation (electric pulses create temporary pores in the membrane), Microinjection (direct injection into the cell or nucleus), Gene gun (mainly for tissues or plant cells)</li>
+                <li><strong>Biological methods:</strong> Viral transduction (e.g., using lentivirus or adenovirus to deliver DNA)</li>
+            </ul>
+            <p class="text-sm mt-2">Each method varies in efficiency, toxicity, and suitability for different cell types.</p>
+        </div>
+    </div>
+    
+    <div class="qa-item">
+        <div class="qa-header">
+            <span class="qa-question"><strong>What are the potential problems with transfection? (especially Calcium phosphate)</strong></span>
+            <span class="qa-toggle">+</span>
+        </div>
+        <div class="qa-answer hidden">
+            <ul class="text-sm mt-2 list-disc list-inside ml-4">
+                <li><strong>Inconsistency:</strong> Calcium phosphate precipitation is sensitive to pH and temperature, which can lead to batch-to-batch variability.</li>
+                <li><strong>Low efficiency:</strong> Particularly in primary cells or hard-to-transfect lines.</li>
+                <li><strong>Toxicity:</strong> Large precipitates or long incubation times can be harmful to cells.</li>
+                <li><strong>Precipitate size:</strong> If the precipitate is too coarse, it won't be taken up efficiently.</li>
+                <li><strong>Limited reproducibility:</strong> Small changes in mixing or timing can affect results.</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="qa-item">
+        <div class="qa-header">
+            <span class="qa-question"><strong>How can the transfection efficiency be influenced? (especially Calcium phosphate)</strong></span>
+            <span class="qa-toggle">+</span>
+        </div>
+        <div class="qa-answer hidden">
+            <ul class="text-sm mt-2 list-disc list-inside ml-4">
+                <li><strong>Precise pH control:</strong> Optimal pH for precipitate formation is usually around 7.05–7.12. Slight deviations can strongly affect efficiency.</li>
+                <li><strong>Precipitate quality:</strong> A fine, even precipitate increases uptake—this depends on mixing speed and incubation time before adding to cells.</li>
+                <li><strong>DNA amount and purity:</strong> Using clean, endotoxin-free DNA in the right concentration improves results.</li>
+                <li><strong>Cell confluency:</strong> Ideal confluency is 50–80%—cells that are too sparse or too confluent transfect less efficiently.</li>
+                <li><strong>Incubation time with precipitate:</strong> Typically 4–8 hours, but too long can cause toxicity.</li>
+                <li><strong>Glycerol shock or DMSO shock (optional):</strong> Brief exposure after transfection can boost efficiency.</li>
+            </ul>
+        </div>
+    </div>
+</div>
             
             <h4 class="styled-h4">Plasmid Maps</h4>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div class="text-center">
                     <img src="images/image095.png" alt="pH2B-GFP plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+95:+pH2B-GFP+Plasmid'; this.alt='Placeholder: pH2B-GFP Plasmid Map';">
-                    <p class="text-sm mt-2 font-semibold">Figure 5: Plasmid map of pH2B-GFP used in the practical course. Can be bought e.g. on addgene</p>
+                    <p class="text-sm mt-2 font-semibold">Plasmid map of pH2B-GFP used in the practical course. Can be bought e.g. on addgene</p>
                 </div>
                 <div class="text-center">
                     <img src="images/image096.png" alt="pRKV-FLAG plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+pRKV-FLAG+Plasmid'; this.alt='Placeholder: pRKV-FLAG Plasmid Map';">
-                    <p class="text-sm mt-2 font-semibold">Figure 6: Plasmid map of pRKV-FLAG used in the practical course</p>
+                    <p class="text-sm mt-2 font-semibold">Plasmid map of pRKV-FLAG used in the practical course</p>
                 </div>
             </div>
         </div>
@@ -605,6 +620,26 @@ function initializeTransfectionMethods(rootElement) {
                 details.classList.add('hidden');
             } else {
                 details.classList.remove('hidden');
+            }
+        });
+    });
+}
+
+function initializeQAItems(rootElement) {
+    rootElement.querySelectorAll('.qa-item').forEach(item => {
+        const header = item.querySelector('.qa-header');
+        const answer = item.querySelector('.qa-answer');
+        
+        header.addEventListener('click', () => {
+            const isExpanded = item.classList.contains('expanded');
+            
+            // Toggle current item
+            if (isExpanded) {
+                item.classList.remove('expanded');
+                answer.classList.add('hidden');
+            } else {
+                item.classList.add('expanded');
+                answer.classList.remove('hidden');
             }
         });
     });

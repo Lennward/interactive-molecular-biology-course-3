@@ -150,7 +150,7 @@ function getContent() {
                 
                 <img src="images/image093.png" alt="24-well plate pipetting scheme" class="my-2 rounded-lg shadow-md mx-auto block max-w-xs w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Image+93:+24-Well+Plate+Scheme'; this.alt='Placeholder: 24-Well Plate Scheme';">
                 
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 3: Pipetting scheme for the 24-well plate.</strong></p>
+                <p class="text-sm text-gray-600 mt-2"></p>
                 
                 <p class="text-sm mt-2"><strong>Example Conditions:</strong></p>
                 <ul class="text-xs list-disc list-inside ml-4">

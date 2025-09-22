@@ -48,11 +48,11 @@ function getContent() {
 
             <div class="interactive-terms-grid transfection-types">
                 <div class="interactive-term" data-term="Transient Transfection">
-                    <div class="term-title"><strong>Transient Transfection:</strong></div>
+                    <div class="term-title"><strong>Transient Transfection</strong></div>
                     <div class="term-explanation">The introduced nucleic acid (e.g., plasmid) enters the cell and is expressed for a limited period (typically 24-96 hours). It is not integrated into the host cell's genome and is eventually lost or diluted out as cells divide. This is useful for rapid gene expression studies.</div>
                 </div>
                 <div class="interactive-term" data-term="Stable Transfection">
-                    <div class="term-title"><strong>Stable Transfection:</strong></div>
+                    <div class="term-title"><strong>Stable Transfection</strong></div>
                     <div class="term-explanation">The introduced nucleic acid is integrated into the host cell's genome. This results in long-term, stable expression of the gene, which is passed on to daughter cells during cell division. Creating stable cell lines requires selection methods (e.g., using antibiotic resistance markers).</div>
                 </div>
             </div>

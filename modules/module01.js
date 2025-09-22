@@ -148,7 +148,7 @@ function getContent() {
             <div id="quiz-container"></div>
         </div>
 
-        <style>
+<style>
         .interactive-terms-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -295,79 +295,6 @@ function getContent() {
                 grid-template-columns: 1fr;
                 gap: 8px;
             }
-        }
-
-        .term-tooltip {
-            position: fixed;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            pointer-events: none;
-        }
-
-        .term-tooltip.active {
-            opacity: 1;
-            visibility: visible;
-            pointer-events: all;
-        }
-
-        .tooltip-content {
-            background: white;
-            border: 2px solid var(--purple-light);
-            border-radius: 12px;
-            padding: 1.2rem;
-            max-width: 350px;
-            min-width: 280px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            position: relative;
-            animation: tooltipSlideIn 0.3s ease-out;
-        }
-
-        @keyframes tooltipSlideIn {
-            from {
-                transform: translateY(-10px) scale(0.95);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0) scale(1);
-                opacity: 1;
-            }
-        }
-
-        .tooltip-close {
-            position: absolute;
-            top: 8px;
-            right: 12px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--purple-medium);
-            cursor: pointer;
-            transition: color 0.2s ease;
-            padding: 0;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .tooltip-close:hover {
-            color: var(--purple-dark);
-        }
-
-        .tooltip-text {
-            color: var(--text-primary);
-            line-height: 1.6;
-            font-size: 0.95rem;
-            padding-right: 20px;
-        }
-
-        /* Add a subtle glow effect when term is active */
-        .interactive-term.active {
-            color: var(--purple-light);
-            text-shadow: 0 0 8px rgba(212, 43, 233, 0.3);
         }
         </style>
     `;

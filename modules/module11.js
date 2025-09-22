@@ -214,103 +214,111 @@ function getContent() {
             </div>
 
             <h3>Questions for Reflection</h3>
-            
-            <div class="space-y-4">
-                <div class="highlight-note">
-                    <p><strong>What are the essential steps for antibody staining?</strong></p>
-                    <div class="text-sm mt-2">
-                        <p><strong>Essential Steps for Antibody Staining:</strong></p>
-                        <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
-                            <li><strong>Fixation:</strong> Preserves cell/tissue structure and immobilizes antigens. Common fixatives: paraformaldehyde (PFA), methanol.</li>
-                            <li><strong>Permeabilization (if intracellular targets):</strong> Allows antibodies to enter the cells. Common reagents: Triton X-100, saponin.</li>
-                            <li><strong>Blocking:</strong> Prevents non-specific binding of antibodies. Common blockers: BSA, serum, or commercial blocking buffers.</li>
-                            <li><strong>Primary antibody incubation:</strong> Antibody binds to the specific target (antigen). Incubation time/temperature depends on the antibody (e.g., 1 h RT or overnight 4°C).</li>
-                            <li><strong>Washing:</strong> Removes unbound primary antibody to reduce background.</li>
-                            <li><strong>Secondary antibody incubation:</strong> Binds to the primary antibody and is usually conjugated to a fluorophore or enzyme.</li>
-                            <li><strong>Washing:</strong> Again, to reduce background signal.</li>
-                            <li><strong>Counterstaining (optional):</strong> e.g., nuclear staining with DAPI or Hoechst.</li>
-                            <li><strong>Mounting and Imaging:</strong> Use appropriate mounting medium and acquire images with a fluorescence or confocal microscope.</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="highlight-note">
-                    <p><strong>What are possible sources of error during staining and how could appropriate control experiments look like?</strong></p>
-                    
-                    <h5 class="font-semibold mt-3 mb-2">Possible Sources of Error:</h5>
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse border border-gray-300 text-sm">
-                            <thead>
-                                <tr class="bg-purple-100">
-                                    <th class="border border-gray-300 p-2 text-left font-semibold">Error Type</th>
-                                    <th class="border border-gray-300 p-2 text-left font-semibold">Description</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Non-specific binding</td>
-                                    <td class="border border-gray-300 p-2">Antibodies bind to unintended targets or background</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Poor fixation</td>
-                                    <td class="border border-gray-300 p-2">Leads to loss of target protein or poor morphology</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Insufficient washing</td>
-                                    <td class="border border-gray-300 p-2">Causes high background signal</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Wrong antibody dilution</td>
-                                    <td class="border border-gray-300 p-2">Too concentrated: high background; too dilute: weak/no signal</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Cross-reactivity</td>
-                                    <td class="border border-gray-300 p-2">Secondary antibody binds to endogenous immunoglobulins</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Photobleaching</td>
-                                    <td class="border border-gray-300 p-2">Fluorophores fade during imaging</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <h5 class="font-semibold mt-4 mb-2">Control Experiments:</h5>
-                    <div class="overflow-x-auto">
-                        <table class="w-full border-collapse border border-gray-300 text-sm">
-                            <thead>
-                                <tr class="bg-green-100">
-                                    <th class="border border-gray-300 p-2 text-left font-semibold">Control Type</th>
-                                    <th class="border border-gray-300 p-2 text-left font-semibold">Purpose</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">No primary antibody control</td>
-                                    <td class="border border-gray-300 p-2">Detects background caused by secondary antibody alone</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Isotype control</td>
-                                    <td class="border border-gray-300 p-2">Uses a non-specific antibody of the same class as the primary; tests for non-specific Fc binding</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Positive control sample</td>
-                                    <td class="border border-gray-300 p-2">A sample known to express the target antigen ensures the staining worked</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Negative control sample</td>
-                                    <td class="border border-gray-300 p-2">A sample that lacks the target protein verifies specificity</td>
-                                </tr>
-                                <tr>
-                                    <td class="border border-gray-300 p-2 font-medium">Secondary-only control</td>
-                                    <td class="border border-gray-300 p-2">Apply only secondary antibody to check for cross-reactivity or background fluorescence</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+
+<div class="space-y-4">
+    <div class="qa-item">
+        <div class="qa-header">
+            <span class="qa-question"><strong>What are the essential steps for antibody staining?</strong></span>
+            <span class="qa-toggle">+</span>
+        </div>
+        <div class="qa-answer hidden">
+            <div class="text-sm mt-2">
+                <p><strong>Essential Steps for Antibody Staining:</strong></p>
+                <ul class="list-disc list-inside ml-4 mt-2 space-y-1">
+                    <li><strong>Fixation:</strong> Preserves cell/tissue structure and immobilizes antigens. Common fixatives: paraformaldehyde (PFA), methanol.</li>
+                    <li><strong>Permeabilization (if intracellular targets):</strong> Allows antibodies to enter the cells. Common reagents: Triton X-100, saponin.</li>
+                    <li><strong>Blocking:</strong> Prevents non-specific binding of antibodies. Common blockers: BSA, serum, or commercial blocking buffers.</li>
+                    <li><strong>Primary antibody incubation:</strong> Antibody binds to the specific target (antigen). Incubation time/temperature depends on the antibody (e.g., 1 h RT or overnight 4°C).</li>
+                    <li><strong>Washing:</strong> Removes unbound primary antibody to reduce background.</li>
+                    <li><strong>Secondary antibody incubation:</strong> Binds to the primary antibody and is usually conjugated to a fluorophore or enzyme.</li>
+                    <li><strong>Washing:</strong> Again, to reduce background signal.</li>
+                    <li><strong>Counterstaining (optional):</strong> e.g., nuclear staining with DAPI or Hoechst.</li>
+                    <li><strong>Mounting and Imaging:</strong> Use appropriate mounting medium and acquire images with a fluorescence or confocal microscope.</li>
+                </ul>
             </div>
         </div>
+    </div>
+    
+    <div class="qa-item">
+        <div class="qa-header">
+            <span class="qa-question"><strong>What are possible sources of error during staining and how could appropriate control experiments look like?</strong></span>
+            <span class="qa-toggle">+</span>
+        </div>
+        <div class="qa-answer hidden">
+            <h5 class="font-semibold mt-3 mb-2">Possible Sources of Error:</h5>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                    <thead>
+                        <tr class="bg-purple-100">
+                            <th class="border border-gray-300 p-2 text-left font-semibold">Error Type</th>
+                            <th class="border border-gray-300 p-2 text-left font-semibold">Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Non-specific binding</td>
+                            <td class="border border-gray-300 p-2">Antibodies bind to unintended targets or background</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Poor fixation</td>
+                            <td class="border border-gray-300 p-2">Leads to loss of target protein or poor morphology</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Insufficient washing</td>
+                            <td class="border border-gray-300 p-2">Causes high background signal</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Wrong antibody dilution</td>
+                            <td class="border border-gray-300 p-2">Too concentrated: high background; too dilute: weak/no signal</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Cross-reactivity</td>
+                            <td class="border border-gray-300 p-2">Secondary antibody binds to endogenous immunoglobulins</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Photobleaching</td>
+                            <td class="border border-gray-300 p-2">Fluorophores fade during imaging</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h5 class="font-semibold mt-4 mb-2">Control Experiments:</h5>
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse border border-gray-300 text-sm">
+                    <thead>
+                        <tr class="bg-green-100">
+                            <th class="border border-gray-300 p-2 text-left font-semibold">Control Type</th>
+                            <th class="border border-gray-300 p-2 text-left font-semibold">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">No primary antibody control</td>
+                            <td class="border border-gray-300 p-2">Detects background caused by secondary antibody alone</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Isotype control</td>
+                            <td class="border border-gray-300 p-2">Uses a non-specific antibody of the same class as the primary; tests for non-specific Fc binding</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Positive control sample</td>
+                            <td class="border border-gray-300 p-2">A sample known to express the target antigen ensures the staining worked</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Negative control sample</td>
+                            <td class="border border-gray-300 p-2">A sample that lacks the target protein verifies specificity</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 p-2 font-medium">Secondary-only control</td>
+                            <td class="border border-gray-300 p-2">Apply only secondary antibody to check for cross-reactivity or background fluorescence</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
     `;
 }
 
@@ -393,6 +401,26 @@ function calculateICCEfficiency() {
     }
 }
 
+function initializeQAItems(rootElement) {
+    rootElement.querySelectorAll('.qa-item').forEach(item => {
+        const header = item.querySelector('.qa-header');
+        const answer = item.querySelector('.qa-answer');
+        
+        header.addEventListener('click', () => {
+            const isExpanded = item.classList.contains('expanded');
+            
+            // Toggle current item
+            if (isExpanded) {
+                item.classList.remove('expanded');
+                answer.classList.add('hidden');
+            } else {
+                item.classList.add('expanded');
+                answer.classList.remove('hidden');
+            }
+        });
+    });
+}
+
 export default function initModule11(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -423,6 +451,9 @@ export default function initModule11(rootEl, sidebarEl) {
     // 3. Attach event listeners
     document.getElementById('calculate-icc-efficiency-btn')?.addEventListener('click', calculateICCEfficiency);
 
-    // 4. Render main module quiz
-    renderQuiz(QUIZ_DATA, 'quiz-container-module-11');
+    // 4. Initialize Q&A functionality
+    initializeQAItems(rootEl);
+
+    // 5. Render main module quiz
+    renderQuiz(QUIZ_DATA, 'quiz-container-module-11');  
 }

@@ -287,7 +287,7 @@ function getContent() {
             <div class="overflow-x-auto">
                 <table class="w-full border-collapse border border-gray-300 text-sm">
                     <thead>
-                        <tr class="bg-green-100">
+                        <tr class="bg-orange-100">
                             <th class="border border-gray-300 p-2 text-left font-semibold">Control Type</th>
                             <th class="border border-gray-300 p-2 text-left font-semibold">Purpose</th>
                         </tr>

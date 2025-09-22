@@ -877,9 +877,8 @@ document.addEventListener('keydown', (e) => {
         });
     }
 });
-    // 5. Initialize interactive terms functionality
-initializeInteractiveTerms(rootEl);
 
+    
 // 6. Initialize transfection methods functionality  
 initializeTransfectionMethods(rootEl);
 

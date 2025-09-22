@@ -248,7 +248,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                 <li>Timer, marker</li>
             </ul>
             
-            <div class="highlight-note">
+            <div class="orange-highlight-note">
                 <h4>How to prepare 2x BBS pH 6.95 (100mL):</h4>
                 <ul class="text-sm">
                     <li>You need:</li>
@@ -280,7 +280,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                 </ul>
             </div>
             
-            <div class="highlight-note">
+            <div class="orange-highlight-note">
                 <p><strong>The following protocol is for transfecting one well of a 24-well plate. Remember to scale up your calculations for the total number of wells you plan to transfect for each plasmid, and always prepare a little extra (e.g., 10%) to account for pipetting inaccuracies!</strong></p>
                 <p><strong>Further Note:</strong> Calcium phosphate precipitates can be toxic or stressful to cells. If you plan to transfect both plasmids into the same well i.e. to the same cells, then prepare separate reactions (i.e. one tube per plasmid) and add a total of 50 µl of your DNA-calcium phosphate co-precipitate solutions (i.e. only 25 µl of each tube) to the cells.</p>
             </div>
@@ -368,7 +368,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
             <h4 class="styled-h4">Key Questions and Answers</h4>
             <div class="space-y-4">
                     
-                <div class="highlight-note">
+                <div class="orange-highlight-note">
                     <p><strong>What other possibilities are there to introduce foreign DNA into cells?</strong></p>
                     <p class="text-sm mt-1">In addition to calcium phosphate, several other methods exist:</p>
                     <ul class="text-sm mt-2 list-disc list-inside ml-4">
@@ -379,7 +379,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                     <p class="text-sm mt-2">Each method varies in efficiency, toxicity, and suitability for different cell types.</p>
                 </div>
                 
-                <div class="highlight-note">
+                <div class="orange-highlight-note">
                     <p><strong>What are the potential problems with transfection? (especially Calcium phosphate)</strong></p>
                     <ul class="text-sm mt-2 list-disc list-inside ml-4">
                         <li><strong>Inconsistency:</strong> Calcium phosphate precipitation is sensitive to pH and temperature, which can lead to batch-to-batch variability.</li>
@@ -390,7 +390,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                     </ul>
                 </div>
                 
-                <div class="highlight-note">
+                <div class="orange-highlight-note">
                     <p><strong>How can the transfection efficiency be influenced? (especially Calcium phosphate)</strong></p>
                     <ul class="text-sm mt-2 list-disc list-inside ml-4">
                         <li><strong>Precise pH control:</strong> Optimal pH for precipitate formation is usually around 7.05–7.12. Slight deviations can strongly affect efficiency.</li>

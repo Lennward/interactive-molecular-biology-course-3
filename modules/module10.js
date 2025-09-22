@@ -179,44 +179,6 @@ function getContent() {
                 </div>
                 <p id="efficiency-output" class="mt-3 font-semibold text-green-700"></p>
             </div>
-
-            <h3>Questions for Reflection</h3>
-            
-            <div class="space-y-4">
-                <div class="highlight-note">
-                    <p><strong>Why is GFP used in this experiment?</strong></p>
-                    <p class="text-sm mt-1"><strong>GFP (green fluorescent protein)</strong> serves as a <strong>reporter molecule</strong> to visualize the expression of a specific gene or protein. In this experiment, GFP indicates whether the plasmid has been successfully introduced into the cells and whether the target protein is being produced. It therefore enables simple and direct visualization of living or fixed cells under a fluorescence microscope.</p>
-                </div>
-                
-                <div class="highlight-note">
-                    <p><strong>What would happen if you used the wrong filter on the microscope?</strong></p>
-                    <p class="text-sm mt-1">If the <strong>wrong filter</strong> is used (e.g., one that does not match the excitation or emission wavelength of GFP), then:</p>
-                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
-                        <li>GFP is <strong>not stimulated</strong>, or</li>
-                        <li>the emitted light is <strong>not detected</strong>.</li>
-                    </ul>
-                    <p class="text-sm mt-2"><strong>Consequence: No signal or only a very weak signal</strong> is visible, even though GFP is actually being expressed.</p>
-                </div>
-                
-                <div class="highlight-note">
-                    <p><strong>Did all cells in a well that was transfected with GFP also express GFP?</strong></p>
-                    <p class="text-sm mt-1">As a rule: <strong>No.</strong></p>
-                    <p class="text-sm mt-1">Not all cells take up the plasmid during transfection or express GFP efficiently. The number of GFP-positive cells depends on:</p>
-                    <ul class="text-sm mt-2 list-disc list-inside ml-4">
-                        <li><strong>transfection efficiency</strong> (e.g., depending on cell type, transfection reagent),</li>
-                        <li><strong>plasmid quality</strong>, and</li>
-                        <li><strong>culture conditions</strong>.</li>
-                    </ul>
-                    <p class="text-sm mt-2">This is why one often sees a mixture of <strong>GFP-positive</strong> and <strong>non-fluorescent</strong> cells.</p>
-                </div>
-                
-                <div class="highlight-note">
-                    <p><strong>Where in the cell can you see the signal?</strong></p>
-                    <p class="text-sm mt-1">Since you used <strong>H2B-GFP</strong>, GFP is coupled to the histone protein <strong>H2B</strong>. Histones are part of the <strong>chromatin structure in the cell nucleus</strong>.</p>
-                    <p class="text-sm mt-2"><strong>→ This means:</strong> The GFP signal is <strong>only visible in the cell nucleus</strong> — and there it <strong>often appears patchy or structured</strong>, as it reflects the DNA organization (chromatin).</p>
-                    <p class="text-sm mt-2">This targeted nuclear localization makes H2B-GFP particularly useful for studies on cell division, nuclear morphology, or live imaging of cell nuclei.</p>
-                </div>
-            </div>
         </div>
     `;
 }

@@ -38,7 +38,7 @@ function getContent() {
             <p>After we analyzed our GFP transfection efficiency, we will now perform an immunocytochemistry (ICC) experiment 24-48 hrs after the transfection. In this module we will:</p>
             
             <ul class="list-disc list-inside ml-4 mb-4 bg-sky-50 p-3 rounded-md">
-                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein</li>
+                <li>Perform immunofluorescence staining to detect the FLAG-tagged protein LMNB1 expressed on the earlier cloned plasmid plL001_3xFLAG-LMNB1</li>
                 <li>Observe cells under a fluorescence microscope to indirectly detect FLAG expression (red fluorescence).</li>
                 <li>Calculate transfection efficiency (percentage of FLAG-positive cells).</li>
             </ul>
@@ -163,7 +163,7 @@ function getContent() {
                         <li>Place the 24-well plate in a suitable microscopy chamber.</li>
                         <li>Set the fluorescence microscope to the appropriate channel for the fluorophore used. → Alexa Fluor 594 excited using the 561 nm or even better at 594 nm laser lines</li>
                         <li>Look for immunostained (=fluorescent) cells and document the results by taking images. Take at least 3-5 images per well</li>
-                        <li>Also take a look at Hoechst- and GFP-stained cells (GFP should only be present in co-transfection = wells to which GFP-Plasmid and FLAG tag-Plasmid were added).</li>
+                        <li>Also take a look at Hoechst- and GFP-stained cells (GFP should only be present in co-transfection = wells to which GFP-Plasmid and FLAG tag-Plasmid plL001_3xFLAG-LMNB1 were added).</li>
                         <li><strong>Filter specifications:</strong>
                             <ul class="list-circle list-inside ml-4 text-sm">
                                 <li>Hoechst33258 excitation at 352 nm (UV light) and emission at 454 nm</li>
@@ -179,7 +179,7 @@ function getContent() {
                     <h4 class="styled-h4">7. Documentation & Analysis</h4>
                     <ul class="list-disc list-inside ml-4 space-y-2">
                         <li>Using ImageJ (Fiji) software, we can now easily determine transfection efficiency. The "Multi-point" tool can be used for this purpose. This makes it easy to count the cells.</li>
-                        <li>Count the cells that show FLAG-tag proteins made visible by ICC (red-fluorescent cells), as well as GFP-expressing cells and Hoechst-stained cells.</li>
+                        <li>Count the cells that show FLAG-tagged LMNB1 proteins made visible by ICC (red-fluorescent cells), as well as GFP-expressing cells and Hoechst-stained cells.</li>
                         <li>The Hoechst staining indicates the total cell count. By simple division, we now obtain the transfection efficiency of the FLAG-tag expressing plasmid and the GFP-expressing plasmid. This can be indicated as a percentage.</li>
                         <li>Note all steps, pay attention to any peculiarities in the fluorescence distribution and to possible confounding factors.</li>
                     </ul>

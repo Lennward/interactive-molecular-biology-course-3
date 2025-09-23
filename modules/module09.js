@@ -233,7 +233,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                 <li><strong>Plasmids:</strong>
                     <ul class="list-disc list-inside ml-4">
                         <li>pH2B-GFP (Concentration: e.g. 680 ng/µl - *please use the actual concentration from your stock tube label*; can be bought on e.g. Addgene)</li>
-                        <li>pRKV-FLAG (Concentration: e.g. 1015 ng/µl - *please use the actual concentration from your stock tube label*)</li>
+                        <li>plL001_3xFLAG-LMNB1 (Concentration: e.g. 1015 ng/µl - *please use the actual concentration from your stock tube label*)</li>
                     </ul>
                 </li>
                 <li><strong>Transfection reagents:</strong>
@@ -273,9 +273,9 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                 <p class="text-sm mt-2"><strong>Example Conditions:</strong></p>
                 <ul class="text-xs list-disc list-inside ml-4">
                     <li>A1-2: Plasmid pH2B-GFP</li>
-                    <li>B1-2: Plasmid pRKV-FLAG (B3-4 for control with only secondary antibody)</li>
-                    <li>B3-4: Plasmid pRKV-FLAG (for control during ICC with secondary antibody only)</li>
-                    <li>C1-2: Plasmid pH2B-GFP + Plasmid pRKV-FLAG</li>
+                    <li>B1-2: Plasmid plL001_3xFLAG-LMNB1 (B3-4 for control with only secondary antibody)</li>
+                    <li>B3-4: Plasmid plL001_3xFLAG-LMNB1 (for control during ICC with secondary antibody only)</li>
+                    <li>C1-2: Plasmid pH2B-GFP + Plasmid plL001_3xFLAG-LMNB1</li>
                     <li>D1-2: negative control (no plasmid = control for general transfection)</li>
                 </ul>
             </div>
@@ -290,7 +290,7 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
             
             <ul class="list-disc list-inside ml-4 space-y-2">
                 <li>In a sterile 1.5 mL microcentrifuge tube (Eppendorf tube), add <strong>25 µL of 0.25 M CaCl₂</strong>.</li>
-                <li><strong>Add Plasmid DNA:</strong> Add <strong>0.3 µg</strong> of your desired plasmid (pH2B-GFP or pRKV-FLAG) to the CaCl₂. 
+                <li><strong>Add Plasmid DNA:</strong> Add <strong>0.3 µg</strong> of your desired plasmid (pH2B-GFP or plL001_3xFLAG-LMNB1) to the CaCl₂. 
                     <div class="p-2 mt-1 bg-amber-50 border-l-4 border-amber-400 text-amber-700 text-xs rounded-r-md">
                         <p><strong>Attention, Pipetting Pros!</strong> Pipetting volumes less than 0.5 µL is highly inaccurate. That's why you usually prepare a dilution of your plasmid to e.g. 0.1 µg/µl (= 100 ng/µl) in nuclease free H₂O (if not available in dH₂O).</p>
                         <p class="mt-1"><strong>Storage & Handling:</strong> Plasmids should be kept in the freezer and only be taken out on ice.</p>
@@ -421,8 +421,8 @@ There are numerous ways to get nucleic acids into cells, broadly categorized as:
                     <p class="text-sm mt-2 font-semibold">Plasmid map of pH2B-GFP used in the practical course. Can be bought e.g. on addgene</p>
                 </div>
                 <div class="text-center">
-                    <img src="images/image096.png" alt="pRKV-FLAG plasmid map" class="rounded-lg shadow-md mx-auto block w-[350px] max-w-full" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+pRKV-FLAG+Plasmid'; this.alt='Placeholder: pRKV-FLAG Plasmid Map';">
-                    <p class="text-sm mt-2 font-semibold">Plasmid map of pRKV-FLAG used in the practical course</p>
+                    <img src="images/image096.png" alt="plL001_3xFLAG-LMNB1 plasmid map" class="rounded-lg shadow-md mx-auto block w-[350px] max-w-full" onerror="this.onerror=null; this.src='https://placehold.co/300x300/e2e8f0/4a5568?text=Image+96:+plL001_3xFLAG-LMNB1+Plasmid'; this.alt='Placeholder: plL001_3xFLAG-LMNB1 Plasmid Map';">
+                    <p class="text-sm mt-2 font-semibold">Plasmid map of plL001_3xFLAG-LMNB1 used in the practical course</p>
                 </div>
             </div>
         </div>

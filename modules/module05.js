@@ -68,14 +68,14 @@ function getContent() {
             <p>Plasmid documentation and sequences are available for all vectors prior to purchase. The following screenshots show an <strong>example</strong> of a plasmid and its sequence.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image051.png" alt="Addgene plasmid page example" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+51:+Addgene+Plasmid+Page'; this.alt='Placeholder: Addgene Plasmid Page';">
+                <img src="images/image051.png" alt="Addgene plasmid page example" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+51:+Addgene+Plasmid+Page'; this.alt='Placeholder: Addgene Plasmid Page';">
                 <p class="text-sm text-gray-600 mt-2">Screenshot showing an example plasmid page on Addgene with detailed information and sequence data.</p>
             </div>
 
             <p>Specific features of the plasmid, such as promoter regions, coding regions, and restriction sites can be visualized using the Map tool on Addgene. One can also download the sequence and analyze it using a sequence editing and analysis program (see below).</p>
 
             <div class="my-6 text-center">
-                <img src="images/image052.png" alt="Addgene plasmid map visualization" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x350/e2e8f0/4a5568?text=Image+52:+Plasmid+Map+Tool'; this.alt='Placeholder: Plasmid Map Tool';">
+                <img src="images/image052.png" alt="Addgene plasmid map visualization" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x350/e2e8f0/4a5568?text=Image+52:+Plasmid+Map+Tool'; this.alt='Placeholder: Plasmid Map Tool';">
                 <p class="text-sm text-gray-600 mt-2">The Map tool on Addgene allows visualization of plasmid features including promoters, coding regions, and restriction sites.</p>
             </div>
 
@@ -118,7 +118,7 @@ function getContent() {
             <p>Even the best-designed primers sometimes result in the amplification of undesired DNA sequences. Therefore, after designing primers to amplify a gene of interest, one additional step is required to control for their sequence specificity to the target DNA. Specifically, one should examine whether primers bind to other, undesired regions within the template DNA. One means to do this is by using the BLAST tool in the NCBI web site. BLAST basically aligns your short DNA sequences to whole genomes (or to another DNA sequence) and shows to which sites your primers can bind. To use it you can copy your primer sequence (without restriction enzyme sites) into the search bar and see to how many different sites it binds.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image053.png" alt="BLAST search interface for primer specificity" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Image+53:+BLAST+Search'; this.alt='Placeholder: BLAST Search Interface';">
+                <img src="images/image053.png" alt="BLAST search interface for primer specificity" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Image+53:+BLAST+Search'; this.alt='Placeholder: BLAST Search Interface';">
                 <p class="text-sm text-gray-600 mt-2">BLAST search interface for checking primer specificity against genomic sequences.</p>
             </div>
 
@@ -128,7 +128,7 @@ function getContent() {
             <p>The simplest formula for determining primer melting temperatures (Tm) is <span class="formula">Tm = 2×(A+T) + 4×(C+G)</span>. However, salt concentrations and other physicochemical factors may also influence Tm. There are many commercial sites offering online tools for Tm calculations that take these factors into account (e.g., <a href="http://tmcalculator.neb.com/#!/" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">http://tmcalculator.neb.com/#!/</a>). These sites typically allow one to insert primer sequences and concentrations, and the polymerase and buffers used in order to obtain a recommended annealing temperature for use in the PCR cycling protocol.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image054.png" alt="Tm calculator tool interface" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x180/e2e8f0/4a5568?text=Image+54:+Tm+Calculator'; this.alt='Placeholder: Tm Calculator Tool';">
+                <img src="images/image054.png" alt="Tm calculator tool interface" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x180/e2e8f0/4a5568?text=Image+54:+Tm+Calculator'; this.alt='Placeholder: Tm Calculator Tool';">
                 <p class="text-sm text-gray-600 mt-2">Online Tm calculator tool for determining optimal annealing temperatures for PCR primers.</p>
             </div>
 
@@ -136,7 +136,7 @@ function getContent() {
             <p>To analyze primers for unwanted secondary structures or primer-dimers that could interfere with the PCR, we can use online tools available on the Integrated DNA Technologies website (<a href="https://eu.idtdna.com/calc/analyzer" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">https://eu.idtdna.com/calc/analyzer</a>) or others like <a href="https://www.biosyn.com/gizmo/tools/oligo/oligonucleotide%20properties%20calculator.htm" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">https://www.biosyn.com/gizmo/tools/oligo/oligonucleotide%20properties%20calculator.htm</a>. With this tool, it is possible to examine primers for hairpin, self-dimer and hetero-dimer formation. BLAST search and Tm mismatch analyses are also possible from this website.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image055.png" alt="IDT primer analysis tool showing secondary structure prediction" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x220/e2e8f0/4a5568?text=Image+55:+IDT+Primer+Analysis'; this.alt='Placeholder: IDT Primer Analysis Tool';">
+                <img src="images/image055.png" alt="IDT primer analysis tool showing secondary structure prediction" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x220/e2e8f0/4a5568?text=Image+55:+IDT+Primer+Analysis'; this.alt='Placeholder: IDT Primer Analysis Tool';">
                 <p class="text-sm text-gray-600 mt-2">IDT primer analysis tool interface showing secondary structure predictions and dimer formation analysis.</p>
             </div>
 

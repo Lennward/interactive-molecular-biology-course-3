@@ -51,9 +51,9 @@ function getContent() {
             <h2>Module 4: Introduction to molecular cloning</h2>
             
             <h3>General cloning concepts</h3>
-            <p>Molecular biology techniques take advantage of the canonical dogma (transcription, translation, ...) to manipulate these steps <em>in vitro</em> and produce recombinant DNA molecules and proteins that are useful for experimental purposes. Molecular cloning is the process by which a specific target DNA sequence is amplified by polymerase chain reaction from total genomic DNA or other sources like a genomic library or a plasmid, and then inserted into a plasmid vector of interest for further study.</p>
+            <p>Molecular biology techniques take advantage of the canonical dogma (Acivation, <strong>Transcription</strong>, Processing and <strong>Translation</strong>) to manipulate these steps <em>in vitro</em> and produce recombinant DNA molecules and proteins that are useful for experimental purposes. Molecular cloning is the process by which a specific target DNA sequence is amplified by polymerase chain reaction from total genomic DNA or other sources like a genomic library or a plasmid, and then inserted into a plasmid vector of interest for further study.</p>
 
-            <p>The basic steps of molecular cloning, depicted in Figure 2, include:</p>
+            <p>The basic steps of molecular cloning, depicted in the following figure, include:</p>
             
             <ol class="list-decimal list-inside ml-4 space-y-2 bg-slate-100 p-3 rounded-md shadow-sm">
                 <li><strong>Amplification</strong> of the target DNA sequence by polymerase chain reaction.</li>
@@ -64,10 +64,10 @@ function getContent() {
 
             <div class="my-6 text-center">
                 <img src="images/image041.png" alt="General cloning procedure schematic" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x500/e2e8f0/4a5568?text=Figure+2:+General+Cloning+Procedure'; this.alt='Placeholder: General Cloning Procedure';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 2.</strong> General cloning procedure. This schematic cartoon illustrates the general procedure for cloning a given double-stranded DNA sequence in a given circular plasmid. First, sequence-specific primers are created to match the start and end region to be amplified by PCR. These primers are designed to contain 5' overhangs that will provide specific restriction enzyme sites that will match with those available in the plasmid. Thus, after cutting the PCR products and the plasmid with the restriction enzymes (e.g., using BamHI and HindIII as shown here), they can finally be ligated to obtain a circular plasmid bearing the sequence of interest and transformed into competent E. coli. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+                <p class="text-sm text-gray-600 mt-2">FIgure shows the general cloning procedure. This schematic cartoon illustrates the general procedure for cloning a given double-stranded DNA sequence in a given circular plasmid. First, sequence-specific primers are created to match the start and end region to be amplified by PCR. These primers are designed to contain 5' overhangs that will provide specific restriction enzyme sites that will match with those available in the plasmid. Thus, after cutting the PCR products and the plasmid with the restriction enzymes (e.g., using BamHI and HindIII as shown here), they can finally be ligated to obtain a circular plasmid bearing the sequence of interest and transformed into competent E. coli. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
-            <p>The transformation is followed by a plasmid purification via e.g. mini prep, to purify the desired plasmid from the bacteria. In most cases this is followed by sequencing to verify that the obtained plasmid has the correct sequence. (Optionally also a Polymerase chain reaction (PCR) or digest can be performed to verify the plasmid sequence by length)</p>
+            <p>The transformation is followed by a plasmid purification via e.g. a mini prep, to purify the desired plasmid from the bacteria. In most cases this is followed by sequencing to verify that the obtained plasmid has the correct sequence. (Also a Polymerase chain reaction (PCR) or restriction digest can be performed to verify the plasmid sequence by length)</p>
 
             <div class="interactive-box">
                 <h4>Interactive: Cloning Steps Sequence</h4>
@@ -82,7 +82,7 @@ function getContent() {
             </div>
 
             <h3>Polymerase chain reaction (PCR)</h3>
-            <p>The technique of polymerase chain reaction (PCR) is based on our understanding of how a new DNA molecule is produced from a preexisting DNA sequence that serves as a template. In the laboratory, DNA polymerases resistant to high temperatures (≥ 100°C)—obtained from extremophile organisms—are used in combination with a thermocycler that controls the temperature of the reaction mixture to amplify double-stranded DNA molecules as shown in Figure 3.</p>
+            <p>The technique of polymerase chain reaction (PCR) is based on our understanding of how a new DNA molecule is produced from a preexisting DNA sequence that serves as a template. In the laboratory, DNA polymerases resistant to high temperatures (≥ 100°C)—obtained from extremophile organisms—are used in combination with a thermocycler that controls the temperature of the reaction mixture to amplify double-stranded DNA molecules as shown in the following Figure.</p>
             
             <p>In the first step of the PCR, the reaction mixture is brought to a high temperature in order to melt the DNA duplexes. This step is followed by the annealing of a specific pair of short (typically, 17–30 nucleotides) sequences called primers that define the edges of the DNA sequence to be amplified. The next step involves the elongation of the new nascent DNA strand driven by the DNA polymerase, until completion. The process is repeated over many cycles until the desired amount of DNA is synthesized.</p>
 

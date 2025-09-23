@@ -49,13 +49,7 @@ function getContent() {
             
             <p>With this it is possible to identify the sequences of commercial plasmids (e.g. the plasmid that you are using as template for your cloning) from company websites and other DNA sequences (e.g. the sequence of your GOI) from online databases. Further <em>in silico</em> cloning is especially useful to design <span class="clickable-term" data-term="primers">primers</span> which are needed for a PCR. In addition, <em>in silico</em> cloning enables you to identify restriction enzyme sites and edit plasmid vector sequences.</p>
 
-            <div class="interactive-terms-grid primers-section">
-                <div class="interactive-term" data-term="primers">
-                    <div class="term-title">Primers</div>
-                    <div class="term-explanation">A primer is a short nucleic acid sequence that provides a starting point for DNA synthesis. In natural biological processes, like DNA replication, primers are short strands of RNA created by the enzyme primase. However, in laboratory techniques such as the Polymerase Chain Reaction (PCR), short DNA fragments are synthesized and used as primers to target specific DNA sequences for amplification or sequencing.</div>
-                </div>
-            </div>
-
+            
             <div class="interactive-box">
                 <h4>Quick Check: What is in silico cloning?</h4>
                 <p class="text-sm mb-2">Select the best definition:</p>
@@ -304,6 +298,67 @@ function getContent() {
                 font-size: 0.85em;
             }
         }
+        /* Primer tooltip styling */
+        .primer-tooltip {
+            position: fixed;
+            z-index: 1000;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: all;
+        }
+
+        .tooltip-content {
+            background: white;
+            border: 2px solid var(--purple-light);
+            border-radius: 12px;
+            padding: 1.2rem;
+            max-width: 350px;
+            min-width: 280px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            animation: tooltipSlideIn 0.3s ease-out;
+        }
+
+        @keyframes tooltipSlideIn {
+            from {
+                transform: translateY(-10px) scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .tooltip-close {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--purple-medium);
+            cursor: pointer;
+            transition: color 0.2s ease;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tooltip-close:hover {
+            color: var(--purple-dark);
+        }
+
+        .tooltip-text {
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            padding-right: 20px;
+            margin: 0;
+        }
         </style>
     `;
 }
@@ -395,22 +450,47 @@ function initializeInteractiveTerms(rootElement) {
         });
     });
 
-    // Handle clickable inline terms
+   // Handle clickable inline terms - show tooltip/popup
     rootElement.querySelectorAll('.clickable-term').forEach(clickableTerm => {
         clickableTerm.addEventListener('click', (e) => {
             e.preventDefault();
-            const termName = clickableTerm.dataset.term;
-            const correspondingTerm = rootElement.querySelector(`.interactive-term[data-term="${termName}"]`);
-            if (correspondingTerm) {
-                // Close all other expanded terms
-                rootElement.querySelectorAll('.primers-section .interactive-term.expanded').forEach(otherTerm => {
-                    otherTerm.classList.remove('expanded', 'active');
-                });
-                // Expand the corresponding term
-                correspondingTerm.classList.add('expanded', 'active');
-                // Scroll to the term
-                correspondingTerm.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
+            e.stopPropagation();
+            
+            // Remove any existing tooltips
+            document.querySelectorAll('.primer-tooltip').forEach(tooltip => tooltip.remove());
+            
+            // Create tooltip
+            const tooltip = document.createElement('div');
+            tooltip.className = 'primer-tooltip';
+            tooltip.innerHTML = `
+                <div class="tooltip-content">
+                    <button class="tooltip-close">×</button>
+                    <h5 style="font-weight: 600; color: var(--purple-dark); margin-bottom: 0.5rem;">Primers</h5>
+                    <p class="tooltip-text">A primer is a short nucleic acid sequence that provides a starting point for DNA synthesis. In natural biological processes, like DNA replication, primers are short strands of RNA created by the enzyme primase. However, in laboratory techniques such as the Polymerase Chain Reaction (PCR), short DNA fragments are synthesized and used as primers to target specific DNA sequences for amplification or sequencing.</p>
+                </div>
+            `;
+            
+            // Position tooltip
+            const rect = clickableTerm.getBoundingClientRect();
+            tooltip.style.position = 'fixed';
+            tooltip.style.left = Math.min(rect.left, window.innerWidth - 350) + 'px';
+            tooltip.style.top = (rect.bottom + 10) + 'px';
+            tooltip.style.zIndex = '1000';
+            
+            document.body.appendChild(tooltip);
+            
+            // Add close functionality
+            tooltip.querySelector('.tooltip-close').addEventListener('click', () => {
+                tooltip.remove();
+            });
+            
+            // Close on outside click
+            document.addEventListener('click', function closeTooltip(e) {
+                if (!tooltip.contains(e.target) && e.target !== clickableTerm) {
+                    tooltip.remove();
+                    document.removeEventListener('click', closeTooltip);
+                }
+            });
         });
     });
 

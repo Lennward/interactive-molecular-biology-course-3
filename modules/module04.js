@@ -88,14 +88,14 @@ function getContent() {
 
             <div class="my-6 text-center">
                 <img src="images/image042.png" alt="PCR steps diagram" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/200x500/e2e8f0/4a5568?text=Figure+3:+PCR+Steps'; this.alt='Placeholder: PCR Steps';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 3.</strong> Steps employed during a PCR for obtaining large amounts of a specific DNA sequence using specific primers. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+                <p class="text-sm text-gray-600 mt-2">The figure shows the steps employed during a PCR for obtaining large amounts of a specific DNA sequence using specific primers. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
-            <p>After the desired PCR product is obtained, it may be introduced into an expression vector, usually a plasmid. The plasmid one chosen depends on the application of interest. Some possibilities include: mammalian expression vectors, reporter gene vectors, vectors for protein production in bacteria, etc. Regardless of their specific purpose, however, all plasmid expression vectors contain at least 3 specific components: 1) A bacterial replication origin, 2) a selection gene, and 3) a polylinker or multiple cloning site (MCS) as shown in Figure 4.</p>
+            <p>After the desired PCR product is obtained, it may be introduced into an expression vector, usually a plasmid. The plasmid one chosen depends on the application of interest. Some possibilities include: mammalian expression vectors, reporter gene vectors, vectors for protein production in bacteria, etc. Regardless of their specific purpose, however, all plasmid expression vectors contain at least 3 specific components: 1) A bacterial replication origin, 2) a selection gene, and 3) a polylinker or multiple cloning site (MCS) as shown in the following figure.</p>
 
             <div class="my-6 text-center">
                 <img src="images/image043.png" alt="Basic components of a plasmid cloning vector" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/400x250/e2e8f0/4a5568?text=Figure+4:+Plasmid+Components'; this.alt='Placeholder: Plasmid Components';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 4.</strong> Basic components of a plasmid cloning vector for amplification in E. coli. The replication origin (ORI) enables the bacteria to produce many copies of the plasmid as they grow and reproduce. A selection gene like the β-lactamase gene (amp<sup>r</sup>) confers resistance to the antibiotic ampicillin. A polylinker region containing multiple restriction enzyme sites allows for the insertion of DNA sequences using a variety of restriction enzymes. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+                <p class="text-sm text-gray-600 mt-2">The figure shows the basic components of a plasmid cloning vector for amplification in E. coli. The replication origin (ORI) enables the bacteria to produce many copies of the plasmid as they grow and reproduce. A selection gene like the β-lactamase gene (amp<sup>r</sup>) confers resistance to the antibiotic ampicillin. A polylinker region containing multiple restriction enzyme sites allows for the insertion of DNA sequences using a variety of restriction enzymes. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
             <div class="interactive-box">
@@ -127,35 +127,36 @@ function getContent() {
                 <div id="plasmid-components-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
             </div>
 
-            <h4 class="styled-h4">GG8/Gibson Assembly:</h4>
-            <div class="highlight-note">
-                <p><strong>Note:</strong> Text below needs to be adapted based on specific course requirements.</p>
-            </div>
-
+            
             <h3>Restriction digestion</h3>
-            <p>Restriction enzymes are fundamental tools in molecular biology, which in combination with PCR constitute the basis for most of the techniques available. In general, restriction enzymes are endonucleases able to recognize short palindromic sequences in double stranded DNA molecules and produce a cut or separation. The cutting can produce either "sticky" or blunt ends depending on the restriction enzyme of choice (Figure 5).</p>
+            <p>Restriction enzymes are fundamental tools in molecular biology, which in combination with PCR constitute the basis for most of the techniques available. In general, restriction enzymes are endonucleases able to recognize short palindromic sequences in double stranded DNA molecules and produce a cut or separation. The cutting can produce either "sticky" or blunt ends depending on the restriction enzyme of choice (see following Figure).</p>
 
             <div class="my-6 text-center">
                 <img src="images/image044.png" alt="Examples of restriction endonucleases and their cuts" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Figure+5:+Restriction+Enzymes'; this.alt='Placeholder: Restriction Enzymes';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 5.</strong> Examples of the main kinds of endonucleases, their recognition sequences, and the resulting ends generated on the double-stranded DNA molecule. EcoRI and KpnI, for example, produce sticky ends, whilst SmaI generates blunt ends. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+                <p class="text-sm text-gray-600 mt-2">The figure shows examples of the main kinds of endonucleases, their recognition sequences, and the resulting ends generated on the double-stranded DNA molecule. EcoRI and KpnI, for example, produce sticky ends, whilst SmaI generates blunt ends. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
             <p>The most straightforward strategy for inserting a fragment of DNA into a plasmid is to cut or "digest" both the sequence to be inserted (the "insert") and the plasmid vector with the same pair of RE. In this way it is easy to introduce the insert in the appropriate orientation. Alternatively, it is possible to use just one restriction enzyme to produce the same sticky end on both ends. Using this method, however, the insert may be randomly oriented in either of two directions in the final expression plasmid. Thus, an additional screening of subsequent products is necessary. A similar situation arises when cloning is performed using restriction enzymes that produce blunt ends.</p>
 
             <h3>Ligation</h3>
-            <p>Following restriction digestion of both insert and plasmid vector, these are fused together in a ligation reaction. In this reaction, depicted in Figure 6, the ligase enzyme catalyzes the fusion of free ends on the plasmid and insert, producing a new plasmid that contains the DNA sequence of interest.</p>
+            <p>Following restriction digestion of both insert and plasmid vector, these are fused together in a ligation reaction. In this reaction, depicted in the following figure, the ligase enzyme catalyzes the fusion of free ends on the plasmid and insert, producing a new plasmid that contains the DNA sequence of interest.</p>
 
             <div class="my-6 text-center">
                 <img src="images/image045.png" alt="Ligation of restriction fragments with complementary sticky ends" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/300x400/e2e8f0/4a5568?text=Figure+6:+DNA+Ligation'; this.alt='Placeholder: DNA Ligation';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 6.</strong> Ligation of restriction fragments with complementary sticky ends. After the plasmid vector and DNA fragment of interest have both been digested with the same or compatible REs, those ends bearing complementary sequences will bind to each other, providing the substrate for the T4 DNA ligase. The ligase hydrolyzes two ATP molecules and fuses the double stranded DNA molecules together. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+                <p class="text-sm text-gray-600 mt-2">The figure shows the ligation of restriction fragments with complementary sticky ends. After the plasmid vector and DNA fragment of interest have both been digested with the same or compatible REs, those ends bearing complementary sequences will bind to each other, providing the substrate for the T4 DNA ligase. The ligase hydrolyzes two ATP molecules and fuses the double stranded DNA molecules together. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+            </div>
+
+<h4 class="styled-h4">GG8/Gibson Assembly:</h4>
+            <div class="highlight-note">
+                <p><strong>Note:</strong> Text below needs to be adapted based on specific course requirements.</p>
             </div>
 
             <h3>Transformation</h3>
-            <p>Once a recombinant plasmid has been generated, it is transformed into E. coli and amplified as depicted in Figure 7. Transformed bacteria are plated onto nutrient agar plates containing a toxin (e.g., ampicillin). Only bacteria that have taken up the recombinant plasmid and express the selection gene conferring resistance to this toxin will survive and replicate, allowing for amplification of the recombinant plasmid.</p>
+            <p>Once a recombinant plasmid has been generated, it is transformed into E. coli and amplified as depicted in the following figure. Transformed bacteria are plated onto nutrient agar plates containing a toxin (e.g., ampicillin). Only bacteria that have taken up the recombinant plasmid and express the selection gene conferring resistance to this toxin will survive and replicate, allowing for amplification of the recombinant plasmid.</p>
 
             <div class="my-6 text-center">
                 <img src="images/image046.png" alt="Basic protocol for cloning and transformation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" onerror="this.onerror=null; this.src='https://placehold.co/250x550/e2e8f0/4a5568?text=Figure+7:+Transformation+Protocol'; this.alt='Placeholder: Transformation Protocol';">
-                <p class="text-sm text-gray-600 mt-2"><strong>Figure 7.</strong> Basic protocol illustrating the cloning of a DNA sequence to generate a recombinant plasmid, its introduction into competent E. coli, known as transformation, and the positive selection of the bacteria colonies containing the recombinant plasmid by taking advantage of their ability to grow in the presence of the selection antibiotic. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
+                <p class="text-sm text-gray-600 mt-2">The figure shows the basic protocol illustrating the cloning of a DNA sequence to generate a recombinant plasmid, its introduction into competent E. coli, known as transformation, and the positive selection of the bacteria colonies containing the recombinant plasmid by taking advantage of their ability to grow in the presence of the selection antibiotic. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
             <div class="interactive-box">

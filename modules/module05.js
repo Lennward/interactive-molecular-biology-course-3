@@ -143,6 +143,189 @@ function getContent() {
             <div class="highlight-note">
                 <p><strong>Key Takeaway:</strong> Successful <em>in silico</em> cloning requires careful consideration of primer design, specificity checking, and thorough analysis of secondary structures to ensure optimal PCR performance and successful cloning outcomes.</p>
             </div>
+            <h3>Practical Exercise: Golden Gate Assembly in SnapGene</h3>
+            <p>Now let's put the theory into practice! In this exercise, we will clone the gene for lamin B1 with a 3xFLAG-tag (3xFLAG-LMNB1) into the plR006_FKBP-CD28TM-ZipEE plasmid using a Golden Gate Assembly strategy.</p>
+
+            <div class="goal-box">
+                <strong>🎯 Learning Goal:</strong>
+                <p>Learn to perform in silico Golden Gate Assembly cloning using SnapGene software</p>
+            </div>
+
+            <h4 class="styled-h4">Step-by-Step SnapGene Tutorial</h4>
+            
+            <div class="procedure-steps">
+                <div class="procedure-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>Download and Open Source Plasmid</h5>
+                        <p>Download the sequence of addgene plasmid qTAG-N-Blast-3xFLAG-LMNB1 and open the .dna file in SnapGene.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image056.png" alt="qTAG-N-Blast-3xFLAG-LMNB1 plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+056:+Source+Plasmid+Map'; this.alt='Placeholder: Source Plasmid Map';">
+                            <p class="text-sm text-gray-600 mt-2">The map of plasmid qTAG-N-Blast-3xFLAG-LMNB1 contains the gene of interest (GOI) that we want to clone into a different plasmid.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>Open Vector (Backbone) Plasmid</h5>
+                        <p>Open the sequence of your vector (backbone) in SnapGene. In our case, we're using plR006_FKBP-CD28TM-ZipEE, but you can also use a different plasmid as vector.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image057.png" alt="plR006_FKBP-CD28TM-ZipEE vector plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+057:+Vector+Plasmid+Map'; this.alt='Placeholder: Vector Plasmid Map';">
+                            <p class="text-sm text-gray-600 mt-2">The map of plasmid plR006_FKBP-CD28TM-ZipEE serves as our vector backbone.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h5>Create Feature Annotation</h5>
+                        <p>Change the view from Map to Sequence and mark the sequence following the 3xFLAG until the stop codon (depicted as *). Go to Features > Add Features and create a new feature called LMNB1.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image058.png" alt="Adding LMNB1 feature annotation in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+058:+Feature+Annotation'; this.alt='Placeholder: Feature Annotation';">
+                            <p class="text-sm text-gray-600 mt-2">Creating a new feature annotation for the LMNB1 gene sequence in SnapGene.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h5>Select Vector Sequence to Replace</h5>
+                        <p>Golden Gate Assembly requires PCRs of both the GOI (insert) and the vector (backbone). This means we need 4 primers total: 2 for the GOI and 2 for the vector. First, select the part of the coding sequence in your vector that you want to replace with the new insert.</p>
+                        <div class="orange-highlight-note">
+                            <h4>Golden Gate Assembly Overview</h4>
+                            <p>This specific cloning method was described in the "Introduction to molecular cloning" module. It involves:</p>
+                            <ul>
+                                <li>PCR amplification of the gene of interest (insert)</li>
+                                <li>PCR amplification of the vector (backbone)</li>
+                                <li>Assembly using a Type IIs restriction enzyme (like BsaI)</li>
+                            </ul>
+                        </div>
+                        <div class="my-4 text-center">
+                            <img src="images/image059.png" alt="Selecting vector sequence to replace in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+059:+Vector+Selection'; this.alt='Placeholder: Vector Selection';">
+                            <p class="text-sm text-gray-600 mt-2">Selecting the coding sequence region (shown in blue) that will be replaced with the new insert.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h5>Initialize Golden Gate Assembly</h5>
+                        <p>Go to Actions > Golden Gate Assembly > Insert Fragment. A new window will open for the Golden Gate Assembly setup.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image151.png" alt="Golden Gate Assembly dialog in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+151:+Golden+Gate+Dialog'; this.alt='Placeholder: Golden Gate Dialog';">
+                            <p class="text-sm text-gray-600 mt-2">The Golden Gate Assembly dialog window in SnapGene.</p>
+                        </div>
+                        <p>The vector should already be set correctly, and you can choose the restriction enzyme (Golden Gate enzyme) that you want to use. In our case, we're using <strong>BsaI</strong>.</p>
+                        <div class="enzyme-info-box">
+                            <h4>BsaI Cutting Site</h4>
+                            <div class="cutting-site">5'-GGTCTC(N)₁↓(N)₄-3'<br>3'-(N)₄↑(N)₁CCAGAG-5'</div>
+                            <p class="text-sm">BsaI is a Type IIs restriction enzyme that cuts outside its recognition sequence, creating programmable sticky ends.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h5>Select Fragment Source</h5>
+                        <p>Go to Fragment and at "Source of Fragment" select the plasmid that contains your GOI (gene of interest = insert you want to introduce into the other vector) and select the sequence of your GOI.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image152.png" alt="Selecting fragment source in SnapGene Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+152:+Fragment+Selection'; this.alt='Placeholder: Fragment Selection';">
+                            <p class="text-sm text-gray-600 mt-2">Selecting the gene of interest (highlighted in blue) from the source plasmid.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h5>Choose PCR Primers</h5>
+                        <p>Go to "Product" and click on "Choose PCR Primers" to let SnapGene design the primers for your cloning reaction.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image153.png" alt="PCR primer selection interface in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+153:+Primer+Selection'; this.alt='Placeholder: Primer Selection';">
+                            <p class="text-sm text-gray-600 mt-2">The PCR primer selection interface in SnapGene.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h5>Generate and Validate Primers</h5>
+                        <p>You can leave the settings for the primers as they are and click "Choose Primers". If the generated primers work properly, the indicator in the right corner will turn green.</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image154.png" alt="Successful primer generation indicated by green status" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+154:+Primer+Validation'; this.alt='Placeholder: Primer Validation';">
+                            <p class="text-sm text-gray-600 mt-2">Green indicator showing successful primer generation and validation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">9</div>
+                    <div class="step-content">
+                        <h5>Complete the Assembly</h5>
+                        <p>Give the file a name and click "Assemble". You now have your new cloned plasmid (in our case plL001_3xFLAG-LMNB1).</p>
+                        <div class="my-4 text-center">
+                            <img src="images/image155.png" alt="Final assembled plasmid map plL001_3xFLAG-LMNB1" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+155:+Final+Plasmid+Map'; this.alt='Placeholder: Final Plasmid Map';">
+                            <p class="text-sm text-gray-600 mt-2">The map of the final assembled plasmid plL001_3xFLAG-LMNB1.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="procedure-step">
+                    <div class="step-number">10</div>
+                    <div class="step-content">
+                        <h5>Validate Your Primers</h5>
+                        <p>You can see the primers for the fragment and the vector in the file for the cloned plasmid if you switch from "Map" to "Primers". Now you can check the primers using the validation criteria described earlier in this module.</p>
+                        <p><strong>Next step:</strong> If the primers pass all (or most) of the validation tests, you can order them from a company's website and proceed to the actual molecular cloning in the lab!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="interactive-box">
+                <h4>Practice Questions</h4>
+                <div class="practice-questions">
+                    <div class="practice-question-item">
+                        <h5>Question 1: Reading Frame</h5>
+                        <p><strong>What is meant by the term "reading frame" when referring to a DNA sequence? Why is it important to keep the reading frame in mind when creating constructs to code for fusion proteins?</strong></p>
+                        <div class="practice-answer" style="display: none;">
+                            <p><strong>Answer:</strong> A reading frame refers to the way nucleotides in DNA are grouped into codons (triplets) for translation. There are three possible reading frames in each direction. When creating fusion proteins, it's crucial to maintain the correct reading frame to ensure:</p>
+                            <ul>
+                                <li>The protein sequence remains intact</li>
+                                <li>No premature stop codons are introduced</li>
+                                <li>The fusion maintains proper protein function</li>
+                                <li>The tagged protein is expressed at the correct molecular weight</li>
+                            </ul>
+                        </div>
+                        <button class="practice-toggle bg-orange-500 text-white px-3 py-1 rounded text-sm mt-2">Show Answer</button>
+                    </div>
+
+                    <div class="practice-question-item">
+                        <h5>Question 2: Primer Tm Calculation</h5>
+                        <p><strong>Why do we exclude the added restriction enzyme sites and overhangs from the primer's sequence when calculating primer Tm values?</strong></p>
+                        <div class="practice-answer" style="display: none;">
+                            <p><strong>Answer:</strong> We exclude restriction enzyme sites and overhangs from Tm calculations because:</p>
+                            <ul>
+                                <li>These sequences don't bind to the template DNA during the initial PCR cycles</li>
+                                <li>Only the template-complementary region determines the actual annealing temperature</li>
+                                <li>Including non-complementary sequences would give an artificially high Tm</li>
+                                <li>The restriction sites are only incorporated after several PCR cycles</li>
+                                <li>Accurate Tm calculation ensures optimal PCR annealing temperature</li>
+                            </ul>
+                        </div>
+                        <button class="practice-toggle bg-orange-500 text-white px-3 py-1 rounded text-sm mt-2">Show Answer</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-note">
+                <p><strong>Module Complete!</strong> You now understand both the theoretical principles of <em>in silico</em> cloning and have hands-on experience with Golden Gate Assembly using SnapGene. These skills are essential for successful molecular cloning projects in the laboratory.</p>
+            </div>
         </div>
 
         <style>
@@ -359,6 +542,144 @@ function getContent() {
             padding-right: 20px;
             margin: 0;
         }
+        /* Procedure steps styling */
+        .procedure-steps {
+            margin: 2rem 0;
+        }
+
+        .procedure-step {
+            display: flex;
+            margin-bottom: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 2px solid var(--purple-light);
+            transition: all 0.3s ease;
+        }
+
+        .procedure-step:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, var(--orange-medium), var(--orange-accent));
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .step-content h5 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .step-content p {
+            line-height: 1.6;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        /* Enzyme info box styling */
+        .enzyme-info-box {
+            background: linear-gradient(135deg, rgba(251, 136, 37, 0.1), rgba(253, 172, 19, 0.1));
+            border: 2px solid var(--orange-light);
+            border-radius: 0.75rem;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .enzyme-info-box h4 {
+            color: var(--orange-dark);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .cutting-site {
+            font-family: 'Courier New', monospace;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 1px solid var(--orange-medium);
+            margin: 0.5rem 0;
+            text-align: center;
+            font-weight: bold;
+            color: var(--purple-dark);
+        }
+
+        /* Practice questions styling */
+        .practice-questions {
+            margin-top: 1rem;
+        }
+
+        .practice-question-item {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--purple-light);
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .practice-question-item h5 {
+            color: var(--purple-dark);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .practice-answer {
+            background: var(--background-light);
+            border-left: 4px solid var(--orange-medium);
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: 0.5rem;
+        }
+
+        .practice-answer ul {
+            margin-top: 0.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .practice-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        .practice-toggle {
+            transition: background-color 0.2s ease;
+        }
+
+        .practice-toggle:hover {
+            background-color: var(--orange-dark);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .procedure-step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.2rem;
+            }
+            
+            .step-content {
+                padding: 1rem;
+            }
+        }
         </style>
     `;
 }
@@ -572,4 +893,22 @@ export default function initModule5(rootEl, sidebarEl) {
 
     // 5. Initialize interactive terms functionality
     initializeInteractiveTerms(rootEl);
+    
+    // 6. Initialize practice question toggles
+    rootEl.querySelectorAll('.practice-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const answerDiv = button.parentElement.querySelector('.practice-answer');
+            if (answerDiv.style.display === 'none') {
+                answerDiv.style.display = 'block';
+                button.textContent = 'Hide Answer';
+                button.classList.remove('bg-orange-500');
+                button.classList.add('bg-gray-500');
+            } else {
+                answerDiv.style.display = 'none';
+                button.textContent = 'Show Answer';
+                button.classList.remove('bg-gray-500');
+                button.classList.add('bg-orange-500');
+            }
+        });
+    });
 }

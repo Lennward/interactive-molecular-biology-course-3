@@ -223,7 +223,7 @@ function getContent() {
                         <p>The vector should already be set correctly, and you can choose the restriction enzyme (Golden Gate enzyme) that you want to use. In our case, we're using <strong>BsaI</strong>.</p>
                         <div class="enzyme-info-box">
                             <h4>BsaI Cutting Site</h4>
-                            <div class="cutting-site">5'-GGTCTC(N)₁↓(N)₄-3'<br>3'-(N)₄↑(N)₁CCAGAG-5'</div>
+                            <div class="cutting-site">5'-...GGTCTC(N)₁↓...-3'<br>3'-...CCAGAG(N)₅↑...-5'</div>
                             <p class="text-sm">BsaI is a Type IIs restriction enzyme that cuts outside its recognition sequence, creating programmable sticky ends.</p>
                         </div>
                     </div>

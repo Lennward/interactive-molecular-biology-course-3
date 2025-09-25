@@ -314,7 +314,6 @@ function getContent() {
                                 <li>These sequences don't bind to the template DNA during the initial PCR cycles</li>
                                 <li>Only the template-complementary region determines the actual annealing temperature</li>
                                 <li>Including non-complementary sequences would give an artificially high Tm</li>
-                                <li>The restriction sites are only incorporated after several PCR cycles</li>
                                 <li>Accurate Tm calculation ensures optimal PCR annealing temperature</li>
                             </ul>
                         </div>

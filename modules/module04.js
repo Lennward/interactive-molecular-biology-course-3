@@ -151,16 +151,16 @@ function getContent() {
 
             <div class="my-6 text-center">
                 <img src="images/image046.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
-                <p class="text-sm text-gray-600 mt-2">BsaI recognition sequence (5'...GGTCTC(N)₁...3') showing how Type IIS enzymes cut outside their recognition site, enabling custom overhang design.</p>
+                <p class="text-sm text-gray-600 mt-2">BsaI recognition sequence (5'...GGTCTC(N)₁...3') showing how Type IIS enzymes cut outside their recognition site, enabling custom overhang design. Image from <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGl7r3i4nHVKCvOFZRh3O06sMERVks7N4tw&s" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a></p>
             </div>
 
             <p>The most significant advantage of this approach is that <strong>digestion and ligation can occur simultaneously in a single reaction tube</strong>. Unlike the traditional four-step process (PCR, restriction digestion, ligation, transformation), Golden Gate streamlines cloning into fewer steps while enabling <strong>multi-fragment assembly</strong> in a single reaction.</p>
 
             <div class="my-6 text-center">
                 <img src="images/image047.png" alt="Side-by-side comparison of Traditional cloning vs Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Traditional+vs+Golden+Gate+Cloning'; this.alt='Placeholder: Traditional vs Golden Gate Cloning';">
-                <p class="text-sm text-gray-600 mt-2">Comparison of traditional cloning (multi-step protocol) versus Golden Gate Assembly (digestion & ligation in a single reaction), highlighting the scarless assembly advantage.</p>
+                <p class="text-sm text-gray-600 mt-2">Comparison of traditional cloning (multi-step protocol) versus Golden Gate Assembly (digestion & ligation in a single reaction), highlighting the scarless assembly advantage.Image from <a href="https://www.neb.com/en/-/media/nebus/page-images/blogs/blog-posts/getting-started-with-golden-gate/goldengateassembly_blog_traditionalcloningvsgoldengateassembly.png?sc_lang=en&rev=965e30d0fb2a4f0d83fedf3252b0645e&hash=E3373E4A32D8B9722225C0A74D5BDC61" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a></p>
             </div>
-
+            
             <div class="interactive-box">
                 <h4>Interactive: Golden Gate vs Traditional Cloning</h4>
                 <p class="text-sm mb-3">What is the key advantage of Golden Gate cloning over traditional restriction enzyme cloning?</p>
@@ -178,7 +178,7 @@ function getContent() {
 
             <div class="my-6 text-center">
                 <img src="images/image048.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
-                <p class="text-sm text-gray-600 mt-2">Golden Gate Workflow: In its simplest form, Golden Gate Assembly requires a Type IIS recognition site, in this case, BsaI-HFv2 (GGTCTC), added to both ends of a dsDNA fragment. After digestion, these sites are left behind, with each fragment bearing the designed 4-base overhangs that direct the assembly.</p>
+                <p class="text-sm text-gray-600 mt-2">Golden Gate Workflow: In its simplest form, Golden Gate Assembly requires a Type IIS recognition site, in this case, BsaI-HFv2 (GGTCTC), added to both ends of a dsDNA fragment. After digestion, these sites are left behind, with each fragment bearing the designed 4-base overhangs that direct the assembly.Image adapted from <a href="https://www.neb-online.de/wp-content/uploads/2021/01/GoldenGateOverview_LP_0520_CL_Update_2021-1-919x1024.jpg" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
             </div>
 
             <p>The reaction utilizes <strong>thermocycling</strong> that alternates between temperatures favoring restriction enzyme activity and DNA ligase activity. This cycling continuously cuts incorrectly ligated products while allowing correctly assembled constructs to accumulate, resulting in highly efficient assembly.</p>

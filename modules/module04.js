@@ -150,14 +150,14 @@ function getContent() {
             <p>Golden Gate cloning represents an advanced molecular cloning strategy that builds upon the fundamental principles we've just covered. While traditional cloning methods use restriction enzymes that cut within their recognition sites, Golden Gate cloning employs <strong>Type IIS restriction enzymes</strong> that cut outside their recognition sequences. This key difference enables the creation of <strong>custom overhangs</strong> that can be precisely designed to control fragment assembly.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image047.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
+                <img src="images/image046.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
                 <p class="text-sm text-gray-600 mt-2">BsaI recognition sequence (5'...GGTCTC(N)₁...3') showing how Type IIS enzymes cut outside their recognition site, enabling custom overhang design.</p>
             </div>
 
             <p>The most significant advantage of this approach is that <strong>digestion and ligation can occur simultaneously in a single reaction tube</strong>. Unlike the traditional four-step process (PCR, restriction digestion, ligation, transformation), Golden Gate streamlines cloning into fewer steps while enabling <strong>multi-fragment assembly</strong> in a single reaction.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image048.png" alt="Side-by-side comparison of Traditional cloning vs Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Traditional+vs+Golden+Gate+Cloning'; this.alt='Placeholder: Traditional vs Golden Gate Cloning';">
+                <img src="images/image047.png" alt="Side-by-side comparison of Traditional cloning vs Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Traditional+vs+Golden+Gate+Cloning'; this.alt='Placeholder: Traditional vs Golden Gate Cloning';">
                 <p class="text-sm text-gray-600 mt-2">Comparison of traditional cloning (multi-step protocol) versus Golden Gate Assembly (digestion & ligation in a single reaction), highlighting the scarless assembly advantage.</p>
             </div>
 
@@ -177,7 +177,7 @@ function getContent() {
             <p>Type IIS enzymes, such as BsaI, recognize their binding site but cut at a defined distance outside this sequence. This allows researchers to design custom 4-base overhangs that are independent of the enzyme's recognition sequence. Each DNA fragment can be engineered with specific overhangs that ensure fragments ligate only in the desired order and orientation.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image049.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
+                <img src="images/image048.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
                 <p class="text-sm text-gray-600 mt-2">Golden Gate workflow showing how multiple fragments with designed overhangs can be assembled into a destination vector in a single reaction using thermocycling.</p>
             </div>
 
@@ -207,7 +207,7 @@ function getContent() {
             <p>Once a recombinant plasmid has been generated, it is transformed into E. coli and amplified as depicted in the following figure. Transformed bacteria are plated onto nutrient agar plates containing a toxin (e.g., ampicillin). Only bacteria that have taken up the recombinant plasmid and express the selection gene conferring resistance to this toxin will survive and replicate, allowing for amplification of the recombinant plasmid.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image046.png" alt="Basic protocol for cloning and transformation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[350px]" onerror="this.onerror=null; this.src='https://placehold.co/250x550/e2e8f0/4a5568?text=Figure+7:+Transformation+Protocol'; this.alt='Placeholder: Transformation Protocol';">
+                <img src="images/image049.png" alt="Basic protocol for cloning and transformation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[350px]" onerror="this.onerror=null; this.src='https://placehold.co/250x550/e2e8f0/4a5568?text=Figure+7:+Transformation+Protocol'; this.alt='Placeholder: Transformation Protocol';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the basic protocol illustrating the cloning of a DNA sequence to generate a recombinant plasmid, its introduction into competent E. coli, known as transformation, and the positive selection of the bacteria colonies containing the recombinant plasmid by taking advantage of their ability to grow in the presence of the selection antibiotic. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 

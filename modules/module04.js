@@ -178,7 +178,7 @@ function getContent() {
 
             <div class="my-6 text-center">
                 <img src="images/image048.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
-                <p class="text-sm text-gray-600 mt-2">Golden Gate workflow showing how multiple fragments with designed overhangs can be assembled into a destination vector in a single reaction using thermocycling.</p>
+                <p class="text-sm text-gray-600 mt-2">Golden Gate Workflow: In its simplest form, Golden Gate Assembly requires a Type IIS recognition site, in this case, BsaI-HFv2 (GGTCTC), added to both ends of a dsDNA fragment. After digestion, these sites are left behind, with each fragment bearing the designed 4-base overhangs that direct the assembly.</p>
             </div>
 
             <p>The reaction utilizes <strong>thermocycling</strong> that alternates between temperatures favoring restriction enzyme activity and DNA ligase activity. This cycling continuously cuts incorrectly ligated products while allowing correctly assembled constructs to accumulate, resulting in highly efficient assembly.</p>

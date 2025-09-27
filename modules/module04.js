@@ -146,10 +146,62 @@ function getContent() {
                 <p class="text-sm text-gray-600 mt-2">The figure shows the ligation of restriction fragments with complementary sticky ends. After the plasmid vector and DNA fragment of interest have both been digested with the same or compatible REs, those ends bearing complementary sequences will bind to each other, providing the substrate for the T4 DNA ligase. The ligase hydrolyzes two ATP molecules and fuses the double stranded DNA molecules together. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
-<h4 class="styled-h4">GG8 Assembly:</h4>
-            <div class="highlight-note">
-                <p><strong>Note:</strong> Text below needs to be adapted based on specific course requirements.</p>
+<h4 class="styled-h4">Golden Gate Cloning</h4>
+            <p>Golden Gate cloning represents an advanced molecular cloning strategy that builds upon the fundamental principles we've just covered. While traditional cloning methods use restriction enzymes that cut within their recognition sites, Golden Gate cloning employs <strong>Type IIS restriction enzymes</strong> that cut outside their recognition sequences. This key difference enables the creation of <strong>custom overhangs</strong> that can be precisely designed to control fragment assembly.</p>
+
+            <div class="my-6 text-center">
+                <img src="images/image047.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
+                <p class="text-sm text-gray-600 mt-2">BsaI recognition sequence (5'...GGTCTC(N)₁...3') showing how Type IIS enzymes cut outside their recognition site, enabling custom overhang design.</p>
             </div>
+
+            <p>The most significant advantage of this approach is that <strong>digestion and ligation can occur simultaneously in a single reaction tube</strong>. Unlike the traditional four-step process (PCR, restriction digestion, ligation, transformation), Golden Gate streamlines cloning into fewer steps while enabling <strong>multi-fragment assembly</strong> in a single reaction.</p>
+
+            <div class="my-6 text-center">
+                <img src="images/image048.png" alt="Side-by-side comparison of Traditional cloning vs Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Traditional+vs+Golden+Gate+Cloning'; this.alt='Placeholder: Traditional vs Golden Gate Cloning';">
+                <p class="text-sm text-gray-600 mt-2">Comparison of traditional cloning (multi-step protocol) versus Golden Gate Assembly (digestion & ligation in a single reaction), highlighting the scarless assembly advantage.</p>
+            </div>
+
+            <div class="interactive-box">
+                <h4>Interactive: Golden Gate vs Traditional Cloning</h4>
+                <p class="text-sm mb-3">What is the key advantage of Golden Gate cloning over traditional restriction enzyme cloning?</p>
+                <div id="golden-gate-quiz" class="space-y-1">
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Uses more restriction enzymes</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="true">Combines digestion and ligation in a single reaction</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Requires less DNA template</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Works only with bacterial vectors</button>
+                </div>
+                <div id="golden-gate-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+            </div>
+
+            <h5>Mechanism and Advantages:</h5>
+            <p>Type IIS enzymes, such as BsaI, recognize their binding site but cut at a defined distance outside this sequence. This allows researchers to design custom 4-base overhangs that are independent of the enzyme's recognition sequence. Each DNA fragment can be engineered with specific overhangs that ensure fragments ligate only in the desired order and orientation.</p>
+
+            <div class="my-6 text-center">
+                <img src="images/image049.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
+                <p class="text-sm text-gray-600 mt-2">Golden Gate workflow showing how multiple fragments with designed overhangs can be assembled into a destination vector in a single reaction using thermocycling.</p>
+            </div>
+
+            <p>The reaction utilizes <strong>thermocycling</strong> that alternates between temperatures favoring restriction enzyme activity and DNA ligase activity. This cycling continuously cuts incorrectly ligated products while allowing correctly assembled constructs to accumulate, resulting in highly efficient assembly.</p>
+
+            <div class="golden-gate-features">
+                <h5>Key Benefits:</h5>
+                <ul class="space-y-2 bg-slate-100 p-4 rounded-md shadow-sm">
+                    <li>• <strong>Scarless assembly:</strong> No residual restriction sites remain at junction points</li>
+                    <li>• <strong>Directional cloning:</strong> Custom overhangs ensure proper fragment orientation</li>
+                    <li>• <strong>Multiplexing capability:</strong> Multiple fragments can be assembled simultaneously</li>
+                    <li>• <strong>High efficiency:</strong> Thermocycling optimization drives the reaction toward correct products</li>
+                </ul>
+            </div>
+
+            <h5>Applications in Molecular Biology:</h5>
+            <p>Golden Gate cloning is particularly valuable for constructing complex expression vectors containing multiple functional elements such as promoters, coding sequences, and regulatory regions. It has become essential in synthetic biology applications where precise assembly of genetic circuits is required.</p>
+
+            <p>Following Golden Gate assembly, the resulting plasmids undergo the same transformation and selection processes described earlier in this module. Verification methods include colony PCR, restriction analysis, and DNA sequencing to confirm correct assembly.</p>
+
+            <div class="highlight-note">
+                <p><strong>Golden Gate cloning represents how molecular cloning techniques continue to evolve</strong>, offering researchers more efficient and precise tools for genetic engineering while maintaining the fundamental principles of DNA manipulation we've explored in this module. In Module 5, you'll see this technique applied practically using SnapGene software.</p>
+            </div>
+            
 
             <h3>Transformation</h3>
             <p>Once a recombinant plasmid has been generated, it is transformed into E. coli and amplified as depicted in the following figure. Transformed bacteria are plated onto nutrient agar plates containing a toxin (e.g., ampicillin). Only bacteria that have taken up the recombinant plasmid and express the selection gene conferring resistance to this toxin will survive and replicate, allowing for amplification of the recombinant plasmid.</p>
@@ -332,7 +384,19 @@ export default function initModule4(rootEl, sidebarEl) {
             });
         });
     }
-    
+
+    // Golden Gate quiz
+    const goldenGateContainer = document.getElementById('golden-gate-quiz');
+    if (goldenGateContainer) {
+        goldenGateContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const isCorrect = button.dataset.correct === 'true';
+                const correctFeedback = "<strong>Correct!</strong> Golden Gate cloning's main advantage is combining digestion and ligation in a single reaction tube with thermocycling, making it much more efficient than traditional multi-step cloning.";
+                const incorrectFeedback = "<strong>Not quite.</strong> The key advantage is that Golden Gate combines digestion and ligation in a single reaction, eliminating the need for separate digestion and ligation steps.";
+                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-4');
 }

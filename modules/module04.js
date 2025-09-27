@@ -146,7 +146,7 @@ function getContent() {
                 <p class="text-sm text-gray-600 mt-2">The figure shows the ligation of restriction fragments with complementary sticky ends. After the plasmid vector and DNA fragment of interest have both been digested with the same or compatible REs, those ends bearing complementary sequences will bind to each other, providing the substrate for the T4 DNA ligase. The ligase hydrolyzes two ATP molecules and fuses the double stranded DNA molecules together. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
-<h4 class="styled-h4">GG8/Gibson Assembly:</h4>
+<h4 class="styled-h4">GG8 Assembly:</h4>
             <div class="highlight-note">
                 <p><strong>Note:</strong> Text below needs to be adapted based on specific course requirements.</p>
             </div>

@@ -646,4 +646,26 @@ body {
     }
 }
 
+/* Golden Gate features styling */
+        .golden-gate-features {
+            margin: 1.5rem 0;
+        }
+
+        .golden-gate-features h5 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--purple-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .golden-gate-features ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .golden-gate-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
 

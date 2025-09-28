@@ -330,6 +330,266 @@ function getContent() {
                     </div>
                 </div>
             </div>
+            <h3>2. Agarose gel electrophoresis of the PCR products (insert and backbone)</h3>
+            
+            <h4 class="styled-h4">Background</h4>
+            <p>Agarose gel electrophoresis is the standard tool for the analysis of DNA. Agarose gels are made by boiling agarose in water. Buffer is added either prior to or—for heat-sensitive buffers—after boiling. Once the agarose mixture cools, it sets and builds an "obstacle course" for the DNA. Small pieces of DNA can pass through the gel rapidly, while large pieces of DNA move slowly. The more concentrated the agarose, the more tightly spaced is the obstacle course mesh, and the more difficult it is for the DNA to move. Thus, for large fragments (greater than 4 kb), we use a gel containing a small percentage (mass per volume) of agarose; for small DNA fragments, a high percentage agarose gel is used. There are different types of agarose that differ in their degree of purity, best suitability for different DNA sizes, and melting temperature.</p>
+
+            <h5><strong>Plasmid conformations:</strong></h5>
+            <ul class="list-disc list-inside ml-4 space-y-2">
+                <li><strong>Supercoiled:</strong> the native conformation of plasmid DNA in vivo. Its small, compact structure allows it to easily run through the tiny pores in an agarose gel matrix. This conformation of full-length plasmid DNA runs the FASTEST for its molecular weight.</li>
+                <li><strong>Linear:</strong> plasmid DNA with cuts in both strands</li>
+                <li><strong>Nicked circular:</strong> plasmid DNA with cuts or "nicks" in one or both strands; this releases the supercoiling and leaves a large, floppy circle with low mobility in agarose compared to the linearized or supercoiled plasmids.</li>
+            </ul>
+
+            <div class="my-6 text-center">
+                <img src="images/image065.png" alt="Plasmid conformations and their migration patterns in agarose gel" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x350/e2e8f0/4a5568?text=Plasmid+Conformations'; this.alt='Placeholder: Plasmid Conformations';">
+                <p class="text-sm text-gray-600 mt-2">Different plasmid conformations and their migration patterns in agarose gel electrophoresis.</p>
+            </div>
+
+            <h5><strong>Reading gels:</strong></h5>
+            <p>When bands don't appear as simple as predicted, consider</p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Conformation</li>
+                <li>Partial digestion</li>
+                <li>Multimers</li>
+            </ul>
+
+            <p>Multimers are fused products of several plasmids recombined together. Multimer formation occurs naturally when plasmids are cultivated in recA+ strains of bacteria. These plasmids are several times larger than the individual plasmid and therefore run very slowly in agarose (regardless of their conformation).</p>
+
+            <p>We use a Tris-based buffer with pH 8.3, in which the phosphate groups of the DNA have a negative charge. The DNA is induced to move through the gel by placing an electric field across it. Because DNA is negatively charged, it migrates through the gel towards the positive pole (red electrode).</p>
+
+            <h4 class="styled-h4">Procedure</h4>
+            
+            <p><strong>General:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>We will make a 1% (w/v) agarose gel that will allow us to visualize the PCR fragments.</li>
+                <li>You should have six samples: three insert PCR products and three backbone PCR products.</li>
+                <li>IMPORTANT: Always include at least one well with 5 μl of marker DNA (= DNA-ladder) during each run. We will use the 1 kb plus DNA ladder from NEB.</li>
+            </ul>
+
+            <div class="my-6 text-center">
+                <img src="images/image066.png" alt="1 kb Plus DNA Ladder from NEB" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x400/e2e8f0/4a5568?text=DNA+Ladder+NEB'; this.alt='Placeholder: DNA Ladder NEB';">
+                <p class="text-sm text-gray-600 mt-2">1 kb Plus DNA Ladder (NEB)</p>
+            </div>
+
+            <h5><strong>Steps:</strong></h5>
+            
+            <h6><strong>Prepare a 1% agarose gel.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2">
+                <li>Weigh 0.5 g of agarose in a clean Schott glass bottle.</li>
+                <li>Add 50 ml of 1x TBE buffer and mix. If you don't know how to prepare TBE buffer, take a look <a href="https://www.sigmaaldrich.com/DE/en/technical-documents/protocol/protein-biology/gel-electrophoresis/tae-and-tbe-running-buffers-recipe" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a></li>
+                <li>Cook in a microwave until the agarose powder is completely dissolved. Swing the flask in between heating to support the melting processes. CAUTION: when boiling, solution and flask become extremely hot. ALWAYS carefully watch agarose solution during the boiling process to prevent it from spilling over. Use a sufficiently large vessel for the same reason.</li>
+                <li>Swirl and check whether all of the agarose has dissolved.</li>
+                <li>Allow the agarose to cool down for a few minutes. While you wait for the agarose to cool down, prepare the gel chamber by inserting the dams and combs.</li>
+                <li>When the agarose has cooled to pouring temperature (around 55 °C), add 2.5 μl nucleic acid stain solution (e.g. SYBR Safe) and carefully swirl to mix (avoid air bubbles).</li>
+                <li>Pour the gel into the gel chamber.</li>
+                <li>Allow the gel to solidify at room temperature.</li>
+            </ol>
+
+            <div class="interactive-box">
+                <h4>Safety Note: Agarose Gel Preparation</h4>
+                <p class="text-sm mb-3">Why is it important to watch the agarose solution carefully while microwaving?</p>
+                <div id="agarose-safety-quiz" class="space-y-1">
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">To ensure even heating</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="true">To prevent dangerous spill-over of boiling solution</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">To monitor complete dissolution</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">To control the temperature precisely</button>
+                </div>
+                <div id="agarose-safety-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+            </div>
+
+            <h6><strong>Load and run the gel.</strong></h6>
+            <p>9. Pipette your samples into the wells of the agarose gel ("load the gel") as follows:</p>
+
+            <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm my-4">
+                <thead>
+                    <tr class="bg-purple-100">
+                        <th class="border border-gray-300 p-2 text-center font-semibold">Lane</th>
+                        <th class="border border-gray-300 p-2 text-center font-semibold">Volume</th>
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Sample</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">1</td>
+                        <td class="border border-gray-300 p-2 text-center">5 µl</td>
+                        <td class="border border-gray-300 p-2">DNA ladder: Quick-Load 1 kb Plus DNA Ladder (NEB)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">2</td>
+                        <td class="border border-gray-300 p-2 text-center">all (24 µl)</td>
+                        <td class="border border-gray-300 p-2">Insert PCR sample 1</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">3</td>
+                        <td class="border border-gray-300 p-2 text-center">all (24 µl)</td>
+                        <td class="border border-gray-300 p-2">Insert PCR sample 2</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">4</td>
+                        <td class="border border-gray-300 p-2 text-center">all (24 µl)</td>
+                        <td class="border border-gray-300 p-2">Insert PCR sample 3 (negative control)</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">5</td>
+                        <td class="border border-gray-300 p-2 text-center">-</td>
+                        <td class="border border-gray-300 p-2">-</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">6</td>
+                        <td class="border border-gray-300 p-2 text-center">all (24 µl)</td>
+                        <td class="border border-gray-300 p-2">Backbone PCR sample 1</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">7</td>
+                        <td class="border border-gray-300 p-2 text-center">all (24 µl)</td>
+                        <td class="border border-gray-300 p-2">Backbone PCR sample 2</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2 text-center">8</td>
+                        <td class="border border-gray-300 p-2 text-center">all (24 µl)</td>
+                        <td class="border border-gray-300 p-2">Backbone PCR sample 3 (negative control)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="10">
+                <li>Run the gel at 100-120 V for 30–45 minutes (stop it the latest before the tracking dyes do migrate off the gel!).</li>
+            </ol>
+
+            <h6><strong>Identify and excise the bands containing your DNA fragments of interest.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="11">
+                <li>At the end of the run, examine the gel using an illuminator.</li>
+                <li>Obtain and label a photograph of the gel for your lab notebook. Describe anything that you think is interesting.</li>
+                <li>Excise the band(s) you want using a clean scalpel or razor blade, and transfer the gel slice to a sterile, labeled Eppendorf tube.</li>
+                <li>Determine the mass in mg of each gel slice, and record this value in your lab notebook and on the tube.</li>
+            </ol>
+
+            <p class="text-sm text-gray-600 ml-4">Use an empty microcentrifuge tube to set the balance to ZERO.</p>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="16">
+                <li>Store the tube at 4 °C overnight or proceed with the next step.</li>
+            </ol>
+
+            <h4 class="styled-h4">Questions/Tasks:</h4>
+            <div class="practice-problem-box">
+                <h4>Gel Analysis Questions</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>For which PCR reactions do you expect to see bands?</li>
+                    <li>What sizes will the insert and backbone bands have?</li>
+                    <li>Why is it important to verify both PCR products before Golden Gate assembly?</li>
+                </ul>
+                
+                <div class="mt-4">
+                    <button class="practice-toggle">Show Analysis Guidelines</button>
+                    <div class="practice-answer hidden mt-2">
+                        <p><strong>Expected Results:</strong></p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li><strong>Bands expected:</strong> Lanes 2, 3, 6, 7 (test reactions with template)</li>
+                            <li><strong>No bands expected:</strong> Lanes 4, 8 (negative controls)</li>
+                            <li><strong>Verification importance:</strong> Both fragments must be verified for correct size and purity before proceeding to Golden Gate assembly to ensure successful cloning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>3. Purification of PCR products (insert and backbone) from an agarose gel</h3>
+            
+            <h4 class="styled-h4">Background</h4>
+            <p>Both the insert PCR product and the backbone PCR product must be gel-purified before Golden Gate assembly. There are many different methods for purifying DNA out of agarose gels. You can, in order of increasing expense:</p>
+
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Melt the agarose slice (containing your DNA fragment of interest) and phenol-extract the DNA.</li>
+                <li>Spin the chopped-up slice of agarose over glass wool and collect the flow-through; phenolextract the DNA.</li>
+                <li>Bind the DNA to DEAE paper, by electrophoresis. (The paper is placed just in front of the DNA band).</li>
+                <li>Electro-elute the DNA out of the gel slice into a special chamber.</li>
+                <li>Bind the DNA to special tiny glass beads, wash the beads multiple times, then elute with salt.</li>
+                <li>Extract the DNA using a miniature ion-exchange column.</li>
+            </ul>
+
+            <p>Some of these methods take a long time, involve the use of toxic/aggressive components (phenol, for example), or involve many manipulations, so can only be recommended if you have very few samples that have to be extremely clean. We will use the miniature ion-exchange column method.</p>
+
+            <p>There are several commercial kits available for purifying DNA from agarose gels using this method. All follow the same principles. First, the gel is melted in an appropriate buffer solution at an elevated temperature. The volume of buffer solution that is used is determined according to the mass of the excised band and the percentage of agarose in the cell (e.g., 200 μl of solubilization buffer for each 100 mg of agarose in a 2% agarose gel). An affinity column is then used to separate the DNA from the rest of the solution. The column is washed to remove contaminants, and finally, the DNA is eluted from the columns for further use. We will use the GeneJET Gel extraction Kit from Thermo Scientific.</p>
+
+            <h4 class="styled-h4">Procedure</h4>
+            
+            <p><strong>General:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>All purification steps should be carried out at room temperature.</li>
+                <li>All centrifugations should be carried out in a table-top microcentrifuge at >12000 rpm.</li>
+                <li>If you use a different Gel extraction Kit make sure to follow the manufacturer's instructions for steps 1-10 (may be similar to this protocol).</li>
+            </ul>
+
+            <h5><strong>Steps:</strong></h5>
+            
+            <h6><strong>Dissolve the gel in buffer solution.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2">
+                <li>Set a heat block or water bath to 56 °C.</li>
+                <li>Add an appropriate volume of Binding Buffer each tube containing agarose depending on the weight of your excised band.</li>
+            </ol>
+
+            <p class="ml-4 text-sm">Use 100 μl of Binding Buffer for each 100 mg of agarose.</p>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="3">
+                <li>Incubate for 10–15 minutes at 56 °C.</li>
+            </ol>
+
+            <p class="ml-4 text-sm"><strong>IMPORTANT:</strong> The agarose has to dissolve completely before moving to the next step. You can mix the tube by inversion every few minutes to facilitate the melting process.</p>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="4">
+                <li>Allow the gel mixture to cool down to room temperature.</li>
+            </ol>
+
+            <div class="interactive-box">
+                <h4>Buffer Volume Calculation</h4>
+                <p class="text-sm mb-3">If you have a gel slice weighing 150 mg, how much Binding Buffer should you add?</p>
+                <div class="calculator">
+                    <label>Gel slice weight: <input type="number" id="gel-weight" value="150"> mg</label><br>
+                    <label>Buffer ratio: 100 μl per 100 mg agarose</label><br>
+                    <button onclick="calculateBindingBuffer()">Calculate</button>
+                    <div id="binding-buffer-result" class="solution-details hidden mt-2"></div>
+                </div>
+            </div>
+
+            <h6><strong>Load and wash the affinity column.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="5">
+                <li>Transfer up to 800 μl of the solubilized gel solution to the GeneJET purification column, and centrifuge for 1 min. Discard the flow-through and place the column back into the same collection tube. If the total volume of gel solution exceeds 800 μl, repeat this step until there is no gel solution left.</li>
+                <li>Add 500 μl of Binding Buffer to the column, and centrifuge for 1 min. Discard the flow-through and place the column back into the same collection tube.</li>
+                <li>Add 700 μl of Wash Buffer to the column, and incubate at room temperature for 5 min. Centrifuge for 1 min. Discard the flow-through and place the column back into the same collection tube.</li>
+                <li>Centrifuge the empty GeneJET purification column for an additional 2 min to completely remove any residual Wash Buffer.</li>
+            </ol>
+
+            <p class="ml-4 text-sm">Wash Buffer contains ethanol. The presence of ethanol in the final eluate can inhibit downstream reactions.</p>
+
+            <h6><strong>Elute the DNA and measure its concentration.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="9">
+                <li>Transfer the GeneJET purification column to a new, clean, 1.5 ml microcentrifuge tube. Add 30 μl nuclease free water to the center of the column membrane, wait 1 min, and then centrifuge for 1 min.</li>
+                <li>Optional: to increase DNA yield, repeat step 8 again with the eluate obtained after centrifugation.</li>
+                <li>Using a NanoDrop UV/Vis spectrophotometer, determine the concentration in ng/μl of your purified DNA.</li>
+                <li>Calculate the total yield in μg of your purified product. Since you know the amount of DNA you put in your digestion reaction, you can also determine the percentage of DNA that was recovered from the gel.</li>
+            </ol>
+
+            <h4 class="styled-h4">Questions/Tasks:</h4>
+            <div class="practice-problem-box">
+                <h4>Purification Analysis</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>What was the yield of your purified DNA from the gel in μg?</li>
+                    <li>What amount of DNA (in percent) did you lose from the total that had been used for the digestion?</li>
+                </ul>
+                
+                <div class="mt-4">
+                    <button class="practice-toggle">Show Calculation Help</button>
+                    <div class="practice-answer hidden mt-2">
+                        <p><strong>Yield Calculation Example:</strong></p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li><strong>Total yield (μg) =</strong> Concentration (ng/μl) × Volume (μl) ÷ 1000</li>
+                            <li><strong>Recovery (%) =</strong> (Amount recovered / Amount input) × 100</li>
+                            <li><strong>Typical recovery:</strong> 60-80% for gel purification is normal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
        
@@ -512,6 +772,28 @@ function calculateLoadingBuffer() {
     resultDiv.classList.remove('hidden');
 }
 
+function calculateBindingBuffer() {
+    const gelWeight = parseFloat(document.getElementById('gel-weight').value);
+    const resultDiv = document.getElementById('binding-buffer-result');
+    
+    if (isNaN(gelWeight) || gelWeight <= 0) {
+        resultDiv.innerHTML = '<p class="text-red-600">Please enter a valid gel weight.</p>';
+        resultDiv.classList.remove('hidden');
+        return;
+    }
+    
+    // Calculate binding buffer volume: 100 μl per 100 mg
+    const bufferVolume = gelWeight; // 1:1 ratio (100 μl per 100 mg = 1 μl per mg)
+    
+    resultDiv.innerHTML = `
+        <p><strong>Calculation:</strong></p>
+        <p>Gel weight: ${gelWeight} mg</p>
+        <p>Binding Buffer needed: ${bufferVolume} μl</p>
+        <p>Formula: 100 μl per 100 mg agarose</p>
+    `;
+    resultDiv.classList.remove('hidden');
+}
+
 export default function initModule6(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -554,6 +836,22 @@ export default function initModule6(rootEl, sidebarEl) {
         });
     });
 
+    // Agarose safety quiz
+    const agaroseSafetyContainer = document.getElementById('agarose-safety-quiz');
+    if (agaroseSafetyContainer) {
+        agaroseSafetyContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const isCorrect = button.dataset.correct === 'true';
+                const correctFeedback = "<strong>Correct!</strong> Boiling agarose can suddenly bubble over and cause severe burns. Careful monitoring prevents dangerous spills.";
+                const incorrectFeedback = "<strong>Not quite.</strong> The main safety concern is preventing dangerous spill-over of extremely hot boiling solution that can cause severe burns.";
+                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
+
+    // Make calculateBindingBuffer function globally available
+    window.calculateBindingBuffer = calculateBindingBuffer;
+   
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-6');
 

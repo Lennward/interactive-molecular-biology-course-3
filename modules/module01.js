@@ -81,14 +81,14 @@ function getContent() {
             <p>This practical course is based on the central dogma of molecular biology, whereby DNA is transcribed to make RNA, and then, via the process of translation, proteins are synthesized.</p>
             
             <!-- Broad Canonical Dogma Image -->
-            <img src="images/image011.png" alt="Broad Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
+            <img src="images/image0101.png" alt="Broad Canonical Dogma" class="my-4 w-full max-w-xl mx-auto" />
 
              <p>(Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
             <p>This dogma includes the following four steps in eukaryotes:</p>
 
             <!-- Detailed Canonical Dogma Image -->
-            <img src="images/image012.png" alt="Detailed Canonical Dogma in the Cell" class="my-4 w-full max-w-xl mx-auto" />
+            <img src="images/image0102.png" alt="Detailed Canonical Dogma in the Cell" class="my-4 w-full max-w-xl mx-auto" />
             
             <p>Genetic information flow in living systems. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             
@@ -113,7 +113,7 @@ function getContent() {
 
             <h4 class="styled-h4">Plasmids</h4>
             <p>A plasmid is a small, circular, double-stranded DNA molecule that is distinct from a cell's chromosomal DNA. It serves as a carrier of genetic information. Plasmids naturally exist in bacterial cells and they also occur in some eukaryotes. In the lab, scientists use plasmids to introduce new genes into cells. First, a plasmid needs to be cloned using bacteria. Afterwards, the functional plasmid can be introduced (=transfected) into mammalian cells. For both organisms (bacteria and mammalian cells), different components of a plasmid are needed.</p>
-            <img src="images/image013.png" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
+            <img src="images/image0103.png" alt="Plasmid Map" class="my-4 w-full max-w-xl mx-auto" />
             <p>General Plasmid Map; RE = Restriction Enzyme, MCS = Multiple Cloning Site; image from <a href="https://lh5.googleusercontent.com/Re2XXSHN3W10HJ7u7mT63-HS4OEegHGeETTeyhaVxOsT3EWM0ISlGhjlUUATlvKnT33eXaL1Yv3aJHDh7_jNqSUQTwrwtaNj-2K5qTq47I4ZaK6iiEol1mc8KaqBQw=s0" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a></p>
                         
             <p>A functional plasmid typically contains the following components:</p>

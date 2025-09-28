@@ -1,37 +1,71 @@
 const TITLE = "Module 6: Cloning of DNA-Plasmids";
 const QUIZ_DATA = [
     {
-        question: "In Golden Gate Assembly, how many total PCR reactions do we perform and why?",
+        question: "In Golden Gate Assembly, why do we perform two separate PCR reactions before the assembly step?",
         options: [
-            "One PCR reaction to amplify the insert only",
-            "Two PCR reactions: one for insert and one for backbone",
-            "Three PCR reactions for redundancy",
-            "Four PCR reactions with different primers"
+            "To create backup copies in case one reaction fails",
+            "To amplify both the insert (3xFLAG-LMNB1) and the linearized backbone separately",
+            "To test different primer concentrations",
+            "To generate fragments of different sizes for size selection"
         ],
-        answer: "Two PCR reactions: one for insert and one for backbone",
+        answer: "To amplify both the insert (3xFLAG-LMNB1) and the linearized backbone separately",
         type: "mcq",
-        explanation: "Golden Gate Assembly requires both the insert (3xFLAG-LMNB1) and the backbone to be linear PCR products with BsaI sites for proper assembly."
+        explanation: "Golden Gate Assembly requires both the insert and the vector backbone to be linear PCR products with BsaI sites and complementary overhangs for proper assembly."
     },
     {
-        question: "What restriction enzyme is used in this Golden Gate Assembly protocol?",
-        options: ["EcoRI", "BamHI", "BsaI", "HindIII"],
-        answer: "BsaI",
+        question: "During agarose gel electrophoresis, which lanes should show DNA bands if your PCR was successful?",
+        options: [
+            "All lanes including negative controls",
+            "Only the DNA ladder lane",
+            "Test reactions 1 & 2 for both insert and backbone PCR, but not the negative controls",
+            "Only the backbone PCR reactions"
+        ],
+        answer: "Test reactions 1 & 2 for both insert and backbone PCR, but not the negative controls",
         type: "mcq",
-        explanation: "BsaI is the Type IIS restriction enzyme used in this Golden Gate Assembly protocol."
+        explanation: "Successful PCR reactions with template DNA should show bands, while negative controls (no template) should show no bands, confirming the reactions worked properly."
     },
     {
-        question: "How many total reactions should you prepare for this PCR experiment?",
-        options: ["3 reactions total", "6 reactions total", "9 reactions total", "12 reactions total"],
-        answer: "6 reactions total",
+        question: "What is the key advantage of BsaI (Type IIS enzyme) in Golden Gate Assembly compared to traditional restriction enzymes?",
+        options: [
+            "It cuts DNA faster than other enzymes",
+            "It cuts outside its recognition sequence, allowing custom overhang design",
+            "It requires lower temperatures to function",
+            "It doesn't require ATP for activity"
+        ],
+        answer: "It cuts outside its recognition sequence, allowing custom overhang design",
         type: "mcq",
-        explanation: "You prepare 3 reactions for insert PCR (2 test + 1 negative control) and 3 reactions for backbone PCR (2 test + 1 negative control) = 6 total."
+        explanation: "BsaI cuts outside its recognition sequence, enabling the design of custom 4-base overhangs that are independent of the enzyme's binding site, which is essential for directed assembly."
     },
     {
-        question: "True or False: The primers contain BsaI restriction sites plus additional flanking nucleotides.",
+        question: "True or False: After successful Golden Gate Assembly, BsaI will still be able to cut the final assembled plasmid.",
         options: ["True", "False"],
-        answer: "True",
+        answer: "False",
         type: "tf",
-        explanation: "The primers contain BsaI restriction sites plus 3-6 additional nucleotides to facilitate restriction enzyme binding and functionality."
+        explanation: "During Golden Gate Assembly, the BsaI recognition sites are removed/consumed in the ligation process, so the final assembled product cannot be cut by BsaI, which helps confirm successful assembly."
+    },
+    {
+        question: "Why is heat shock at exactly 42°C for 30 seconds critical during bacterial transformation?",
+        options: [
+            "To activate the restriction enzymes in the plasmid",
+            "To create temporary pores in bacterial cell walls allowing DNA uptake",
+            "To denature any contaminating proteins",
+            "To activate the antibiotic resistance gene"
+        ],
+        answer: "To create temporary pores in bacterial cell walls allowing DNA uptake",
+        type: "mcq",
+        explanation: "Heat shock creates temporary pores in the bacterial cell membrane, allowing the plasmid DNA to enter the competent cells during transformation."
+    },
+    {
+        question: "Which verification method would be most appropriate for the final confirmation before using your cloned plasmid in transfection experiments?",
+        options: [
+            "Colony PCR only",
+            "Restriction digestion analysis only", 
+            "DNA sequencing",
+            "Visual inspection of bacterial colonies"
+        ],
+        answer: "DNA sequencing",
+        type: "mcq",
+        explanation: "DNA sequencing provides the most comprehensive verification by confirming the exact sequence, detecting any mutations or errors that other methods might miss, making it essential before important applications like transfection."
     }
 ];
 

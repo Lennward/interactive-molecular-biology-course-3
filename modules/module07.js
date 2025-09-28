@@ -107,9 +107,9 @@ function getContent() {
             <p>Suitable temperature, CO₂ and humidity are provided by an incubator.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
-                <img src="images/image071.png" alt="Incubator closed" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
-                <img src="images/image072.png" alt="Incubator open" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
-                <img src="images/image073.png" alt="Incubator interior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0701.png" alt="Incubator closed" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0702.png" alt="Incubator open" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0703.png" alt="Incubator interior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
             </div>
 
             <p>On the pictures you can see an incubator in different states (open & closed). It has 2 doors that need to be opened to place vessels with cells inside/take them out of the incubator; the outer door and another glass door.</p>
@@ -165,8 +165,8 @@ function getContent() {
             <p>Animal cells are cultured in sterile plastic vessels (bottles, plates and dishes) that have undergone special surface treatment.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <img src="images/image074.png" alt="Flask with cells and medium" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
-                <img src="images/image075.png" alt="Cell culture vessels" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0704.png" alt="Flask with cells and medium" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0705.png" alt="Cell culture vessels" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
             </div>
             <p>The pictures show a flask that contains cells (not visible) and growth medium.</p>
 
@@ -228,8 +228,8 @@ function getContent() {
             <p>Aseptic technique refers to the practices used to prevent contamination (especially of mammalian cells with e.g. bacteria). For this the most important thing is that all work is performed aseptically under a laminar flow hood which provides a sterile environment. This includes experiments but also everything else that comes into contact with the cells e.g. culture media preparation. Thereby each culture media component is added aseptically under the laminar flow hood.</p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                <img src="images/image077.png" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
-                <img src="images/image078.png" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0707.png" alt="Laminar flow hood exterior" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
+                <img src="images/image0708.png" alt="Working in laminar flow hood" class="rounded-lg shadow-md mx-auto block max-w-full w-auto enlarged-image">
             </div>
             <p>The left picture shows the theory of a laminar flow hood's airflow. On the right picture a real laminar flow hood in the cell culture room can be seen. Left image from <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROi7BIO591EaISDUqK7cwWF5Vkw7dA24fi7w&s" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a></p>
 

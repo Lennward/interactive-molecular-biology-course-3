@@ -590,6 +590,292 @@ function getContent() {
                     </div>
                 </div>
             </div>
+            <h3>4. Golden Gate Assembly</h3>
+            
+            <h4 class="styled-h4">Background</h4>
+            <p>During Golden Gate Assembly, we will combine the purified PCR products (insert and backbone), BsaI restriction enzyme, and DNA ligase in a single reaction tube. Unlike traditional cloning, Golden Gate Assembly uses <strong>thermocycling</strong> to alternate between temperatures that favor restriction enzyme digestion (37°C) and DNA ligase activity (16°C). This cycling process ensures that incorrectly assembled products are continuously digested while correctly assembled constructs accumulate.</p>
+
+            <h5><strong>BsaI: The Key to Golden Gate Efficiency</strong></h5>
+            <p>In our case Golden Gate Assembly relies on <strong>BsaI</strong>, a Type IIS restriction enzyme that recognizes the sequence 5'-GGTCTC-3' but cuts 1 nucleotide downstream, creating programmable 4-base overhangs. Unlike traditional restriction enzymes (such as BglII and HindIII) that cut within their recognition sequences, BsaI's unique cutting pattern allows us to design any 4-base overhang independent of the enzyme's binding site. This is why our PCR primers contain BsaI sites followed by custom overhangs that direct specific assembly.</p>
+
+            <h5><strong>Optimized Reaction Conditions</strong></h5>
+            <p>Restriction enzyme activity is measured in units (U), where 1U digests 1 μg of DNA in one hour under optimal conditions. For this reaction, we will manually combine T4 DNA ligase buffer, BsaI restriction enzyme, and T4 DNA ligase. Unlike pre-made master mixes, this approach allows us to optimize concentrations for our specific fragments.</p>
+
+            <h5><strong>Assembly Mechanism</strong></h5>
+            <p>The custom 4-base overhangs created by BsaI digestion were designed during the PCR primer step to be complementary between insert and backbone fragments. These complementary overhangs anneal by hydrogen bonding, and ligase catalyzes the formation of phosphodiester bonds in the DNA sugar-phosphate backbone between 5'-phosphorylated and 3'-hydroxylated ends (see the following figure). The beauty of Golden Gate is that <strong>digestion and ligation occur simultaneously</strong>, with the thermocycling protocol alternating between optimal temperatures for each enzyme (BsaI restriction enzyme and T4 DNA ligase), driving the reaction toward the correctly assembled product.</p>
+
+            <div class="my-6 text-center">
+                <img src="images/image067.png" alt="Three-step pathway of nick sealing by DNA ligase" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x450/e2e8f0/4a5568?text=DNA+Ligase+Mechanism'; this.alt='Placeholder: DNA Ligase Mechanism';">
+                <p class="text-sm text-gray-600 mt-2">The figure describes the three-step pathway of nick sealing by DNA ligase. Figure from Shuman, JBC 2000: doi.org/10.1074/jbc.R900017200.</p>
+            </div>
+
+            <h5><strong>Calculating Fragment Ratios</strong></h5>
+            <p>In Golden Gate Assembly, the molar ratio of insert DNA to backbone DNA should typically be between 1:1 and 3:1, but optimal ratios can be determined empirically. For this reaction, we will use a ratio of 2:1 insert DNA to backbone DNA. Our purified insert PCR product has a length of <strong>X</strong> base pairs (bp), and our purified backbone PCR product has a length of <strong>Y</strong> bp (Length of PCR products can be looked up in SnapGene). Thus, for every 1 ng of vector backbone DNA we include in the reaction, we should add <strong>Z</strong> ng of insert DNA:</p>
+
+            <p class="formula">1 ng backbone × (2/1) × (<strong>X</strong> bp/<strong>Y</strong> bp) = <strong>Z</strong> ng insert needed.</p>
+
+            <p>We will use 75 ng backbone, so the obtained insert mass needs to be multiplied by 75 as well.</p>
+
+            <div class="interactive-box">
+                <h4>Molar Ratio Calculation</h4>
+                <p class="text-sm mb-3">Calculate the insert mass needed for Golden Gate Assembly:</p>
+                <div class="calculator">
+                    <label>Insert length: <input type="number" id="insert-length" placeholder="bp"> bp</label><br>
+                    <label>Backbone length: <input type="number" id="backbone-length" placeholder="bp"> bp</label><br>
+                    <label>Backbone amount: <input type="number" id="backbone-amount" value="75"> ng</label><br>
+                    <label>Molar ratio (insert:backbone): <input type="number" id="molar-ratio" value="2">:1</label><br>
+                    <button onclick="calculateInsertMass()">Calculate Insert Mass</button>
+                    <div id="insert-mass-result" class="solution-details hidden mt-2"></div>
+                </div>
+            </div>
+
+            <h4 class="styled-h4">Procedure</h4>
+            <p>We will use the gel-purified PCR products (insert and backbone) in a Golden Gate Assembly reaction using BsaI, T4 DNA ligase, and T4 DNA ligase buffer.</p>
+
+            <p><strong>General:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li>Use 0.2 ml PCR tubes</li>
+                <li>Prepare two reactions: one complete assembly reaction and one negative control without insert</li>
+                <li>Remember to label each tube</li>
+            </ul>
+
+            <h5><strong>Steps:</strong></h5>
+            
+            <h6><strong>Prepare the Golden Gate Assembly reaction.</strong></h6>
+            <p>1. Calculate the volumes you need for the assembly reaction.</p>
+
+            <p>Golden Gate Assembly of purified insert and backbone PCR products:</p>
+
+            <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm my-4">
+                <thead>
+                    <tr class="bg-purple-100">
+                        <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
+                        <th class="border border-gray-300 p-2 text-center font-semibold">Amount needed</th>
+                        <th class="border border-gray-300 p-2 text-center font-semibold">Complete Assembly</th>
+                        <th class="border border-gray-300 p-2 text-center font-semibold">No-insert control</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-300 p-2">T4 Ligase Buffer (10x)</td>
+                        <td class="border border-gray-300 p-2 text-center">1x</td>
+                        <td class="border border-gray-300 p-2 text-center">2 µl</td>
+                        <td class="border border-gray-300 p-2 text-center">2 µl</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Purified Backbone PCR product (m = 75 ng)</td>
+                        <td class="border border-gray-300 p-2 text-center">calculated based on conc.</td>
+                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
+                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">Purified Insert PCR product (m = needs to be calculated)</td>
+                        <td class="border border-gray-300 p-2 text-center">calculated based on conc.</td>
+                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
+                        <td class="border border-gray-300 p-2 text-center">-</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">BsaI restriction enzyme</td>
+                        <td class="border border-gray-300 p-2 text-center">0.5 µl/reaction</td>
+                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">T4 DNA Ligase</td>
+                        <td class="border border-gray-300 p-2 text-center">0.5 µl/reaction</td>
+                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-300 p-2">H₂O</td>
+                        <td class="border border-gray-300 p-2 text-center">to final volume</td>
+                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
+                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
+                    </tr>
+                    <tr class="bg-orange-50">
+                        <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
+                        <td class="border border-gray-300 p-2 text-center">-</td>
+                        <td class="border border-gray-300 p-2 text-center font-semibold">20 µl</td>
+                        <td class="border border-gray-300 p-2 text-center font-semibold">20 µl</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="2">
+                <li>Pipette the components in the following order: first water, then buffer, then backbone, then insert, and finally BsaI and T4 DNA ligase.</li>
+                <li>Mix by pipetting up and down gently.</li>
+                <li>Briefly ("touch") centrifuge the liquid to the bottom of the tubes.</li>
+            </ol>
+
+            <h6><strong>Run the Golden Gate thermocycling protocol.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="5">
+                <li>Place tubes in a thermocycler and run the following program:</li>
+            </ol>
+
+            <ul class="list-disc list-inside ml-8 space-y-1">
+                <li>30 cycles of: 37°C for 1 minute, 16°C for 1 minute</li>
+                <li>Final step: 37°C for 5 minutes (inactivates BsaI)</li>
+                <li>Hold at 4°C</li>
+            </ul>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="6">
+                <li>When the reaction is complete, place tubes on ice/in the fridge until transformation.</li>
+            </ol>
+
+            <h4 class="styled-h4">Questions/Tasks:</h4>
+            <div class="practice-problem-box">
+                <h4>Golden Gate Assembly Understanding</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Why does Golden Gate Assembly use thermocycling instead of a single temperature incubation?</li>
+                    <li>How do the designed overhangs ensure that fragments assemble only in the correct orientation?</li>
+                    <li>What advantage does the simultaneous digestion-ligation process provide over traditional cloning methods?</li>
+                    <li>Why is BsaI's Type IIS cutting pattern essential for Golden Gate Assembly to work?</li>
+                </ul>
+                
+                <div class="mt-4">
+                    <button class="practice-toggle">Show Answer Guidelines</button>
+                    <div class="practice-answer hidden mt-2">
+                        <p><strong>Key Concepts:</strong></p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li><strong>Thermocycling:</strong> Alternates between optimal temperatures for BsaI (37°C) and T4 ligase (16°C), ensuring efficient digestion and ligation</li>
+                            <li><strong>Designed overhangs:</strong> Custom 4-base sequences ensure fragments only ligate in the correct order and orientation</li>
+                            <li><strong>Simultaneous process:</strong> Eliminates separate purification steps between digestion and ligation, reducing time and loss</li>
+                            <li><strong>Type IIS pattern:</strong> Cuts outside recognition sequence, allowing custom overhang design independent of enzyme binding site</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>5. Transformation of Escherichia coli DH5α</h3>
+            
+            <p>The ligation reaction product will be used to transform competent E. coli DH5α cells and to select for colonies that transmit the desired recombinant plasmids conferring antibiotic resistance. Most labs have a protocol for making competent E. coli for transformation; it involves various incubations with buffers containing calcium and rubidium chloride. We typically make competent E. coli in large batches and store them at –80°C. Competent cells can also be purchased, but this is more expensive.</p>
+
+            <p>How to perform a transformation and everything needed for this technique is also explained in a video of our Wetlab series.</p>
+
+            <div class="highlight-note">
+                <p><strong>[Wetlab series video Transformation]</strong></p>
+            </div>
+
+            <h4 class="styled-h4">Procedure</h4>
+            
+            <h5><strong>Steps:</strong></h5>
+            
+            <h6><strong>Preparation:</strong></h6>
+            <ul class="list-disc list-inside ml-4 space-y-2">
+                <li>First you need to prepare LB-Agar-plates on which we will later plate our bacteria. Further we also need LB-Medium for the next day.</li>
+                <li>To prepare these things you need LB-powder and Agar-powder. Further you also need an antibiotic that will be added to the LB-Agar plates for selection of our plasmid.</li>
+                <li>To prepare LB-Agar plates you need 15 g/l Agar and 20 g/l LB-Medium. 250 ml will be more than enough for us, so use 3.75 g Agar-Powder and 5 g LB-powder and add 250 ml dH2O to it. If it is possible you can also autoclave the mixture before usage (recommended). The flask with Agar, LB and dH2O in it needs to be put in a microwave to heat and liquify the Agar. Be careful! You need to open the lid of the flask and let the open lid lay on the flask. Otherwise the flask can explode in the microwave!!! also always check that the agar does not spill out of the flask. If it starts cooking and you see bubbles then you can take it out and check if the whole agar is liquified. Continue until this is the case. Then let it cool down until 55°C and add the respective antibiotic, e.g. ampicillin. Which antibiotic you should use depends on the antibiotic resistance gene that your plasmid has e.g. an ampicillin resistance gene means you should use ampicillin. The concentration of antibiotics you should use can be found <a href="https://www.addgene.org/protocols/pouring-lb-agar-plates/" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>. Then you can pour the LB-Agar into petri dishes on which we will plate the cells later on.</li>
+                <li>You need 20 g/l LB for 1 l LB-Medium. In our case 500 ml LB will be more than enough. So take a 1 l glass flask and add 10 g LB-powder to it and subsequently 500 ml of dH2O. If it is possible you can also autoclave the mixture before usage (recommended).</li>
+                <li>Now you can split the LB-Medium equally into <strong>two</strong> flasks. To <strong>one</strong> of the flasks we will now add an antibiotic e.g. Ampicillin. The concentration of antibiotics you should use can be found <a href="https://www.addgene.org/protocols/pouring-lb-agar-plates/" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>. It is important to <strong>not</strong> add antibiotics to the second LB-Medium flask.</li>
+                <li>You can store both, LB-Media and LB-Agar-plates in the fridge.</li>
+            </ul>
+
+            <div class="interactive-box">
+                <h4>Media Preparation Safety</h4>
+                <p class="text-sm mb-3">Why must you leave the flask lid open (but placed on top) when microwaving LB-Agar?</p>
+                <div id="media-safety-quiz" class="space-y-1">
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">To allow even heating</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="true">To prevent pressure buildup that could cause explosion</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">To monitor agar dissolution</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">To prevent contamination</button>
+                </div>
+                <div id="media-safety-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+            </div>
+
+            <h6><strong>Thaw competent cells on ice.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2">
+                <li>Thaw a tube containing 50 μl of competent cells on ice for 10 min. (A protocol for making cells competent can be found <a href="https://www.embl.org/groups/protein-expression-purification/protocols/preparation-of-chemically-competent-e-coli-cells/" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>)</li>
+                <li>Label an Eppendorf tube and place it on ice.</li>
+            </ol>
+
+            <h6><strong>Incubate the DNA with competent cells on ice.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="3">
+                <li>Briefly ("touch") centrifuge your ligation product.</li>
+                <li>Pipette 2 µl of the ligation product into the tube containing the cells.</li>
+                <li>Gently tap the tube 4-5 times to mix, and place it on ice for 30 min (do not vortex). Do not mix. Do not disturb.</li>
+                <li>While the cells are incubating, set a heat block to EXACTLY 42°C.</li>
+            </ol>
+
+            <h6><strong>Heat shock the competent cells.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="7">
+                <li>Place the tubes into the heat block for exactly 30 seconds, then return them to ice.</li>
+                <li>Incubate the tubes for 5 minutes on ice.</li>
+            </ol>
+
+            <h6><strong>Outgrowth incubation: the cells recover and develop antibiotic resistance.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="9">
+                <li>Add 250 µl LB-Medium (without antibiotics!) to the tube and incubate (shaking) on a heat block at 37°C for 30 min.</li>
+            </ol>
+
+            <h6><strong>Plate the cells.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="11">
+                <li>Label LB-agar-plates on the bottom, NOT the lid. Include your initials, date, the plasmid and bacteria strain e.g. DH5-alpha.</li>
+            </ol>
+
+            <p class="text-sm text-gray-600 ml-4">If only the lids were labeled, and the lids were to become separated from the plates, you would no longer be able to identify which plate was which.</p>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="12">
+                <li>Dispense the bacterial solution onto a LB-agar-plate.</li>
+                <li>Spread the bacteria evenly onto each plate using an inoculation loop or glass beads.</li>
+                <li>Leave the plates slightly open on the bench for 5 minutes.</li>
+            </ol>
+
+            <p class="text-sm text-gray-600 ml-4">This short incubation time allows the medium in which the bacteria were suspended to be absorbed by the LB-agar.</p>
+
+            <h6><strong>Incubate the plates overnight.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="18">
+                <li>Lid the plates and place them lid-side-down in the 37°C incubator for overnight incubation.</li>
+            </ol>
+
+            <h4 class="styled-h4">Questions/Tasks:</h4>
+            <div class="practice-problem-box">
+                <h4>Transformation Questions</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Why do you think it is necessary to heat-shock the bacteria during transformation?</li>
+                    <li>Why do we add ampicillin to the LB-agar plates?</li>
+                </ul>
+                
+                <div class="mt-4">
+                    <button class="practice-toggle">Show Answer Guidelines</button>
+                    <div class="practice-answer hidden mt-2">
+                        <p><strong>Key Concepts:</strong></p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li><strong>Heat shock:</strong> Creates temporary pores in bacterial cell walls, allowing DNA uptake</li>
+                            <li><strong>Antibiotic selection:</strong> Only bacteria that took up the plasmid (with resistance gene) can survive and grow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>6. Inoculation of cultures</h3>
+            
+            <h4 class="styled-h4">Procedure</h4>
+            
+            <h6><strong>Examine the selection plates.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2">
+                <li>Examine your bacterial selection plate, and count the number of colonies. Record the number of colonies on the plate and here:</li>
+            </ol>
+
+            <div class="interactive-box">
+                <h4>Colony Count Recording</h4>
+                <div class="calculator">
+                    <label>Sample: <input type="text" id="sample-name" placeholder="Enter sample name"></label><br>
+                    <label>Colonies: <input type="number" id="colony-count" placeholder="Number of colonies"></label><br>
+                    <button onclick="recordColonyCount()">Record Count</button>
+                    <div id="colony-count-result" class="solution-details hidden mt-2"></div>
+                </div>
+            </div>
+
+            <h5><strong>Questions/Tasks:</strong></h5>
+            <p>• Why do you see many/few/no colonies? Think about answers for each scenario.</p>
+
+            <h6><strong>Inoculate miniprep cultures.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="2">
+                <li>Prepare a 15 ml tube with 5 ml LB (with antibiotic; this medium was already prepared!)</li>
+                <li>Label 2 tubes, with bacteria carrying plL001_3xFLAG-LMNB1 and in addition to the plasmid name, your initials and the date also write C1 or C2 (= clone1 or clone2) on them.</li>
+                <li>For each tube, pick a single colony with a sterile P200/P20 pipette tip, and throw the tip into the tube.</li>
+                <li>Place the tubes at 37°C for 12–16 hours (overnight) with vigorous shaking (~200 rpm) into a multitron.</li>
+            </ol>
         </div>
 
        
@@ -794,6 +1080,50 @@ function calculateBindingBuffer() {
     resultDiv.classList.remove('hidden');
 }
 
+function calculateInsertMass() {
+    const insertLength = parseFloat(document.getElementById('insert-length').value);
+    const backboneLength = parseFloat(document.getElementById('backbone-length').value);
+    const backboneAmount = parseFloat(document.getElementById('backbone-amount').value);
+    const molarRatio = parseFloat(document.getElementById('molar-ratio').value);
+    const resultDiv = document.getElementById('insert-mass-result');
+    
+    if (isNaN(insertLength) || isNaN(backboneLength) || isNaN(backboneAmount) || isNaN(molarRatio)) {
+        resultDiv.innerHTML = '<p class="text-red-600">Please enter valid numbers for all fields.</p>';
+        resultDiv.classList.remove('hidden');
+        return;
+    }
+    
+    const insertMass = backboneAmount * molarRatio * (insertLength / backboneLength);
+    
+    resultDiv.innerHTML = `
+        <p><strong>Calculation:</strong></p>
+        <p>Formula: ${backboneAmount} ng × (${molarRatio}/1) × (${insertLength} bp/${backboneLength} bp)</p>
+        <p><strong>Insert mass needed: ${insertMass.toFixed(1)} ng</strong></p>
+    `;
+    resultDiv.classList.remove('hidden');
+}
+
+function recordColonyCount() {
+    const sampleName = document.getElementById('sample-name').value;
+    const colonyCount = document.getElementById('colony-count').value;
+    const resultDiv = document.getElementById('colony-count-result');
+    
+    if (!sampleName || !colonyCount) {
+        resultDiv.innerHTML = '<p class="text-red-600">Please enter both sample name and colony count.</p>';
+        resultDiv.classList.remove('hidden');
+        return;
+    }
+    
+    resultDiv.innerHTML = `
+        <p><strong>Recorded:</strong></p>
+        <p>Sample: ${sampleName}</p>
+        <p>Colonies: ${colonyCount}</p>
+        <p class="text-sm text-gray-600">Remember to record this in your lab notebook!</p>
+    `;
+    resultDiv.classList.remove('hidden');
+}
+
+
 export default function initModule6(rootEl, sidebarEl) {
     // 1. Add sidebar link
     const link = document.createElement('a');
@@ -849,8 +1179,26 @@ export default function initModule6(rootEl, sidebarEl) {
         });
     }
 
+    // Media safety quiz
+    const mediaSafetyContainer = document.getElementById('media-safety-quiz');
+    if (mediaSafetyContainer) {
+        mediaSafetyContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const isCorrect = button.dataset.correct === 'true';
+                const correctFeedback = "<strong>Correct!</strong> An open but covered flask prevents pressure buildup while still allowing steam to escape, preventing dangerous explosions.";
+                const incorrectFeedback = "<strong>Not quite.</strong> The main safety concern is preventing pressure buildup that could cause the flask to explode in the microwave.";
+                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
+
     // Make calculateBindingBuffer function globally available
     window.calculateBindingBuffer = calculateBindingBuffer;
+    
+    // Make new functions globally available
+    window.calculateInsertMass = calculateInsertMass;
+    window.recordColonyCount = recordColonyCount;
+
    
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-6');

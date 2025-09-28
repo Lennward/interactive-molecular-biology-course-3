@@ -68,14 +68,14 @@ function getContent() {
             <p>Plasmid documentation and sequences are available for all vectors prior to purchase. The following screenshots show an <strong>example</strong> of a plasmid and its sequence.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image051.png" alt="Addgene plasmid page example" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+51:+Addgene+Plasmid+Page'; this.alt='Placeholder: Addgene Plasmid Page';">
+                <img src="images/image0501.png" alt="Addgene plasmid page example" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+51:+Addgene+Plasmid+Page'; this.alt='Placeholder: Addgene Plasmid Page';">
                 <p class="text-sm text-gray-600 mt-2">Screenshot showing an example plasmid page on Addgene with detailed information and sequence data.</p>
             </div>
 
             <p>Specific features of the plasmid, such as promoter regions, coding regions, and restriction sites can be visualized using the Map tool on Addgene. One can also download the sequence and analyze it using a sequence editing and analysis program (see below).</p>
 
             <div class="my-6 text-center">
-                <img src="images/image052.png" alt="Addgene plasmid map visualization" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x350/e2e8f0/4a5568?text=Image+52:+Plasmid+Map+Tool'; this.alt='Placeholder: Plasmid Map Tool';">
+                <img src="images/image0502.png" alt="Addgene plasmid map visualization" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x350/e2e8f0/4a5568?text=Image+52:+Plasmid+Map+Tool'; this.alt='Placeholder: Plasmid Map Tool';">
                 <p class="text-sm text-gray-600 mt-2">The Map tool on Addgene allows visualization of plasmid features including promoters, coding regions, and restriction sites.</p>
             </div>
 
@@ -118,7 +118,7 @@ function getContent() {
             <p>Even the best-designed primers sometimes result in the amplification of undesired DNA sequences. Therefore, after designing primers to amplify a gene of interest, one additional step is required to control for their sequence specificity to the target DNA. Specifically, one should examine whether primers bind to other, undesired regions within the template DNA. One means to do this is by using the BLAST tool in the NCBI web site. BLAST basically aligns your short DNA sequences to whole genomes (or to another DNA sequence) and shows to which sites your primers can bind. To use it you can copy your primer sequence (without restriction enzyme sites) into the search bar and see to how many different sites it binds.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image053.png" alt="BLAST search interface for primer specificity" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Image+53:+BLAST+Search'; this.alt='Placeholder: BLAST Search Interface';">
+                <img src="images/image0503.png" alt="BLAST search interface for primer specificity" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x200/e2e8f0/4a5568?text=Image+53:+BLAST+Search'; this.alt='Placeholder: BLAST Search Interface';">
                 <p class="text-sm text-gray-600 mt-2">BLAST search interface for checking primer specificity against genomic sequences.</p>
             </div>
 
@@ -128,7 +128,7 @@ function getContent() {
             <p>The simplest formula for determining primer melting temperatures (Tm) is <span class="formula">Tm = 2×(A+T) + 4×(C+G)</span>. However, salt concentrations and other physicochemical factors may also influence Tm. There are many commercial sites offering online tools for Tm calculations that take these factors into account (e.g., <a href="http://tmcalculator.neb.com/#!/" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">http://tmcalculator.neb.com/#!/</a>). These sites typically allow one to insert primer sequences and concentrations, and the polymerase and buffers used in order to obtain a recommended annealing temperature for use in the PCR cycling protocol.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image054.png" alt="Tm calculator tool interface" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x180/e2e8f0/4a5568?text=Image+54:+Tm+Calculator'; this.alt='Placeholder: Tm Calculator Tool';">
+                <img src="images/image0504.png" alt="Tm calculator tool interface" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x180/e2e8f0/4a5568?text=Image+54:+Tm+Calculator'; this.alt='Placeholder: Tm Calculator Tool';">
                 <p class="text-sm text-gray-600 mt-2">Online Tm calculator tool for determining optimal annealing temperatures for PCR primers.</p>
             </div>
 
@@ -136,7 +136,7 @@ function getContent() {
             <p>To analyze primers for unwanted secondary structures or primer-dimers that could interfere with the PCR, we can use online tools available on the Integrated DNA Technologies website (<a href="https://eu.idtdna.com/calc/analyzer" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">https://eu.idtdna.com/calc/analyzer</a>) or others like <a href="https://www.biosyn.com/gizmo/tools/oligo/oligonucleotide%20properties%20calculator.htm" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">https://www.biosyn.com/gizmo/tools/oligo/oligonucleotide%20properties%20calculator.htm</a>. With this tool, it is possible to examine primers for hairpin, self-dimer and hetero-dimer formation. BLAST search and Tm mismatch analyses are also possible from this website.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image055.png" alt="IDT primer analysis tool showing secondary structure prediction" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x220/e2e8f0/4a5568?text=Image+55:+IDT+Primer+Analysis'; this.alt='Placeholder: IDT Primer Analysis Tool';">
+                <img src="images/image0505.png" alt="IDT primer analysis tool showing secondary structure prediction" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/400x220/e2e8f0/4a5568?text=Image+55:+IDT+Primer+Analysis'; this.alt='Placeholder: IDT Primer Analysis Tool';">
                 <p class="text-sm text-gray-600 mt-2">IDT primer analysis tool interface showing secondary structure predictions and dimer formation analysis.</p>
             </div>
 
@@ -160,7 +160,7 @@ function getContent() {
                         <h5>Download and Open Source Plasmid</h5>
                         <p>Download the sequence of addgene plasmid qTAG-N-Blast-3xFLAG-LMNB1 and open the .dna file in SnapGene.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image056.png" alt="qTAG-N-Blast-3xFLAG-LMNB1 plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+056:+Source+Plasmid+Map'; this.alt='Placeholder: Source Plasmid Map';">
+                            <img src="images/image0506.png" alt="qTAG-N-Blast-3xFLAG-LMNB1 plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+056:+Source+Plasmid+Map'; this.alt='Placeholder: Source Plasmid Map';">
                             <p class="text-sm text-gray-600 mt-2">The map of plasmid qTAG-N-Blast-3xFLAG-LMNB1 contains the gene of interest (GOI) that we want to clone into a different plasmid.</p>
                         </div>
                     </div>
@@ -172,7 +172,7 @@ function getContent() {
                         <h5>Open Vector (Backbone) Plasmid</h5>
                         <p>Open the sequence of your vector (backbone) in SnapGene. In our case, we're using plR006_FKBP-CD28TM-ZipEE, but you can also use a different plasmid as vector.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image057.png" alt="plR006_FKBP-CD28TM-ZipEE vector plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+057:+Vector+Plasmid+Map'; this.alt='Placeholder: Vector Plasmid Map';">
+                            <img src="images/image0507.png" alt="plR006_FKBP-CD28TM-ZipEE vector plasmid map" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+057:+Vector+Plasmid+Map'; this.alt='Placeholder: Vector Plasmid Map';">
                             <p class="text-sm text-gray-600 mt-2">The map of plasmid plR006_FKBP-CD28TM-ZipEE serves as our vector backbone.</p>
                         </div>
                     </div>
@@ -184,7 +184,7 @@ function getContent() {
                         <h5>Create Feature Annotation</h5>
                         <p>Change the view from Map to Sequence and mark the sequence following the 3xFLAG until the stop codon (depicted as *). Go to Features > Add Features and create a new feature called LMNB1.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image058.png" alt="Adding LMNB1 feature annotation in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+058:+Feature+Annotation'; this.alt='Placeholder: Feature Annotation';">
+                            <img src="images/image0508.png" alt="Adding LMNB1 feature annotation in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+058:+Feature+Annotation'; this.alt='Placeholder: Feature Annotation';">
                             <p class="text-sm text-gray-600 mt-2">Creating a new feature annotation for the LMNB1 gene sequence in SnapGene.</p>
                         </div>
                     </div>
@@ -205,7 +205,7 @@ function getContent() {
                             </ul>
                         </div>
                         <div class="my-4 text-center">
-                            <img src="images/image059.png" alt="Selecting vector sequence to replace in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+059:+Vector+Selection'; this.alt='Placeholder: Vector Selection';">
+                            <img src="images/image0509.png" alt="Selecting vector sequence to replace in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x300/e2e8f0/4a5568?text=Image+059:+Vector+Selection'; this.alt='Placeholder: Vector Selection';">
                             <p class="text-sm text-gray-600 mt-2">Selecting the coding sequence region (shown in blue) that will be replaced with the new insert.</p>
                         </div>
                     </div>
@@ -217,7 +217,7 @@ function getContent() {
                         <h5>Initialize Golden Gate Assembly</h5>
                         <p>Go to Actions > Golden Gate Assembly > Insert Fragment. A new window will open for the Golden Gate Assembly setup.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image151.png" alt="Golden Gate Assembly dialog in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+151:+Golden+Gate+Dialog'; this.alt='Placeholder: Golden Gate Dialog';">
+                            <img src="images/image0510.png" alt="Golden Gate Assembly dialog in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+151:+Golden+Gate+Dialog'; this.alt='Placeholder: Golden Gate Dialog';">
                             <p class="text-sm text-gray-600 mt-2">The Golden Gate Assembly dialog window in SnapGene.</p>
                         </div>
                         <p>The vector should already be set correctly, and you can choose the restriction enzyme (Golden Gate enzyme) that you want to use. In our case, we're using <strong>BsaI</strong>.</p>
@@ -235,7 +235,7 @@ function getContent() {
                         <h5>Select Fragment Source</h5>
                         <p>Go to Fragment and at "Source of Fragment" select the plasmid that contains your GOI (gene of interest = insert you want to introduce into the other vector) and select the sequence of your GOI.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image152.png" alt="Selecting fragment source in SnapGene Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+152:+Fragment+Selection'; this.alt='Placeholder: Fragment Selection';">
+                            <img src="images/image0511.png" alt="Selecting fragment source in SnapGene Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+152:+Fragment+Selection'; this.alt='Placeholder: Fragment Selection';">
                             <p class="text-sm text-gray-600 mt-2">Selecting the gene of interest (highlighted in blue) from the source plasmid.</p>
                         </div>
                     </div>
@@ -247,7 +247,7 @@ function getContent() {
                         <h5>Choose PCR Primers</h5>
                         <p>Go to "Product" and click on "Choose PCR Primers" to let SnapGene design the primers for your cloning reaction.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image153.png" alt="PCR primer selection interface in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+153:+Primer+Selection'; this.alt='Placeholder: Primer Selection';">
+                            <img src="images/image0512.png" alt="PCR primer selection interface in SnapGene" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+153:+Primer+Selection'; this.alt='Placeholder: Primer Selection';">
                             <p class="text-sm text-gray-600 mt-2">The PCR primer selection interface in SnapGene.</p>
                         </div>
                     </div>
@@ -259,7 +259,7 @@ function getContent() {
                         <h5>Generate and Validate Primers</h5>
                         <p>You can leave the settings for the primers as they are and click "Choose Primers". If the generated primers work properly, the indicator in the right corner will turn green.</p>
                         <div class="my-4 text-center">
-                            <img src="images/image154.png" alt="Successful primer generation indicated by green status" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+154:+Primer+Validation'; this.alt='Placeholder: Primer Validation';">
+                            <img src="images/image0513.png" alt="Successful primer generation indicated by green status" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+154:+Primer+Validation'; this.alt='Placeholder: Primer Validation';">
                             <p class="text-sm text-gray-600 mt-2">Green indicator showing successful primer generation and validation.</p>
                         </div>
                     </div>
@@ -271,7 +271,7 @@ function getContent() {
                         <h5>Complete the Assembly</h5>
                         <p>Give the file a name and click "Assemble". You now have your new cloned plasmid (in our case plL001_3xFLAG-LMNB1).</p>
                         <div class="my-4 text-center">
-                            <img src="images/image155.png" alt="Final assembled plasmid map plL001_3xFLAG-LMNB1" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+155:+Final+Plasmid+Map'; this.alt='Placeholder: Final Plasmid Map';">
+                            <img src="images/image0514.png" alt="Final assembled plasmid map plL001_3xFLAG-LMNB1" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Image+155:+Final+Plasmid+Map'; this.alt='Placeholder: Final Plasmid Map';">
                             <p class="text-sm text-gray-600 mt-2">The map of the final assembled plasmid plL001_3xFLAG-LMNB1.</p>
                         </div>
                     </div>

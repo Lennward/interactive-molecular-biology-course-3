@@ -99,21 +99,21 @@ function getContent() {
             <p>The vector plasmid we will use for cloning is plR006_FKBP-CD28TM-ZipEE (introduced during the module of the course titled "In Silico Cloning"). A map of this plasmid is shown in the following figure.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image060.png" alt="Map of plasmid plR006_FKBP-CD28TM-ZipEE" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x500/e2e8f0/4a5568?text=plR006+Vector+Map'; this.alt='Placeholder: plR006 Vector Map';">
+                <img src="images/image0601.png" alt="Map of plasmid plR006_FKBP-CD28TM-ZipEE" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x500/e2e8f0/4a5568?text=plR006+Vector+Map'; this.alt='Placeholder: plR006 Vector Map';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the map of plasmid plR006_FKBP-CD28TM-ZipEE (Obtained from SnapGene Viewer).</p>
             </div>
 
             <p>In the section of this practical titled "In Silico Cloning," you amplified by PCR (in silico) the GOI 3xFLAG-LMNB1 (insert) and plR006_FKBP-CD28TM-ZipEE (backbone) with primers that provide BsaI recognition sites on the 5' and 3' end. In this section of the practical, you will amplify the GOI 3xFLAG-LMNB1 (<em>in vitro</em>) from the plasmid qTAG-N-Blast-3xFLAG-LMNB1 and the remaining backbone of plR006_FKBP-CD28TM-ZipEE using the same primers. For this, these primers need to be purchased online. Different companies offer the possibility to purchase primers. Both the expression vector, plR006_FKBP-CD28TM-ZipEE, and the 3xFLAG-LMNB1 amplicon will then be digested using the restriction enzyme BsaI, and the 3xFLAG-LMNB1 will be inserted into the plR006_FKBP-CD28TM-ZipEE plasmid. At the end of the cloning, you will therefore produce the plasmid, plL001_3xFLAG-LMNB1. The plasmid map of the final plasmid, which you should have generated during the section of the practical titled "In Silico Cloning" is shown in the following figure.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image061.png" alt="Map of final plasmid plL001_3xFLAG-LMNB1" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x500/e2e8f0/4a5568?text=plL001+Final+Map'; this.alt='Placeholder: plL001 Final Map';">
+                <img src="images/image0602.png" alt="Map of final plasmid plL001_3xFLAG-LMNB1" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x500/e2e8f0/4a5568?text=plL001+Final+Map'; this.alt='Placeholder: plL001 Final Map';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the map of plL001_3xFLAG-LMNB1 (Obtained from SnapGene Viewer).</p>
             </div>
 
             <p>The specific steps that we will follow to generate plL001_3xFLAG-LMNB1 are shown in the following figure.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image062.png" alt="Overview of Golden Gate Assembly cloning steps" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x600/e2e8f0/4a5568?text=Golden+Gate+Cloning+Overview'; this.alt='Placeholder: Golden Gate Cloning Overview';">
+                <img src="images/image0603.png" alt="Overview of Golden Gate Assembly cloning steps" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[500px]" onerror="this.onerror=null; this.src='https://placehold.co/500x600/e2e8f0/4a5568?text=Golden+Gate+Cloning+Overview'; this.alt='Placeholder: Golden Gate Cloning Overview';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the overview of the cloning steps we will employ to generate plL001_3xFLAG-LMNB1. The schematic representation of the steps involved in molecular cloning using golden gate assembly can be seen. The PCRed vector backbone and the PCRed insert are digested with suitable restriction enzymes to create cohesive ends which subsequently anneal to each other, all in one step during the golden gate assembly (with standard cloning several steps are needed for this). The recombinant DNA is transformed into bacteria and the bacteria are plated onto selection plates for identification of positive clones. Putative positive clones are subsequently collected to inoculate miniprep cultures. Plasmid DNA is purified from the miniprep cultures and subsequently analyzed to identify positive clones. Figure adapted from <a href="https://goldbio.com/articles/article/cloning-overview" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">goldbio.com</a>.</p>
             </div>
 
@@ -122,7 +122,7 @@ function getContent() {
             <p>We will perform two PCRs. The insert (3xFLAG-LMNB1) (first PCR) and the backbone (second PCR) will be amplified with specific oligonucleotide primers (= 4 primers in total). For each PCR, two such primers, normally about 17–30 nucleotides in length, are designed to bind at either end of the sequence to be amplified, one to the top strand and one to the bottom strand of DNA (Figure 17).</p>
 
             <div class="my-6 text-center">
-                <img src="images/image063.png" alt="Overview of polymerase chain reaction (PCR)" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x250/e2e8f0/4a5568?text=PCR+Overview'; this.alt='Placeholder: PCR Overview';">
+                <img src="images/image0604.png" alt="Overview of polymerase chain reaction (PCR)" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x250/e2e8f0/4a5568?text=PCR+Overview'; this.alt='Placeholder: PCR Overview';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the overview of a polymerase chain reaction (PCR). In addition to buffer and water, the reaction mix contains a DNA template containing the sequence of interest, sense and antisense primers, dNTPs, and a DNA polymerase (A). The reaction is initially heated to a temperature of 94-96 °C to heat activate the DNA polymerase. In the first step of the cycling reaction, double-stranded DNA is heated to 94-98 °C. This causes DNA melting, or denaturation, yielding two single-stranded DNA molecules (B). In the next step, the reaction temperature is lowered to 50-65 °C, allowing annealing of the sense and antisense primers to each of the single stranded DNA templates (C). The reaction temperature is then raised, typically to 72 °C (although the reaction temperature may vary depending on the specific polymerase used), to allow for elongation of the new DNA strand by the polymerase starting from the primer binding site (D). Steps B-D constitute a single PCR cycle. In subsequent steps, copies of both the original DNA template and its daughters are generated (E,F). Two new copies are generated for each set of double-stranded templates in each cycle, such that the final yield is approximately 2n copies, where n is the total number of cycles (G). Figure modified from <a href="https://en.wikipedia.org/wiki/Polymerase_chain_reaction" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">Wikipedia</a></p>
             </div>
 
@@ -320,7 +320,7 @@ function getContent() {
             <p>How should the 6x loading buffer be diluted? If your sample contains X μl, then you need to add Y μl of 6x loading buffer so that the final loading buffer concentration is 1x:</p>
 
             <div class="my-4 text-center">
-                <img src="images/image064.png" alt="Loading buffer dilution calculation diagram" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[200px]" onerror="this.onerror=null; this.src='https://placehold.co/200x200/e2e8f0/4a5568?text=Loading+Buffer+Calc'; this.alt='Placeholder: Loading Buffer Calculation';">
+                <img src="images/image0605.png" alt="Loading buffer dilution calculation diagram" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[200px]" onerror="this.onerror=null; this.src='https://placehold.co/200x200/e2e8f0/4a5568?text=Loading+Buffer+Calc'; this.alt='Placeholder: Loading Buffer Calculation';">
             </div>
 
             <div class="interactive-box">
@@ -377,7 +377,7 @@ function getContent() {
             </ul>
 
             <div class="my-6 text-center">
-                <img src="images/image065.png" alt="Plasmid conformations and their migration patterns in agarose gel" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x350/e2e8f0/4a5568?text=Plasmid+Conformations'; this.alt='Placeholder: Plasmid Conformations';">
+                <img src="images/image0606.png" alt="Plasmid conformations and their migration patterns in agarose gel" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x350/e2e8f0/4a5568?text=Plasmid+Conformations'; this.alt='Placeholder: Plasmid Conformations';">
                 <p class="text-sm text-gray-600 mt-2">Different plasmid conformations and their migration patterns in agarose gel electrophoresis.</p>
             </div>
 
@@ -403,7 +403,7 @@ function getContent() {
             </ul>
 
             <div class="my-6 text-center">
-                <img src="images/image066.png" alt="1 kb Plus DNA Ladder from NEB" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x400/e2e8f0/4a5568?text=DNA+Ladder+NEB'; this.alt='Placeholder: DNA Ladder NEB';">
+                <img src="images/image0607.png" alt="1 kb Plus DNA Ladder from NEB" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x400/e2e8f0/4a5568?text=DNA+Ladder+NEB'; this.alt='Placeholder: DNA Ladder NEB';">
                 <p class="text-sm text-gray-600 mt-2">1 kb Plus DNA Ladder (NEB)</p>
             </div>
 
@@ -639,7 +639,7 @@ function getContent() {
             <p>The custom 4-base overhangs created by BsaI digestion were designed during the PCR primer step to be complementary between insert and backbone fragments. These complementary overhangs anneal by hydrogen bonding, and ligase catalyzes the formation of phosphodiester bonds in the DNA sugar-phosphate backbone between 5'-phosphorylated and 3'-hydroxylated ends (see the following figure). The beauty of Golden Gate is that <strong>digestion and ligation occur simultaneously</strong>, with the thermocycling protocol alternating between optimal temperatures for each enzyme (BsaI restriction enzyme and T4 DNA ligase), driving the reaction toward the correctly assembled product.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image067.png" alt="Three-step pathway of nick sealing by DNA ligase" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x450/e2e8f0/4a5568?text=DNA+Ligase+Mechanism'; this.alt='Placeholder: DNA Ligase Mechanism';">
+                <img src="images/image0608.png" alt="Three-step pathway of nick sealing by DNA ligase" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x450/e2e8f0/4a5568?text=DNA+Ligase+Mechanism'; this.alt='Placeholder: DNA Ligase Mechanism';">
                 <p class="text-sm text-gray-600 mt-2">The figure describes the three-step pathway of nick sealing by DNA ligase. Figure from Shuman, JBC 2000: doi.org/10.1074/jbc.R900017200.</p>
             </div>
 
@@ -915,7 +915,7 @@ function getContent() {
             <p>The aim of the following procedure is to purify a small quantity ("miniprep") of highly pure plasmid DNA. The miniprep procedure we are using for this practical course is based on well-established alkaline lysis protocols, with the exception that an ion exchange purification column containing a silica matrix is used to isolate the plasmid DNA in the last steps (see following Figure).</p>
 
             <div class="my-6 text-center">
-                <img src="images/image068.png" alt="Overview of miniprep procedure steps" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x500/e2e8f0/4a5568?text=Miniprep+Overview'; this.alt='Placeholder: Miniprep Overview';">
+                <img src="images/image0609.png" alt="Overview of miniprep procedure steps" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x500/e2e8f0/4a5568?text=Miniprep+Overview'; this.alt='Placeholder: Miniprep Overview';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows an overview of the steps involved in small-scale plasmid DNA purification (miniprep). Figure modified from biorender.com.</p>
             </div>
 
@@ -937,7 +937,7 @@ function getContent() {
             </ol>
 
             <div class="my-4 text-center">
-                <img src="images/image069.png" alt="Pipetting bacterial culture into microcentrifuge tube" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[250px]" onerror="this.onerror=null; this.src='https://placehold.co/250x150/e2e8f0/4a5568?text=Culture+Transfer'; this.alt='Placeholder: Culture Transfer';">
+                <img src="images/image0610.png" alt="Pipetting bacterial culture into microcentrifuge tube" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[250px]" onerror="this.onerror=null; this.src='https://placehold.co/250x150/e2e8f0/4a5568?text=Culture+Transfer'; this.alt='Placeholder: Culture Transfer';">
             </div>
 
             <ol class="list-decimal list-inside ml-4 space-y-2" start="3">
@@ -946,7 +946,7 @@ function getContent() {
             </ol>
 
             <div class="my-4 text-center">
-                <img src="images/image070.png" alt="Bacterial pellet after centrifugation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x250/e2e8f0/4a5568?text=Bacterial+Pellet'; this.alt='Placeholder: Bacterial Pellet';">
+                <img src="images/image0611.png" alt="Bacterial pellet after centrifugation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x250/e2e8f0/4a5568?text=Bacterial+Pellet'; this.alt='Placeholder: Bacterial Pellet';">
             </div>
 
             <div class="highlight-note">
@@ -991,7 +991,7 @@ function getContent() {
             </ol>
 
             <div class="my-4 text-center">
-                <img src="images/image071.png" alt="Transferring supernatant to binding column" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[200px]" onerror="this.onerror=null; this.src='https://placehold.co/200x150/e2e8f0/4a5568?text=Column+Transfer'; this.alt='Placeholder: Column Transfer';">
+                <img src="images/image0612.png" alt="Transferring supernatant to binding column" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[200px]" onerror="this.onerror=null; this.src='https://placehold.co/200x150/e2e8f0/4a5568?text=Column+Transfer'; this.alt='Placeholder: Column Transfer';">
             </div>
 
             <ol class="list-decimal list-inside ml-4 space-y-2" start="10">
@@ -1009,7 +1009,7 @@ function getContent() {
             </ol>
 
             <div class="my-4 text-center">
-                <img src="images/image072.png" alt="Final elution step with purified plasmid DNA" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x150/e2e8f0/4a5568?text=DNA+Elution'; this.alt='Placeholder: DNA Elution';">
+                <img src="images/image0613.png" alt="Final elution step with purified plasmid DNA" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x150/e2e8f0/4a5568?text=DNA+Elution'; this.alt='Placeholder: DNA Elution';">
             </div>
 
             <h3>8. Analysis of Putative Plasmid Clones</h3>

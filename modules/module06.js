@@ -876,6 +876,197 @@ function getContent() {
                 <li>For each tube, pick a single colony with a sterile P200/P20 pipette tip, and throw the tip into the tube.</li>
                 <li>Place the tubes at 37°C for 12–16 hours (overnight) with vigorous shaking (~200 rpm) into a multitron.</li>
             </ol>
+            <h3>7. Plasmid DNA purification (miniprep)</h3>
+            
+            <p>The aim of the following procedure is to purify a small quantity ("miniprep") of highly pure plasmid DNA. The miniprep procedure we are using for this practical course is based on well-established alkaline lysis protocols, with the exception that an ion exchange purification column containing a silica matrix is used to isolate the plasmid DNA in the last steps (see following Figure).</p>
+
+            <div class="my-6 text-center">
+                <img src="images/image068.png" alt="Overview of miniprep procedure steps" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[600px]" onerror="this.onerror=null; this.src='https://placehold.co/600x500/e2e8f0/4a5568?text=Miniprep+Overview'; this.alt='Placeholder: Miniprep Overview';">
+                <p class="text-sm text-gray-600 mt-2">The figure shows an overview of the steps involved in small-scale plasmid DNA purification (miniprep). Figure modified from biorender.com.</p>
+            </div>
+
+            <p>How to perform a miniprep to purify plasmid DNA from bacteria cultures is also explained in another video of our Wetlab series.</p>
+
+            <div class="highlight-note">
+                <p><strong>[Wetlab series video Miniprep]</strong></p>
+            </div>
+
+            <h4 class="styled-h4">Procedure</h4>
+            <p>For this practical course, we will purify plasmid DNA using the commercially available Monarch Plasmid Miniprep Kit from New England BioLabs according to the manufacturer's instructions. If you are using a different Miniprep Kit make sure to conduct the steps according to the manufacturer's instructions of your kit (may be similar to the steps down here).</p>
+
+            <h5><strong>Steps:</strong></h5>
+            
+            <h6><strong>Harvest and lyse bacteria.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2">
+                <li>Label two 2 ml microcentrifuge tubes (one for each of your overnight bacterial cultures).</li>
+                <li>Carefully pipette 2.0 ml of the overnight culture from the 15 ml tubes into each microcentrifuge tube (= Eppendorf tube).</li>
+            </ol>
+
+            <div class="my-4 text-center">
+                <img src="images/image069.png" alt="Pipetting bacterial culture into microcentrifuge tube" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[250px]" onerror="this.onerror=null; this.src='https://placehold.co/250x150/e2e8f0/4a5568?text=Culture+Transfer'; this.alt='Placeholder: Culture Transfer';">
+            </div>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="3">
+                <li>Pellet the bacteria by centrifugation at maximum speed for 1 minute.</li>
+                <li>Remove the supernatant by decanting into a glass beaker.</li>
+            </ol>
+
+            <div class="my-4 text-center">
+                <img src="images/image070.png" alt="Bacterial pellet after centrifugation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x250/e2e8f0/4a5568?text=Bacterial+Pellet'; this.alt='Placeholder: Bacterial Pellet';">
+            </div>
+
+            <div class="highlight-note">
+                <p><strong>Important:</strong> This solution comprises biological waste and will be autoclaved prior to subsequent disposal. Do NOT dispose of the supernatant in the sink!!</p>
+            </div>
+
+            <p class="ml-4">Then repeat steps 2-4 again and add 2 ml from the <strong>same</strong> 15 ml tube to the <strong>same</strong> microcentrifuge tube.</p>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="5">
+                <li>Resuspend the bacterial pellet in 200 μl Plasmid Resuspension Buffer (B1). Pipette well to ensure that the cells are completely resuspended. There should be no visible clumps.</li>
+                <li>Lyse cells by adding 200 μl Plasmid Lysis Buffer (B2). Invert the tube immediately and gently 5–6 times. Do not vortex! Incubate for one minute.</li>
+            </ol>
+
+            <p class="text-sm text-gray-600 ml-4">The color should change to dark pink, and the solution will become transparent and viscous.</p>
+
+            <h6><strong>Prepare cleared lysate.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="7">
+                <li>Neutralize the lysate by adding 400 μl of Plasmid Neutralization Buffer (B3). Gently invert the tube until a precipitate forms. It will be a bit like flakes of snow. Do not vortex! Incubate for 2 minutes.</li>
+            </ol>
+
+            <p class="text-sm text-gray-600 ml-4">Be careful not to shear DNA by vortexing or vigorous shaking. Firmly inverting the tube promotes good mixing, which is important for full neutralization. The sample is neutralized when the color is uniformly yellow and a precipitate forms.</p>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="8">
+                <li>Clarify the lysate by centrifuging for 5 minutes at maximum speed.</li>
+            </ol>
+
+            <div class="interactive-box">
+                <h4>Miniprep Color Changes</h4>
+                <p class="text-sm mb-3">What color change indicates successful cell lysis in step 6?</p>
+                <div id="miniprep-color-quiz" class="space-y-1">
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Clear to yellow</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="true">Clear to dark pink</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Pink to yellow</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Yellow to clear</button>
+                </div>
+                <div id="miniprep-color-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+            </div>
+
+            <h6><strong>Bind plasmid DNA to the column and wash to remove contaminants.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="9">
+                <li>Carefully transfer the supernatant to the binding column placed in a collection tube and centrifuge for 1 minute. Discard the flow-through into a glass beaker.</li>
+            </ol>
+
+            <div class="my-4 text-center">
+                <img src="images/image071.png" alt="Transferring supernatant to binding column" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[200px]" onerror="this.onerror=null; this.src='https://placehold.co/200x150/e2e8f0/4a5568?text=Column+Transfer'; this.alt='Placeholder: Column Transfer';">
+            </div>
+
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="10">
+                <li>Place the column back into the collection tube and add 200 μl of Plasmid Wash Buffer 1. Centrifuge for 1 minute. Discard the flow-through. Plasmid Wash Buffer 1 removes RNA, protein, and endotoxins.</li>
+                <li>Add 400 μl of Plasmid Wash Buffer 2 to the column, and centrifuge for 1 minute. Plasmid Wash Buffer 2 removes salts.</li>
+                <li>Discard the flow-through and place the column back into the collection tube. Centrifuge the column for an additional 1 minute to dry the column.</li>
+            </ol>
+
+            <p class="text-sm text-gray-600 ml-4">Plasmid Wash Buffer 2 contains ethanol. The presence of ethanol in the final eluate can inhibit downstream reactions. Therefore it is important to completely remove the ethanol from the sample.</p>
+
+            <h6><strong>Elute the purified plasmid DNA.</strong></h6>
+            <ol class="list-decimal list-inside ml-4 space-y-2" start="13">
+                <li>Transfer the column to a clean 1.5 ml microcentrifuge tube. Add ≥ 30 μl DNA Elution Buffer (or nuclease-free water) to the center of the matrix. Wait for 1 minute, then centrifuge for 1 minute to elute the purified plasmid DNA.</li>
+                <li>Optional: to increase DNA yield, repeat step 13 again with the eluate obtained after centrifugation.</li>
+            </ol>
+
+            <div class="my-4 text-center">
+                <img src="images/image072.png" alt="Final elution step with purified plasmid DNA" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/300x150/e2e8f0/4a5568?text=DNA+Elution'; this.alt='Placeholder: DNA Elution';">
+            </div>
+
+            <h3>8. Analysis of Putative Plasmid Clones</h3>
+            
+            <h4 class="styled-h4">Overview of Verification Methods</h4>
+            <p>After Golden Gate assembly and transformation, we need to verify that our cloning was successful and that the purified plasmid DNA matches our desired sequence. The three main verification methods are sequencing, colony PCR and restriction digestion analysis, each with distinct advantages.</p>
+
+            <p><strong>Why Verification is Critical:</strong> Golden Gate assembly can produce several outcomes: successful assembly of the desired construct, re-ligation of the backbone without insert (especially if BsaI digestion was incomplete during assembly), or incorporation of contaminating DNA.</p>
+
+            <h5><strong>Method 1: DNA Sequencing (Primary Verification Method)</strong></h5>
+            <p><strong>Principle:</strong> DNA sequencing provides the definitive verification by determining the exact nucleotide sequence of the cloned region. This method can detect not only the presence or absence of the insert but also any point mutations, small insertions/deletions, or errors introduced during PCR amplification.</p>
+
+            <p><strong>Advantages:</strong> Most reliable and comprehensive method; detects all types of errors<br>
+            <strong>Disadvantages:</strong> Most expensive; requires 24-48 hours for results</p>
+
+            <p><strong>Procedure:</strong> You can send the putative plasmid clone to a company for sequencing. Companies like Microsynth or Eurofins (and many others) offer services for sequencing. The necessary steps to send a putative plasmid clone to sequencing are explained in the following video, which is also part of our Wetlab series.</p>
+
+            <div class="highlight-note">
+                <p><strong>[Wetlab series video Sequencing]</strong></p>
+            </div>
+
+            <p><strong>When to use:</strong> Sequencing can be performed directly or subsequently to a colony PCR or a restriction digestion analysis as it is the most reliable of all verification methods but also more expensive. In general it is always recommended as the final verification step, especially before important downstream applications like in our case transfection experiments.</p>
+
+            <h5><strong>Method 2: Colony PCR (Rapid Screening Method)</strong></h5>
+            <p><strong>Theoretical Background:</strong> Colony PCR exploits the fact that bacterial colonies contain multiple copies of the plasmid, providing sufficient template for PCR amplification directly from crude cell lysates. The method relies on designing primers that will only produce a specific-sized product if the correct insert is present.</p>
+
+            <p><strong>Primer Design Strategy:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li><strong>Option A:</strong> One primer in the vector backbone, one in the insert → produces a band only if insert is present</li>
+                <li><strong>Option B:</strong> Both primers flanking the insertion site → produces different sized bands depending on insert presence</li>
+            </ul>
+
+            <p><strong>Why It Works:</strong> The initial denaturation step (95°C) lyses bacterial cells and releases plasmid DNA, eliminating the need for plasmid purification. Taq polymerase is robust enough to function despite the presence of cellular debris and salts.</p>
+
+            <p><strong>Expected Results:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li><strong>Positive clone:</strong> Band of expected size (insert + flanking regions)</li>
+                <li><strong>Negative clone:</strong> No band (primers don't match) or different sized band (backbone only)</li>
+                <li><strong>Negative control:</strong> No band (no template)</li>
+            </ul>
+
+            <p><strong>Advantages:</strong> Fast (3-4 hours), inexpensive, can screen many colonies<br>
+            <strong>Disadvantages:</strong> Cannot detect point mutations or sequence errors</p>
+
+            <h5><strong>Method 3: Restriction Digestion Analysis (Pattern Recognition)</strong></h5>
+            <p><strong>Theoretical Background:</strong> This method exploits the fact that successful Golden Gate assembly creates a new restriction pattern compared to the original backbone. By choosing appropriate restriction enzymes, we can generate diagnostic fragment patterns that differ between positive and negative clones.</p>
+
+            <p><strong>Critical Considerations for Golden Gate Products:</strong></p>
+            <ul class="list-disc list-inside ml-4 space-y-1">
+                <li><strong>BsaI sites are consumed:</strong> During Golden Gate assembly, BsaI sites are removed, so BsaI will not cut the final product</li>
+                <li><strong>New junction sequences:</strong> The assembly creates new sequences at junction points that may create or destroy other restriction sites</li>
+                <li><strong>Insert-specific sites:</strong> The insert may contain restriction sites not present in the original backbone</li>
+            </ul>
+
+            <p><strong>Enzyme Selection Strategy:</strong> Choose enzymes that produce clearly different patterns between the desired construct, original backbone, and possible re-ligation products.</p>
+
+            <p><strong>Advantages:</strong> Relatively fast, inexpensive, can detect large rearrangements<br>
+            <strong>Disadvantages:</strong> Cannot detect point mutations; requires careful enzyme selection</p>
+
+            <div class="interactive-box">
+                <h4>Verification Method Comparison</h4>
+                <p class="text-sm mb-3">Which verification method would be best for initial screening of many colonies?</p>
+                <div id="verification-method-quiz" class="space-y-1">
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">DNA sequencing</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="true">Colony PCR</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Restriction digestion analysis</button>
+                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">All methods simultaneously</button>
+                </div>
+                <div id="verification-method-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+            </div>
+
+            <h4 class="styled-h4">Questions/Tasks:</h4>
+            <div class="practice-problem-box">
+                <h4>Verification Analysis</h4>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Why doesn't BsaI cut the assembled Golden Gate product, and how does this help confirm successful assembly?</li>
+                    <li>What are the advantages and limitations of each verification method?</li>
+                </ul>
+                
+                <div class="mt-4">
+                    <button class="practice-toggle">Show Answer Guidelines</button>
+                    <div class="practice-answer hidden mt-2">
+                        <p><strong>Key Concepts:</strong></p>
+                        <ul class="list-disc list-inside space-y-1 text-sm">
+                            <li><strong>BsaI consumption:</strong> Golden Gate assembly removes BsaI sites during ligation, so successful products won't be cut by BsaI</li>
+                            <li><strong>Method comparison:</strong> Colony PCR (fast screening) → Restriction analysis (confirmation) → Sequencing (final verification)</li>
+                            <li><strong>Cost vs. accuracy trade-off:</strong> Each method balances speed, cost, and information content</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
 
        
@@ -1205,4 +1396,30 @@ export default function initModule6(rootEl, sidebarEl) {
 
     // 5. Make calculateLoadingBuffer function globally available
     window.calculateLoadingBuffer = calculateLoadingBuffer;
+
+    // Miniprep color quiz
+    const miniprepColorContainer = document.getElementById('miniprep-color-quiz');
+    if (miniprepColorContainer) {
+        miniprepColorContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const isCorrect = button.dataset.correct === 'true';
+                const correctFeedback = "<strong>Correct!</strong> The lysis buffer causes the solution to turn dark pink as cell walls break down and contents are released.";
+                const incorrectFeedback = "<strong>Not quite.</strong> Successful cell lysis with the lysis buffer (B2) causes the solution to change from clear to dark pink.";
+                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
+
+    // Verification method quiz
+    const verificationMethodContainer = document.getElementById('verification-method-quiz');
+    if (verificationMethodContainer) {
+        verificationMethodContainer.querySelectorAll('.quiz-option').forEach(button => {
+            button.addEventListener('click', () => {
+                const isCorrect = button.dataset.correct === 'true';
+                const correctFeedback = "<strong>Correct!</strong> Colony PCR is fast, inexpensive, and perfect for initial screening of many colonies before using more expensive verification methods.";
+                const incorrectFeedback = "<strong>Not quite.</strong> Colony PCR is the best choice for initial screening because it's fast and inexpensive, allowing you to test many colonies quickly.";
+                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
+            });
+        });
+    }
 }

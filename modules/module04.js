@@ -63,7 +63,7 @@ function getContent() {
             </ol>
 
             <div class="my-6 text-center">
-                <img src="images/image041.png" alt="General cloning procedure schematic" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[450px]" onerror="this.onerror=null; this.src='https://placehold.co/300x500/e2e8f0/4a5568?text=Figure+2:+General+Cloning+Procedure'; this.alt='Placeholder: General Cloning Procedure';">
+                <img src="images/image0401.png" alt="General cloning procedure schematic" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[450px]" onerror="this.onerror=null; this.src='https://placehold.co/300x500/e2e8f0/4a5568?text=Figure+2:+General+Cloning+Procedure'; this.alt='Placeholder: General Cloning Procedure';">
                 <p class="text-sm text-gray-600 mt-2">FIgure shows the general cloning procedure. This schematic cartoon illustrates the general procedure for cloning a given double-stranded DNA sequence in a given circular plasmid. First, sequence-specific primers are created to match the start and end region to be amplified by PCR. These primers are designed to contain 5' overhangs that will provide specific restriction enzyme sites that will match with those available in the plasmid. Thus, after cutting the PCR products and the plasmid with the restriction enzymes (e.g., using BamHI and HindIII as shown here), they can finally be ligated to obtain a circular plasmid bearing the sequence of interest and transformed into competent E. coli. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
@@ -87,14 +87,14 @@ function getContent() {
             <p>In the first step of the PCR, the reaction mixture is brought to a high temperature in order to melt the DNA duplexes. This step is followed by the annealing of a specific pair of short (typically, 17–30 nucleotides) sequences called primers that define the edges of the DNA sequence to be amplified. The next step involves the elongation of the new nascent DNA strand driven by the DNA polymerase, until completion. The process is repeated over many cycles until the desired amount of DNA is synthesized.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image042.png" alt="PCR steps diagram" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/200x500/e2e8f0/4a5568?text=Figure+3:+PCR+Steps'; this.alt='Placeholder: PCR Steps';">
+                <img src="images/image0402.png" alt="PCR steps diagram" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[300px]" onerror="this.onerror=null; this.src='https://placehold.co/200x500/e2e8f0/4a5568?text=Figure+3:+PCR+Steps'; this.alt='Placeholder: PCR Steps';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the steps employed during a PCR for obtaining large amounts of a specific DNA sequence using specific primers. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
             <p>After the desired PCR product is obtained, it may be introduced into an expression vector, usually a plasmid. The plasmid one chosen depends on the application of interest. Some possibilities include: mammalian expression vectors, reporter gene vectors, vectors for protein production in bacteria, etc. Regardless of their specific purpose, however, all plasmid expression vectors contain at least 3 specific components: 1) A bacterial replication origin, 2) a selection gene, and 3) a polylinker or multiple cloning site (MCS) as shown in the following figure.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image043.png" alt="Basic components of a plasmid cloning vector" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x250/e2e8f0/4a5568?text=Figure+4:+Plasmid+Components'; this.alt='Placeholder: Plasmid Components';">
+                <img src="images/image0403.png" alt="Basic components of a plasmid cloning vector" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x250/e2e8f0/4a5568?text=Figure+4:+Plasmid+Components'; this.alt='Placeholder: Plasmid Components';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the basic components of a plasmid cloning vector for amplification in E. coli. The replication origin (ORI) enables the bacteria to produce many copies of the plasmid as they grow and reproduce. A selection gene like the β-lactamase gene (amp<sup>r</sup>) confers resistance to the antibiotic ampicillin. A polylinker region containing multiple restriction enzyme sites allows for the insertion of DNA sequences using a variety of restriction enzymes. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
@@ -132,7 +132,7 @@ function getContent() {
             <p>Restriction enzymes are fundamental tools in molecular biology, which in combination with PCR constitute the basis for most of the techniques available. In general, restriction enzymes are endonucleases able to recognize short palindromic sequences in double stranded DNA molecules and produce a cut or separation. The cutting can produce either "sticky" or blunt ends depending on the restriction enzyme of choice (see following Figure).</p>
 
             <div class="my-6 text-center">
-                <img src="images/image044.png" alt="Examples of restriction endonucleases and their cuts" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Figure+5:+Restriction+Enzymes'; this.alt='Placeholder: Restriction Enzymes';">
+                <img src="images/image0404.png" alt="Examples of restriction endonucleases and their cuts" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/300x200/e2e8f0/4a5568?text=Figure+5:+Restriction+Enzymes'; this.alt='Placeholder: Restriction Enzymes';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows examples of the main kinds of endonucleases, their recognition sequences, and the resulting ends generated on the double-stranded DNA molecule. EcoRI and KpnI, for example, produce sticky ends, whilst SmaI generates blunt ends. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
@@ -142,7 +142,7 @@ function getContent() {
             <p>Following restriction digestion of both insert and plasmid vector, these are fused together in a ligation reaction. In this reaction, depicted in the following figure, the ligase enzyme catalyzes the fusion of free ends on the plasmid and insert, producing a new plasmid that contains the DNA sequence of interest.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image045.png" alt="Ligation of restriction fragments with complementary sticky ends" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[370px]" onerror="this.onerror=null; this.src='https://placehold.co/300x400/e2e8f0/4a5568?text=Figure+6:+DNA+Ligation'; this.alt='Placeholder: DNA Ligation';">
+                <img src="images/image0405.png" alt="Ligation of restriction fragments with complementary sticky ends" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[370px]" onerror="this.onerror=null; this.src='https://placehold.co/300x400/e2e8f0/4a5568?text=Figure+6:+DNA+Ligation'; this.alt='Placeholder: DNA Ligation';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the ligation of restriction fragments with complementary sticky ends. After the plasmid vector and DNA fragment of interest have both been digested with the same or compatible REs, those ends bearing complementary sequences will bind to each other, providing the substrate for the T4 DNA ligase. The ligase hydrolyzes two ATP molecules and fuses the double stranded DNA molecules together. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 
@@ -150,14 +150,14 @@ function getContent() {
             <p>Golden Gate cloning represents an advanced molecular cloning strategy that builds upon the fundamental principles we've just covered. While traditional cloning methods use restriction enzymes that cut within their recognition sites, Golden Gate cloning employs <strong>Type IIS restriction enzymes</strong> that cut outside their recognition sequences. This key difference enables the creation of <strong>custom overhangs</strong> that can be precisely designed to control fragment assembly.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image046.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
+                <img src="images/image0406.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[400px]" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
                 <p class="text-sm text-gray-600 mt-2">BsaI recognition sequence (5'...GGTCTC(N)₁...3') showing how Type IIS enzymes cut outside their recognition site, enabling custom overhang design. Image from <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFGl7r3i4nHVKCvOFZRh3O06sMERVks7N4tw&s" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
             </div>
 
             <p>The most significant advantage of this approach is that <strong>digestion and ligation can occur simultaneously in a single reaction tube</strong>. Unlike the traditional four-step process (PCR, restriction digestion, ligation, transformation), Golden Gate streamlines cloning into fewer steps while enabling <strong>multi-fragment assembly</strong> in a single reaction.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image047.png" alt="Side-by-side comparison of Traditional cloning vs Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Traditional+vs+Golden+Gate+Cloning'; this.alt='Placeholder: Traditional vs Golden Gate Cloning';">
+                <img src="images/image0407.png" alt="Side-by-side comparison of Traditional cloning vs Golden Gate Assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[650px]" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/4a5568?text=Traditional+vs+Golden+Gate+Cloning'; this.alt='Placeholder: Traditional vs Golden Gate Cloning';">
                 <p class="text-sm text-gray-600 mt-2">Comparison of traditional cloning (multi-step protocol) versus Golden Gate Assembly (digestion & ligation in a single reaction), highlighting the scarless assembly advantage. Image from <a href="https://www.neb.com/en/-/media/nebus/page-images/blogs/blog-posts/getting-started-with-golden-gate/goldengateassembly_blog_traditionalcloningvsgoldengateassembly.png?sc_lang=en&rev=965e30d0fb2a4f0d83fedf3252b0645e&hash=E3373E4A32D8B9722225C0A74D5BDC61" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
             </div>
             
@@ -177,7 +177,7 @@ function getContent() {
             <p>Type IIS enzymes, such as BsaI, recognize their binding site but cut at a defined distance outside this sequence. This allows researchers to design custom 4-base overhangs that are independent of the enzyme's recognition sequence. Each DNA fragment can be engineered with specific overhangs that ensure fragments ligate only in the desired order and orientation.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image048.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
+                <img src="images/image0408.png" alt="Golden Gate Workflow showing multiple fragment assembly" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[550px]" onerror="this.onerror=null; this.src='https://placehold.co/500x400/e2e8f0/4a5568?text=Golden+Gate+Workflow'; this.alt='Placeholder: Golden Gate Workflow';">
                 <p class="text-sm text-gray-600 mt-2">Golden Gate Workflow: In its simplest form, Golden Gate Assembly requires a Type IIS recognition site, in this case, BsaI-HFv2 (GGTCTC), added to both ends of a dsDNA fragment. After digestion, these sites are left behind, with each fragment bearing the designed 4-base overhangs that direct the assembly.Image adapted from <a href="https://www.neb-online.de/wp-content/uploads/2021/01/GoldenGateOverview_LP_0520_CL_Update_2021-1-919x1024.jpg" target="_blank" rel="noopener noreferrer" style="color: var(--orange-medium); text-decoration: underline; font-weight: 600;">here</a>.</p>
             </div>
 
@@ -207,7 +207,7 @@ function getContent() {
             <p>Once a recombinant plasmid has been generated, it is transformed into E. coli and amplified as depicted in the following figure. Transformed bacteria are plated onto nutrient agar plates containing a toxin (e.g., ampicillin). Only bacteria that have taken up the recombinant plasmid and express the selection gene conferring resistance to this toxin will survive and replicate, allowing for amplification of the recombinant plasmid.</p>
 
             <div class="my-6 text-center">
-                <img src="images/image049.png" alt="Basic protocol for cloning and transformation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[350px]" onerror="this.onerror=null; this.src='https://placehold.co/250x550/e2e8f0/4a5568?text=Figure+7:+Transformation+Protocol'; this.alt='Placeholder: Transformation Protocol';">
+                <img src="images/image0409.png" alt="Basic protocol for cloning and transformation" class="rounded-lg shadow-md mx-auto block max-w-full w-auto w-[350px]" onerror="this.onerror=null; this.src='https://placehold.co/250x550/e2e8f0/4a5568?text=Figure+7:+Transformation+Protocol'; this.alt='Placeholder: Transformation Protocol';">
                 <p class="text-sm text-gray-600 mt-2">The figure shows the basic protocol illustrating the cloning of a DNA sequence to generate a recombinant plasmid, its introduction into competent E. coli, known as transformation, and the positive selection of the bacteria colonies containing the recombinant plasmid by taking advantage of their ability to grow in the presence of the selection antibiotic. (Modified from Lodish et al. Molecular Cell Biology, 5th ed.)</p>
             </div>
 

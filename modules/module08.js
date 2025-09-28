@@ -33,14 +33,14 @@ function getContent() {
                 <p><strong>Confluency:</strong> Proportion of the vessel's surface that is covered by cells. Cells should be split when they are at 70% confluency.</p>
             </div>
 
-            <img src="images/image081.png" alt="Cell confluency diagram showing different confluence levels" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
+            <img src="images/image0801.png" alt="Cell confluency diagram showing different confluence levels" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
 
             <p>The image shows examples of how the cell density looks at different percentages in confluency. A higher percentage in confluency indicates a higher cell density.</p>
             
             <h3>Cell Counting with a Hemocytometer (Neubauer Chamber)</h3>
             <p>A hemocytometer is a specialized counting chamber slide used to determine the concentration of cells in a liquid sample.</p>
 
-            <img src="images/image082.png" alt="Neubauer chamber counting grid with example cells" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
+            <img src="images/image0802.png" alt="Neubauer chamber counting grid with example cells" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
             <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Example of cell counting in <strong>one big</strong> square of a Neubauer grid. Green checks indicate cells to count; red X's indicate cells not to count based on a common counting rule (e.g., count cells on top and left lines, exclude bottom and right).</p>
 
             <h4 class="styled-h4">General Procedure</h4>
@@ -151,7 +151,7 @@ function getContent() {
                 </li>
             </ol>
 
-            <img src="images/image083.png" alt="Neubauer counting chamber under the microscope" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
+            <img src="images/image0803.png" alt="Neubauer counting chamber under the microscope" class="my-4 rounded-lg shadow-md mx-auto block max-w-full sm:max-w-md w-auto enlarged-image">
             <p class="text-xs text-center text-gray-500 -mt-2 mb-4">Fig.: Neubauer counting chamber under the microscope</p>
 
             <ol class="list-decimal list-inside space-y-2" start="3">

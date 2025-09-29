@@ -1,17 +1,5 @@
 const TITLE = "Module 6: Cloning of DNA-Plasmids";
-const QUIZ_DATA = [
-    {
-        question: "In Golden Gate Assembly, why do we perform two separate PCR reactions before the assembly step?",
-        options: [
-            "To create backup copies in case one reaction fails",
-            "To amplify both the insert (3xFLAG-LMNB1) and the linearized backbone separately",
-            "To test different primer concentrations",
-            "To generate fragments of different sizes for size selection"
-        ],
-        answer: "To amplify both the insert (3xFLAG-LMNB1) and the linearized backbone separately",
-        type: "mcq",
-        explanation: "Golden Gate Assembly requires both the insert and the vector backbone to be linear PCR products with BsaI sites and complementary overhangs for proper assembly."
-    },
+const QUIZ_DATA = [        
     {
         question: "During agarose gel electrophoresis, which lanes should show DNA bands if your PCR was successful?",
         options: [
@@ -148,110 +136,110 @@ function getContent() {
             <p>PCR amplification of the subsequent insert 3xFLAG-LMNB1 (GOI) and plR006_FKBP-CD28TM-ZipEE backbone (perform both simultaneously):</p>
 
             <div class="pcr-tables-container">
-                <div class="pcr-table-section">
-                    <h6><strong>For insert:</strong></h6>
-                    <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm mb-4">
-                        <thead>
-                            <tr class="bg-purple-100">
-                                <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
-                                <th class="border border-gray-300 p-2 text-center font-semibold">Test 1</th>
-                                <th class="border border-gray-300 p-2 text-center font-semibold">Test 2</th>
-                                <th class="border border-gray-300 p-2 text-center font-semibold">Negative control</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 p-2">2x Q5 HF PCR master mix*</td>
-                                <td class="border border-gray-300 p-2 text-center">10 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">10 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">10 µl</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">qTAG-N-Blast-3xFLAG-LMNB1 (40 ng) (e.g. c = 50 ng/µl**)</td>
-                                <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                                <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                                <td class="border border-gray-300 p-2 text-center">-</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">Sense Primer (for insert; 10 µM)</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">Antisense Primer (for insert; 10 µM)</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">H2O</td>
-                                <td class="border border-gray-300 p-2 text-center">REST</td>
-                                <td class="border border-gray-300 p-2 text-center">REST</td>
-                                <td class="border border-gray-300 p-2 text-center">REST</td>
-                            </tr>
-                            <tr class="bg-orange-50">
-                                <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
-                                <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
-                                <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
-                                <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+    <div class="pcr-table-section">
+        <h6><strong>For insert:</strong></h6>
+        <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm mb-4">
+            <thead>
+                <tr class="bg-purple-100">
+                    <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Test 1</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Test 2</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Negative control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-gray-300 p-2">2x Q5 HF PCR master mix*</td>
+                    <td class="border border-gray-300 p-2 text-center">10 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">10 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">10 µl</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">qTAG-N-Blast-3xFLAG-LMNB1 (40 ng) (e.g. c = 50 ng/µl**)</td>
+                    <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="insert-dna-test1" class="pcr-input" placeholder="µl"></td>
+                    <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="insert-dna-test2" class="pcr-input" placeholder="µl"></td>
+                    <td class="border border-gray-300 p-2 text-center">-</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Sense Primer (for insert; 10 µM)</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Antisense Primer (for insert; 10 µM)</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">H2O</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test1">REST = 6.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test2">REST = 6.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-neg">REST = 7.3 µl</td>
+                </tr>
+                <tr class="bg-orange-50">
+                    <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
+                    <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
+                    <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
+                    <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-                <div class="pcr-table-section">
-                    <h6><strong>For backbone:</strong></h6>
-                    <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm mb-4">
-                        <thead>
-                            <tr class="bg-purple-100">
-                                <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
-                                <th class="border border-gray-300 p-2 text-center font-semibold">Test 1</th>
-                                <th class="border border-gray-300 p-2 text-center font-semibold">Test 2</th>
-                                <th class="border border-gray-300 p-2 text-center font-semibold">Negative control</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="border border-gray-300 p-2">2x Q5 HF PCR master mix*</td>
-                                <td class="border border-gray-300 p-2 text-center">10 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">10 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">10 µl</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">plR006_FKBP-CD28TM-ZipEE (40 ng) (e.g. c = 50 ng/µl**)</td>
-                                <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                                <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                                <td class="border border-gray-300 p-2 text-center">-</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">Sense Primer (for backbone; 10 µM)</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">Antisense Primer (for backbone; 10 µM)</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                                <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
-                            </tr>
-                            <tr>
-                                <td class="border border-gray-300 p-2">H2O</td>
-                                <td class="border border-gray-300 p-2 text-center">REST</td>
-                                <td class="border border-gray-300 p-2 text-center">REST</td>
-                                <td class="border border-gray-300 p-2 text-center">REST</td>
-                            </tr>
-                            <tr class="bg-orange-50">
-                                <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
-                                <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
-                                <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
-                                <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+    <div class="pcr-table-section">
+        <h6><strong>For backbone:</strong></h6>
+        <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm mb-4">
+            <thead>
+                <tr class="bg-purple-100">
+                    <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Test 1</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Test 2</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Negative control</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border border-gray-300 p-2">2x Q5 HF PCR master mix*</td>
+                    <td class="border border-gray-300 p-2 text-center">10 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">10 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">10 µl</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">plR006_FKBP-CD28TM-ZipEE (40 ng) (e.g. c = 50 ng/µl**)</td>
+                    <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="backbone-dna-test1" class="pcr-input" placeholder="µl"></td>
+                    <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="backbone-dna-test2" class="pcr-input" placeholder="µl"></td>
+                    <td class="border border-gray-300 p-2 text-center">-</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Sense Primer (for backbone; 10 µM)</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">Antisense Primer (for backbone; 10 µM)</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                    <td class="border border-gray-300 p-2 text-center">1.25 µl</td>
+                </tr>
+                <tr>
+                    <td class="border border-gray-300 p-2">H2O</td>
+                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-test1">REST = 6.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-test2">REST = 6.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-neg">REST = 7.3 µl</td>
+                </tr>
+                <tr class="bg-orange-50">
+                    <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
+                    <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
+                    <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
+                    <td class="border border-gray-300 p-2 text-center font-semibold">20.0 µl</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
             <p class="text-sm">*The master mix contains reaction buffer, dNTPs, polymerase, and a GC enhancer.</p>
             <p class="text-sm">**This is just an example. Use the specific concentration of your sample.</p>
@@ -324,46 +312,40 @@ function getContent() {
             </div>
 
             <div class="interactive-box">
-                <h4>Loading Buffer Calculation</h4>
-                <p class="text-sm mb-3">Calculate the volume of 6x loading buffer needed for your 20 µl PCR reaction:</p>
-                <div class="calculator">
-                    <label>Sample volume: <input type="number" id="sample-volume" value="20"> µl</label><br>
-                    <label>Stock concentration: 
-                        <select id="stock-concentration">
-                            <option value="6">6x</option>
-                        </select>
-                    </label><br>
-                    <button onclick="calculateLoadingBuffer()">Calculate</button>
-                    <div id="loading-buffer-result" class="solution-details hidden mt-2"></div>
-                </div>
-            </div>
+    <h4>Loading Buffer Calculation</h4>
+    <p class="text-sm mb-3">Calculate the volume of loading buffer needed for your PCR reaction:</p>
+    <div class="calculator">
+        <label>Sample volume: <input type="number" id="sample-volume" value="20"> µl</label><br>
+        <label>Stock concentration: <input type="number" id="stock-concentration" value="6">x</label><br>
+        <button onclick="calculateLoadingBuffer()">Calculate</button>
+        <div id="loading-buffer-result" class="solution-details hidden mt-2"></div>
+    </div>
+</div>
 
             <p>The 6x loading buffer that you added to your samples is viscous and dense, allowing the mixture with DNA to sink to the bottom of the well of an agarose gel.</p>
 
             <p>6. Store samples on ice or at 4 °C until further use. (Samples will be examined using agarose gel electrophoresis later).</p>
 
             <h4 class="styled-h4">Questions/Tasks:</h4>
-            <div class="practice-problem-box">
-                <h4>Analysis Questions</h4>
-                <ul class="list-disc list-inside space-y-2">
-                    <li>Next, you will run your PCR products on a gel to analyze the bands. For which reactions do you expect to see bands?</li>
-                    <li>What size(s) will these bands have?</li>
-                    <li>Do you expect all bands to have the same intensity? Why or why not?</li>
-                </ul>
-                
-                <div class="mt-4">
-                    <button class="practice-toggle">Show Answer Guidelines</button>
-                    <div class="practice-answer hidden mt-2">
-                        <p><strong>Expected Results:</strong></p>
-                        <ul class="list-disc list-inside space-y-1 text-sm">
-                            <li><strong>Bands expected:</strong> Test reactions 1 & 2 for both insert and backbone PCR should show bands (template DNA present)</li>
-                            <li><strong>No bands expected:</strong> Negative controls should show no bands (no template DNA)</li>
-                            <li><strong>Band sizes:</strong> Calculate based on your specific insert and backbone lengths</li>
-                            <li><strong>Intensity variation:</strong> Band intensity may vary due to differences in amplification efficiency, template quality, or primer binding kinetics</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<div class="practice-problem-box">
+    <h4>Analysis Questions</h4>
+    <ul class="list-disc list-inside space-y-2">
+        <li>Next, you will run your PCR products on a gel to analyze the bands. For which reactions do you expect to see bands?</li>
+        <li>Do you expect all bands to have the same intensity? Why or why not?</li>
+    </ul>
+    
+    <div class="mt-4">
+        <button class="practice-toggle">Show Answer Guidelines</button>
+        <div class="practice-answer hidden mt-2">
+            <p><strong>Expected Results:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+                <li><strong>Bands expected:</strong> Test reactions 1 & 2 for both insert and backbone PCR should show bands (template DNA present)</li>
+                <li><strong>No bands expected:</strong> Negative controls should show no bands (no template DNA)</li>
+                <li><strong>Intensity variation:</strong> Band intensity may vary due to differences in amplification efficiency, template quality, or primer binding kinetics</li>
+            </ul>
+        </div>
+    </div>
+</div>
             <h3>2. Agarose gel electrophoresis of the PCR products (insert and backbone)</h3>
             
             <h4 class="styled-h4">Background</h4>
@@ -507,26 +489,25 @@ function getContent() {
             </ol>
 
             <h4 class="styled-h4">Questions/Tasks:</h4>
-            <div class="practice-problem-box">
-                <h4>Gel Analysis Questions</h4>
-                <ul class="list-disc list-inside space-y-2">
-                    <li>For which PCR reactions do you expect to see bands?</li>
-                    <li>What sizes will the insert and backbone bands have?</li>
-                    <li>Why is it important to verify both PCR products before Golden Gate assembly?</li>
-                </ul>
-                
-                <div class="mt-4">
-                    <button class="practice-toggle">Show Analysis Guidelines</button>
-                    <div class="practice-answer hidden mt-2">
-                        <p><strong>Expected Results:</strong></p>
-                        <ul class="list-disc list-inside space-y-1 text-sm">
-                            <li><strong>Bands expected:</strong> Lanes 2, 3, 6, 7 (test reactions with template)</li>
-                            <li><strong>No bands expected:</strong> Lanes 4, 8 (negative controls)</li>
-                            <li><strong>Verification importance:</strong> Both fragments must be verified for correct size and purity before proceeding to Golden Gate assembly to ensure successful cloning</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<div class="practice-problem-box">
+    <h4>Gel Analysis Questions</h4>
+    <ul class="list-disc list-inside space-y-2">
+        <li>For which PCR reactions do you expect to see bands?</li>
+        <li>Why is it important to verify both PCR products before Golden Gate assembly?</li>
+    </ul>
+    
+    <div class="mt-4">
+        <button class="practice-toggle">Show Analysis Guidelines</button>
+        <div class="practice-answer hidden mt-2">
+            <p><strong>Expected Results:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+                <li><strong>Bands expected:</strong> Lanes 2, 3, 6, 7 (test reactions with template)</li>
+                <li><strong>No bands expected:</strong> Lanes 4, 8 (negative controls)</li>
+                <li><strong>Verification importance:</strong> Both fragments must be verified for correct size and purity before proceeding to Golden Gate assembly to ensure successful cloning</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
             <h3>3. Purification of PCR products (insert and backbone) from an agarose gel</h3>
             
@@ -681,59 +662,59 @@ function getContent() {
             <p>Golden Gate Assembly of purified insert and backbone PCR products:</p>
 
             <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm my-4">
-                <thead>
-                    <tr class="bg-purple-100">
-                        <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
-                        <th class="border border-gray-300 p-2 text-center font-semibold">Amount needed</th>
-                        <th class="border border-gray-300 p-2 text-center font-semibold">Complete Assembly</th>
-                        <th class="border border-gray-300 p-2 text-center font-semibold">No-insert control</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="border border-gray-300 p-2">T4 Ligase Buffer (10x)</td>
-                        <td class="border border-gray-300 p-2 text-center">1x</td>
-                        <td class="border border-gray-300 p-2 text-center">2 µl</td>
-                        <td class="border border-gray-300 p-2 text-center">2 µl</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Purified Backbone PCR product (m = 75 ng)</td>
-                        <td class="border border-gray-300 p-2 text-center">calculated based on conc.</td>
-                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">Purified Insert PCR product (m = needs to be calculated)</td>
-                        <td class="border border-gray-300 p-2 text-center">calculated based on conc.</td>
-                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                        <td class="border border-gray-300 p-2 text-center">-</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">BsaI restriction enzyme</td>
-                        <td class="border border-gray-300 p-2 text-center">0.5 µl/reaction</td>
-                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
-                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">T4 DNA Ligase</td>
-                        <td class="border border-gray-300 p-2 text-center">0.5 µl/reaction</td>
-                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
-                        <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
-                    </tr>
-                    <tr>
-                        <td class="border border-gray-300 p-2">H₂O</td>
-                        <td class="border border-gray-300 p-2 text-center">to final volume</td>
-                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                        <td class="border border-gray-300 p-2 text-center">XXXX</td>
-                    </tr>
-                    <tr class="bg-orange-50">
-                        <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
-                        <td class="border border-gray-300 p-2 text-center">-</td>
-                        <td class="border border-gray-300 p-2 text-center font-semibold">20 µl</td>
-                        <td class="border border-gray-300 p-2 text-center font-semibold">20 µl</td>
-                    </tr>
-                </tbody>
-            </table>
+    <thead>
+        <tr class="bg-purple-100">
+            <th class="border border-gray-300 p-2 text-left font-semibold">Component</th>
+            <th class="border border-gray-300 p-2 text-center font-semibold">Amount needed</th>
+            <th class="border border-gray-300 p-2 text-center font-semibold">Complete Assembly</th>
+            <th class="border border-gray-300 p-2 text-center font-semibold">No-insert control</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="border border-gray-300 p-2">T4 Ligase Buffer (10x)</td>
+            <td class="border border-gray-300 p-2 text-center">1x</td>
+            <td class="border border-gray-300 p-2 text-center">2 µl</td>
+            <td class="border border-gray-300 p-2 text-center">2 µl</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-2">Purified Backbone PCR product (m = 75 ng)</td>
+            <td class="border border-gray-300 p-2 text-center">calculated based on conc.</td>
+            <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="gg-backbone-complete" class="pcr-input" placeholder="µl"></td>
+            <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="gg-backbone-control" class="pcr-input" placeholder="µl"></td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-2">Purified Insert PCR product (m = needs to be calculated)</td>
+            <td class="border border-gray-300 p-2 text-center">calculated based on conc.</td>
+            <td class="border border-gray-300 p-2 text-center"><input type="number" step="0.1" id="gg-insert-complete" class="pcr-input" placeholder="µl"></td>
+            <td class="border border-gray-300 p-2 text-center">-</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-2">BsaI restriction enzyme</td>
+            <td class="border border-gray-300 p-2 text-center">0.5 µl/reaction</td>
+            <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+            <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-2">T4 DNA Ligase</td>
+            <td class="border border-gray-300 p-2 text-center">0.5 µl/reaction</td>
+            <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+            <td class="border border-gray-300 p-2 text-center">0.5 µl</td>
+        </tr>
+        <tr>
+            <td class="border border-gray-300 p-2">H₂O</td>
+            <td class="border border-gray-300 p-2 text-center">to final volume</td>
+            <td class="border border-gray-300 p-2 text-center" id="gg-h2o-complete">REST = 17.0 µl</td>
+            <td class="border border-gray-300 p-2 text-center" id="gg-h2o-control">REST = 17.0 µl</td>
+        </tr>
+        <tr class="bg-orange-50">
+            <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
+            <td class="border border-gray-300 p-2 text-center">-</td>
+            <td class="border border-gray-300 p-2 text-center font-semibold">20 µl</td>
+            <td class="border border-gray-300 p-2 text-center font-semibold">20 µl</td>
+        </tr>
+    </tbody>
+</table>
 
             <ol class="list-decimal list-inside ml-4 space-y-2" start="2">
                 <li>Pipette the components in the following order: first water, then buffer, then backbone, then insert, and finally BsaI and T4 DNA ligase.</li>
@@ -891,17 +872,59 @@ function getContent() {
             </ol>
 
             <div class="interactive-box">
-                <h4>Colony Count Recording</h4>
-                <div class="calculator">
-                    <label>Sample: <input type="text" id="sample-name" placeholder="Enter sample name"></label><br>
-                    <label>Colonies: <input type="number" id="colony-count" placeholder="Number of colonies"></label><br>
-                    <button onclick="recordColonyCount()">Record Count</button>
-                    <div id="colony-count-result" class="solution-details hidden mt-2"></div>
-                </div>
-            </div>
+    <h4>Colony Count Recording</h4>
+    <div class="calculator">
+        <label>Sample: <input type="text" id="sample-name" placeholder="Enter sample name"></label><br>
+        <label>Colonies: <input type="number" id="colony-count" placeholder="Number of colonies"></label><br>
+        <button onclick="recordColonyCount()">Record Count</button>
+        <div id="colony-count-result" class="solution-details hidden mt-2"></div>
+    </div>
+    
+    <div class="mt-4">
+        <h5><strong>Recorded Samples:</strong></h5>
+        <table class="w-full border-collapse border border-gray-300 bg-white rounded-md shadow-sm mt-2">
+            <thead>
+                <tr class="bg-purple-100">
+                    <th class="border border-gray-300 p-2 text-left font-semibold">Sample</th>
+                    <th class="border border-gray-300 p-2 text-center font-semibold">Number of Colonies</th>
+                </tr>
+            </thead>
+            <tbody id="colony-count-table">
+                <tr><td class="border border-gray-300 p-2 text-gray-400">No data recorded</td><td class="border border-gray-300 p-2 text-center text-gray-400">-</td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+                <tr><td class="border border-gray-300 p-2"></td><td class="border border-gray-300 p-2"></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
 
-            <h5><strong>Questions/Tasks:</strong></h5>
-            <p>• Why do you see many/few/no colonies? Think about answers for each scenario.</p>
+<h5><strong>Questions/Tasks:</strong></h5>
+<p>• Why do you see many/few/no colonies? Think about answers for each scenario.</p>
+
+<div class="practice-problem-box">
+    <h4>Colony Count Analysis</h4>
+    <p>Consider the different scenarios you might observe:</p>
+    
+    <div class="mt-4">
+        <button class="practice-toggle">Show Scenario Analysis</button>
+        <div class="practice-answer hidden mt-2">
+            <p><strong>Colony Count Scenarios:</strong></p>
+            <ul class="list-disc list-inside space-y-1 text-sm">
+                <li><strong>Many colonies (>100):</strong> Successful transformation with high competency cells, optimal DNA concentration, or possible contamination</li>
+                <li><strong>Few colonies (10-50):</strong> Normal transformation efficiency, appropriate for clone selection and analysis</li>
+                <li><strong>Very few colonies (1-10):</strong> Low transformation efficiency due to poor competent cells, suboptimal DNA concentration, or harsh selection conditions</li>
+                <li><strong>No colonies:</strong> Failed transformation due to incompetent cells, no DNA uptake, lethal selection pressure, or incorrect antibiotic concentration</li>
+            </ul>
+        </div>
+    </div>
+</div>
 
             <h6><strong>Inoculate miniprep cultures.</strong></h6>
             <ol class="list-decimal list-inside ml-4 space-y-2" start="2">
@@ -974,16 +997,16 @@ function getContent() {
             </ol>
 
             <div class="interactive-box">
-                <h4>Miniprep Color Changes</h4>
-                <p class="text-sm mb-3">What color change indicates successful cell lysis in step 6?</p>
-                <div id="miniprep-color-quiz" class="space-y-1">
-                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Clear to yellow</button>
-                    <button class="quiz-option text-xs sm:text-sm" data-correct="true">Clear to dark pink</button>
-                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Pink to yellow</button>
-                    <button class="quiz-option text-xs sm:text-sm" data-correct="false">Yellow to clear</button>
-                </div>
-                <div id="miniprep-color-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
-            </div>
+    <h4>Miniprep Understanding</h4>
+    <p class="text-sm mb-3">What is the primary purpose of the neutralization step (step 7) in the miniprep procedure?</p>
+    <div id="miniprep-neutralization-quiz" class="space-y-1">
+        <button class="quiz-option text-xs sm:text-sm" data-correct="false">To precipitate the plasmid DNA</button>
+        <button class="quiz-option text-xs sm:text-sm" data-correct="true">To neutralize the alkaline lysis and precipitate proteins/genomic DNA</button>
+        <button class="quiz-option text-xs sm:text-sm" data-correct="false">To wash away cellular debris</button>
+        <button class="quiz-option text-xs sm:text-sm" data-correct="false">To activate the binding column</button>
+    </div>
+    <div id="miniprep-neutralization-feedback" class="feedback-message text-xs mt-2 p-1.5 rounded-md hidden"></div>
+</div>
 
             <h6><strong>Bind plasmid DNA to the column and wash to remove contaminants.</strong></h6>
             <ol class="list-decimal list-inside ml-4 space-y-2" start="9">
@@ -1019,7 +1042,7 @@ function getContent() {
 
             <p><strong>Why Verification is Critical:</strong> Golden Gate assembly can produce several outcomes: successful assembly of the desired construct, re-ligation of the backbone without insert (especially if BsaI digestion was incomplete during assembly), or incorporation of contaminating DNA.</p>
 
-            <h5><strong>Method 1: DNA Sequencing (Primary Verification Method)</strong></h5>
+            <h4 class="styled-h4">Method 1: DNA Sequencing (Primary Verification Method)</h4>
             <p><strong>Principle:</strong> DNA sequencing provides the definitive verification by determining the exact nucleotide sequence of the cloned region. This method can detect not only the presence or absence of the insert but also any point mutations, small insertions/deletions, or errors introduced during PCR amplification.</p>
 
             <p><strong>Advantages:</strong> Most reliable and comprehensive method; detects all types of errors<br>
@@ -1033,7 +1056,7 @@ function getContent() {
 
             <p><strong>When to use:</strong> Sequencing can be performed directly or subsequently to a colony PCR or a restriction digestion analysis as it is the most reliable of all verification methods but also more expensive. In general it is always recommended as the final verification step, especially before important downstream applications like in our case transfection experiments.</p>
 
-            <h5><strong>Method 2: Colony PCR (Rapid Screening Method)</strong></h5>
+            <h4 class="styled-h4">Method 2: Colony PCR (Rapid Screening Method)</h4>
             <p><strong>Theoretical Background:</strong> Colony PCR exploits the fact that bacterial colonies contain multiple copies of the plasmid, providing sufficient template for PCR amplification directly from crude cell lysates. The method relies on designing primers that will only produce a specific-sized product if the correct insert is present.</p>
 
             <p><strong>Primer Design Strategy:</strong></p>
@@ -1054,7 +1077,7 @@ function getContent() {
             <p><strong>Advantages:</strong> Fast (3-4 hours), inexpensive, can screen many colonies<br>
             <strong>Disadvantages:</strong> Cannot detect point mutations or sequence errors</p>
 
-            <h5><strong>Method 3: Restriction Digestion Analysis (Pattern Recognition)</strong></h5>
+            <h4 class="styled-h4">Method 3: Restriction Digestion Analysis (Pattern Recognition)</h4>
             <p><strong>Theoretical Background:</strong> This method exploits the fact that successful Golden Gate assembly creates a new restriction pattern compared to the original backbone. By choosing appropriate restriction enzymes, we can generate diagnostic fragment patterns that differ between positive and negative clones.</p>
 
             <p><strong>Critical Considerations for Golden Gate Products:</strong></p>
@@ -1193,6 +1216,31 @@ function getContent() {
             margin-top: 0.75rem;
             border-radius: 0.25rem;
         }
+
+        /* PCR Input styling */
+.pcr-input {
+    width: 60px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border-light);
+    border-radius: 0.25rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.pcr-input:focus {
+    outline: none;
+    border-color: var(--orange-medium);
+    box-shadow: 0 0 0 2px rgba(251, 136, 37, 0.2);
+}
+
+/* Colony count table styling */
+#colony-count-table tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+#colony-count-table td:empty {
+    height: 2.5rem;
+}
         </style>
     `;
 }
@@ -1269,8 +1317,13 @@ function calculateLoadingBuffer() {
         return;
     }
     
+    if (isNaN(stockConcentration) || stockConcentration <= 1) {
+        resultDiv.innerHTML = '<p class="text-red-600">Please enter a valid stock concentration greater than 1.</p>';
+        resultDiv.classList.remove('hidden');
+        return;
+    }
+    
     // Calculate loading buffer volume needed
-    // For 1x final concentration from 6x stock: add 1/5 of sample volume
     const loadingBufferVolume = sampleVolume / (stockConcentration - 1);
     const finalVolume = sampleVolume + loadingBufferVolume;
     
@@ -1346,6 +1399,115 @@ function recordColonyCount() {
         <p class="text-sm text-gray-600">Remember to record this in your lab notebook!</p>
     `;
     resultDiv.classList.remove('hidden');
+}
+
+
+// PCR calculation functions (newly added)
+function updatePCRCalculations() {
+    // Insert PCR calculations
+    const insertDnaTest1 = parseFloat(document.getElementById('insert-dna-test1')?.value) || 0.8;
+    const insertDnaTest2 = parseFloat(document.getElementById('insert-dna-test2')?.value) || 0.8;
+    
+    const insertH2oTest1 = 20 - 10 - insertDnaTest1 - 1.25 - 1.25;
+    const insertH2oTest2 = 20 - 10 - insertDnaTest2 - 1.25 - 1.25;
+    const insertH2oNeg = 20 - 10 - 1.25 - 1.25;
+    
+    document.getElementById('insert-h2o-test1').textContent = `REST = ${insertH2oTest1.toFixed(1)} µl`;
+    document.getElementById('insert-h2o-test2').textContent = `REST = ${insertH2oTest2.toFixed(1)} µl`;
+    document.getElementById('insert-h2o-neg').textContent = `REST = ${insertH2oNeg.toFixed(1)} µl`;
+    
+    // Backbone PCR calculations
+    const backboneDnaTest1 = parseFloat(document.getElementById('backbone-dna-test1')?.value) || 0.8;
+    const backboneDnaTest2 = parseFloat(document.getElementById('backbone-dna-test2')?.value) || 0.8;
+    
+    const backboneH2oTest1 = 20 - 10 - backboneDnaTest1 - 1.25 - 1.25;
+    const backboneH2oTest2 = 20 - 10 - backboneDnaTest2 - 1.25 - 1.25;
+    const backboneH2oNeg = 20 - 10 - 1.25 - 1.25;
+    
+    document.getElementById('backbone-h2o-test1').textContent = `REST = ${backboneH2oTest1.toFixed(1)} µl`;
+    document.getElementById('backbone-h2o-test2').textContent = `REST = ${backboneH2oTest2.toFixed(1)} µl`;
+    document.getElementById('backbone-h2o-neg').textContent = `REST = ${backboneH2oNeg.toFixed(1)} µl`;
+}
+
+// Golden Gate calculation functions
+function updateGoldenGateCalculations() {
+    const ggBackboneComplete = parseFloat(document.getElementById('gg-backbone-complete')?.value) || 0;
+    const ggBackboneControl = parseFloat(document.getElementById('gg-backbone-control')?.value) || 0;
+    const ggInsertComplete = parseFloat(document.getElementById('gg-insert-complete')?.value) || 0;
+    
+    const h2oComplete = 20 - 2 - ggBackboneComplete - ggInsertComplete - 0.5 - 0.5;
+    const h2oControl = 20 - 2 - ggBackboneControl - 0.5 - 0.5;
+    
+    document.getElementById('gg-h2o-complete').textContent = `REST = ${h2oComplete.toFixed(1)} µl`;
+    document.getElementById('gg-h2o-control').textContent = `REST = ${h2oControl.toFixed(1)} µl`;
+}
+
+// Updated record colony count function
+let colonyCountData = [];
+
+function recordColonyCount() {
+    const sampleName = document.getElementById('sample-name').value;
+    const colonyCount = document.getElementById('colony-count').value;
+    const resultDiv = document.getElementById('colony-count-result');
+    
+    if (!sampleName || !colonyCount) {
+        resultDiv.innerHTML = '<p class="text-red-600">Please enter both sample name and colony count.</p>';
+        resultDiv.classList.remove('hidden');
+        return;
+    }
+    
+    // Add to data array
+    colonyCountData.push({ sample: sampleName, count: colonyCount });
+    
+    // Update table
+    updateColonyCountTable();
+    
+    resultDiv.innerHTML = `
+        <p><strong>Recorded:</strong></p>
+        <p>Sample: ${sampleName}</p>
+        <p>Colonies: ${colonyCount}</p>
+        <p class="text-sm text-gray-600">Data added to table below!</p>
+    `;
+    resultDiv.classList.remove('hidden');
+    
+    // Clear inputs
+    document.getElementById('sample-name').value = '';
+    document.getElementById('colony-count').value = '';
+}
+
+function updateColonyCountTable() {
+    const tableBody = document.getElementById('colony-count-table');
+    if (!tableBody) return;
+    
+    // Clear existing rows
+    tableBody.innerHTML = '';
+    
+    // Add data rows
+    for (let i = 0; i < 10; i++) {
+        const row = document.createElement('tr');
+        if (i < colonyCountData.length) {
+            row.innerHTML = `
+                <td class="border border-gray-300 p-2">${colonyCountData[i].sample}</td>
+                <td class="border border-gray-300 p-2 text-center">${colonyCountData[i].count}</td>
+            `;
+        } else {
+            row.innerHTML = `
+                <td class="border border-gray-300 p-2"></td>
+                <td class="border border-gray-300 p-2 text-center"></td>
+            `;
+        }
+        tableBody.appendChild(row);
+    }
+    
+    // Add "No data" message if empty
+    if (colonyCountData.length === 0) {
+        const emptyRow = document.createElement('tr');
+        emptyRow.innerHTML = `
+            <td class="border border-gray-300 p-2 text-gray-400">No data recorded</td>
+            <td class="border border-gray-300 p-2 text-center text-gray-400">-</td>
+        `;
+        tableBody.insertBefore(emptyRow, tableBody.firstChild);
+    }
 }
 
 
@@ -1431,18 +1593,32 @@ export default function initModule6(rootEl, sidebarEl) {
     // 5. Make calculateLoadingBuffer function globally available
     window.calculateLoadingBuffer = calculateLoadingBuffer;
 
-    // Miniprep color quiz
-    const miniprepColorContainer = document.getElementById('miniprep-color-quiz');
-    if (miniprepColorContainer) {
-        miniprepColorContainer.querySelectorAll('.quiz-option').forEach(button => {
-            button.addEventListener('click', () => {
-                const isCorrect = button.dataset.correct === 'true';
-                const correctFeedback = "<strong>Correct!</strong> The lysis buffer causes the solution to turn dark pink as cell walls break down and contents are released.";
-                const incorrectFeedback = "<strong>Not quite.</strong> Successful cell lysis with the lysis buffer (B2) causes the solution to change from clear to dark pink.";
-                handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
-            });
+    // Miniprep neutralization quiz
+const miniprepNeutralizationContainer = document.getElementById('miniprep-neutralization-quiz');
+if (miniprepNeutralizationContainer) {
+    miniprepNeutralizationContainer.querySelectorAll('.quiz-option').forEach(button => {
+        button.addEventListener('click', () => {
+            const isCorrect = button.dataset.correct === 'true';
+            const correctFeedback = "<strong>Correct!</strong> The neutralization buffer stops the alkaline lysis and precipitates proteins and genomic DNA while keeping plasmid DNA in solution.";
+            const incorrectFeedback = "<strong>Not quite.</strong> The neutralization step neutralizes the alkaline conditions and selectively precipitates proteins and genomic DNA.";
+            handleSimpleQuiz(button, isCorrect, correctFeedback, incorrectFeedback);
         });
+    });
+}
+
+// Add event listeners for PCR calculations
+document.addEventListener('input', function(e) {
+    if (e.target.classList.contains('pcr-input')) {
+        updatePCRCalculations();
+        updateGoldenGateCalculations();
     }
+});
+
+// Initialize calculations on load
+setTimeout(() => {
+    updatePCRCalculations();
+    updateGoldenGateCalculations();
+}, 100);
 
     // Verification method quiz
     const verificationMethodContainer = document.getElementById('verification-method-quiz');
@@ -1456,4 +1632,11 @@ export default function initModule6(rootEl, sidebarEl) {
             });
         });
     }
+    // Make all functions globally available
+window.calculateLoadingBuffer = calculateLoadingBuffer;
+window.calculateBindingBuffer = calculateBindingBuffer;
+window.calculateInsertMass = calculateInsertMass;
+window.recordColonyCount = recordColonyCount;
+window.updatePCRCalculations = updatePCRCalculations;
+window.updateGoldenGateCalculations = updateGoldenGateCalculations;
 }

@@ -669,3 +669,95 @@ body {
             position: relative;
         }
 
+/* Prevent horizontal overflow on mobile */
+@media (max-width: 768px) {
+    /* Prevent body overflow */
+    body {
+        overflow-x: hidden;
+    }
+    
+    #main-content {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
+    /* Make tables responsive */
+    .module-content table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        max-width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Alternatively, make table cells wrap on very small screens */
+    @media (max-width: 480px) {
+        .module-content table {
+            font-size: 0.85rem;
+        }
+        
+        .module-content table td,
+        .module-content table th {
+            padding: 0.4rem;
+            word-wrap: break-word;
+            white-space: normal;
+        }
+    }
+    
+    /* Make images responsive */
+    .module-content img {
+        max-width: 100% !important;
+        height: auto !important;
+        width: auto !important;
+    }
+    
+    /* Make iframes responsive */
+    .module-content iframe {
+        max-width: 100%;
+    }
+    
+    /* Prevent long links from overflowing */
+    .module-content a {
+        word-wrap: break-word;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Ensure all containers respect viewport width */
+    .module-content > * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Make pre/code blocks scrollable instead of overflowing */
+    .module-content pre,
+    .module-content code {
+        max-width: 100%;
+        overflow-x: auto;
+        word-wrap: normal;
+        white-space: pre;
+    }
+    
+    /* Fix interactive boxes on mobile */
+    .interactive-box,
+    .practice-problem-box {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+    
+    /* Make input fields fit on mobile */
+    .calculator input,
+    .calculator select,
+    .practice-problem-box input {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* Ensure formulas don't overflow */
+    .module-content .formula {
+        max-width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+}
+

@@ -223,7 +223,9 @@ function getContent() {
                         <p>The vector should already be set correctly, and you can choose the restriction enzyme (Golden Gate enzyme) that you want to use. In our case, we're using <strong>BsaI</strong>.</p>
                         <div class="enzyme-info-box">
                             <h4>BsaI Cutting Site</h4>
-                            <div class="cutting-site">5'-...GGTCTC(N)₁↓...-3'<br>3'-...CCAGAG(N)₅↑...-5'</div>
+                            <div class="text-center my-3">
+                                <img src="images/image0406.png" alt="BsaI recognition sequence showing cut site outside recognition sequence" class="rounded-lg shadow-md mx-auto block max-w-full w-auto" style="max-width: 400px;" onerror="this.onerror=null; this.src='https://placehold.co/400x100/e2e8f0/4a5568?text=BsaI+Recognition+Sequence'; this.alt='Placeholder: BsaI Recognition Sequence';">
+                            </div>
                             <p class="text-sm">BsaI is a Type IIs restriction enzyme that cuts outside its recognition sequence, creating programmable sticky ends.</p>
                         </div>
                     </div>
@@ -607,30 +609,6 @@ function getContent() {
             margin-bottom: 0.5rem;
         }
 
-        .cutting-site {
-    font-family: 'Courier New', monospace;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    border: 1px solid var(--orange-medium);
-    margin: 0.5rem 0;
-    text-align: center;
-    font-weight: bold;
-    color: var(--purple-dark);
-    overflow-x: auto;
-    white-space: nowrap;
-    font-size: 0.9rem;
-}
-
-/* Make cutting site responsive on mobile */
-@media (max-width: 768px) {
-    .cutting-site {
-        font-size: 0.75rem;
-        padding: 0.5rem;
-        word-break: break-all;
-        white-space: normal;
-    }
-}
 
         /* Practice questions styling */
         .practice-questions {

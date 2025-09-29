@@ -174,8 +174,8 @@ function getContent() {
                 </tr>
                 <tr>
                     <td class="border border-gray-300 p-2">H2O</td>
-                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test1">REST = 6.5 µl</td>
-                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test2">REST = 6.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test1">REST = 7.3 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test2">REST = 7.3 µl</td>
                     <td class="border border-gray-300 p-2 text-center" id="insert-h2o-neg">REST = 7.3 µl</td>
                 </tr>
                 <tr class="bg-orange-50">

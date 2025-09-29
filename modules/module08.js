@@ -296,7 +296,7 @@ function getContent() {
 
         .hek-cells-section .interactive-term.expanded .term-explanation {
             opacity: 1;
-            max-height: 200px;
+            max-height: 500px;
             margin-top: 12px;
         }
 

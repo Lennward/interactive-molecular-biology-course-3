@@ -174,9 +174,9 @@ function getContent() {
                 </tr>
                 <tr>
                     <td class="border border-gray-300 p-2">H2O</td>
-                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test1">REST = 6.5 µl</td>
-                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test2">REST = 6.5 µl</td>
-                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-neg">REST = 7.3 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test1">REST = 7.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-test2">REST = 7.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="insert-h2o-neg">REST = 7.5 µl</td>
                 </tr>
                 <tr class="bg-orange-50">
                     <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
@@ -226,9 +226,9 @@ function getContent() {
                 </tr>
                 <tr>
                     <td class="border border-gray-300 p-2">H2O</td>
-                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-test1">REST = 6.5 µl</td>
-                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-test2">REST = 6.5 µl</td>
-                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-neg">REST = 7.3 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-test1">REST = 7.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-test2">REST = 7.5 µl</td>
+                    <td class="border border-gray-300 p-2 text-center" id="backbone-h2o-neg">REST = 7.5 µl</td>
                 </tr>
                 <tr class="bg-orange-50">
                     <td class="border border-gray-300 p-2 font-semibold">Total Volume</td>
@@ -1383,8 +1383,8 @@ function calculateInsertMass() {
 // PCR calculation functions (newly added)
 function updatePCRCalculations() {
     // Insert PCR calculations
-    const insertDnaTest1 = parseFloat(document.getElementById('insert-dna-test1')?.value) || 0.8;
-    const insertDnaTest2 = parseFloat(document.getElementById('insert-dna-test2')?.value) || 0.8;
+    const insertDnaTest1 = parseFloat(document.getElementById('insert-dna-test1')?.value) || 0;
+    const insertDnaTest2 = parseFloat(document.getElementById('insert-dna-test2')?.value) || 0;
     
     const insertH2oTest1 = 20 - 10 - insertDnaTest1 - 1.25 - 1.25;
     const insertH2oTest2 = 20 - 10 - insertDnaTest2 - 1.25 - 1.25;
@@ -1395,8 +1395,8 @@ function updatePCRCalculations() {
     document.getElementById('insert-h2o-neg').textContent = `REST = ${insertH2oNeg.toFixed(1)} µl`;
     
     // Backbone PCR calculations
-    const backboneDnaTest1 = parseFloat(document.getElementById('backbone-dna-test1')?.value) || 0.8;
-    const backboneDnaTest2 = parseFloat(document.getElementById('backbone-dna-test2')?.value) || 0.8;
+    const backboneDnaTest1 = parseFloat(document.getElementById('backbone-dna-test1')?.value) || 0;
+    const backboneDnaTest2 = parseFloat(document.getElementById('backbone-dna-test2')?.value) || 0;
     
     const backboneH2oTest1 = 20 - 10 - backboneDnaTest1 - 1.25 - 1.25;
     const backboneH2oTest2 = 20 - 10 - backboneDnaTest2 - 1.25 - 1.25;

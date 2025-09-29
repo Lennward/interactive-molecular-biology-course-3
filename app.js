@@ -583,12 +583,13 @@ function getCourseContent() {
             }
             
             .timeline-item {
-                flex-direction: column;
-                text-align: center;
+                flex-direction: row;
+                text-align: left;
             }
             
             .timeline-marker {
-                margin: 0 auto 1rem auto;
+                margin-right: 1rem;
+                margin-bottom: 0;
             }
             
             .timeline-content {
@@ -596,8 +597,8 @@ function getCourseContent() {
             }
             
             .timeline-item::before {
-                left: 50%;
-                transform: translateX(-50%);
+                left: 25px;
+                transform: none;
             }
             
             .team-logos {

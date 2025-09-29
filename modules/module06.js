@@ -1421,7 +1421,7 @@ function updateGoldenGateCalculations() {
 }
 
 // Updated record colony count function
-colonyCountData = [];
+let colonyCountData = [];
 
 function recordColonyCount() {
     const sampleName = document.getElementById('sample-name').value;

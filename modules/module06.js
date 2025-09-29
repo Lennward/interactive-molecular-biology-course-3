@@ -1381,26 +1381,6 @@ function calculateInsertMass() {
     resultDiv.classList.remove('hidden');
 }
 
-function recordColonyCount() {
-    const sampleName = document.getElementById('sample-name').value;
-    const colonyCount = document.getElementById('colony-count').value;
-    const resultDiv = document.getElementById('colony-count-result');
-    
-    if (!sampleName || !colonyCount) {
-        resultDiv.innerHTML = '<p class="text-red-600">Please enter both sample name and colony count.</p>';
-        resultDiv.classList.remove('hidden');
-        return;
-    }
-    
-    resultDiv.innerHTML = `
-        <p><strong>Recorded:</strong></p>
-        <p>Sample: ${sampleName}</p>
-        <p>Colonies: ${colonyCount}</p>
-        <p class="text-sm text-gray-600">Remember to record this in your lab notebook!</p>
-    `;
-    resultDiv.classList.remove('hidden');
-}
-
 
 // PCR calculation functions (newly added)
 function updatePCRCalculations() {

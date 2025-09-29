@@ -608,16 +608,29 @@ function getContent() {
         }
 
         .cutting-site {
-            font-family: 'Courier New', monospace;
-            background: rgba(255, 255, 255, 0.8);
-            padding: 0.75rem;
-            border-radius: 0.5rem;
-            border: 1px solid var(--orange-medium);
-            margin: 0.5rem 0;
-            text-align: center;
-            font-weight: bold;
-            color: var(--purple-dark);
-        }
+    font-family: 'Courier New', monospace;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--orange-medium);
+    margin: 0.5rem 0;
+    text-align: center;
+    font-weight: bold;
+    color: var(--purple-dark);
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+/* Make cutting site responsive on mobile */
+@media (max-width: 768px) {
+    .cutting-site {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        word-break: break-all;
+        white-space: normal;
+    }
+}
 
         /* Practice questions styling */
         .practice-questions {

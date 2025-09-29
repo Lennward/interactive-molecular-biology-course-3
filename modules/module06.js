@@ -905,12 +905,10 @@ function getContent() {
     </div>
 </div>
 
-<h5><strong>Questions/Tasks:</strong></h5>
-<p>• Why do you see many/few/no colonies? Think about answers for each scenario.</p>
 
 <div class="practice-problem-box">
-    <h4>Colony Count Analysis</h4>
-    <p>Consider the different scenarios you might observe:</p>
+    <h4>Questions/Tasks: Colony Count Analysis</h4>
+    <p>• Why do you see many/few/no colonies? Think about answers for each scenario.</p>
     
     <div class="mt-4">
         <button class="practice-toggle">Show Scenario Analysis</button>

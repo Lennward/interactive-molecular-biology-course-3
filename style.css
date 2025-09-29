@@ -761,3 +761,17 @@ body {
     }
 }
 
+/* Fix module height to prevent endless scrolling */
+@media (max-width: 768px) {
+    .module-section {
+        min-height: auto;
+        height: auto;
+        overflow: visible;
+    }
+    
+    #main-content {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 100vh;
+    }
+}

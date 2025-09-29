@@ -1559,19 +1559,10 @@ export default function initModule6(rootEl, sidebarEl) {
         });
     }
 
-    // Make calculateBindingBuffer function globally available
-    window.calculateBindingBuffer = calculateBindingBuffer;
-    
-    // Make new functions globally available
-    window.calculateInsertMass = calculateInsertMass;
-    window.recordColonyCount = recordColonyCount;
-
    
     // 4. Render main module quiz
     renderQuiz(QUIZ_DATA, 'quiz-container-module-6');
-
-    // 5. Make calculateLoadingBuffer function globally available
-    window.calculateLoadingBuffer = calculateLoadingBuffer;
+    
 
     // Miniprep neutralization quiz
 const miniprepNeutralizationContainer = document.getElementById('miniprep-neutralization-quiz');

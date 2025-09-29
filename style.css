@@ -761,17 +761,22 @@ body {
     }
 }
 
-/* Fix module height to prevent endless scrolling */
+/* Fix endless scrolling in modules on mobile */
 @media (max-width: 768px) {
     .module-section {
-        min-height: auto;
-        height: auto;
-        overflow: visible;
+        overflow: hidden;
+        display: block;
+        height: fit-content;
     }
     
-    #main-content {
-        overflow-y: auto;
-        overflow-x: hidden;
-        height: 100vh;
+    .module-content {
+        overflow: visible;
+        padding-bottom: 2rem; /* Add some bottom padding */
+    }
+    
+    /* Ensure quiz container doesn't cause overflow */
+    [id^="quiz-container-"] {
+        margin-bottom: 2rem;
+        overflow: visible;
     }
 }

@@ -1423,7 +1423,7 @@ function updateGoldenGateCalculations() {
 }
 
 // Updated record colony count function
-let colonyCountData = [];
+colonyCountData = [];
 
 function recordColonyCount() {
     const sampleName = document.getElementById('sample-name').value;
@@ -1578,7 +1578,7 @@ if (miniprepNeutralizationContainer) {
 }
 
 // Add event listeners for PCR calculations
-document.addEventListener('input', function(e) {
+rootEl.addEventListener('input', function(e) {
     if (e.target.classList.contains('pcr-input')) {
         updatePCRCalculations();
         updateGoldenGateCalculations();

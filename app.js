@@ -369,12 +369,7 @@ function getCourseContent() {
             border: 2px solid transparent;
         }
 
-        .highlight-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-            border-color: var(--purple-light);
-        }
-
+        
         .highlight-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -467,11 +462,7 @@ function getCourseContent() {
             transition: all 0.3s ease;
         }
 
-        .timeline-content:hover {
-            transform: translateX(10px);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.15);
-        }
-
+      
         .timeline-content h4 {
             font-size: 1.3rem;
             font-weight: 600;
@@ -534,9 +525,6 @@ function getCourseContent() {
             transition: all 0.3s ease;
         }
 
-        .logo-hover:hover {
-            transform: scale(1.1);
-        }
 
         .team-credit {
             background: linear-gradient(135deg, var(--purple-dark), var(--orange-medium));
